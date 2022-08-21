@@ -1,0 +1,12 @@
+/* If this is your first time using Reio, it is highly
+ * it is highly recommended that you open the documentation of the framework.
+ * https://github.com/MineEjo/reiodart/wiki
+*/
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}

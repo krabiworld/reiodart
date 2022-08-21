@@ -1,0 +1,21 @@
+# VisualStudioCode.
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.history/
+
+# Webstorm.
+.idea/
+
+# Files and directories created by pub.
+.dart_tool/
+.packages
+
+# Conventional directory for build output.
+test/build/
+
+# Mockito build.
+*.mocks.dart

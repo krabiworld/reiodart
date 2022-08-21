@@ -1,0 +1,8 @@
+# Not needed in the package.
+test/
+
+# Git.
+.gitignore
+
+# Files and directories created by pub.
+.packages
