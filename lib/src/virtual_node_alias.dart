@@ -1,4 +1,4 @@
-import 'package:reio/src/virtual_node.dart';
+import 'virtual_node.dart';
 
 VirtualNode v(String tag, [dynamic v1, dynamic v2, dynamic v3, dynamic v4]) {
   dynamic value, attrs, children, onMount, onDestroy;

@@ -1,5 +1,5 @@
-import 'package:reio/src/virtual_node.dart';
-import 'package:reio/src/virtual_node_observable.dart';
+import 'virtual_node.dart';
+import 'virtual_node_observable.dart';
 
 /// It's a class that stores a value and notifies all the observers when the value changes.
 class WritableProxy {
