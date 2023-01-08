@@ -1,15 +1,19 @@
 import 'virtual_node.dart';
 
+/// V is an abbreviation and takes 4 [VirtualNode] parameters.
+/// The parameters correspond to the original, but in any order.
 VirtualNode v(String tag, [dynamic v1, dynamic v2, dynamic v3, dynamic v4]) {
   dynamic value, attrs, children, onMount, onDestroy;
   final List<dynamic> values = [v1, v2, v3, v4];
 
   for (dynamic val in values) {
-    if (val == null)
+    if (val == null) {
       continue;
-    else if (val is String)
+    } else if (val is String) {
+      /// A string is always a value.
       value = val;
-    else if (val is List) {
+    } else if (val is List) {
+      /// If the list contains strings, they are always attributes.
       if (val.first is String) {
         List<Attr> attributes = [];
 
@@ -21,15 +25,13 @@ VirtualNode v(String tag, [dynamic v1, dynamic v2, dynamic v3, dynamic v4]) {
 
         attrs = attributes;
       } else if (val.first is VirtualNode) {
+        /// Otherwise, the list contains virtual nodes.
         children = val;
       }
     } else if (val is Map) {
-      if (val['onMount'] != null) {
-        onMount = val['onMount'];
-      }
-      if (val['onDestroy'] != null) {
-        onDestroy = val['onDestroy'];
-      }
+      /// Event triggers are placed in the map.
+      if (val['onMount'] != null) onMount = val['onMount'];
+      if (val['onDestroy'] != null) onDestroy = val['onDestroy'];
     }
   }
 
