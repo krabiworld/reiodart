@@ -47,7 +47,7 @@ VirtualNode $Counter([ComponentOptions options]) {
     });
   }
 
-  List<String> emojis = ['😔', '😞', '😒', '😏', '😎', '😌', '😉', '😀', '😄', '😁', '🥳'];
+  List<String> emojis = ['😔', '😞', '😒', '😏', '😎', '😌', '😉', '😀', '😄', '😁'];
 
   /// To change the design in the future, a function is used.
   VirtualNode render(int value) {
@@ -66,7 +66,7 @@ VirtualNode $Counter([ComponentOptions options]) {
       p([
         span('Total clicks: '),
         span(['class count'], '$value'),
-        span(['class emojis'], (value > 0 && value < emojis.length) ? emojis[value] : '🐒'),
+        span(['class emojis'], (value > 0 && value < emojis.length) ? emojis[value - 1] : '🐒'),
         br(),
         span(['class hint'], 'Hint, try to get 10 clicks ;)')
       ]),
