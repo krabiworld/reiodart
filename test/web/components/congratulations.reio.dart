@@ -8,8 +8,7 @@ import 'counter.reio.dart';
 
 VirtualNode $Congratulations([ComponentOptions options]) {
   VirtualNode render() {
-    return div({'onDestroy': () => print('Congratulations have been destroyed =( !')},
-        [span('🎉 Congratulations, you have 10 clicks! 🎉')]);
+    return div({'onDestroy': () => print('Congratulations have been destroyed =( !')}, [span('🎉 Congratulations, you have 10 clicks! 🎉')]);
   }
 
   /// Watcher helps to work with the virtual node.
