@@ -1,21 +1,9 @@
-# VisualStudioCode.
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-*.code-workspace
-.history/
-
-# Webstorm.
-.idea/
-
-# Files and directories created by pub.
+# Don’t commit the following directories created by pub.
+.buildlog
 .dart_tool/
+.pub/
+build/
+packages
+
+# Include when developing application packages.
 .packages
-
-# Conventional directory for build output.
-test/build/
-
-# Mockito build.
-*.mocks.dart
