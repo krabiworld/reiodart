@@ -72,7 +72,8 @@ VirtualNode $Counter([ComponentOptions options]) {
       ]),
       button('Increase', {'onMount': increase}),
       button('Decrease', {'onMount': decrease}),
-      button('Destroy', {'onMount': destroyStore})
+      button('Destroy', {'onMount': destroyStore}),
+      $Text({})
     ]);
   }
 
@@ -196,11 +197,6 @@ VirtualNode $Counter([ComponentOptions options]) {
       tempComponentStorage?.destroy();
       tempComponentStorage = null;
     }
-
-    /// Initialize the other components in this.
-    watcher.components(() {
-      $Text({'target': watcher.virtualNode.dom});
-    });
   });
 
   /// Be sure to return it, to work with it in other components.
