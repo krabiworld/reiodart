@@ -10,10 +10,12 @@ Reio.dart is a progressive Dart library for creating UI on the web. Create your 
 ## Quick links
 
 **Github**
+
 * [Getting started](https://github.com/MineEjo/reiodart/wiki)
 * [Repository](https://github.com/MineEjo/reiodart)
 
 **Pub**
+
 * [Package](https://pub.dev/packages/reio)
 * [API reference](https://pub.dev/documentation/reio/latest/)
 
@@ -32,6 +34,7 @@ void main() {
 Stores are used to interact and store information. They are responsible for reactivity in components.
 
 ```dart
+
 Watcher watcher = Watcher();
 
 watcher.watch(() {
