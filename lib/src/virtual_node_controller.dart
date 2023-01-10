@@ -28,7 +28,7 @@ final RegExp _regExpMinifyCss = RegExp(r'[\s\n\r]{2,}|/\*[\s\S]*?\*/');
 const List<String> _ignoredAttrs = [_attrReioComponentId];
 
 class VirtualNodeController {
-  VirtualNode _currentNode;
+  final VirtualNode _currentNode;
   VirtualNode? _newNode;
   bool _compare = true;
 
@@ -91,8 +91,9 @@ class VirtualNodeController {
             regExpModifier.allMatches(_currentNode.css).toList();
 
         String cssClass = '';
-        if (modifierClass != null)
-          cssClass = '${modifierClass}-${_currentNode.id}';
+        if (modifierClass != null) {
+          cssClass = '$modifierClass-${_currentNode.id}';
+        }
 
         for (RegExpMatch match in modifiers) {
           String? mod = match.group(0);
