@@ -1,5 +1,6 @@
 ## 0.1.3
 
+* Added documentation to pub.dev.
 * Third-party improvements.
 
 ## 0.1.2
