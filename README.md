@@ -8,6 +8,7 @@ Reio.dart is a progressive Dart library for creating UI on the web. Create your 
 * Reactivity;
 
 ## Quick links
+
 * [Getting started](https://github.com/MineEjo/reiodart/wiki)
 * [Package](https://pub.dev/packages/reio)
 
@@ -53,8 +54,10 @@ div('value', [
 
 The syntax is almost the same as standard CSS, but has the ability to use access modifiers.
 
-* `public` - It makes element styles global, which is an alternative to `global.css`. Use the public modifier if this is the only way and if the element styles refer to a component, otherwise use `global.css`.
-* `private` - Restricts access to element styles to everyone except the component `itself`. Does not require an element to be specified after the modifier.
+* `public` - It makes element styles global, which is an alternative to `global.css`. Use the public modifier if this is
+  the only way and if the element styles refer to a component, otherwise use `global.css`.
+* `private` - Restricts access to element styles to everyone except the component `itself`. Does not require an element
+  to be specified after the modifier.
 * `Restricts` access to element styles other than the component `itself` and `its children`.
 
 **Example:**

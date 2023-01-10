@@ -1,3 +1,7 @@
+## 0.1.2
+
+* Fixed questionable solutions.
+
 ## 0.1.1
 
 * Improve the appearance and readability of the code.

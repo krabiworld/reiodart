@@ -1,9 +1,8 @@
-#  doc: dart doc .
 #  publish: dart pub publish --dry-run
 
 name: reio
 description: Reio.dart is a progressive Dart library for creating UI on the web.
-version: 0.1.1
+version: 0.1.2
 homepage: https://github.com/MineEjo/reiodart
 repository: https://github.com/MineEjo/reiodart
 issue_tracker: https://github.com/MineEjo/reiodart/issues
