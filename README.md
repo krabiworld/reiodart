@@ -9,8 +9,13 @@ Reio.dart is a progressive Dart library for creating UI on the web. Create your 
 
 ## Quick links
 
+**Github**
 * [Getting started](https://github.com/MineEjo/reiodart/wiki)
+* [Repository](https://github.com/MineEjo/reiodart)
+
+**Pub**
 * [Package](https://pub.dev/packages/reio)
+* [API reference](https://pub.dev/documentation/reio/latest/)
 
 ## Example
 
