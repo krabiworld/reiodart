@@ -56,6 +56,54 @@
 <li><a href="https://github.com/MineEjo/reiodart/wiki">Getting started</a></li>
 <li><a href="https://pub.dev/packages/reio">Package</a></li>
 </ul>
+<h2 id="example">Example</h2>
+<pre class="language-dart"><code class="language-dart">import 'components/app.reio.dart';
+
+void main() {
+  $App();
+}
+</code></pre>
+<h2 id="reactive-stores">Reactive stores</h2>
+<p>Stores are used to interact and store information. They are responsible for reactivity in components.</p>
+<pre class="language-dart"><code class="language-dart">Watcher watcher = Watcher();
+
+watcher.watch(() {
+  print('Congratulations, you have ${store['clicks']?.get()} clicks!');
+});
+</code></pre>
+<h2 id="html">HTML</h2>
+<pre class="language-dart"><code class="language-dart">div('value', [
+        'id cool-element',
+        'class first second etc'
+      ], [
+        div(),
+        span(),
+        $Component({})
+      ], {
+        'onMount': () =&gt; print('Yep!'),
+        'onDestroy': () =&gt; print('Nope!')
+      })
+</code></pre>
+<h2 id="styles">Styles</h2>
+<p>The syntax is almost the same as standard CSS, but has the ability to use access modifiers.</p>
+<ul>
+<li><code>public</code> - It makes element styles global, which is an alternative to <code>global.css</code>. Use the public modifier if this is the only way and if the element styles refer to a component, otherwise use <code>global.css</code>.</li>
+<li><code>private</code> - Restricts access to element styles to everyone except the component <code>itself</code>. Does not require an element to be specified after the modifier.</li>
+<li><code>Restricts</code> access to element styles other than the component <code>itself</code> and <code>its children</code>.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre class="language-css"><code class="language-css">{public}: body {
+  color: black;
+}
+
+{private}: {
+  color: white;
+}
+
+{protected}: div {
+  color: blue;
+}
+</code></pre>
 </section>
 
 
