@@ -9,7 +9,8 @@ void main() {
   String tagNameChild = 'p';
   String value = 'value';
   String css = '''<style>{public}: .value { display: none }</style>''';
-  VirtualNode virtualNode = VirtualNode(tag: tagName, children: [VirtualNode(tag: tagNameChild)]);
+  VirtualNode virtualNode =
+      VirtualNode(tag: tagName, children: [VirtualNode(tag: tagNameChild)]);
   final Element element = document.createElement(tagName);
 
   test('Creating a virtual node controller.', () {

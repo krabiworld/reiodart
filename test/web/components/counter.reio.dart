@@ -38,7 +38,8 @@ VirtualNode $Counter([ComponentOptions options]) {
 
   void destroyStore(VirtualNode virtualNode) {
     virtualNode.dom?.onClick.listen((event) {
-      bool answer = window.confirm('Are you sure you want to destroy the store?');
+      bool answer =
+          window.confirm('Are you sure you want to destroy the store?');
 
       if (answer) {
         store['clicks']?.destroy();
@@ -47,7 +48,18 @@ VirtualNode $Counter([ComponentOptions options]) {
     });
   }
 
-  List<String> emojis = ['😔', '😞', '😒', '😏', '😎', '😌', '😉', '😀', '😄', '😁'];
+  List<String> emojis = [
+    '😔',
+    '😞',
+    '😒',
+    '😏',
+    '😎',
+    '😌',
+    '😉',
+    '😀',
+    '😄',
+    '😁'
+  ];
 
   /// To change the design in the future, a function is used.
   VirtualNode render(int value) {
@@ -66,7 +78,8 @@ VirtualNode $Counter([ComponentOptions options]) {
       p([
         span('Total clicks: '),
         span(['class count'], '$value'),
-        span(['class emojis'], (value > 0 && value < emojis.length) ? emojis[value - 1] : '🐒'),
+        span(['class emojis'],
+            (value > 0 && value < emojis.length) ? emojis[value - 1] : '🐒'),
         br(),
         span(['class hint'], 'Hint, try to get 10 clicks ;)')
       ]),
@@ -192,7 +205,8 @@ VirtualNode $Counter([ComponentOptions options]) {
 
     if (tenClick) {
       /// Creating a congratulations component in this virtual node, after 3 children.
-      tempComponentStorage = $Congratulations({'target': watcher.virtualNode.children![3].dom});
+      tempComponentStorage =
+          $Congratulations({'target': watcher.virtualNode.children![3].dom});
     } else if (tempComponentStorage != null) {
       tempComponentStorage?.destroy();
       tempComponentStorage = null;

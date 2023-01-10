@@ -3,7 +3,8 @@ import '../../src/virtual_node.dart';
 dynamic _activeEffect;
 
 class Watcher {
-  VirtualNode _virtualNode = VirtualNode(tag: '', value: '', attrs: [], children: []);
+  VirtualNode _virtualNode =
+      VirtualNode(tag: '', value: '', attrs: [], children: []);
   int _iterations = 0;
 
   int get iterations => _iterations;

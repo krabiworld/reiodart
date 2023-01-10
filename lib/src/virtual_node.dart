@@ -17,7 +17,13 @@ class VirtualNode {
   List<String> _values = [];
   bool _mounted = false;
 
-  VirtualNode({required this.tag, this.value, this.attrs, this.children, this.onMount, this.onDestroy});
+  VirtualNode(
+      {required this.tag,
+      this.value,
+      this.attrs,
+      this.children,
+      this.onMount,
+      this.onDestroy});
 
   bool get isMount => _mounted;
 

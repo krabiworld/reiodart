@@ -17,9 +17,12 @@ const String _modifierPrivate = '{private}:';
 const String _modifierProtected = '{protected}:';
 const String _modifierPublic = '{public}:';
 
-final RegExp _regExpPrivateModifier = RegExp(r'(\(.*\s*)?{private}:?.*{[\s\S]*?}');
-final RegExp _regExpProtectedModifier = RegExp(r'(\(.*\s*)?{protected}:?.*{[\s\S]*?}');
-final RegExp _regExpPublicModifier = RegExp(r'(\(.*\s*)?{public}:?.*{[\s\S]*?}');
+final RegExp _regExpPrivateModifier =
+    RegExp(r'(\(.*\s*)?{private}:?.*{[\s\S]*?}');
+final RegExp _regExpProtectedModifier =
+    RegExp(r'(\(.*\s*)?{protected}:?.*{[\s\S]*?}');
+final RegExp _regExpPublicModifier =
+    RegExp(r'(\(.*\s*)?{public}:?.*{[\s\S]*?}');
 final RegExp _regExpMinifyCss = RegExp(r'[\s\n\r]{2,}|/\*[\s\S]*?\*/');
 
 const List<String> _ignoredAttrs = [_attrReioComponentId];
@@ -59,7 +62,8 @@ class VirtualNodeController {
   void initValue([Element? element]) {
     if (_compare) {
       if (_newNode?.dom == null || _newNode?.value == null) return;
-      if (_newNode?.value == _currentNode.value && _currentNode.isOldValue(_newNode!.value!)) return;
+      if (_newNode?.value == _currentNode.value &&
+          _currentNode.isOldValue(_newNode!.value!)) return;
       _newNode!.dom?.innerHtml = _newNode!.value;
     } else {
       if (_currentNode.value == null || element == null) return;
@@ -70,8 +74,10 @@ class VirtualNodeController {
   /// Initializing a CSS block in a virtual node.
   void initCss([Element? element]) {
     void set(Element? element) {
-      void setModifier(String type, RegExp regExpModifier, String modifier, [String? modifierClass]) {
-        final query = 'style[$_attrReioComponentId="${_currentNode.id}"][$_attrReioTypeStyle="$type"]';
+      void setModifier(String type, RegExp regExpModifier, String modifier,
+          [String? modifierClass]) {
+        final query =
+            'style[$_attrReioComponentId="${_currentNode.id}"][$_attrReioTypeStyle="$type"]';
 
         List<String>? oldStyles = [];
 
@@ -79,11 +85,14 @@ class VirtualNodeController {
           return oldStyles.add(element.text as String);
         });
 
-        List<Element>? oldStylesTags = _currentNode.dom?.querySelectorAll(query);
-        List<RegExpMatch> modifiers = regExpModifier.allMatches(_currentNode.css).toList();
+        List<Element>? oldStylesTags =
+            _currentNode.dom?.querySelectorAll(query);
+        List<RegExpMatch> modifiers =
+            regExpModifier.allMatches(_currentNode.css).toList();
 
         String cssClass = '';
-        if (modifierClass != null) cssClass = '$modifierClass-${_currentNode.id}';
+        if (modifierClass != null)
+          cssClass = '$modifierClass-${_currentNode.id}';
 
         for (RegExpMatch match in modifiers) {
           String? mod = match.group(0);
@@ -133,8 +142,10 @@ class VirtualNodeController {
         });
       }
 
-      setModifier(_typePrivate, _regExpPrivateModifier, _modifierPrivate, _classReioPrivateStyle);
-      setModifier(_typeProtected, _regExpProtectedModifier, _modifierProtected, _classReioProtectedStyle);
+      setModifier(_typePrivate, _regExpPrivateModifier, _modifierPrivate,
+          _classReioPrivateStyle);
+      setModifier(_typeProtected, _regExpProtectedModifier, _modifierProtected,
+          _classReioProtectedStyle);
       setModifier(_typePublic, _regExpPublicModifier, _modifierPublic);
     }
 
@@ -159,8 +170,12 @@ class VirtualNodeController {
 
       List<String> currentAttrs = [];
       List<String> newAttrs = [];
-      _currentNode.attrs?.toSet().forEach((attr) => currentAttrs.add('${attr.name} ${attr.value}'));
-      _newNode!.attrs!.toSet().forEach((attr) => newAttrs.add('${attr.name} ${attr.value}'));
+      _currentNode.attrs
+          ?.toSet()
+          .forEach((attr) => currentAttrs.add('${attr.name} ${attr.value}'));
+      _newNode!.attrs!
+          .toSet()
+          .forEach((attr) => newAttrs.add('${attr.name} ${attr.value}'));
 
       /// Check for a new value.
       if (currentAttrs.join('') == newAttrs.join('')) return;
@@ -198,18 +213,24 @@ class VirtualNodeController {
       if (_newNode?.dom == null || _newNode?.children == null) return;
 
       /// A loop that compares the children of the current node with the children of the new node.
-      for (int i = 0; i < min(_currentNode.children!.length, _newNode!.children!.length); i++) {
+      for (int i = 0;
+          i < min(_currentNode.children!.length, _newNode!.children!.length);
+          i++) {
         _currentNode.children![i].replace(_newNode!.children![i]);
       }
 
       /// If the new node has fewer children than the current one, the excess children are deleted.
       if (_currentNode.children!.length > _newNode!.children!.length) {
-        _currentNode.children!.sublist(_newNode!.children!.length).forEach((child) => child.destroy());
+        _currentNode.children!
+            .sublist(_newNode!.children!.length)
+            .forEach((child) => child.destroy());
       }
 
       /// If the new node has more children than the current one, the children are added.
       if (_newNode!.children!.length > _currentNode.children!.length) {
-        _newNode!.children!.sublist(_currentNode.children!.length).forEach((child) => child.mount());
+        _newNode!.children!
+            .sublist(_currentNode.children!.length)
+            .forEach((child) => child.mount());
       }
     } else {
       if (element == null) return;
