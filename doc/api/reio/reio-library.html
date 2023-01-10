@@ -1,0 +1,1847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="reio library API docs, for the Dart programming language.">
+  <title>reio library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">reio</a></li>
+    <li class="self-crumb">reio library</li>
+  </ol>
+  <div class="self-name">reio</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><span class="kind-library">reio</span> library 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+ 
+</h1></div>
+
+    
+
+
+    <section class="summary offset-anchor" id="classes">
+      <h2>Classes</h2>
+
+      <dl>
+        <dt id="Attr">
+  <span class="name "><a href="../reio/Attr-class.html">Attr</a></span> 
+
+</dt>
+<dd>
+  
+</dd>
+
+        <dt id="Dependency">
+  <span class="name "><a href="../reio/Dependency-class.html">Dependency</a></span> 
+
+</dt>
+<dd>
+  <code>Dependency</code> is a class that keeps track of all the functions that depend on it,
+and calls them when it changes.
+</dd>
+
+        <dt id="ReadableProxy">
+  <span class="name "><a href="../reio/ReadableProxy-class.html">ReadableProxy</a></span> 
+
+</dt>
+<dd>
+  It's a class that stores a value and notifies all the observers when the value changes.
+</dd>
+
+        <dt id="Style">
+  <span class="name "><a href="../reio/Style-class.html">Style</a></span> 
+
+</dt>
+<dd>
+  
+</dd>
+
+        <dt id="VirtualNode">
+  <span class="name "><a href="../reio/VirtualNode-class.html">VirtualNode</a></span> 
+
+</dt>
+<dd>
+  
+</dd>
+
+        <dt id="VirtualNodeController">
+  <span class="name "><a href="../reio/VirtualNodeController-class.html">VirtualNodeController</a></span> 
+
+</dt>
+<dd>
+  
+</dd>
+
+        <dt id="Watcher">
+  <span class="name "><a href="../reio/Watcher-class.html">Watcher</a></span> 
+
+</dt>
+<dd>
+  
+</dd>
+
+        <dt id="WritableProxy">
+  <span class="name "><a href="../reio/WritableProxy-class.html">WritableProxy</a></span> 
+
+</dt>
+<dd>
+  It's a class that stores a value and notifies all the observers when the value changes.
+</dd>
+
+      </dl>
+    </section>
+
+
+
+
+
+    <section class="summary offset-anchor" id="functions">
+      <h2>Functions</h2>
+
+      <dl class="callables">
+        <dt id="$Readable" class="callable">
+  <span class="name"><a href="../reio/$Readable.html">$Readable</a></span><span class="signature">(<wbr><span class="parameter" id="$Readable-param-fields"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.18.6/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.18.6/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span> <span class="parameter-name">fields</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/ReactiveReadableStore.html">ReactiveReadableStore</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  It takes a map of fields and returns a map of readable proxies.
+  
+
+</dd>
+
+        <dt id="$Writable" class="callable">
+  <span class="name"><a href="../reio/$Writable.html">$Writable</a></span><span class="signature">(<wbr><span class="parameter" id="$Writable-param-fields"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.18.6/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.18.6/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span> <span class="parameter-name">fields</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/ReactiveWritableStore.html">ReactiveWritableStore</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  It takes a map of fields and returns a map of writable proxies.
+  
+
+</dd>
+
+        <dt id="a" class="callable">
+  <span class="name"><a href="../reio/a.html">a</a></span><span class="signature">(<wbr><span class="parameter" id="a-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="a-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="a-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="a-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="abbr" class="callable">
+  <span class="name"><a href="../reio/abbr.html">abbr</a></span><span class="signature">(<wbr><span class="parameter" id="abbr-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="abbr-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="abbr-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="abbr-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="address" class="callable">
+  <span class="name"><a href="../reio/address.html">address</a></span><span class="signature">(<wbr><span class="parameter" id="address-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="address-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="address-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="address-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="area" class="callable">
+  <span class="name"><a href="../reio/area.html">area</a></span><span class="signature">(<wbr><span class="parameter" id="area-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="area-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="area-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="area-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="article" class="callable">
+  <span class="name"><a href="../reio/article.html">article</a></span><span class="signature">(<wbr><span class="parameter" id="article-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="article-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="article-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="article-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="aside" class="callable">
+  <span class="name"><a href="../reio/aside.html">aside</a></span><span class="signature">(<wbr><span class="parameter" id="aside-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="aside-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="aside-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="aside-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="audio" class="callable">
+  <span class="name"><a href="../reio/audio.html">audio</a></span><span class="signature">(<wbr><span class="parameter" id="audio-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="audio-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="audio-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="audio-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="b" class="callable">
+  <span class="name"><a href="../reio/b.html">b</a></span><span class="signature">(<wbr><span class="parameter" id="b-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="b-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="b-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="b-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="base" class="callable">
+  <span class="name"><a href="../reio/base.html">base</a></span><span class="signature">(<wbr><span class="parameter" id="base-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="base-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="base-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="base-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="bdi" class="callable">
+  <span class="name"><a href="../reio/bdi.html">bdi</a></span><span class="signature">(<wbr><span class="parameter" id="bdi-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="bdi-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="bdi-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="bdi-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="bdo" class="callable">
+  <span class="name"><a href="../reio/bdo.html">bdo</a></span><span class="signature">(<wbr><span class="parameter" id="bdo-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="bdo-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="bdo-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="bdo-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="blockquote" class="callable">
+  <span class="name"><a href="../reio/blockquote.html">blockquote</a></span><span class="signature">(<wbr><span class="parameter" id="blockquote-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="blockquote-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="blockquote-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="blockquote-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="body" class="callable">
+  <span class="name"><a href="../reio/body.html">body</a></span><span class="signature">(<wbr><span class="parameter" id="body-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="body-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="body-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="body-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="br" class="callable">
+  <span class="name"><a href="../reio/br.html">br</a></span><span class="signature">(<wbr><span class="parameter" id="br-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="br-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="br-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="br-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="button" class="callable">
+  <span class="name"><a href="../reio/button.html">button</a></span><span class="signature">(<wbr><span class="parameter" id="button-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="button-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="button-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="button-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="canvas" class="callable">
+  <span class="name"><a href="../reio/canvas.html">canvas</a></span><span class="signature">(<wbr><span class="parameter" id="canvas-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="canvas-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="canvas-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="canvas-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="caption" class="callable">
+  <span class="name"><a href="../reio/caption.html">caption</a></span><span class="signature">(<wbr><span class="parameter" id="caption-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="caption-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="caption-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="caption-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="cite" class="callable">
+  <span class="name"><a href="../reio/cite.html">cite</a></span><span class="signature">(<wbr><span class="parameter" id="cite-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="cite-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="cite-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="cite-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="code" class="callable">
+  <span class="name"><a href="../reio/code.html">code</a></span><span class="signature">(<wbr><span class="parameter" id="code-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="code-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="code-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="code-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="col" class="callable">
+  <span class="name"><a href="../reio/col.html">col</a></span><span class="signature">(<wbr><span class="parameter" id="col-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="col-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="col-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="col-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="colgroup" class="callable">
+  <span class="name"><a href="../reio/colgroup.html">colgroup</a></span><span class="signature">(<wbr><span class="parameter" id="colgroup-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="colgroup-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="colgroup-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="colgroup-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="data" class="callable">
+  <span class="name"><a href="../reio/data.html">data</a></span><span class="signature">(<wbr><span class="parameter" id="data-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="data-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="data-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="data-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="datalist" class="callable">
+  <span class="name"><a href="../reio/datalist.html">datalist</a></span><span class="signature">(<wbr><span class="parameter" id="datalist-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="datalist-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="datalist-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="datalist-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="dd" class="callable">
+  <span class="name"><a href="../reio/dd.html">dd</a></span><span class="signature">(<wbr><span class="parameter" id="dd-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="dd-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="dd-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="dd-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="del" class="callable">
+  <span class="name"><a href="../reio/del.html">del</a></span><span class="signature">(<wbr><span class="parameter" id="del-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="del-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="del-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="del-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="details" class="callable">
+  <span class="name"><a href="../reio/details.html">details</a></span><span class="signature">(<wbr><span class="parameter" id="details-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="details-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="details-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="details-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="dfn" class="callable">
+  <span class="name"><a href="../reio/dfn.html">dfn</a></span><span class="signature">(<wbr><span class="parameter" id="dfn-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="dfn-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="dfn-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="dfn-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="dialog" class="callable">
+  <span class="name"><a href="../reio/dialog.html">dialog</a></span><span class="signature">(<wbr><span class="parameter" id="dialog-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="dialog-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="dialog-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="dialog-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="div" class="callable">
+  <span class="name"><a href="../reio/div.html">div</a></span><span class="signature">(<wbr><span class="parameter" id="div-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="div-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="div-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="div-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="dl" class="callable">
+  <span class="name"><a href="../reio/dl.html">dl</a></span><span class="signature">(<wbr><span class="parameter" id="dl-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="dl-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="dl-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="dl-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="dt" class="callable">
+  <span class="name"><a href="../reio/dt.html">dt</a></span><span class="signature">(<wbr><span class="parameter" id="dt-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="dt-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="dt-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="dt-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="em" class="callable">
+  <span class="name"><a href="../reio/em.html">em</a></span><span class="signature">(<wbr><span class="parameter" id="em-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="em-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="em-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="em-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="embed" class="callable">
+  <span class="name"><a href="../reio/embed.html">embed</a></span><span class="signature">(<wbr><span class="parameter" id="embed-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="embed-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="embed-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="embed-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="fieldset" class="callable">
+  <span class="name"><a href="../reio/fieldset.html">fieldset</a></span><span class="signature">(<wbr><span class="parameter" id="fieldset-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="fieldset-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="fieldset-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="fieldset-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="figcaption" class="callable">
+  <span class="name"><a href="../reio/figcaption.html">figcaption</a></span><span class="signature">(<wbr><span class="parameter" id="figcaption-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="figcaption-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="figcaption-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="figcaption-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="figure" class="callable">
+  <span class="name"><a href="../reio/figure.html">figure</a></span><span class="signature">(<wbr><span class="parameter" id="figure-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="figure-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="figure-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="figure-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="footer" class="callable">
+  <span class="name"><a href="../reio/footer.html">footer</a></span><span class="signature">(<wbr><span class="parameter" id="footer-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="footer-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="footer-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="footer-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="form" class="callable">
+  <span class="name"><a href="../reio/form.html">form</a></span><span class="signature">(<wbr><span class="parameter" id="form-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="form-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="form-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="form-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="h1" class="callable">
+  <span class="name"><a href="../reio/h1.html">h1</a></span><span class="signature">(<wbr><span class="parameter" id="h1-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="h1-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="h1-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="h1-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="h2" class="callable">
+  <span class="name"><a href="../reio/h2.html">h2</a></span><span class="signature">(<wbr><span class="parameter" id="h2-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="h2-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="h2-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="h2-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="h3" class="callable">
+  <span class="name"><a href="../reio/h3.html">h3</a></span><span class="signature">(<wbr><span class="parameter" id="h3-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="h3-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="h3-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="h3-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="h4" class="callable">
+  <span class="name"><a href="../reio/h4.html">h4</a></span><span class="signature">(<wbr><span class="parameter" id="h4-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="h4-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="h4-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="h4-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="h5" class="callable">
+  <span class="name"><a href="../reio/h5.html">h5</a></span><span class="signature">(<wbr><span class="parameter" id="h5-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="h5-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="h5-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="h5-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="h6" class="callable">
+  <span class="name"><a href="../reio/h6.html">h6</a></span><span class="signature">(<wbr><span class="parameter" id="h6-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="h6-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="h6-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="h6-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="head" class="callable">
+  <span class="name"><a href="../reio/head.html">head</a></span><span class="signature">(<wbr><span class="parameter" id="head-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="head-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="head-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="head-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="header" class="callable">
+  <span class="name"><a href="../reio/header.html">header</a></span><span class="signature">(<wbr><span class="parameter" id="header-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="header-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="header-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="header-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="hr" class="callable">
+  <span class="name"><a href="../reio/hr.html">hr</a></span><span class="signature">(<wbr><span class="parameter" id="hr-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="hr-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="hr-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="hr-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="i" class="callable">
+  <span class="name"><a href="../reio/i.html">i</a></span><span class="signature">(<wbr><span class="parameter" id="i-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="i-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="i-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="i-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="iframe" class="callable">
+  <span class="name"><a href="../reio/iframe.html">iframe</a></span><span class="signature">(<wbr><span class="parameter" id="iframe-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="iframe-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="iframe-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="iframe-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="img" class="callable">
+  <span class="name"><a href="../reio/img.html">img</a></span><span class="signature">(<wbr><span class="parameter" id="img-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="img-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="img-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="img-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="input" class="callable">
+  <span class="name"><a href="../reio/input.html">input</a></span><span class="signature">(<wbr><span class="parameter" id="input-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="input-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="input-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="input-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="ins" class="callable">
+  <span class="name"><a href="../reio/ins.html">ins</a></span><span class="signature">(<wbr><span class="parameter" id="ins-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="ins-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="ins-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="ins-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="kbd" class="callable">
+  <span class="name"><a href="../reio/kbd.html">kbd</a></span><span class="signature">(<wbr><span class="parameter" id="kbd-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="kbd-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="kbd-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="kbd-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="label" class="callable">
+  <span class="name"><a href="../reio/label.html">label</a></span><span class="signature">(<wbr><span class="parameter" id="label-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="label-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="label-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="label-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="legend" class="callable">
+  <span class="name"><a href="../reio/legend.html">legend</a></span><span class="signature">(<wbr><span class="parameter" id="legend-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="legend-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="legend-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="legend-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="li" class="callable">
+  <span class="name"><a href="../reio/li.html">li</a></span><span class="signature">(<wbr><span class="parameter" id="li-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="li-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="li-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="li-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="link" class="callable">
+  <span class="name"><a href="../reio/link.html">link</a></span><span class="signature">(<wbr><span class="parameter" id="link-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="link-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="link-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="link-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="main" class="callable">
+  <span class="name"><a href="../reio/main.html">main</a></span><span class="signature">(<wbr><span class="parameter" id="main-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="main-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="main-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="main-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="map" class="callable">
+  <span class="name"><a href="../reio/map.html">map</a></span><span class="signature">(<wbr><span class="parameter" id="map-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="map-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="map-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="map-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="mark" class="callable">
+  <span class="name"><a href="../reio/mark.html">mark</a></span><span class="signature">(<wbr><span class="parameter" id="mark-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="mark-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="mark-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="mark-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="meta" class="callable">
+  <span class="name"><a href="../reio/meta.html">meta</a></span><span class="signature">(<wbr><span class="parameter" id="meta-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="meta-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="meta-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="meta-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="meter" class="callable">
+  <span class="name"><a href="../reio/meter.html">meter</a></span><span class="signature">(<wbr><span class="parameter" id="meter-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="meter-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="meter-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="meter-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="nav" class="callable">
+  <span class="name"><a href="../reio/nav.html">nav</a></span><span class="signature">(<wbr><span class="parameter" id="nav-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="nav-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="nav-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="nav-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="noscript" class="callable">
+  <span class="name"><a href="../reio/noscript.html">noscript</a></span><span class="signature">(<wbr><span class="parameter" id="noscript-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="noscript-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="noscript-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="noscript-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="object" class="callable">
+  <span class="name"><a href="../reio/object.html">object</a></span><span class="signature">(<wbr><span class="parameter" id="object-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="object-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="object-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="object-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="ol" class="callable">
+  <span class="name"><a href="../reio/ol.html">ol</a></span><span class="signature">(<wbr><span class="parameter" id="ol-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="ol-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="ol-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="ol-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="optgroup" class="callable">
+  <span class="name"><a href="../reio/optgroup.html">optgroup</a></span><span class="signature">(<wbr><span class="parameter" id="optgroup-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="optgroup-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="optgroup-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="optgroup-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="option" class="callable">
+  <span class="name"><a href="../reio/option.html">option</a></span><span class="signature">(<wbr><span class="parameter" id="option-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="option-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="option-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="option-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="output" class="callable">
+  <span class="name"><a href="../reio/output.html">output</a></span><span class="signature">(<wbr><span class="parameter" id="output-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="output-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="output-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="output-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="p" class="callable">
+  <span class="name"><a href="../reio/p.html">p</a></span><span class="signature">(<wbr><span class="parameter" id="p-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="p-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="p-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="p-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="param" class="callable">
+  <span class="name"><a href="../reio/param.html">param</a></span><span class="signature">(<wbr><span class="parameter" id="param-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="param-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="param-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="param-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="picture" class="callable">
+  <span class="name"><a href="../reio/picture.html">picture</a></span><span class="signature">(<wbr><span class="parameter" id="picture-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="picture-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="picture-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="picture-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="pre" class="callable">
+  <span class="name"><a href="../reio/pre.html">pre</a></span><span class="signature">(<wbr><span class="parameter" id="pre-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="pre-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="pre-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="pre-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="progress" class="callable">
+  <span class="name"><a href="../reio/progress.html">progress</a></span><span class="signature">(<wbr><span class="parameter" id="progress-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="progress-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="progress-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="progress-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="q" class="callable">
+  <span class="name"><a href="../reio/q.html">q</a></span><span class="signature">(<wbr><span class="parameter" id="q-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="q-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="q-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="q-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="rb" class="callable">
+  <span class="name"><a href="../reio/rb.html">rb</a></span><span class="signature">(<wbr><span class="parameter" id="rb-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="rb-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="rb-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="rb-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="rp" class="callable">
+  <span class="name"><a href="../reio/rp.html">rp</a></span><span class="signature">(<wbr><span class="parameter" id="rp-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="rp-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="rp-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="rp-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="rt" class="callable">
+  <span class="name"><a href="../reio/rt.html">rt</a></span><span class="signature">(<wbr><span class="parameter" id="rt-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="rt-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="rt-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="rt-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="rtc" class="callable">
+  <span class="name"><a href="../reio/rtc.html">rtc</a></span><span class="signature">(<wbr><span class="parameter" id="rtc-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="rtc-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="rtc-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="rtc-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="ruby" class="callable">
+  <span class="name"><a href="../reio/ruby.html">ruby</a></span><span class="signature">(<wbr><span class="parameter" id="ruby-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="ruby-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="ruby-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="ruby-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="s" class="callable">
+  <span class="name"><a href="../reio/s.html">s</a></span><span class="signature">(<wbr><span class="parameter" id="s-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="s-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="s-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="s-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="samp" class="callable">
+  <span class="name"><a href="../reio/samp.html">samp</a></span><span class="signature">(<wbr><span class="parameter" id="samp-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="samp-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="samp-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="samp-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="script" class="callable">
+  <span class="name"><a href="../reio/script.html">script</a></span><span class="signature">(<wbr><span class="parameter" id="script-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="script-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="script-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="script-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="section" class="callable">
+  <span class="name"><a href="../reio/section.html">section</a></span><span class="signature">(<wbr><span class="parameter" id="section-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="section-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="section-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="section-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="select" class="callable">
+  <span class="name"><a href="../reio/select.html">select</a></span><span class="signature">(<wbr><span class="parameter" id="select-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="select-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="select-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="select-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="small" class="callable">
+  <span class="name"><a href="../reio/small.html">small</a></span><span class="signature">(<wbr><span class="parameter" id="small-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="small-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="small-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="small-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="source" class="callable">
+  <span class="name"><a href="../reio/source.html">source</a></span><span class="signature">(<wbr><span class="parameter" id="source-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="source-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="source-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="source-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="span" class="callable">
+  <span class="name"><a href="../reio/span.html">span</a></span><span class="signature">(<wbr><span class="parameter" id="span-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="span-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="span-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="span-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="strong" class="callable">
+  <span class="name"><a href="../reio/strong.html">strong</a></span><span class="signature">(<wbr><span class="parameter" id="strong-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="strong-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="strong-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="strong-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="style" class="callable">
+  <span class="name"><a href="../reio/style.html">style</a></span><span class="signature">(<wbr><span class="parameter" id="style-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="style-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="style-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="style-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="sub" class="callable">
+  <span class="name"><a href="../reio/sub.html">sub</a></span><span class="signature">(<wbr><span class="parameter" id="sub-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="sub-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="sub-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="sub-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="summary" class="callable">
+  <span class="name"><a href="../reio/summary.html">summary</a></span><span class="signature">(<wbr><span class="parameter" id="summary-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="summary-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="summary-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="summary-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="sup" class="callable">
+  <span class="name"><a href="../reio/sup.html">sup</a></span><span class="signature">(<wbr><span class="parameter" id="sup-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="sup-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="sup-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="sup-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="table" class="callable">
+  <span class="name"><a href="../reio/table.html">table</a></span><span class="signature">(<wbr><span class="parameter" id="table-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="table-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="table-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="table-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="tbody" class="callable">
+  <span class="name"><a href="../reio/tbody.html">tbody</a></span><span class="signature">(<wbr><span class="parameter" id="tbody-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="tbody-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="tbody-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="tbody-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="td" class="callable">
+  <span class="name"><a href="../reio/td.html">td</a></span><span class="signature">(<wbr><span class="parameter" id="td-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="td-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="td-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="td-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="template" class="callable">
+  <span class="name"><a href="../reio/template.html">template</a></span><span class="signature">(<wbr><span class="parameter" id="template-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="template-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="template-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="template-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="textarea" class="callable">
+  <span class="name"><a href="../reio/textarea.html">textarea</a></span><span class="signature">(<wbr><span class="parameter" id="textarea-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="textarea-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="textarea-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="textarea-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="tfoot" class="callable">
+  <span class="name"><a href="../reio/tfoot.html">tfoot</a></span><span class="signature">(<wbr><span class="parameter" id="tfoot-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="tfoot-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="tfoot-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="tfoot-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="th" class="callable">
+  <span class="name"><a href="../reio/th.html">th</a></span><span class="signature">(<wbr><span class="parameter" id="th-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="th-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="th-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="th-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="thead" class="callable">
+  <span class="name"><a href="../reio/thead.html">thead</a></span><span class="signature">(<wbr><span class="parameter" id="thead-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="thead-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="thead-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="thead-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="time" class="callable">
+  <span class="name"><a href="../reio/time.html">time</a></span><span class="signature">(<wbr><span class="parameter" id="time-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="time-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="time-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="time-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="title" class="callable">
+  <span class="name"><a href="../reio/title.html">title</a></span><span class="signature">(<wbr><span class="parameter" id="title-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="title-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="title-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="title-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="tr" class="callable">
+  <span class="name"><a href="../reio/tr.html">tr</a></span><span class="signature">(<wbr><span class="parameter" id="tr-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="tr-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="tr-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="tr-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="track" class="callable">
+  <span class="name"><a href="../reio/track.html">track</a></span><span class="signature">(<wbr><span class="parameter" id="track-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="track-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="track-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="track-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="u" class="callable">
+  <span class="name"><a href="../reio/u.html">u</a></span><span class="signature">(<wbr><span class="parameter" id="u-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="u-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="u-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="u-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="ul" class="callable">
+  <span class="name"><a href="../reio/ul.html">ul</a></span><span class="signature">(<wbr><span class="parameter" id="ul-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="ul-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="ul-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="ul-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="v" class="callable">
+  <span class="name"><a href="../reio/v.html">v</a></span><span class="signature">(<wbr><span class="parameter" id="v-param-tag"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.18.6/dart-core/String-class.html">String</a></span> <span class="parameter-name">tag</span>, </span><span class="parameter" id="v-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="v-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="v-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="v-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  V is an abbreviation and takes 4 <a href="../reio/VirtualNode-class.html">VirtualNode</a> parameters.
+The parameters correspond to the original, but in any order.
+  
+
+</dd>
+
+        <dt id="var_" class="callable">
+  <span class="name"><a href="../reio/var_.html">var_</a></span><span class="signature">(<wbr><span class="parameter" id="var_-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="var_-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="var_-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="var_-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="video" class="callable">
+  <span class="name"><a href="../reio/video.html">video</a></span><span class="signature">(<wbr><span class="parameter" id="video-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="video-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="video-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="video-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="wbr" class="callable">
+  <span class="name"><a href="../reio/wbr.html">wbr</a></span><span class="signature">(<wbr><span class="parameter" id="wbr-param-v1">[<span class="type-annotation">dynamic</span> <span class="parameter-name">v1</span>, </span><span class="parameter" id="wbr-param-v2"><span class="type-annotation">dynamic</span> <span class="parameter-name">v2</span>, </span><span class="parameter" id="wbr-param-v3"><span class="type-annotation">dynamic</span> <span class="parameter-name">v3</span>, </span><span class="parameter" id="wbr-param-v4"><span class="type-annotation">dynamic</span> <span class="parameter-name">v4</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../reio/VirtualNode-class.html">VirtualNode</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+      </dl>
+    </section>
+
+
+    <section class="summary offset-anchor" id="typedefs">
+      <h2>Typedefs</h2>
+
+      <dl>
+          
+  <dt id="ComponentOptions" class="">
+  <span class="name"><a href="../reio/ComponentOptions.html">ComponentOptions</a></span>
+    = <a href="https://api.dart.dev/stable/2.18.6/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.18.6/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span>?
+  </span>
+  
+
+</dt>
+<dd>
+  The optional components are - <code>Map&lt;String, dynamic&gt;</code>.<br><br>
+  
+
+</dd>
+
+
+          
+  <dt id="ReactiveReadableStore" class="">
+  <span class="name"><a href="../reio/ReactiveReadableStore.html">ReactiveReadableStore</a></span>
+    = <a href="https://api.dart.dev/stable/2.18.6/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.18.6/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="../reio/ReadableProxy-class.html">ReadableProxy</a></span>&gt;</span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+
+          
+  <dt id="ReactiveWritableStore" class="">
+  <span class="name"><a href="../reio/ReactiveWritableStore.html">ReactiveWritableStore</a></span>
+    = <a href="https://api.dart.dev/stable/2.18.6/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.18.6/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="../reio/WritableProxy-class.html">WritableProxy</a></span>&gt;</span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+
+      </dl>
+    </section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="../index.html">reio</a></li>
+  <li class="self-crumb">reio library</li>
+</ol>
+
+
+    <h5><span class="package-name">reio</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="../reio/reio-library.html">reio</a></li>
+      <li><a href="../reio_scripts/reio_scripts-library.html">reio_scripts</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <h5>reio library</h5>
+    <ol>
+  <li class="section-title"><a href="../reio/reio-library.html#classes">Classes</a></li>
+  <li><a href="../reio/Attr-class.html">Attr</a></li>
+  <li><a href="../reio/Dependency-class.html">Dependency</a></li>
+  <li><a href="../reio/ReadableProxy-class.html">ReadableProxy</a></li>
+  <li><a href="../reio/Style-class.html">Style</a></li>
+  <li><a href="../reio/VirtualNode-class.html">VirtualNode</a></li>
+  <li><a href="../reio/VirtualNodeController-class.html">VirtualNodeController</a></li>
+  <li><a href="../reio/Watcher-class.html">Watcher</a></li>
+  <li><a href="../reio/WritableProxy-class.html">WritableProxy</a></li>
+
+
+
+
+
+  <li class="section-title"><a href="../reio/reio-library.html#functions">Functions</a></li>
+  <li><a href="../reio/$Readable.html">$Readable</a></li>
+  <li><a href="../reio/$Writable.html">$Writable</a></li>
+  <li><a href="../reio/a.html">a</a></li>
+  <li><a href="../reio/abbr.html">abbr</a></li>
+  <li><a href="../reio/address.html">address</a></li>
+  <li><a href="../reio/area.html">area</a></li>
+  <li><a href="../reio/article.html">article</a></li>
+  <li><a href="../reio/aside.html">aside</a></li>
+  <li><a href="../reio/audio.html">audio</a></li>
+  <li><a href="../reio/b.html">b</a></li>
+  <li><a href="../reio/base.html">base</a></li>
+  <li><a href="../reio/bdi.html">bdi</a></li>
+  <li><a href="../reio/bdo.html">bdo</a></li>
+  <li><a href="../reio/blockquote.html">blockquote</a></li>
+  <li><a href="../reio/body.html">body</a></li>
+  <li><a href="../reio/br.html">br</a></li>
+  <li><a href="../reio/button.html">button</a></li>
+  <li><a href="../reio/canvas.html">canvas</a></li>
+  <li><a href="../reio/caption.html">caption</a></li>
+  <li><a href="../reio/cite.html">cite</a></li>
+  <li><a href="../reio/code.html">code</a></li>
+  <li><a href="../reio/col.html">col</a></li>
+  <li><a href="../reio/colgroup.html">colgroup</a></li>
+  <li><a href="../reio/data.html">data</a></li>
+  <li><a href="../reio/datalist.html">datalist</a></li>
+  <li><a href="../reio/dd.html">dd</a></li>
+  <li><a href="../reio/del.html">del</a></li>
+  <li><a href="../reio/details.html">details</a></li>
+  <li><a href="../reio/dfn.html">dfn</a></li>
+  <li><a href="../reio/dialog.html">dialog</a></li>
+  <li><a href="../reio/div.html">div</a></li>
+  <li><a href="../reio/dl.html">dl</a></li>
+  <li><a href="../reio/dt.html">dt</a></li>
+  <li><a href="../reio/em.html">em</a></li>
+  <li><a href="../reio/embed.html">embed</a></li>
+  <li><a href="../reio/fieldset.html">fieldset</a></li>
+  <li><a href="../reio/figcaption.html">figcaption</a></li>
+  <li><a href="../reio/figure.html">figure</a></li>
+  <li><a href="../reio/footer.html">footer</a></li>
+  <li><a href="../reio/form.html">form</a></li>
+  <li><a href="../reio/h1.html">h1</a></li>
+  <li><a href="../reio/h2.html">h2</a></li>
+  <li><a href="../reio/h3.html">h3</a></li>
+  <li><a href="../reio/h4.html">h4</a></li>
+  <li><a href="../reio/h5.html">h5</a></li>
+  <li><a href="../reio/h6.html">h6</a></li>
+  <li><a href="../reio/head.html">head</a></li>
+  <li><a href="../reio/header.html">header</a></li>
+  <li><a href="../reio/hr.html">hr</a></li>
+  <li><a href="../reio/i.html">i</a></li>
+  <li><a href="../reio/iframe.html">iframe</a></li>
+  <li><a href="../reio/img.html">img</a></li>
+  <li><a href="../reio/input.html">input</a></li>
+  <li><a href="../reio/ins.html">ins</a></li>
+  <li><a href="../reio/kbd.html">kbd</a></li>
+  <li><a href="../reio/label.html">label</a></li>
+  <li><a href="../reio/legend.html">legend</a></li>
+  <li><a href="../reio/li.html">li</a></li>
+  <li><a href="../reio/link.html">link</a></li>
+  <li><a href="../reio/main.html">main</a></li>
+  <li><a href="../reio/map.html">map</a></li>
+  <li><a href="../reio/mark.html">mark</a></li>
+  <li><a href="../reio/meta.html">meta</a></li>
+  <li><a href="../reio/meter.html">meter</a></li>
+  <li><a href="../reio/nav.html">nav</a></li>
+  <li><a href="../reio/noscript.html">noscript</a></li>
+  <li><a href="../reio/object.html">object</a></li>
+  <li><a href="../reio/ol.html">ol</a></li>
+  <li><a href="../reio/optgroup.html">optgroup</a></li>
+  <li><a href="../reio/option.html">option</a></li>
+  <li><a href="../reio/output.html">output</a></li>
+  <li><a href="../reio/p.html">p</a></li>
+  <li><a href="../reio/param.html">param</a></li>
+  <li><a href="../reio/picture.html">picture</a></li>
+  <li><a href="../reio/pre.html">pre</a></li>
+  <li><a href="../reio/progress.html">progress</a></li>
+  <li><a href="../reio/q.html">q</a></li>
+  <li><a href="../reio/rb.html">rb</a></li>
+  <li><a href="../reio/rp.html">rp</a></li>
+  <li><a href="../reio/rt.html">rt</a></li>
+  <li><a href="../reio/rtc.html">rtc</a></li>
+  <li><a href="../reio/ruby.html">ruby</a></li>
+  <li><a href="../reio/s.html">s</a></li>
+  <li><a href="../reio/samp.html">samp</a></li>
+  <li><a href="../reio/script.html">script</a></li>
+  <li><a href="../reio/section.html">section</a></li>
+  <li><a href="../reio/select.html">select</a></li>
+  <li><a href="../reio/small.html">small</a></li>
+  <li><a href="../reio/source.html">source</a></li>
+  <li><a href="../reio/span.html">span</a></li>
+  <li><a href="../reio/strong.html">strong</a></li>
+  <li><a href="../reio/style.html">style</a></li>
+  <li><a href="../reio/sub.html">sub</a></li>
+  <li><a href="../reio/summary.html">summary</a></li>
+  <li><a href="../reio/sup.html">sup</a></li>
+  <li><a href="../reio/table.html">table</a></li>
+  <li><a href="../reio/tbody.html">tbody</a></li>
+  <li><a href="../reio/td.html">td</a></li>
+  <li><a href="../reio/template.html">template</a></li>
+  <li><a href="../reio/textarea.html">textarea</a></li>
+  <li><a href="../reio/tfoot.html">tfoot</a></li>
+  <li><a href="../reio/th.html">th</a></li>
+  <li><a href="../reio/thead.html">thead</a></li>
+  <li><a href="../reio/time.html">time</a></li>
+  <li><a href="../reio/title.html">title</a></li>
+  <li><a href="../reio/tr.html">tr</a></li>
+  <li><a href="../reio/track.html">track</a></li>
+  <li><a href="../reio/u.html">u</a></li>
+  <li><a href="../reio/ul.html">ul</a></li>
+  <li><a href="../reio/v.html">v</a></li>
+  <li><a href="../reio/var_.html">var_</a></li>
+  <li><a href="../reio/video.html">video</a></li>
+  <li><a href="../reio/wbr.html">wbr</a></li>
+
+
+  <li class="section-title"><a href="../reio/reio-library.html#typedefs">Typedefs</a></li>
+  <li><a href="../reio/ComponentOptions.html">ComponentOptions</a></li>
+  <li><a href="../reio/ReactiveReadableStore.html">ReactiveReadableStore</a></li>
+  <li><a href="../reio/ReactiveWritableStore.html">ReactiveWritableStore</a></li>
+
+</ol>
+
+  </div><!--/sidebar-offcanvas-right-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    reio
+      0.1.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+
