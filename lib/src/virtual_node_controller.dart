@@ -92,7 +92,7 @@ class VirtualNodeController {
 
         String cssClass = '';
         if (modifierClass != null)
-          cssClass = '$modifierClass-${_currentNode.id}';
+          cssClass = '${modifierClass}-${_currentNode.id}';
 
         for (RegExpMatch match in modifiers) {
           String? mod = match.group(0);
