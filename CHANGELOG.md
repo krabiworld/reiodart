@@ -1,3 +1,7 @@
+## 0.1.4
+
+* Important decisions and tests have been made.
+
 ## 0.1.3
 
 * Added documentation to pub.dev.
