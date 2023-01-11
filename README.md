@@ -2,7 +2,7 @@
 
 Reio.dart is a progressive Dart library for creating UI on the web. Create your UI in minutes!
 
-* Zero dependence;
+* Zero-dependency*;
 * Flexible components;
 * Virtual DOM;
 * Reactivity;
