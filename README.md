@@ -22,7 +22,7 @@ Reio.dart is a progressive Dart library for creating UI on the web. Create your 
 ## Example
 
 ```dart
-import 'components/app.reio.dart';
+import 'components/app.dart';
 
 void main() {
   $App();
