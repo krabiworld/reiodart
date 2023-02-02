@@ -54,8 +54,7 @@ class Th extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th#attr-headers)
   Th headers(List<String> idList, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr =
-          ReioNodeAttr('headers', _html.listToSpaces(idList));
+      ReioNodeAttr attr = ReioNodeAttr('headers', _html.listToSpaces(idList));
       node.attrs!.add(attr);
     }
     return this;

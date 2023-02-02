@@ -52,8 +52,7 @@ class Source extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source#attr-srcset)
   Source srcSet(List<String> srcList, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr =
-          ReioNodeAttr('srcset', _html.listToCommas(srcList));
+      ReioNodeAttr attr = ReioNodeAttr('srcset', _html.listToCommas(srcList));
       node.attrs!.add(attr);
     }
     return this;
@@ -65,8 +64,7 @@ class Source extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source#attr-sizes)
   Source sizes(List<String> sizesList, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr =
-          ReioNodeAttr('sizes', _html.listToCommas(sizesList));
+      ReioNodeAttr attr = ReioNodeAttr('sizes', _html.listToCommas(sizesList));
       node.attrs!.add(attr);
     }
     return this;
