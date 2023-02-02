@@ -9,6 +9,7 @@
 
 import 'dart:html';
 
+import '../virtual_dom/virtual_node_slot.dart';
 import '../virtual_dom/virtual_node_widget.dart';
 import 'html/html_element.dart';
 import 'widget_watcher.dart';
@@ -46,28 +47,30 @@ abstract class ReioWidget {
 
   /// Mounts the widget in the parent, and starts the activity.
   void mount(ReioWidget parent) {
-    _watcher.initActivity(() {
-      _watcher.node = _html.call(this).node;
-      _watcher.node.styles = _styles?.call();
-      _watcher.node.init(parent.node.element);
-    });
-
-    _watcher.watchActivity(() {
-      activity();
-      _update();
-      _controlState();
-    });
+    _initialize(parent.node.element, true);
   }
 
   /// Mounts the widget directly to the HTML element ([htmlElement]),
-  /// used to insert in HTML element if Reio was not previously embedded in it.
+  /// used to insert in HTML element if Reio was not previously inserted in it.
   void inject(Element? htmlElement) {
     if (htmlElement == null) return;
+    _initialize(htmlElement, true);
+  }
 
+  /// Mounts the widget in the specified slot.
+  void toSlot(String id) {
+    Element? element = document.querySelector(slotQuery + id);
+    if (element == null) return;
+
+    _initialize(element, true);
+  }
+
+  /// Starts the activity and watcher [ReioWidget].
+  void _initialize(dynamic element, bool replace) {
     _watcher.initActivity(() {
       _watcher.node = _html.call(this).node;
       _watcher.node.styles = _styles?.call();
-      _watcher.node.init(htmlElement);
+      _watcher.node.init(element, replace);
     });
 
     _watcher.watchActivity(() {

@@ -79,7 +79,7 @@ class ReioNodeWidget extends ReioNode {
   }
 
   @override
-  void init([Node? htmlNode]) {
+  void init([Node? htmlNode, bool? replace]) {
     saveValue(value);
 
     final Element newElement = document.createElement(tag);
@@ -92,7 +92,13 @@ class ReioNodeWidget extends ReioNode {
     element = newElement;
 
     // Mounting an element at once.
-    if (htmlNode != null) htmlNode.append(newElement);
+    if (htmlNode != null) {
+      if (replace == true) {
+        htmlNode.replaceWith(newElement);
+      } else {
+        htmlNode.append(newElement);
+      }
+    }
 
     // Event Calling.
     onMount?.call(element!);
@@ -135,7 +141,7 @@ class ReioNodeWidgetController extends ReioNodeController {
     ReioNodeWidget cNode = node as ReioNodeWidget;
 
     void init(Element? newNode) {
-      const String attrStyleComponent = 'reio-widget-style';
+      const String attrStyleWidget = 'reio-widget-style';
       const String attrStyleType = 'reio-style-type';
 
       // The public class is not required because
@@ -160,7 +166,7 @@ class ReioNodeWidgetController extends ReioNodeController {
 
       void initModifier(String type, RegExp regExp, String modifier,
           [String? mClass]) {
-        final query = 'style[$attrStyleComponent="${cNode.number}"]'
+        final query = 'style[$attrStyleWidget="${cNode.number}"]'
             '[$attrStyleType="$type"]';
 
         void addClass(String styleClass) {
@@ -214,7 +220,7 @@ class ReioNodeWidgetController extends ReioNodeController {
           }
 
           Element styleTag = StyleElement();
-          styleTag.setAttribute(attrStyleComponent, cNode.number);
+          styleTag.setAttribute(attrStyleWidget, cNode.number);
           styleTag.setAttribute(attrStyleType, type);
           styleTag.text = style;
           addClass(styleClass);

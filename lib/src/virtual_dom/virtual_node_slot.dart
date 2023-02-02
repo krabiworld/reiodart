@@ -7,8 +7,12 @@ import 'dart:html';
 
 import 'virtual_node.dart';
 
+const String slotHtmlTag = 'slot';
+const String slotPrefix = 'reio-slot-';
+const String slotQuery = '$slotHtmlTag.$slotPrefix';
+
 class ReioNodeSlot extends ReioNode {
-  ReioNodeSlot({super.tag = 'div', required super.value});
+  ReioNodeSlot({super.tag = slotHtmlTag, required super.value});
 
   @override
   void destroy() {
@@ -19,11 +23,8 @@ class ReioNodeSlot extends ReioNode {
 
   @override
   void init([Node? htmlNode]) {
-    saveValue(value);
-
     final Element newElement = document.createElement(tag);
-    newElement.id = value;
-    element = newElement;
+    newElement.className = slotPrefix + value;
 
     // Mounting an element at once.
     if (htmlNode != null) htmlNode.append(newElement);
