@@ -1,9 +1,15 @@
 ## 0.2.0
 
+* Added automatic refresh for development..
+* The finished project template has been updated.
+* Corrected specific features of stores.
+* The structure of the construction and appearance has been changed.
+* Added methods to add and remove elements from the DOM.
 * Added tools.
+* Fixed the critical bug of overwriting children with a value.
 * Fixed the critical bug of inserting children of a node.
+* Fixed the critical bug on store subscription.
 * Fixed bug of ignoring new attributes.
-* Fixed a critical bug on store subscription.
 * Added components.
 * Added automation and helpers for components.
 * Code refactoring and optimization.

@@ -4,11 +4,11 @@ import 'package:reio/reio.dart';
 // it is highly recommended that you open the documentation of the framework.
 // https://github.com/MineEjo/reiodart/wiki
 
-class App extends ReioComponent {
+class App extends ReioWidget {
   App(super.construct, super.styles);
 
   @override
   void activity() {}
 }
 
-ReioComponent app = App(() => div('Test'), null);
+ReioWidget app = App((inThis) => Div('Test'), null);

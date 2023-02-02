@@ -11,7 +11,8 @@ executables:
   #
   # The best solution at the moment, is to change the platform from chrome to firefox.
   test: dart run build_runner test -- -p firefox
-  dev: webdev serve --release
+  dev: webdev serve --auto=refresh
+  serve: webdev serve --release
   build: webdev build --release
 
 environment:
