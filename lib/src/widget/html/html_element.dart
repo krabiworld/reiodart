@@ -5,6 +5,7 @@
 
 import 'dart:html';
 
+import '../../virtual_dom/virtual_node_slot.dart';
 import '../../virtual_dom/virtual_node_attr.dart';
 import '../../virtual_dom/virtual_node_widget.dart';
 import '../widget.dart';
@@ -64,6 +65,12 @@ abstract class ReioElement {
   /// Think of it as an add, insert, etc. method.
   ReioElement $(ReioElement element) {
     _node.children?.add(element.node);
+    return this;
+  }
+
+  /// Creates a slot for inserting a side [ReioWidget].
+  ReioElement $slot(String id) {
+    _node.children?.add(ReioNodeSlot(value: id));
     return this;
   }
 
@@ -356,8 +363,7 @@ abstract class ReioElement {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class)
   ReioElement thisClass(List<String> nameList, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr =
-          ReioNodeAttr('class', _html.listToSpaces(nameList));
+      ReioNodeAttr attr = ReioNodeAttr('class', _html.listToSpaces(nameList));
       node.attrs!.add(attr);
     }
     return this;

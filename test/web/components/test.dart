@@ -1,13 +1,16 @@
 import 'dart:html';
+import 'dart:math';
 
 import 'package:reio/reio.dart';
+
+import 'link.dart';
 
 // If this is your first time using Reio, it is highly
 // it is highly recommended that you open the documentation of the framework.
 // https://github.com/MineEjo/reiodart/wiki
 
 class Test extends ReioWidget {
-  static String metaName = 'Test';
+  static String slotLink = Random().nextInt(90).toString();
 
   static int value = 0;
   static ReioWritableStore store = ReioWritableStore({'clicks': value});
@@ -42,12 +45,12 @@ ReioWidget test = Test(
             .$(Div('Test!!!')
                 .id('second')
                 .lang('ru')
-                .style(['margin: 10px', 'padding: 10px'])
-                .$(Input('cool value')
+                .style(['margin: 10px', 'padding: 10px']).$(Input('cool value')
                     .value('1')
                     .disabled(true)
                     .type('number')
                     .id('ok'))))
+        .$slot(Test.slotLink)
         .$(Button('Plus').onClick(Test.plus))
         .$(Button('Minus').onClick(Test.minus)),
     () => '''<style> 

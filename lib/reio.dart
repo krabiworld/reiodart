@@ -12,6 +12,8 @@ export 'src/widget/store/store_readable.dart';
 
 // widget/html
 export 'src/widget/html/html.dart';
+
+// widget/html/tag
 export 'src/widget/html/tag/element_tag_a.dart';
 export 'src/widget/html/tag/element_tag_abbr.dart';
 export 'src/widget/html/tag/element_tag_address.dart';

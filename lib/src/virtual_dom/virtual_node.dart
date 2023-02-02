@@ -9,10 +9,10 @@ import 'dart:math';
 import '../foundation/expanded/map.dart';
 import 'virtual_node_attr.dart';
 
-// const String reioComponent = 'reio-widget';
+// const String reioWidget = 'reio-widget';
 
 int totalGenerated = 0;
-String getComponentNumber() {
+String genWidgetNumber() {
   totalGenerated++;
   return totalGenerated.toString();
 }
@@ -26,7 +26,7 @@ abstract class ReioNode {
   List<ReioNode>? children;
 
   // Used as an identifier for a widget.
-  String number = getComponentNumber();
+  String number = genWidgetNumber();
 
   // Stores all unique values of a widget,
   // for checking them in the future.
@@ -74,7 +74,7 @@ class ReioNodeController {
 
   // void initData([Element? element]) {
   //   if (element == null) return;
-  //   element.setAttribute(reioComponent, node.number);
+  //   element.setAttribute(reioWidget, node.number);
   // }
 
   void initValue([Element? element]) {
@@ -96,7 +96,7 @@ class ReioNodeController {
   }
 
   void initAttrs([Element? element]) {
-    // final List<String> ignore = [reioComponent];
+    // final List<String> ignore = [reioWidget];
 
     if (isUpdate) {
       // No element = no attributes in the element.

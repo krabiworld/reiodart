@@ -1,6 +1,7 @@
 ## 0.2.0
 
-* Added automatic refresh for development..
+* 
+* Added automatic refresh for development.
 * The finished project template has been updated.
 * Corrected specific features of stores.
 * The structure of the construction and appearance has been changed.
