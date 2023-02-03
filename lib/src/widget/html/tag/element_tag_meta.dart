@@ -19,7 +19,7 @@ class Meta extends ReioElement {
   /// HTML meta-related elements, like `<base>`, `<link>`,
   /// `<script>`, `<style>` or `<title>`.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta)
-  Meta([super.value]) {
+  Meta() {
     tag = 'meta';
   }
 

@@ -17,7 +17,7 @@ class Hr extends ReioElementVisible {
   /// The `<hr>` HTML element represents a thematic
   /// break between paragraph-level elements.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr)
-  Hr([super.value]) {
+  Hr() {
     tag = 'hr';
   }
 }

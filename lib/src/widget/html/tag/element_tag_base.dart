@@ -18,7 +18,7 @@ class Base extends ReioElement {
   /// the base URL to use for all relative
   /// URLs in a document.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base)
-  Base([super.value]) {
+  Base() {
     tag = 'base';
   }
 

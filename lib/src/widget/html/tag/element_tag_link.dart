@@ -24,7 +24,7 @@ class Link extends ReioElementVisible {
   /// relationships between the current document
   /// and an external resource.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link)
-  Link([super.value]) {
+  Link() {
     tag = 'link';
   }
 

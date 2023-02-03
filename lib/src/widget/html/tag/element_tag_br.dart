@@ -16,7 +16,7 @@ class Br extends ReioElement {
   /// The `<br>` HTML element produces a line break
   /// in text (carriage-return).
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br)
-  Br([super.value]) {
+  Br() {
     tag = 'br';
   }
 }

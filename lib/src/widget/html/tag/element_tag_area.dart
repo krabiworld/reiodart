@@ -23,7 +23,7 @@ class Area extends ReioElementVisible {
   /// An image map allows geometric areas
   /// on an image to be associated with hypertext links.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area)
-  Area([super.value]) {
+  Area() {
     tag = 'area';
   }
 

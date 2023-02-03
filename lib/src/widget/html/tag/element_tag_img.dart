@@ -23,7 +23,7 @@ class Img extends ReioElementVisible {
   /// The `<img>` HTML element embeds
   /// an image into the document.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img)
-  Img([super.value]) {
+  Img() {
     tag = 'img';
   }
 

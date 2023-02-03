@@ -21,8 +21,13 @@ class Input extends ReioElementVisible {
   /// to create interactive controls for web-based
   /// forms in order to accept data from the user.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
-  Input([super.value]) {
+  Input(dynamic value) {
     tag = 'input';
+
+    /// The initial value of the control.
+    /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#value)
+    ReioNodeAttr attr = ReioNodeAttr('value', value.toString());
+    node.attrs!.add(attr);
   }
 
   /// The select event fires when some
@@ -361,16 +366,6 @@ class Input extends ReioElementVisible {
   Input type(String inputTypes, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
       ReioNodeAttr attr = ReioNodeAttr('type', inputTypes);
-      node.attrs!.add(attr);
-    }
-    return this;
-  }
-
-  /// The initial value of the control.
-  /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#value)
-  Input value(dynamic value, [bool? removeIf]) {
-    if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('value', value.toString());
       node.attrs!.add(attr);
     }
     return this;

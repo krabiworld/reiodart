@@ -20,7 +20,7 @@ class Col extends ReioElementVisible {
   /// for defining common semantics
   /// on all common cells.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col)
-  Col([super.value]) {
+  Col() {
     tag = 'col';
   }
 

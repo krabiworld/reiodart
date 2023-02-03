@@ -20,7 +20,7 @@ class Embed extends ReioElementVisible {
   /// The `<embed>` HTML element embeds external content
   /// at the specified point in the document.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed)
-  Embed([super.value]) {
+  Embed() {
     tag = 'embed';
   }
 

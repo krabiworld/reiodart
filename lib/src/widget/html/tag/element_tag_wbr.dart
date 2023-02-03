@@ -19,7 +19,7 @@ class Wbr extends ReioElementVisible {
   /// may optionally break a line, though its line-breaking
   /// rules would not otherwise create a break at that location.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr)
-  Wbr([super.value]) {
+  Wbr() {
     tag = 'wbr';
   }
 }

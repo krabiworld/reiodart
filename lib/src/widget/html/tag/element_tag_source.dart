@@ -22,7 +22,7 @@ class Source extends ReioElementVisible {
   /// multiple media resources for the `<picture>`,
   /// the `<audio>` element, or the `<video>` element.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source)
-  Source([super.value]) {
+  Source() {
     tag = 'source';
   }
 
