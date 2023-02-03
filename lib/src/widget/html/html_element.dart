@@ -5,12 +5,12 @@
 
 import 'dart:html';
 
-import '../../virtual_dom/virtual_node_slot.dart';
 import '../../virtual_dom/virtual_node_attr.dart';
+import '../../virtual_dom/virtual_node_slot.dart';
 import '../../virtual_dom/virtual_node_widget.dart';
 import '../widget.dart';
-import 'tag/element_tag_div.dart';
 import 'html.dart';
+import 'tag/element_tag_div.dart';
 
 // Experimental, not standard or obsolete tags and attributes
 // are not and will not be implemented. If you notice this,

@@ -12,6 +12,8 @@ const String slotPrefix = 'reio-slot-';
 const String slotQuery = '$slotHtmlTag.$slotPrefix';
 
 class ReioNodeSlot extends ReioNode {
+  /// [ReioNodeSlot] creates an element in place of which
+  /// the widget is inserted.
   ReioNodeSlot({super.tag = slotHtmlTag, required super.value});
 
   @override
@@ -24,6 +26,7 @@ class ReioNodeSlot extends ReioNode {
   @override
   void init([Node? htmlNode]) {
     final Element newElement = document.createElement(tag);
+    // Sets a unique class to identify this slot.
     newElement.className = slotPrefix + value;
 
     // Mounting an element at once.
@@ -31,5 +34,8 @@ class ReioNodeSlot extends ReioNode {
   }
 
   @override
-  void updateTo(ReioNode newNode) {}
+  void updateTo(ReioNode newNode) {
+    // ReioNodeSlot creates an element in place of which
+    // the widget is inserted, so it cannot update itself.
+  }
 }

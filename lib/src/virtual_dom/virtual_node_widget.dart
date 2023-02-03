@@ -20,30 +20,20 @@ class ReioNodeWidget extends ReioNode {
   bool? isRemove;
   bool? isDestroy;
 
+  //  HTML CSS styles: `<style>...<style>`.
   String? styles;
 
+  /// Creates a node for the widget
+  /// with its main functionality.
   ReioNodeWidget(
       {required super.tag,
       required super.value,
       super.attrs,
       super.children,
-      this.onMount,
       this.onRemove,
       this.onAdd,
+      this.onMount,
       this.onDestroy});
-
-  @override
-  void destroy() {
-    // Removing an HTML element.
-    element?.remove();
-    element = null;
-
-    // Event Calling.
-    onDestroy?.call();
-
-    isMount = false;
-    isDestroy = true;
-  }
 
   /// Removes element from DOM, works only with HTML element,
   /// so easier to destroy.
@@ -60,15 +50,21 @@ class ReioNodeWidget extends ReioNode {
     isRemove = true;
   }
 
-  /// Inserts element into parent, works only with HTML element,
+  /// Inserts element into parent,
+  /// works only with HTML element,
   /// so easier to mount.
-  void add(Element parent, int pos) {
+  void add(Element parent, int number) {
     if (element == null) return;
 
-    if (parent.childNodes.length == pos) {
+    if (parent.childNodes.length == number) {
+      // If the number of elements equals the position,
+      // then the element can be inserted
+      // at the end of the array.
       parent.append(element!);
     } else {
-      parent.insertBefore(element!, parent.children[pos]);
+      // Otherwise, it will be inserted
+      // in the same position it was in before.
+      parent.insertBefore(element!, parent.children[number]);
     }
 
     // Event Calling.
@@ -79,11 +75,30 @@ class ReioNodeWidget extends ReioNode {
   }
 
   @override
+  void destroy() {
+    // Removing an HTML element.
+    element?.remove();
+    element = null;
+
+    // Event Calling.
+    onDestroy?.call();
+
+    isMount = false;
+    isDestroy = true;
+  }
+
+  /// Initializes a [ReioNodeWidget] in the HTML DOM.
+  /// Takes an [htmlNode] to insert into an element
+  /// and [replace] to denote insertion
+  /// in place of that element.
+  @override
   void init([Node? htmlNode, bool? replace]) {
+    // Saves the initial value.
     saveValue(value);
 
     final Element newElement = document.createElement(tag);
     ReioNodeWidgetController(this)
+      // Ready-made code that can help at any time.
       // ..initData(newElement)
       ..initValue(newElement)
       ..initAttrs(newElement)
@@ -107,20 +122,25 @@ class ReioNodeWidget extends ReioNode {
     isDestroy = false;
   }
 
+  /// Replaces the values of the old [ReioNodeWidget]
+  /// with those of the new [ReioNodeWidget].
   @override
   void updateTo(ReioNode newNode) {
     newNode as ReioNodeWidget;
 
-    // With different tags, recreates a virtual_dom in the same parent.
+    // With different tags, recreates
+    // a ReioNodeWidget in the same parent.
     if (tag != newNode.tag) {
       newNode.init(element?.parentNode);
-      // This virtual_dom is destroyed because a new virtual_dom has been created.
+      // This ReioNodeWidget is destroyed because
+      // a new ReioNodeWidget has been created.
       destroy();
     } else {
       saveValue(newNode.value);
 
-      // The new virtual virtual_dom does not have its own element in the DOM
-      // at this stage, but it must keep the data of the previous one.
+      // ReioNodeWidget does not have its own
+      // element in the DOM at this stage,
+      // but it must keep the data of the previous one.
       newNode.element = element;
       newNode.number = number;
 

@@ -11,16 +11,13 @@ import 'package:reio/reio.dart';
 import '../foundation/expanded/map.dart';
 import 'virtual_node_attr.dart';
 
+// Ready-made code that can help at any time.
 // const String reioWidget = 'reio-widget';
 
-int totalGenerated = 0;
-String genWidgetNumber() {
-  totalGenerated++;
-  return totalGenerated.toString();
-}
+int _totalGenerated = 0;
 
-/// The virtual virtual_dom used in the virtual DOM
-/// tries to be similar to the HTML.
+int _genWidgetNumber() => ++_totalGenerated;
+
 abstract class ReioNode {
   String tag;
   String value;
@@ -28,19 +25,21 @@ abstract class ReioNode {
   List<ReioNode>? children;
 
   // Used as an identifier for a widget.
-  String number = genWidgetNumber();
+  String number = _genWidgetNumber().toString();
 
-  // Stores all unique values of a widget,
-  // for checking them in the future.
-  // For example, to see if the new value was the original value.
+  // Contains the initial value and the actual value.
   List<String> values = [];
+
   bool isNewValue(String value) => (values.length > 1 && values[0] != value);
+
   bool isOldValue(String value) => (values.length == 1 && values[0] == value);
 
   // Stores the element from the DOM,
   // to change the HTML, because Reio uses virtual.
   Element? element;
 
+  /// The virtual virtual_dom used in the virtual DOM
+  /// tries to be similar to the HTML.
   ReioNode({required this.tag, required this.value, this.attrs, this.children});
 
   void destroy();
@@ -56,7 +55,7 @@ abstract class ReioNode {
     if (!values.contains(value)) {
       values.add(value);
       // if there are more than 1, it reverses the list and
-      // trims the rest, leaving the standard and new values.
+      // trims the rest, leaving the initial and actual value.
       if (values.length > 1) values = values.reversed.toList().sublist(0, 2);
     }
   }
@@ -70,10 +69,12 @@ class ReioNodeController {
   bool isUpdate = false;
 
   ReioNodeController(this.node, [this.minorNode]) {
-    // The new virtual_dom, must update the old one, so the update is true.
+    // The new virtual_dom, must update the old one,
+    // so the update is true.
     if (minorNode != null) isUpdate = true;
   }
 
+  // Ready-made code that can help at any time.
   // void initData([Element? element]) {
   //   if (element == null) return;
   //   element.setAttribute(reioWidget, node.number);
@@ -81,10 +82,15 @@ class ReioNodeController {
 
   void initValue([Element? element]) {
     // Tags that are allowed in the element value.
-    final List<String> possibleTags = [wbr, br];
-
+    final List<String> allowedTags = [wbr, br];
     Element spanValue = document.createElement('span');
-    bool isWithHtml = false;
+
+    bool isWithHtml(String value) {
+      for (String tag in allowedTags) {
+        if (value.contains(tag)) return true;
+      }
+      return false;
+    }
 
     if (isUpdate) {
       ReioNode newNode = minorNode as ReioNode;
@@ -97,14 +103,7 @@ class ReioNodeController {
       Node? childValue = newNode.element?.firstChild;
       if (childValue == null) return;
 
-      for (String tag in possibleTags) {
-        if (newNode.value.contains(tag)) {
-          isWithHtml = true;
-          break;
-        }
-      }
-
-      if (isWithHtml) {
+      if (isWithHtml(newNode.value)) {
         spanValue.innerHtml = newNode.value;
         childValue.replaceWith(spanValue);
       } else {
@@ -114,14 +113,7 @@ class ReioNodeController {
       // No element = no value in the element.
       if (element == null || node.value.isEmpty) return;
 
-      for (String tag in possibleTags) {
-        if (node.value.contains(tag)) {
-          isWithHtml = true;
-          break;
-        }
-      }
-
-      if (isWithHtml) {
+      if (isWithHtml(node.value)) {
         spanValue.innerHtml = node.value;
         element.append(spanValue);
       } else {
@@ -131,6 +123,7 @@ class ReioNodeController {
   }
 
   void initAttrs([Element? element]) {
+    // Ready-made code that can help at any time.
     // final List<String> ignore = [reioWidget];
 
     if (isUpdate) {
@@ -149,6 +142,7 @@ class ReioNodeController {
       List<String> newKeys = [];
       newNode.attrs?.toSet().forEach((attr) => newKeys.add(attr.name));
       for (var key in keys) {
+        // Ready-made code that can help at any time.
         if (/* ignore.contains(key) || */ newKeys.contains(key)) continue;
         newElement.removeAttribute(key);
       }

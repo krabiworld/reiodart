@@ -26,7 +26,7 @@ class ReioProxy {
   }
 
   /// Standard method for setting the value,
-  /// accepts the value and notifies
+  /// takes the value and notifies
   /// [dependency] of the update.
   void set(dynamic newValue) {
     if (value == newValue) return;
