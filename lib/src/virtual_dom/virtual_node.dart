@@ -6,7 +6,7 @@
 import 'dart:html';
 import 'dart:math';
 
-import '../expand/expand_map.dart';
+import '../expand/expand_list.dart';
 import '../widget/html/html.dart';
 import 'virtual_node_attr.dart';
 

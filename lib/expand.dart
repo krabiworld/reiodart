@@ -4,4 +4,4 @@
 // LICENSE file in the root directory of this source tree.
 
 // expand
-export 'src/expand/expand_map.dart';
+export 'src/expand/expand_list.dart';
