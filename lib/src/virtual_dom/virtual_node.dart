@@ -6,9 +6,9 @@
 import 'dart:html';
 import 'dart:math';
 
+import 'package:reio/reio.dart';
+
 import '../foundation/expanded/map.dart';
-import '../widget/html/tag/element_tag_br.dart';
-import '../widget/html/tag/element_tag_wbr.dart';
 import 'virtual_node_attr.dart';
 
 // const String reioWidget = 'reio-widget';
@@ -81,10 +81,7 @@ class ReioNodeController {
 
   void initValue([Element? element]) {
     // Tags that are allowed in the element value.
-    final List<String> possibleTags = [
-      '<${Wbr().node.tag}>',
-      '<${Br().node.tag}>'
-    ];
+    final List<String> possibleTags = [wbr, br];
 
     Element spanValue = document.createElement('span');
     bool isWithHtml = false;

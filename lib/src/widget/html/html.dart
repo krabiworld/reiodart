@@ -3,6 +3,12 @@
 // This source code is licensed under the MIT license found in the
 // LICENSE file in the root directory of this source tree.
 
+// Prepared for use in the element value.
+import 'package:reio/reio.dart';
+
+final br = '<${Br().node.tag}>';
+final wbr = '<${Wbr().node.tag}>';
+
 /// Contains useful methods to make working with HTML easier.
 class ReioHtml {
   static const String semicolonSep = '; ';
