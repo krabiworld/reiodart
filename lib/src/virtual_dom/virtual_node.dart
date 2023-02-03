@@ -6,9 +6,8 @@
 import 'dart:html';
 import 'dart:math';
 
-import 'package:reio/reio.dart';
-
-import '../foundation/expanded/map.dart';
+import '../expand/expand_map.dart';
+import '../widget/html/html.dart';
 import 'virtual_node_attr.dart';
 
 // Ready-made code that can help at any time.
@@ -132,8 +131,10 @@ class ReioNodeController {
       ReioNode newNode = minorNode as ReioNode;
       Element newElement = minorNode!.element as Element;
 
-      if (compareMapOfList(
-          node.attrs, newNode.attrs, (m) => m.name + m.value)) {
+      if (compareMapOfList(node.attrs, newNode.attrs, (m) {
+        m as ReioNodeAttr;
+        return m.name + m.value;
+      })) {
         return;
       }
 

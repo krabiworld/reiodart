@@ -22,7 +22,6 @@ class ReioWatcher {
   }
 }
 
-/// Binds the function-activity to a virtual_dom.
 class ReioSubscriber {
   Function function;
   ReioNodeWidget node;
