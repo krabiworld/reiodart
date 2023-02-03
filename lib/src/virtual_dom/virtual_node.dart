@@ -7,6 +7,8 @@ import 'dart:html';
 import 'dart:math';
 
 import '../foundation/expanded/map.dart';
+import '../widget/html/tag/element_tag_br.dart';
+import '../widget/html/tag/element_tag_wbr.dart';
 import 'virtual_node_attr.dart';
 
 // const String reioWidget = 'reio-widget';
@@ -78,6 +80,15 @@ class ReioNodeController {
   // }
 
   void initValue([Element? element]) {
+    // Tags that are allowed in the element value.
+    final List<String> possibleTags = [
+      '<${Wbr().node.tag}>',
+      '<${Br().node.tag}>'
+    ];
+
+    Element spanValue = document.createElement('span');
+    bool isWithHtml = false;
+
     if (isUpdate) {
       ReioNode newNode = minorNode as ReioNode;
 
@@ -86,12 +97,39 @@ class ReioNodeController {
           newNode.value == node.value && node.isOldValue(newNode.value)) return;
 
       // As a rule, the first child is the value.
-      Node? valueChild = newNode.element?.firstChild;
-      if (valueChild != null) valueChild.text = newNode.value;
+      Node? childValue = newNode.element?.firstChild;
+      if (childValue == null) return;
+
+      for (String tag in possibleTags) {
+        if (newNode.value.contains(tag)) {
+          isWithHtml = true;
+          break;
+        }
+      }
+
+      if (isWithHtml) {
+        spanValue.innerHtml = newNode.value;
+        childValue.replaceWith(spanValue);
+      } else {
+        childValue.text = newNode.value;
+      }
     } else {
       // No element = no value in the element.
       if (element == null || node.value.isEmpty) return;
-      element.appendText(node.value);
+
+      for (String tag in possibleTags) {
+        if (node.value.contains(tag)) {
+          isWithHtml = true;
+          break;
+        }
+      }
+
+      if (isWithHtml) {
+        spanValue.innerHtml = node.value;
+        element.append(spanValue);
+      } else {
+        element.appendText(node.value);
+      }
     }
   }
 
