@@ -4,7 +4,8 @@
 // LICENSE file in the root directory of this source tree.
 
 // Prepared for use in the element value.
-import 'package:reio/reio.dart';
+import 'package:reio/src/widget/html/tag/element_tag_br.dart';
+import 'package:reio/src/widget/html/tag/element_tag_wbr.dart';
 
 final br = '<${Br().node.tag}>';
 final wbr = '<${Wbr().node.tag}>';
