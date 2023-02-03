@@ -10,7 +10,7 @@
 ///   map as Banana;
 ///   return m.peel + m.pulp;
 /// })
-///```
+/// ```
 bool compareMapOfList(List? l1, List? l2, dynamic Function(dynamic) getValue) {
   List<dynamic> firstValues = [];
   l1?.toSet().forEach((map) => firstValues.add(getValue.call(map)));
