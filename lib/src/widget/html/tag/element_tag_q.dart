@@ -20,7 +20,7 @@ class Q extends ReioElementVisible {
   /// is a short inline quotation.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q)
   Q([super.value]) {
-    setHtmlTag('q');
+    tag = 'q';
   }
 
   /// The value of this attribute is a URL

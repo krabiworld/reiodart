@@ -19,6 +19,6 @@ class Span extends ReioElementVisible {
   /// which does not inherently represent anything.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span)
   Span([super.value]) {
-    setHtmlTag('span');
+    tag = 'span';
   }
 }

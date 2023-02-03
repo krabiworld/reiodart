@@ -23,7 +23,7 @@ class Menu extends ReioElementVisible {
   /// as no different than `<ul>`.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu)
   Menu([super.value]) {
-    setHtmlTag('menu');
+    tag = 'menu';
   }
 
   /// The scroll event fires when an element

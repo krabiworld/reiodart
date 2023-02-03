@@ -18,6 +18,6 @@ class Summary extends ReioElementVisible {
   /// caption, or legend for a `<details>` element's disclosure box.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary)
   Summary([super.value]) {
-    setHtmlTag('summary');
+    tag = 'summary';
   }
 }

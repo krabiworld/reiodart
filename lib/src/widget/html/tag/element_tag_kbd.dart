@@ -19,6 +19,6 @@ class Kbd extends ReioElementVisible {
   /// voice input, or any other text entry device.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd)
   Kbd([super.value]) {
-    setHtmlTag('kbd');
+    tag = 'kbd';
   }
 }

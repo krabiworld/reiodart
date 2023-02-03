@@ -24,7 +24,7 @@ class IFrame extends ReioElement {
   /// HTML page into the current one.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe)
   IFrame([super.value]) {
-    setHtmlTag('iframe');
+    tag = 'iframe';
   }
 
   /// The load event is fired when the whole

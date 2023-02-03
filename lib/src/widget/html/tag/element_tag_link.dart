@@ -25,7 +25,7 @@ class Link extends ReioElementVisible {
   /// and an external resource.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link)
   Link([super.value]) {
-    setHtmlTag('link');
+    tag = 'link';
   }
 
   /// The load event is fired when the whole

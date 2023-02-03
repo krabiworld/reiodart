@@ -20,6 +20,6 @@ class NoScript extends ReioElementVisible {
   /// off in the browser.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript)
   NoScript([super.value]) {
-    setHtmlTag('noscript');
+    tag = 'noscript';
   }
 }

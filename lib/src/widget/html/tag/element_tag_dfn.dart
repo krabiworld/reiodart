@@ -19,6 +19,6 @@ class Dfn extends ReioElementVisible {
   /// of a definition phrase or sentence.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dfn)
   Dfn([super.value]) {
-    setHtmlTag('dfn');
+    tag = 'dfn';
   }
 }

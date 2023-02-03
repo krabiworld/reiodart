@@ -19,7 +19,7 @@ class Meter extends ReioElementVisible {
   /// a scalar value within a known range or a fractional value.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meter)
   Meter([super.value]) {
-    setHtmlTag('meter');
+    tag = 'meter';
   }
 
   /// The current numeric value.

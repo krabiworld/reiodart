@@ -19,7 +19,7 @@ class ColGroup extends ReioElementVisible {
   /// of columns within a table.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/colgroup)
   ColGroup([super.value]) {
-    setHtmlTag('colgroup');
+    tag = 'colgroup';
   }
 
   /// This attribute contains a positive integer

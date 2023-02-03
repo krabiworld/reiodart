@@ -23,7 +23,7 @@ class Details extends ReioElementVisible {
   /// is toggled into an "open" state.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details)
   Details([super.value]) {
-    setHtmlTag('details');
+    tag = 'details';
   }
 
   /// The toggle event fires when the open/closed

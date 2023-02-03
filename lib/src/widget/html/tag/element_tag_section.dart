@@ -20,6 +20,6 @@ class Section extends ReioElementVisible {
   /// element to represent it.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section)
   Section([super.value]) {
-    setHtmlTag('section');
+    tag = 'section';
   }
 }

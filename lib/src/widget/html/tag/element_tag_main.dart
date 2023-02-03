@@ -18,6 +18,6 @@ class Main extends ReioElementVisible {
   /// the dominant content of the `<body>` of a document.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main)
   Main([super.value]) {
-    setHtmlTag('main');
+    tag = 'main';
   }
 }

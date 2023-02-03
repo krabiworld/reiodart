@@ -21,7 +21,7 @@ class Pre extends ReioElementVisible {
   /// as written in the HTML file.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre)
   Pre([super.value]) {
-    setHtmlTag('pre');
+    tag = 'pre';
   }
 
   /// The scroll event fires when an element

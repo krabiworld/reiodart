@@ -20,7 +20,7 @@ class Canvas extends ReioElementVisible {
   /// the WebGL API to draw graphics and animations.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas)
   Canvas([super.value]) {
-    setHtmlTag('canvas');
+    tag = 'canvas';
   }
 
   /// The height of the coordinate space in CSS pixels.

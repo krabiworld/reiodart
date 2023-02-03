@@ -20,7 +20,7 @@ class Del extends ReioElementVisible {
   /// from a document.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del)
   Del([super.value]) {
-    setHtmlTag('del');
+    tag = 'del';
   }
 
   /// A URL for a resource that explains the change

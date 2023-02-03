@@ -20,6 +20,6 @@ class DataList extends ReioElementVisible {
   /// to choose from within other controls.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist)
   DataList([super.value]) {
-    setHtmlTag('datalist');
+    tag = 'datalist';
   }
 }

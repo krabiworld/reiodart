@@ -20,6 +20,6 @@ class Table extends ReioElementVisible {
   /// of rows and columns of cells containing data.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)
   Table([super.value]) {
-    setHtmlTag('table');
+    tag = 'table';
   }
 }

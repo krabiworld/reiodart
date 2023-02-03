@@ -19,6 +19,6 @@ class U extends ReioElementVisible {
   /// that it has a non-textual annotation.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u)
   U([super.value]) {
-    setHtmlTag('u');
+    tag = 'u';
   }
 }

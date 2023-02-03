@@ -23,7 +23,7 @@ class Object extends ReioElementVisible {
   /// to be handled by a plugin.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object)
   Object([super.value]) {
-    setHtmlTag('object');
+    tag = 'object';
   }
 
   /// The scroll event fires when an element

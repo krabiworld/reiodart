@@ -19,7 +19,7 @@ class Time extends ReioElementVisible {
   /// a specific period in time.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time)
   Time([super.value]) {
-    setHtmlTag('time');
+    tag = 'time';
   }
 
   /// This attribute indicates the time and/or

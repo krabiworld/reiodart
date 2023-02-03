@@ -21,7 +21,7 @@ class Li extends ReioElementVisible {
   /// to represent an item in a list.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li)
   Li([super.value]) {
-    setHtmlTag('li');
+    tag = 'li';
   }
 
   /// This attribute indicates the current

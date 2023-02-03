@@ -22,7 +22,7 @@ class Address extends ReioElementVisible {
   /// or for an organization.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address)
   Address([super.value]) {
-    setHtmlTag('address');
+    tag = 'address';
   }
 
   /// The scroll event fires when an element

@@ -21,7 +21,7 @@ class Embed extends ReioElementVisible {
   /// at the specified point in the document.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed)
   Embed([super.value]) {
-    setHtmlTag('embed');
+    tag = 'embed';
   }
 
   /// The error event is fired on an Element

@@ -18,6 +18,6 @@ class Hr extends ReioElementVisible {
   /// break between paragraph-level elements.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr)
   Hr([super.value]) {
-    setHtmlTag('hr');
+    tag = 'hr';
   }
 }

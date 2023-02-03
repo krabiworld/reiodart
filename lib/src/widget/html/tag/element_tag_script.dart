@@ -24,7 +24,7 @@ class Script extends ReioElement {
   /// is typically used to embed or refer to JavaScript code.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
   Script([super.value]) {
-    setHtmlTag('script');
+    tag = 'script';
   }
 
   /// The load event is fired when the whole

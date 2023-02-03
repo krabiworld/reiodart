@@ -19,6 +19,6 @@ class Header extends ReioElementVisible {
   /// of introductory or navigational aids.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header)
   Header([super.value]) {
-    setHtmlTag('header');
+    tag = 'header';
   }
 }

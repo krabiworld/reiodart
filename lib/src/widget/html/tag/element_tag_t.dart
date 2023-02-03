@@ -17,6 +17,6 @@ class T extends ReioElementVisible {
   /// Takes an HTML [tagName] and creates
   /// the corresponding element.
   T(String tagName, [super.value]) {
-    setHtmlTag(tagName);
+    tag = tagName;
   }
 }

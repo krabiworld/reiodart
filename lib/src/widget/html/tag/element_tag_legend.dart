@@ -18,6 +18,6 @@ class Legend extends ReioElementVisible {
   /// for the content of its parent `<fieldset>`.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend)
   Legend([super.value]) {
-    setHtmlTag('legend');
+    tag = 'legend';
   }
 }

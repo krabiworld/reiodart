@@ -19,6 +19,6 @@ class Footer extends ReioElementVisible {
   /// or sectioning root element.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer)
   Footer([super.value]) {
-    setHtmlTag('footer');
+    tag = 'footer';
   }
 }

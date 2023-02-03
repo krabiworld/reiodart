@@ -21,7 +21,7 @@ class Ul extends ReioElementVisible {
   /// typically rendered as a bulleted list.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul)
   Ul([super.value]) {
-    setHtmlTag('ul');
+    tag = 'ul';
   }
 
   /// The scroll event fires when an element

@@ -20,7 +20,7 @@ class Dl extends ReioElementVisible {
   /// a description list.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl)
   Dl([super.value]) {
-    setHtmlTag('dl');
+    tag = 'dl';
   }
 
   /// The scroll event fires when an element

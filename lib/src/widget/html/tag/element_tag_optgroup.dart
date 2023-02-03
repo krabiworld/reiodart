@@ -19,7 +19,7 @@ class OptGroup extends ReioElementVisible {
   /// of options within a `<select>` element.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup)
   OptGroup([super.value]) {
-    setHtmlTag('optgroup');
+    tag = 'optgroup';
   }
 
   /// If this attribute is set, none

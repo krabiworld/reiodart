@@ -18,6 +18,6 @@ class S extends ReioElementVisible {
   /// with a strikethrough, or a line through it.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/s)
   S([super.value]) {
-    setHtmlTag('s');
+    tag = 's';
   }
 }

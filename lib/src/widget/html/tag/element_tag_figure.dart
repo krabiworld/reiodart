@@ -20,6 +20,6 @@ class Figure extends ReioElementVisible {
   /// which is specified using the `<figcaption>` element.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure)
   Figure([super.value]) {
-    setHtmlTag('figure');
+    tag = 'figure';
   }
 }

@@ -20,6 +20,6 @@ class Rp extends ReioElementVisible {
   /// of ruby annotations using the `<ruby>` element.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rp)
   Rp([super.value]) {
-    setHtmlTag('rp');
+    tag = 'rp';
   }
 }

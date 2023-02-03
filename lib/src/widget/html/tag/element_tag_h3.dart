@@ -21,7 +21,7 @@ class H3 extends ReioElementVisible {
   /// for submitting information.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements)
   H3([super.value]) {
-    setHtmlTag('h3');
+    tag = 'h3';
   }
 
   /// The scroll event fires when an element

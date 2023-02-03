@@ -21,7 +21,7 @@ class Col extends ReioElementVisible {
   /// on all common cells.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col)
   Col([super.value]) {
-    setHtmlTag('col');
+    tag = 'col';
   }
 
   /// This attribute contains a positive integer

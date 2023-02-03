@@ -18,6 +18,6 @@ class Cite extends ReioElementVisible {
   /// to mark up the title of a cited creative work.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite)
   Cite([super.value]) {
-    setHtmlTag('cite');
+    tag = 'cite';
   }
 }

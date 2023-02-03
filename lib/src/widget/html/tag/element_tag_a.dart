@@ -24,7 +24,7 @@ class A extends ReioElementVisible {
   /// in the same page, or anything else a URL can address.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
   A([super.value]) {
-    setHtmlTag('a');
+    tag = 'a';
   }
 
   /// Causes the browser to treat

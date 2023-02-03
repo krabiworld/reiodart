@@ -20,7 +20,7 @@ class Div extends ReioElementVisible {
   /// container for flow content.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div)
   Div([super.value]) {
-    setHtmlTag('div');
+    tag = 'div';
   }
 
   /// The scroll event fires when an element

@@ -21,7 +21,7 @@ class H2 extends ReioElementVisible {
   /// for submitting information.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements)
   H2([super.value]) {
-    setHtmlTag('h2');
+    tag = 'h2';
   }
 
   /// The scroll event fires when an element

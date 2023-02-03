@@ -19,6 +19,6 @@ class Small extends ReioElementVisible {
   /// independent of its styled presentation.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/small)
   Small([super.value]) {
-    setHtmlTag('small');
+    tag = 'small';
   }
 }

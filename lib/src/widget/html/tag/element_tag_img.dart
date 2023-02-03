@@ -24,7 +24,7 @@ class Img extends ReioElementVisible {
   /// an image into the document.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img)
   Img([super.value]) {
-    setHtmlTag('img');
+    tag = 'img';
   }
 
   /// The load event is fired when the whole

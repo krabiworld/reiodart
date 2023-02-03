@@ -18,6 +18,6 @@ class Bdo extends ReioElement {
   /// is rendered in a different direction.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdo)
   Bdo([super.value]) {
-    setHtmlTag('bdo');
+    tag = 'bdo';
   }
 }

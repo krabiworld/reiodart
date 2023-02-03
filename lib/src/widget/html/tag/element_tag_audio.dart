@@ -21,7 +21,7 @@ class Audio extends ReioElementVisible {
   /// to embed sound content in documents.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio)
   Audio([super.value]) {
-    setHtmlTag('audio');
+    tag = 'audio';
   }
 
   /// The waiting event is fired when playback

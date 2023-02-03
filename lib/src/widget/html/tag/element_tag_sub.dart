@@ -19,6 +19,6 @@ class Sub extends ReioElementVisible {
   /// for solely typographical reasons.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sub)
   Sub([super.value]) {
-    setHtmlTag('sub');
+    tag = 'sub';
   }
 }

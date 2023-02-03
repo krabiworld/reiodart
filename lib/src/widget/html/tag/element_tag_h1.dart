@@ -21,7 +21,7 @@ class H1 extends ReioElementVisible {
   /// for submitting information.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements)
   H1([super.value]) {
-    setHtmlTag('h1');
+    tag = 'h1';
   }
 
   /// The scroll event fires when an element

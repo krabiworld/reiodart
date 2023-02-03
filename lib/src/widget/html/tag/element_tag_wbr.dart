@@ -20,6 +20,6 @@ class Wbr extends ReioElementVisible {
   /// rules would not otherwise create a break at that location.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr)
   Wbr([super.value]) {
-    setHtmlTag('wbr');
+    tag = 'wbr';
   }
 }

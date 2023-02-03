@@ -19,7 +19,7 @@ class Data extends ReioElementVisible {
   /// of content with a machine-readable translation.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/data)
   Data([super.value]) {
-    setHtmlTag('data');
+    tag = 'data';
   }
 
   /// This attribute specifies the machine-readable

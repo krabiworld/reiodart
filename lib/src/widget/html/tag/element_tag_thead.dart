@@ -20,7 +20,7 @@ class THead extends ReioElementVisible {
   /// defining the head of the columns of the table.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/thead)
   THead([super.value]) {
-    setHtmlTag('thead');
+    tag = 'thead';
   }
 
   /// The scroll event fires when an element

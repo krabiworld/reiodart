@@ -20,6 +20,6 @@ class Ruby extends ReioElementVisible {
   /// the pronunciation of East Asian characters.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ruby)
   Ruby([super.value]) {
-    setHtmlTag('ruby');
+    tag = 'ruby';
   }
 }

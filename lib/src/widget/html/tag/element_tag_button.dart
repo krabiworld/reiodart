@@ -21,7 +21,7 @@ class Button extends ReioElementVisible {
   /// or other assistive technology.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
   Button([super.value]) {
-    setHtmlTag('button');
+    tag = 'button';
   }
 
   /// This attribute prevents the user from interacting

@@ -20,6 +20,6 @@ class B extends ReioElementVisible {
   /// not otherwise granted special importance.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/b)
   B([super.value]) {
-    setHtmlTag('b');
+    tag = 'b';
   }
 }

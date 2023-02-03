@@ -20,6 +20,6 @@ class Nav extends ReioElementVisible {
   /// the current document or to other documents.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav)
   Nav([super.value]) {
-    setHtmlTag('nav');
+    tag = 'nav';
   }
 }

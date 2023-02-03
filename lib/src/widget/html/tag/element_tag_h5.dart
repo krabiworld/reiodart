@@ -21,7 +21,7 @@ class H5 extends ReioElementVisible {
   /// for submitting information.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements)
   H5([super.value]) {
-    setHtmlTag('h5');
+    tag = 'h5';
   }
 
   /// The scroll event fires when an element

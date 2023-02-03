@@ -23,7 +23,7 @@ class Source extends ReioElementVisible {
   /// the `<audio>` element, or the `<video>` element.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source)
   Source([super.value]) {
-    setHtmlTag('source');
+    tag = 'source';
   }
 
   /// The MIME media type of the image or

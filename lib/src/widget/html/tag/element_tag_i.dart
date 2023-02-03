@@ -21,6 +21,6 @@ class I extends ReioElementVisible {
   /// among others.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/i)
   I([super.value]) {
-    setHtmlTag('i');
+    tag = 'i';
   }
 }

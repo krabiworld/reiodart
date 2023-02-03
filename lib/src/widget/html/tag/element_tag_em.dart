@@ -18,6 +18,6 @@ class Em extends ReioElementVisible {
   /// that has stress emphasis.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em)
   Em([super.value]) {
-    setHtmlTag('em');
+    tag = 'em';
   }
 }

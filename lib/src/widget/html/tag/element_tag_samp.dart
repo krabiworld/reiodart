@@ -19,6 +19,6 @@ class Samp extends ReioElementVisible {
   /// (or quoted) output from a computer program.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/samp)
   Samp([super.value]) {
-    setHtmlTag('samp');
+    tag = 'samp';
   }
 }

@@ -34,9 +34,8 @@ abstract class ReioElement {
     _node.value = value ?? '';
   }
 
-  void setHtmlTag(String tag) {
-    if (_node.tag.isEmpty) _node.tag = tag;
-  }
+  /// Sets the [ReioElement] HTML tag.
+  set tag(String tag) => _node.tag = tag;
 
   /// Removes [ReioElement] from the HTML DOM.
   ReioElement remove(ReioWidget widget) {

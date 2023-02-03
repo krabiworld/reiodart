@@ -21,7 +21,7 @@ class Track extends ReioElementVisible {
   /// as a child of the media elements, `<audio>` and `<video>`.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track)
   Track([super.value]) {
-    setHtmlTag('track');
+    tag = 'track';
   }
 
   /// The cuechange event fires when a TextTrack

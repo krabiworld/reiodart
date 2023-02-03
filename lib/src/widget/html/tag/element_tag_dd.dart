@@ -22,7 +22,7 @@ class Dd extends ReioElementVisible {
   /// in a description list (`<dl>`).
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dd)
   Dd([super.value]) {
-    setHtmlTag('dd');
+    tag = 'dd';
   }
 
   /// The scroll event fires when an element

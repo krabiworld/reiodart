@@ -21,6 +21,6 @@ class Article extends ReioElementVisible {
   /// (e.g., in syndication).
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article)
   Article([super.value]) {
-    setHtmlTag('article');
+    tag = 'article';
   }
 }

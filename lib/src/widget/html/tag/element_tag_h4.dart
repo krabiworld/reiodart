@@ -21,7 +21,7 @@ class H4 extends ReioElementVisible {
   /// for submitting information.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements)
   H4([super.value]) {
-    setHtmlTag('h4');
+    tag = 'h4';
   }
 
   /// The scroll event fires when an element

@@ -18,6 +18,6 @@ class Abbr extends ReioElementVisible {
   /// an abbreviation or acronym.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr)
   Abbr([super.value]) {
-    setHtmlTag('abbr');
+    tag = 'abbr';
   }
 }

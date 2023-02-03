@@ -19,7 +19,7 @@ class P extends ReioElementVisible {
   /// The `<p>` HTML element represents a paragraph.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p)
   P([super.value]) {
-    setHtmlTag('p');
+    tag = 'p';
   }
 
   /// The scroll event fires when an element

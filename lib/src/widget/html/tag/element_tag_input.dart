@@ -22,7 +22,7 @@ class Input extends ReioElementVisible {
   /// forms in order to accept data from the user.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
   Input([super.value]) {
-    setHtmlTag('input');
+    tag = 'input';
   }
 
   /// The select event fires when some

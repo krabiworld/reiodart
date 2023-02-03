@@ -18,6 +18,6 @@ class Strong extends ReioElementVisible {
   /// have strong importance, seriousness, or urgency.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong)
   Strong([super.value]) {
-    setHtmlTag('strong');
+    tag = 'strong';
   }
 }

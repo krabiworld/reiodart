@@ -19,6 +19,6 @@ class Var extends ReioElementVisible {
   /// or a programming context.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/var)
   Var([super.value]) {
-    setHtmlTag('var');
+    tag = 'var';
   }
 }

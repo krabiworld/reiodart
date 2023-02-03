@@ -20,6 +20,6 @@ class Rt extends ReioElementVisible {
   /// or transliteration information for East Asian typography.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rt)
   Rt([super.value]) {
-    setHtmlTag('rt');
+    tag = 'rt';
   }
 }

@@ -24,7 +24,7 @@ class Area extends ReioElementVisible {
   /// on an image to be associated with hypertext links.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area)
   Area([super.value]) {
-    setHtmlTag('area');
+    tag = 'area';
   }
 
   /// A text alternative to display

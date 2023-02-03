@@ -20,7 +20,7 @@ class Progress extends ReioElementVisible {
   /// typically displayed as a progress bar.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress)
   Progress([super.value]) {
-    setHtmlTag('progress');
+    tag = 'progress';
   }
 
   /// This attribute describes how much work

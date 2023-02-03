@@ -24,7 +24,7 @@ class Output extends ReioElementVisible {
   /// of a user action.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output)
   Output([super.value]) {
-    setHtmlTag('output');
+    tag = 'output';
   }
 
   /// A list of other elements' ids,

@@ -17,6 +17,6 @@ class Br extends ReioElement {
   /// in text (carriage-return).
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br)
   Br([super.value]) {
-    setHtmlTag('br');
+    tag = 'br';
   }
 }

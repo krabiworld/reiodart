@@ -19,7 +19,7 @@ class Label extends ReioElementVisible {
   /// for an item in a user interface.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label)
   Label([super.value]) {
-    setHtmlTag('label');
+    tag = 'label';
   }
 
   /// The value of the for attribute must be a single id

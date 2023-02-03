@@ -19,6 +19,6 @@ class FigCaption extends ReioElementVisible {
   /// of the contents of its parent `<figure>` element.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption)
   FigCaption([super.value]) {
-    setHtmlTag('figcaption');
+    tag = 'figcaption';
   }
 }

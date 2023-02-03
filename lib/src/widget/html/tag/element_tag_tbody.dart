@@ -21,7 +21,7 @@ class TBody extends ReioElementVisible {
   /// indicating that they comprise the body of the table (`<table>`).
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody)
   TBody([super.value]) {
-    setHtmlTag('tbody');
+    tag = 'tbody';
   }
 
   /// The scroll event fires when an element

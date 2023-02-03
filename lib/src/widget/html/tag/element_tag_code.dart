@@ -20,6 +20,6 @@ class Code extends ReioElementVisible {
   /// of computer code.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code)
   Code([super.value]) {
-    setHtmlTag('code');
+    tag = 'code';
   }
 }

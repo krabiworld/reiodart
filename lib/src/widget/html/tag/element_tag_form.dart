@@ -25,7 +25,7 @@ class Form extends ReioElementVisible {
   /// for submitting information.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)
   Form([super.value]) {
-    setHtmlTag('form');
+    tag = 'form';
   }
 
   /// The submit event fires when a `<form>` is submitted.

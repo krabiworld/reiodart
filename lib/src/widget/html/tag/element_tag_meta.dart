@@ -20,7 +20,7 @@ class Meta extends ReioElement {
   /// `<script>`, `<style>` or `<title>`.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta)
   Meta([super.value]) {
-    setHtmlTag('meta');
+    tag = 'meta';
   }
 
   /// This attribute declares the

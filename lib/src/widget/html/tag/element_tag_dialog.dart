@@ -20,7 +20,7 @@ class Dialog extends ReioElementVisible {
   /// such as a dismissible alert, inspector, or sub-window.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
   Dialog([super.value]) {
-    setHtmlTag('dialog');
+    tag = 'dialog';
   }
 
   /// Indicates that the dialog is active

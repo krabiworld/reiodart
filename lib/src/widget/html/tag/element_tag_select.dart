@@ -21,7 +21,7 @@ class Select extends ReioElementVisible {
   /// a control that provides a menu of options.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select)
   Select([super.value]) {
-    setHtmlTag('select');
+    tag = 'select';
   }
 
   /// The scroll event fires when an element

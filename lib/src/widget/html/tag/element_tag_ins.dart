@@ -19,7 +19,7 @@ class Ins extends ReioElementVisible {
   /// a range of text that has been added to a document.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins)
   Ins([super.value]) {
-    setHtmlTag('ins');
+    tag = 'ins';
   }
 
   /// This attribute defines the URI of a resource

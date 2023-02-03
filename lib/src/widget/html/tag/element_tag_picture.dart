@@ -20,6 +20,6 @@ class Picture extends ReioElementVisible {
   /// of an image for different display/device scenarios.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture)
   Picture([super.value]) {
-    setHtmlTag('picture');
+    tag = 'picture';
   }
 }

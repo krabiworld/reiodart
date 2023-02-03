@@ -20,7 +20,7 @@ class TFoot extends ReioElementVisible {
   /// of rows summarizing the columns of the table.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tfoot)
   TFoot([super.value]) {
-    setHtmlTag('tfoot');
+    tag = 'tfoot';
   }
 
   /// The scroll event fires when an element

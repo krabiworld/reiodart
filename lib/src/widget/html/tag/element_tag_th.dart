@@ -22,7 +22,7 @@ class Th extends ReioElementVisible {
   /// of a group of table cells.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th)
   Th([super.value]) {
-    setHtmlTag('th');
+    tag = 'th';
   }
 
   /// This attribute contains a short abbreviated

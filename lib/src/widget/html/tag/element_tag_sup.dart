@@ -19,6 +19,6 @@ class Sup extends ReioElementVisible {
   /// for solely typographical reasons.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sup)
   Sup([super.value]) {
-    setHtmlTag('sup');
+    tag = 'sup';
   }
 }

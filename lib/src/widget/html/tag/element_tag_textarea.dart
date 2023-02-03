@@ -23,7 +23,7 @@ class TextArea extends ReioElementVisible {
   /// for example a comment on a review or feedback form.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)
   TextArea([super.value]) {
-    setHtmlTag('textarea');
+    tag = 'textarea';
   }
 
   /// The select event fires when some

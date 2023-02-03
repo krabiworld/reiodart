@@ -19,7 +19,7 @@ class Map extends ReioElementVisible {
   /// to define an image map (a clickable link area).
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map)
   Map([super.value]) {
-    setHtmlTag('map');
+    tag = 'map';
   }
 
   /// The name attribute gives the map

@@ -20,7 +20,7 @@ class Option extends ReioElementVisible {
   /// or a `<datalist>` element.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option)
   Option([super.value]) {
-    setHtmlTag('option');
+    tag = 'option';
   }
 
   /// If this attribute is set,

@@ -22,7 +22,7 @@ class FieldSet extends ReioElementVisible {
   /// as well as labels (`<label>`) within a web form.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset)
   FieldSet([super.value]) {
-    setHtmlTag('fieldset');
+    tag = 'fieldset';
   }
 
   /// The scroll event fires when an element

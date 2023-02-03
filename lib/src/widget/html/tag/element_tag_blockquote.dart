@@ -21,7 +21,7 @@ class BlockQuote extends ReioElementVisible {
   /// that the enclosed text is an extended quotation.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote)
   BlockQuote([super.value]) {
-    setHtmlTag('blockquote');
+    tag = 'blockquote';
   }
 
   /// The scroll event fires when an element

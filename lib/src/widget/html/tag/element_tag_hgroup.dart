@@ -18,6 +18,6 @@ class HGroup extends ReioElementVisible {
   /// a heading and related content.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hgroup)
   HGroup([super.value]) {
-    setHtmlTag('hgroup');
+    tag = 'hgroup';
   }
 }

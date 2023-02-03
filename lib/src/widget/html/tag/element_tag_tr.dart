@@ -18,6 +18,6 @@ class Tr extends ReioElementVisible {
   /// a row of cells in a table.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr)
   Tr([super.value]) {
-    setHtmlTag('tr');
+    tag = 'tr';
   }
 }

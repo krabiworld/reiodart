@@ -20,7 +20,7 @@ class Caption extends ReioElementVisible {
   /// the caption (or title) of a table.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/caption)
   Caption([super.value]) {
-    setHtmlTag('caption');
+    tag = 'caption';
   }
 
   /// The scroll event fires when an element

@@ -22,7 +22,7 @@ class Td extends ReioElementVisible {
   /// of a table that contains data.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td)
   Td([super.value]) {
-    setHtmlTag('td');
+    tag = 'td';
   }
 
   /// This attribute contains a non-negative

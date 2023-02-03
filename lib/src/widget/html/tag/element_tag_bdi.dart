@@ -20,6 +20,6 @@ class Bdi extends ReioElementVisible {
   /// from its surrounding text.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdi)
   Bdi([super.value]) {
-    setHtmlTag('bdi');
+    tag = 'bdi';
   }
 }

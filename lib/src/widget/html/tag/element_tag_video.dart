@@ -21,7 +21,7 @@ class Video extends ReioElementVisible {
   /// which supports video playback into the document.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)
   Video([super.value]) {
-    setHtmlTag('video');
+    tag = 'video';
   }
 
   /// The waiting event is fired when playback

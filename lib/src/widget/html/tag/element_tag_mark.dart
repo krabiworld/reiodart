@@ -20,6 +20,6 @@ class Mark extends ReioElementVisible {
   /// relevance in the enclosing context.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark)
   Mark([super.value]) {
-    setHtmlTag('mark');
+    tag = 'mark';
   }
 }

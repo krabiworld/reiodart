@@ -19,6 +19,6 @@ class Aside extends ReioElementVisible {
   /// indirectly related to the document's main content.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside)
   Aside([super.value]) {
-    setHtmlTag('aside');
+    tag = 'aside';
   }
 }

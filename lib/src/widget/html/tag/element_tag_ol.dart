@@ -21,7 +21,7 @@ class Ol extends ReioElementVisible {
   /// of items — typically rendered as a numbered list.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol)
   Ol([super.value]) {
-    setHtmlTag('ol');
+    tag = 'ol';
   }
 
   /// The scroll event fires when an element

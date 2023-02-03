@@ -21,7 +21,7 @@ class H6 extends ReioElementVisible {
   /// for submitting information.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements)
   H6([super.value]) {
-    setHtmlTag('h6');
+    tag = 'h6';
   }
 
   /// The scroll event fires when an element
