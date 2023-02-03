@@ -10,11 +10,9 @@ import 'store.dart';
 class ReioWritableStore {
   final Map<String, ReioProxy> _store = {};
 
+  /// Creates a store of writable proxies created on [Map].
   ReioWritableStore(Map<String, dynamic> fields) {
-    for (var key in fields.keys) {
-      dynamic value = fields[key];
-      _store[key] = ReioProxy(value);
-    }
+    fields.forEach((key, value) => _store[key] = ReioProxy(value));
   }
 
   /// Takes [ReioWidget] second argument as a store subscription.
@@ -29,11 +27,21 @@ class ReioWritableStore {
   /// Takes [ReioWidget] second argument as a store subscription.
   void update(
       String key, ReioWidget widget, dynamic Function(dynamic value) fun) {
-    dynamic value = fun.call(_store[key]?.get(widget.node));
-    _store[key]?.set(value);
+    dynamic value = _store[key]?.get(widget.node);
+    if (value == null) return;
+
+    dynamic newValue = fun.call(_store[key]?.get(widget.node));
+    if (newValue != null) _store[key]?.set(newValue);
   }
 
+  /// Takes the key of the value to be destroyed.
   void destroy(String key) {
     _store[key]?.destroy();
+  }
+
+  /// Clears proxy dependencies and proxies from the store.
+  void clear() {
+    _store.forEach((key, value) => destroy(key));
+    _store.clear();
   }
 }
