@@ -153,128 +153,46 @@ class ReioNodeWidget extends ReioNode {
   }
 }
 
+const String styleHtmlTag = 'style';
+const String stylePrefix = 'reio-style-';
+const String styleQuery = '$styleHtmlTag.$stylePrefix';
+
+/// Initializes or overwrites a [ReioNodeWidget].
 class ReioNodeWidgetController extends ReioNodeController {
   ReioNodeWidgetController(super.node, [super.newNode]);
 
-  /// Initializing a CSS block in a virtual virtual_dom.
   void initStyles([Element? element]) {
-    ReioNodeWidget cNode = node as ReioNodeWidget;
+    ReioNodeWidget curNode = node as ReioNodeWidget;
 
-    void init(Element? newNode) {
-      const String attrStyleWidget = 'reio-widget-style';
-      const String attrStyleType = 'reio-style-type';
+    if (curNode.styles == null) return;
 
-      // The public class is not required because
-      // styles are public in the first place.
-      const String pvStyleClass = 'reio-private-style';
-      const String ptStyleClass = 'reio-protected-style';
-
-      const String pvType = 'private';
-      const String ptType = 'protected';
-      const String pbType = 'public';
-
-      const String pvKey = '{private}:';
-      const String ptKey = '{protected}:';
-      const String pbKey = '{public}:';
-
-      final RegExp pvRegExp = RegExp(r'(\(.*\s*)?{private}:?.*{[\s\S]*?}');
-      final RegExp ptRegExp = RegExp(r'(\(.*\s*)?{protected}:?.*{[\s\S]*?}');
-      final RegExp pbRegExp = RegExp(r'(\(.*\s*)?{public}:?.*{[\s\S]*?}');
-      final RegExp ruleRegExp = RegExp(r'^\(');
-
-      final RegExp minifyRegExp = RegExp(r'[\s\n\r]{2,}|/\*[\s\S]*?\*/');
-
-      void initModifier(String type, RegExp regExp, String modifier,
-          [String? mClass]) {
-        final query = 'style[$attrStyleWidget="${cNode.number}"]'
-            '[$attrStyleType="$type"]';
-
-        void addClass(String styleClass) {
-          if (mClass != null && newNode?.classes.contains(styleClass) == true) {
-            newNode?.classes.add(styleClass);
-          }
-        }
-
-        List<String>? oldStyles = [];
-        List<Element>? oldStylesTags = cNode.element?.querySelectorAll(query);
-        cNode.element?.querySelectorAll(query).forEach((el) {
-          return oldStyles.add(el.text as String);
-        });
-
-        String styleClass = (mClass != null) ? '$mClass-${cNode.number}' : '';
-
-        // The old virtual_dom must have at least an empty string instead of null,
-        // so that the new one can add new styles.
-        if (cNode.styles == null) return;
-
-        List<RegExpMatch> modifiers = regExp.allMatches(cNode.styles!).toList();
-        for (RegExpMatch match in modifiers) {
-          String? style = match.group(0);
-          if (style == null) continue;
-
-          // The modifier class is set instead of the key.
-          if (mClass != null) {
-            style = style.replaceFirst(modifier, '.$styleClass');
-          } else {
-            // If there is no class, there shouldn't be a key in the styles.
-            style = style.replaceFirst(modifier, '');
-          }
-
-          // Formatting and minifying style.
-          style = style.trim();
-          style = style.replaceAllMapped(minifyRegExp, (match) => '');
-
-          // Removes the bracket for rules at the beginning of the style.
-          style = style.replaceAllMapped(ruleRegExp, (match) => '');
-
-          // If the style is in the old ones,
-          // it means that it is already in use.
-          if (oldStyles.contains(style)) {
-            oldStyles.remove(style);
-
-            // If the used style had a class,
-            // it is important to keep it in the new virtual_dom.
-            addClass(styleClass);
-
-            continue;
-          }
-
-          Element styleTag = StyleElement();
-          styleTag.setAttribute(attrStyleWidget, cNode.number);
-          styleTag.setAttribute(attrStyleType, type);
-          styleTag.text = style;
-          addClass(styleClass);
-
-          if (newNode != null) {
-            newNode.append(styleTag);
-          } else {
-            cNode.element?.append(styleTag);
-          }
-        }
-
-        // Removes unused styles.
-        oldStylesTags?.forEach((el) {
-          if (oldStyles.contains(el.text)) el.remove();
-        });
-      }
-
-      // Initialization of the private modifier.
-      initModifier(pvType, pvRegExp, pvKey, pvStyleClass);
-      // Initialization of the protected modifier.
-      initModifier(ptType, ptRegExp, ptKey, ptStyleClass);
-      // Initialization of the public modifier.
-      initModifier(pbType, pbRegExp, pbKey);
+    // Clears the line with
+    // the style from the `<style>` tag.
+    String? clearStyle(String? style) {
+      return style
+          ?.replaceFirst('<$styleHtmlTag>', '')
+          .replaceFirst('</$styleHtmlTag>', '')
+          .trim();
     }
 
     if (isUpdate) {
-      ReioNodeWidget newNode = minorNode as ReioNodeWidget;
-      // No element = no attributes in the element.
-      if (newNode.element == null || newNode.styles == null) return;
-      if (cNode.styles == newNode.styles) return;
+      // The style is updated only when there
+      // is reactivity in it, that is, all the work
+      // is on the watcher, and no additional
+      // checks are required.
 
-      init(minorNode?.element);
-    } else if (element != null) {
-      init(element);
+      Element? style =
+          curNode.element?.querySelector(styleQuery + curNode.number);
+
+      style?.text = clearStyle(curNode.styles);
+    } else {
+      if (element == null) return;
+
+      Element style = StyleElement();
+      style.className = stylePrefix + curNode.number;
+      style.text = clearStyle(curNode.styles!);
+
+      element.append(style);
     }
   }
 }
