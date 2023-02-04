@@ -11,9 +11,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<picture>` tag.
-class Picture extends ReioElementVisible {
+class Picture extends WidgetElementVisible {
   /// The `<picture>` HTML element contains
   /// zero or more `<source>` elements and one `<img>`
   /// element to offer alternative versions

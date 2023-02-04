@@ -5,7 +5,8 @@
 
 import 'dart:html';
 
-import '../../../virtual_dom/virtual_node_attr.dart';
+
+import '../../../virtual_dom/virtual_attr.dart';
 import '../html.dart';
 import '../html_element.dart';
 import '../html_element_visible.dart';
@@ -15,11 +16,11 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-ReioHtml _html = ReioHtml();
+WidgetHtml _html = WidgetHtml();
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<link>` tag.
-class Link extends ReioElementVisible {
+class Link extends WidgetElementVisible {
   /// The `<link>` HTML element specifies
   /// relationships between the current document
   /// and an external resource.
@@ -45,7 +46,7 @@ class Link extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-as)
   Link as(String type, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('as', type);
+      VirtualAttr attr = VirtualAttr('as', type);
       node.attrs!.add(attr);
     }
     return this;
@@ -56,7 +57,7 @@ class Link extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-crossorigin)
   Link crossOrigin(String mode, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('crossorigin', mode);
+      VirtualAttr attr = VirtualAttr('crossorigin', mode);
       node.attrs!.add(attr);
     }
     return this;
@@ -67,7 +68,7 @@ class Link extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-href)
   Link href(String url, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('href', url);
+      VirtualAttr attr = VirtualAttr('href', url);
       node.attrs!.add(attr);
     }
     return this;
@@ -78,7 +79,7 @@ class Link extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-hreflang)
   Link hrefLang(String langCode, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('hreflang', langCode);
+      VirtualAttr attr = VirtualAttr('hreflang', langCode);
       node.attrs!.add(attr);
     }
     return this;
@@ -90,8 +91,8 @@ class Link extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-imagesizes)
   Link imageSizes(List<String> sizesList, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr =
-          ReioNodeAttr('imagesizes', _html.listToCommas(sizesList));
+      VirtualAttr attr =
+          VirtualAttr('imagesizes', _html.listToCommas(sizesList));
       node.attrs!.add(attr);
     }
     return this;
@@ -103,8 +104,8 @@ class Link extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-imagesrcset)
   Link imageSrcSet(List<String> srcList, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr =
-          ReioNodeAttr('imagesrcset', _html.listToCommas(srcList));
+      VirtualAttr attr =
+          VirtualAttr('imagesrcset', _html.listToCommas(srcList));
       node.attrs!.add(attr);
     }
     return this;
@@ -116,7 +117,7 @@ class Link extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-integrity)
   Link integrity(String metaData, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('integrity', metaData);
+      VirtualAttr attr = VirtualAttr('integrity', metaData);
       node.attrs!.add(attr);
     }
     return this;
@@ -127,7 +128,7 @@ class Link extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-media)
   Link media(String value, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('media', value);
+      VirtualAttr attr = VirtualAttr('media', value);
       node.attrs!.add(attr);
     }
     return this;
@@ -138,7 +139,7 @@ class Link extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-referrerpolicy)
   Link referrerPolicy(String referrer, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('referrerpolicy', referrer);
+      VirtualAttr attr = VirtualAttr('referrerpolicy', referrer);
       node.attrs!.add(attr);
     }
     return this;
@@ -149,7 +150,7 @@ class Link extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-rel)
   Link rel(List<String> typeList, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('rel', _html.listToSpaces(typeList));
+      VirtualAttr attr = VirtualAttr('rel', _html.listToSpaces(typeList));
       node.attrs!.add(attr);
     }
     return this;
@@ -160,7 +161,7 @@ class Link extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-type)
   Link type(String mediaType, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('type', mediaType);
+      VirtualAttr attr = VirtualAttr('type', mediaType);
       node.attrs!.add(attr);
     }
     return this;
@@ -172,8 +173,8 @@ class Link extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-blocking)
   Link blocking(List<String> operationList, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr =
-          ReioNodeAttr('blocking', _html.listToCommas(operationList));
+      VirtualAttr attr =
+          VirtualAttr('blocking', _html.listToCommas(operationList));
       node.attrs!.add(attr);
     }
     return this;

@@ -11,9 +11,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<kbd>` tag.
-class Kbd extends ReioElementVisible {
+class Kbd extends WidgetElementVisible {
   /// The `<kbd>` HTML element represents a span
   /// of inline text denoting textual user input from a keyboard,
   /// voice input, or any other text entry device.

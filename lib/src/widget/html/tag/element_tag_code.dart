@@ -11,9 +11,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<code>` tag.
-class Code extends ReioElementVisible {
+class Code extends WidgetElementVisible {
   /// The `<code>` HTML element displays
   /// its contents styled in a fashion intended
   /// to indicate that the text is a short fragment

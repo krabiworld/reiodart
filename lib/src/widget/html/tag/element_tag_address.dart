@@ -13,9 +13,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<address>` tag.
-class Address extends ReioElementVisible {
+class Address extends WidgetElementVisible {
   /// The `<address>` HTML element indicates
   /// that the enclosed HTML provides contact
   /// information for a person or people,

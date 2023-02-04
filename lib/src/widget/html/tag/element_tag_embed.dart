@@ -5,7 +5,7 @@
 
 import 'dart:html';
 
-import '../../../virtual_dom/virtual_node_attr.dart';
+import '../../../virtual_dom/virtual_attr.dart';
 import '../html_element.dart';
 import '../html_element_visible.dart';
 
@@ -14,9 +14,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<embed>` tag.
-class Embed extends ReioElementVisible {
+class Embed extends WidgetElementVisible {
   /// The `<embed>` HTML element embeds external content
   /// at the specified point in the document.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed)
@@ -57,7 +57,7 @@ class Embed extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed#attr-height)
   Embed height(int pixels, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('height', pixels.toString());
+      VirtualAttr attr = VirtualAttr('height', pixels.toString());
       node.attrs!.add(attr);
     }
     return this;
@@ -67,7 +67,7 @@ class Embed extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed#attr-src)
   Embed src(String url, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('src', url);
+      VirtualAttr attr = VirtualAttr('src', url);
       node.attrs!.add(attr);
     }
     return this;
@@ -78,7 +78,7 @@ class Embed extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed#attr-type)
   Embed type(String mediaType, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('type', mediaType);
+      VirtualAttr attr = VirtualAttr('type', mediaType);
       node.attrs!.add(attr);
     }
     return this;
@@ -88,7 +88,7 @@ class Embed extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed#attr-width)
   Embed width(int pixels, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('width', pixels.toString());
+      VirtualAttr attr = VirtualAttr('width', pixels.toString());
       node.attrs!.add(attr);
     }
     return this;

@@ -11,9 +11,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<nav>` tag.
-class Nav extends ReioElementVisible {
+class Nav extends WidgetElementVisible {
   /// The `<nav>` HTML element represents
   /// a section of a page whose purpose is
   /// to provide navigation links, either within

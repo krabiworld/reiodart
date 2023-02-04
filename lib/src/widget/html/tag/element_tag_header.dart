@@ -11,9 +11,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<header>` tag.
-class Header extends ReioElementVisible {
+class Header extends WidgetElementVisible {
   /// The `<header>` HTML element represents
   /// introductory content, typically a group
   /// of introductory or navigational aids.

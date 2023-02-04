@@ -5,7 +5,7 @@
 
 import 'dart:html';
 
-import '../../../virtual_dom/virtual_node_attr.dart';
+import '../../../virtual_dom/virtual_attr.dart';
 import '../html_element.dart';
 import '../html_element_visible.dart';
 
@@ -14,9 +14,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<fieldset>` tag.
-class FieldSet extends ReioElementVisible {
+class FieldSet extends WidgetElementVisible {
   /// The `<fieldset>` HTML element is used
   /// to group several controls
   /// as well as labels (`<label>`) within a web form.
@@ -36,7 +36,7 @@ class FieldSet extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset#attr-disabled)
   FieldSet disabled(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('disabled', '');
+      VirtualAttr attr = VirtualAttr('disabled', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -48,7 +48,7 @@ class FieldSet extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset#attr-form)
   FieldSet form(String id, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('form', id);
+      VirtualAttr attr = VirtualAttr('form', id);
       node.attrs!.add(attr);
     }
     return this;
@@ -58,7 +58,7 @@ class FieldSet extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset#attr-name)
   FieldSet name(String name, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('name', name);
+      VirtualAttr attr = VirtualAttr('name', name);
       node.attrs!.add(attr);
     }
     return this;

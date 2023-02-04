@@ -3,7 +3,7 @@
 // This source code is licensed under the MIT license found in the
 // LICENSE file in the root directory of this source tree.
 
-import '../../../virtual_dom/virtual_node_attr.dart';
+import '../../../virtual_dom/virtual_attr.dart';
 import '../html.dart';
 import '../html_element.dart';
 import '../html_element_visible.dart';
@@ -13,11 +13,11 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-ReioHtml _html = ReioHtml();
+WidgetHtml _html = WidgetHtml();
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<td>` tag.
-class Td extends ReioElementVisible {
+class Td extends WidgetElementVisible {
   /// The `<td>` HTML element defines a cell
   /// of a table that contains data.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td)
@@ -31,7 +31,7 @@ class Td extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td#attr-colspan)
   Td colSpan(int number, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('colspan', number.toString());
+      VirtualAttr attr = VirtualAttr('colspan', number.toString());
       node.attrs!.add(attr);
     }
     return this;
@@ -43,7 +43,7 @@ class Td extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td#attr-headers)
   Td headers(List<String> idList, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('headers', _html.listToSpaces(idList));
+      VirtualAttr attr = VirtualAttr('headers', _html.listToSpaces(idList));
       node.attrs!.add(attr);
     }
     return this;
@@ -55,7 +55,7 @@ class Td extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td#attr-rowspan)
   Td rowSpan(int number, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('rowspan', number.toString());
+      VirtualAttr attr = VirtualAttr('rowspan', number.toString());
       node.attrs!.add(attr);
     }
     return this;

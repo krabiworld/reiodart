@@ -11,9 +11,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<hgroup>` tag.
-class HGroup extends ReioElementVisible {
+class HGroup extends WidgetElementVisible {
   /// The `<hgroup>` HTML element represents
   /// a heading and related content.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hgroup)

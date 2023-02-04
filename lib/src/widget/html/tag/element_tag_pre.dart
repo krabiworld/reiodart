@@ -13,9 +13,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<pre>` tag.
-class Pre extends ReioElementVisible {
+class Pre extends WidgetElementVisible {
   /// The `<pre>` HTML element represents
   /// preformatted text which is to be presented exactly
   /// as written in the HTML file.

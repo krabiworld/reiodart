@@ -11,9 +11,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<rp>` tag.
-class Rp extends ReioElementVisible {
+class Rp extends WidgetElementVisible {
   /// The `<rp>` HTML element is used
   /// to provide fall-back parentheses
   /// for browsers that do not support display

@@ -5,7 +5,7 @@
 
 import 'dart:html';
 
-import '../../../virtual_dom/virtual_node_attr.dart';
+import '../../../virtual_dom/virtual_attr.dart';
 import '../html.dart';
 import '../html_element.dart';
 
@@ -14,11 +14,11 @@ import '../html_element.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-ReioHtml _html = ReioHtml();
+WidgetHtml _html = WidgetHtml();
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<script>` tag.
-class Script extends ReioElement {
+class Script extends WidgetElement {
   /// The `<script>` HTML element is used
   /// to embed executable code or data; this
   /// is typically used to embed or refer to JavaScript code.
@@ -52,7 +52,7 @@ class Script extends ReioElement {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-async)
   Script async(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('async', '');
+      VirtualAttr attr = VirtualAttr('async', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -66,7 +66,7 @@ class Script extends ReioElement {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-crossorigin)
   Script crossOrigin(String mode, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('crossorigin', mode);
+      VirtualAttr attr = VirtualAttr('crossorigin', mode);
       node.attrs!.add(attr);
     }
     return this;
@@ -79,7 +79,7 @@ class Script extends ReioElement {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-defer)
   Script defer(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('defer', '');
+      VirtualAttr attr = VirtualAttr('defer', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -92,7 +92,7 @@ class Script extends ReioElement {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-integrity)
   Script integrity(String metaData, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('integrity', metaData);
+      VirtualAttr attr = VirtualAttr('integrity', metaData);
       node.attrs!.add(attr);
     }
     return this;
@@ -107,7 +107,7 @@ class Script extends ReioElement {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-nomodule)
   Script noModule(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('nomodule', '');
+      VirtualAttr attr = VirtualAttr('nomodule', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -119,7 +119,7 @@ class Script extends ReioElement {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-referrerpolicy)
   Script referrerPolicy(String referrer, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('referrerpolicy', referrer);
+      VirtualAttr attr = VirtualAttr('referrerpolicy', referrer);
       node.attrs!.add(attr);
     }
     return this;
@@ -131,7 +131,7 @@ class Script extends ReioElement {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-src)
   Script src(String url, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('src', url);
+      VirtualAttr attr = VirtualAttr('src', url);
       node.attrs!.add(attr);
     }
     return this;
@@ -141,7 +141,7 @@ class Script extends ReioElement {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script/type)
   Script type(String scriptType, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('type', scriptType);
+      VirtualAttr attr = VirtualAttr('type', scriptType);
       node.attrs!.add(attr);
     }
     return this;
@@ -153,8 +153,8 @@ class Script extends ReioElement {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-blocking)
   Script blocking(List<String> operationList, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr =
-          ReioNodeAttr('blocking', _html.listToCommas(operationList));
+      VirtualAttr attr =
+          VirtualAttr('blocking', _html.listToCommas(operationList));
       node.attrs!.add(attr);
     }
     return this;

@@ -5,7 +5,7 @@
 
 import 'dart:html';
 
-import '../../../virtual_dom/virtual_node_attr.dart';
+import '../../../virtual_dom/virtual_attr.dart';
 import '../html_element.dart';
 import '../html_element_visible.dart';
 
@@ -14,9 +14,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<textarea>` tag.
-class TextArea extends ReioElementVisible {
+class TextArea extends WidgetElementVisible {
   /// The `<textarea>` HTML element represents a multi-line
   /// plain-text editing control, useful when you want to allow users
   /// to enter a sizeable amount of free-form text,
@@ -66,7 +66,7 @@ class TextArea extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attr-autocomplete)
   TextArea autoComplete(String value, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('autocomplete', value);
+      VirtualAttr attr = VirtualAttr('autocomplete', value);
       node.attrs!.add(attr);
     }
     return this;
@@ -77,7 +77,7 @@ class TextArea extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attr-cols)
   TextArea cols(int number, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('cols', number.toString());
+      VirtualAttr attr = VirtualAttr('cols', number.toString());
       node.attrs!.add(attr);
     }
     return this;
@@ -88,7 +88,7 @@ class TextArea extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attr-disabled)
   TextArea disabled(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('disabled', '');
+      VirtualAttr attr = VirtualAttr('disabled', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -99,7 +99,7 @@ class TextArea extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attr-form)
   TextArea form(String id, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('form', id);
+      VirtualAttr attr = VirtualAttr('form', id);
       node.attrs!.add(attr);
     }
     return this;
@@ -110,7 +110,7 @@ class TextArea extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attr-maxlength)
   TextArea maxLength(num number, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('maxlength', number.toString());
+      VirtualAttr attr = VirtualAttr('maxlength', number.toString());
       node.attrs!.add(attr);
     }
     return this;
@@ -122,7 +122,7 @@ class TextArea extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attr-minlength)
   TextArea minLength(num number, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('minlength', number.toString());
+      VirtualAttr attr = VirtualAttr('minlength', number.toString());
       node.attrs!.add(attr);
     }
     return this;
@@ -132,7 +132,7 @@ class TextArea extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attr-name)
   TextArea name(String name, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('name', name);
+      VirtualAttr attr = VirtualAttr('name', name);
       node.attrs!.add(attr);
     }
     return this;
@@ -143,7 +143,7 @@ class TextArea extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attr-placeholder)
   TextArea placeholder(String text, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('placeholder', text);
+      VirtualAttr attr = VirtualAttr('placeholder', text);
       node.attrs!.add(attr);
     }
     return this;
@@ -155,7 +155,7 @@ class TextArea extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attr-readonly)
   TextArea readOnly(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('readonly', '');
+      VirtualAttr attr = VirtualAttr('readonly', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -167,7 +167,7 @@ class TextArea extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attr-required)
   TextArea required(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('required', '');
+      VirtualAttr attr = VirtualAttr('required', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -177,7 +177,7 @@ class TextArea extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attr-rows)
   TextArea rows(int number, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('rows', number.toString());
+      VirtualAttr attr = VirtualAttr('rows', number.toString());
       node.attrs!.add(attr);
     }
     return this;
@@ -188,7 +188,7 @@ class TextArea extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attr-wrap)
   TextArea wrap(String value, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('wrap', value);
+      VirtualAttr attr = VirtualAttr('wrap', value);
       node.attrs!.add(attr);
     }
     return this;

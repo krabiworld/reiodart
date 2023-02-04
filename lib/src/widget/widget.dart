@@ -5,18 +5,18 @@
 
 import 'dart:html';
 
-import '../virtual_dom/virtual_node_slot.dart';
-import '../virtual_dom/virtual_node_widget.dart';
+import '../virtual_dom/node/virtual_node_slot.dart';
+import '../virtual_dom/node/virtual_node_widget.dart';
 import 'html/html_element.dart';
 import 'widget_watcher.dart';
 
 /// The parent of all widgets.
 /// You must extend it if you want to create a widget.
-abstract class ReioWidget {
+abstract class Widget {
   bool _isUpdate = false;
 
   /// Contains nodes that will be removed. Not recommended for use.
-  final List<ReioNodeWidget> remNodes = [];
+  final List<VirtualNodeWidget> remNodes = [];
 
   /// Contains nodes that will be removed on condition.
   final List<List<dynamic>> remOnceNodes = [];
@@ -35,14 +35,14 @@ abstract class ReioWidget {
   /// and afterwards also added on the same position.
   final Map<int, int?> _remPositions = {};
 
-  final ReioElement Function(ReioWidget widget) _html;
+  final WidgetElement Function(Widget widget) _html;
   final String? Function()? _styles;
-  final ReioWatcher _watcher = ReioWatcher();
+  final WidgetWatcher _watcher = WidgetWatcher();
 
-  ReioWidget(this._html, this._styles);
+  Widget(this._html, this._styles);
 
   /// Mounts the widget in the parent, and starts the activity.
-  void mount(ReioWidget parent) {
+  void mount(Widget parent) {
     _initialize(parent.node.element, true);
   }
 
@@ -61,7 +61,7 @@ abstract class ReioWidget {
     _initialize(element, true);
   }
 
-  /// Starts the activity and watcher [ReioWidget].
+  /// Starts the activity and watcher [Widget].
   void _initialize(dynamic element, bool replace) {
     _watcher.initActivity(() {
       _watcher.node = _html.call(this).node;
@@ -79,7 +79,7 @@ abstract class ReioWidget {
   /// Implementation of widget functionality.
   void activity();
 
-  /// Updates the old [ReioNodeWidget] with a new one.
+  /// Updates the old [VirtualNodeWidget] with a new one.
   void _update() {
     if (_isUpdate) {
       _watcher.node.styles = _styles?.call();
@@ -95,7 +95,7 @@ abstract class ReioWidget {
     if (remNodes.isEmpty && remOnceNodes.isEmpty && remOnNodes.isEmpty) return;
 
     if (remNodes.isNotEmpty) {
-      for (ReioNodeWidget node in remNodes) {
+      for (VirtualNodeWidget node in remNodes) {
         node.remove();
       }
       // When you get a new design, the list will be updated,
@@ -107,7 +107,7 @@ abstract class ReioWidget {
     if (remOnceNodes.isNotEmpty) {
       for (List<dynamic> list in remOnceNodes) {
         bool Function() condition = list[1];
-        ReioNodeWidget node = list[0];
+        VirtualNodeWidget node = list[0];
         if (condition()) node.remove();
       }
       // When you get a new design, the list will be updated,
@@ -121,7 +121,7 @@ abstract class ReioWidget {
 
     remOnNodes.forEach((int k, List<dynamic> v) {
       bool Function() condition = v[1];
-      ReioNodeWidget node = v[0];
+      VirtualNodeWidget node = v[0];
 
       // If the removal condition is true and the item is not removed.
       if (condition() && !_remSlots.contains(k)) {
@@ -150,7 +150,7 @@ abstract class ReioWidget {
 
     for (List<dynamic> list in toRemove) {
       // After saving the data, removing.
-      ReioNodeWidget node = list[1];
+      VirtualNodeWidget node = list[1];
       int slot = list[0];
 
       node.remove();
@@ -158,7 +158,7 @@ abstract class ReioWidget {
     }
 
     for (List<dynamic> list in toAdd) {
-      ReioNodeWidget node = list[1];
+      VirtualNodeWidget node = list[1];
       int slot = list[0];
 
       node.add(_remParents[slot]!, _remPositions[slot]!);
@@ -172,5 +172,5 @@ abstract class ReioWidget {
 
   void destroy() => _watcher.node.destroy();
 
-  ReioNodeWidget get node => _watcher.node;
+  VirtualNodeWidget get node => _watcher.node;
 }

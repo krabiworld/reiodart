@@ -11,9 +11,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<var>` tag.
-class Var extends ReioElementVisible {
+class Var extends WidgetElementVisible {
   /// The `<var>` HTML element represents the name
   /// of a variable in a mathematical expression
   /// or a programming context.

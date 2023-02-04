@@ -13,9 +13,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<p>` tag.
-class P extends ReioElementVisible {
+class P extends WidgetElementVisible {
   /// The `<p>` HTML element represents a paragraph.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p)
   P([super.value]) {

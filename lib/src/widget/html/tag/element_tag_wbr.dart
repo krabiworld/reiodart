@@ -11,9 +11,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<wbr>` tag.
-class Wbr extends ReioElementVisible {
+class Wbr extends WidgetElementVisible {
   /// The `<wbr>` HTML  element represents a word break
   /// opportunity—a position within text where the browser
   /// may optionally break a line, though its line-breaking

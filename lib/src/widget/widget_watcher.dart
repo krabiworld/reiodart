@@ -3,13 +3,13 @@
 // This source code is licensed under the MIT license found in the
 // LICENSE file in the root directory of this source tree.
 
-import '../virtual_dom/virtual_node_widget.dart';
+import '../virtual_dom/node/virtual_node_widget.dart';
 
 dynamic activity;
 
 /// Initializes a widget and sets the activity.
-class ReioWatcher {
-  late ReioNodeWidget node;
+class WidgetWatcher {
+  late VirtualNodeWidget node;
 
   void initActivity(Function fun) {
     fun.call();
@@ -22,27 +22,27 @@ class ReioWatcher {
   }
 }
 
-class ReioSubscriber {
+class Subscriber {
   Function function;
-  ReioNodeWidget node;
+  VirtualNodeWidget node;
 
-  ReioSubscriber(this.function, this.node);
+  Subscriber(this.function, this.node);
 }
 
-/// Sets the [ReioNodeWidget] dependency and controls subscribers.
-class ReioDependency {
-  final List<ReioSubscriber> subscribers = [];
+/// Sets the [VirtualNodeWidget] dependency and controls subscribers.
+class Dependency {
+  final List<Subscriber> subscribers = [];
 
   // Subscribes the activity to a virtual_dom.
-  void depend(ReioNodeWidget node) {
+  void depend(VirtualNodeWidget node) {
     if (activity != null && !subscribers.contains(activity)) {
-      subscribers.add(ReioSubscriber(activity, node));
+      subscribers.add(Subscriber(activity, node));
     }
   }
 
-  /// Calls out and controls [ReioDependency] subscribers.
+  /// Calls out and controls [Dependency] subscribers.
   void notify() {
-    List<ReioSubscriber> toRemove = [];
+    List<Subscriber> toRemove = [];
     List<Function> toExecute = [];
 
     for (var subscriber in subscribers) {
@@ -64,7 +64,7 @@ class ReioDependency {
     }
   }
 
-  /// Destroys [ReioDependency].
+  /// Destroys [Dependency].
   void destroy() {
     subscribers.clear();
   }

@@ -3,7 +3,7 @@
 // This source code is licensed under the MIT license found in the
 // LICENSE file in the root directory of this source tree.
 
-import '../../../virtual_dom/virtual_node_attr.dart';
+import '../../../virtual_dom/virtual_attr.dart';
 import '../html_element.dart';
 import '../html_element_visible.dart';
 
@@ -12,9 +12,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<time>` tag.
-class Time extends ReioElementVisible {
+class Time extends WidgetElementVisible {
   /// The `<time>` HTML element represents
   /// a specific period in time.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time)
@@ -28,7 +28,7 @@ class Time extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time#attr-datetime)
   Time dateTime(String time, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('datetime', time);
+      VirtualAttr attr = VirtualAttr('datetime', time);
       node.attrs!.add(attr);
     }
     return this;

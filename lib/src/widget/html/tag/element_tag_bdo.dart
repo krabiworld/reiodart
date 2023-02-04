@@ -10,9 +10,9 @@ import '../html_element.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<bdo>` tag.
-class Bdo extends ReioElement {
+class Bdo extends WidgetElement {
   /// The `<bdo>` HTML element overrides the current
   /// directionality of text, so that the text within
   /// is rendered in a different direction.

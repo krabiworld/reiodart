@@ -5,7 +5,7 @@
 
 import 'dart:html';
 
-import '../../../virtual_dom/virtual_node_attr.dart';
+import '../../../virtual_dom/virtual_attr.dart';
 import '../html_element.dart';
 import '../html_element_visible.dart';
 
@@ -14,9 +14,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<video>` tag.
-class Video extends ReioElementVisible {
+class Video extends WidgetElementVisible {
   /// The `<video>` HTML element embeds a media player
   /// which supports video playback into the document.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)
@@ -229,7 +229,7 @@ class Video extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-autoplay)
   Video autoPlay(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('autoplay', '');
+      VirtualAttr attr = VirtualAttr('autoplay', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -241,7 +241,7 @@ class Video extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-controls)
   Video controls(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('controls', '');
+      VirtualAttr attr = VirtualAttr('controls', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -252,7 +252,7 @@ class Video extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-crossorigin)
   Video crossOrigin(String mode, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('crossorigin', mode);
+      VirtualAttr attr = VirtualAttr('crossorigin', mode);
       node.attrs!.add(attr);
     }
     return this;
@@ -262,7 +262,7 @@ class Video extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-height)
   Video height(int pixels, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('height', pixels.toString());
+      VirtualAttr attr = VirtualAttr('height', pixels.toString());
       node.attrs!.add(attr);
     }
     return this;
@@ -273,7 +273,7 @@ class Video extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-loop)
   Video loop(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('loop', '');
+      VirtualAttr attr = VirtualAttr('loop', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -284,7 +284,7 @@ class Video extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-muted)
   Video muted(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('muted', '');
+      VirtualAttr attr = VirtualAttr('muted', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -296,7 +296,7 @@ class Video extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-playsinline)
   Video playsInline(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('playsinline', '');
+      VirtualAttr attr = VirtualAttr('playsinline', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -307,7 +307,7 @@ class Video extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-poster)
   Video poster(String url, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('poster', url);
+      VirtualAttr attr = VirtualAttr('poster', url);
       node.attrs!.add(attr);
     }
     return this;
@@ -320,7 +320,7 @@ class Video extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-preload)
   Video preload(String value, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('preload', value);
+      VirtualAttr attr = VirtualAttr('preload', value);
       node.attrs!.add(attr);
     }
     return this;
@@ -330,7 +330,7 @@ class Video extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-src)
   Video src(String url, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('src', url);
+      VirtualAttr attr = VirtualAttr('src', url);
       node.attrs!.add(attr);
     }
     return this;
@@ -340,7 +340,7 @@ class Video extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-width)
   Video width(int pixels, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('width', pixels.toString());
+      VirtualAttr attr = VirtualAttr('width', pixels.toString());
       node.attrs!.add(attr);
     }
     return this;

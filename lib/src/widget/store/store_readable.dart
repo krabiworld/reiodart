@@ -7,20 +7,20 @@ import '../widget.dart';
 import 'store.dart';
 
 /// Reactive store available for reading.
-class ReioReadableStore {
-  final Map<String, ReioProxy> _store = {};
+class ReadableStore {
+  final Map<String, ProxyStore> _store = {};
 
   /// Creates a store of readable proxies created on [Map].
-  ReioReadableStore(Map<String, dynamic> fields) {
-    fields.forEach((key, value) => _store[key] = ReioProxy(value));
+  ReadableStore(Map<String, dynamic> fields) {
+    fields.forEach((key, value) => _store[key] = ProxyStore(value));
   }
 
-  /// Takes [ReioWidget] second argument as a store dependency.
-  dynamic get(String key, ReioWidget widget) {
+  /// Takes [Widget] second argument as a store dependency.
+  dynamic get(String key, Widget widget) {
     return _store[key]?.get(widget.node);
   }
 
-  /// [ReioReadableStore] proxy can be destroyed,
+  /// [ReadableStore] proxy can be destroyed,
   /// takes the key of the value to be destroyed.
   void destroy(String key) {
     _store[key]?.destroy();

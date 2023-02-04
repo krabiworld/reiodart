@@ -13,9 +13,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<tfoot>` tag.
-class TFoot extends ReioElementVisible {
+class TFoot extends WidgetElementVisible {
   /// The `<tfoot>` HTML element defines a set
   /// of rows summarizing the columns of the table.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tfoot)

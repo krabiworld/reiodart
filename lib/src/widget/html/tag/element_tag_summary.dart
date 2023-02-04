@@ -11,9 +11,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<summary>` tag.
-class Summary extends ReioElementVisible {
+class Summary extends WidgetElementVisible {
   /// The `<summary>` HTML element specifies a summary,
   /// caption, or legend for a `<details>` element's disclosure box.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary)

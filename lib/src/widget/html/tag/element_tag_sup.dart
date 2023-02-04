@@ -11,9 +11,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<sup>` tag.
-class Sup extends ReioElementVisible {
+class Sup extends WidgetElementVisible {
   /// The `<sup>` HTML element specifies inline text
   /// which is to be displayed as superscript
   /// for solely typographical reasons.

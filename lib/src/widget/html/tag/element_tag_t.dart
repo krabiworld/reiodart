@@ -11,9 +11,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<tagName>` tag.
-class T extends ReioElementVisible {
+class T extends WidgetElementVisible {
   /// Takes an HTML [tagName] and creates
   /// the corresponding element.
   T(String tagName, [super.value]) {

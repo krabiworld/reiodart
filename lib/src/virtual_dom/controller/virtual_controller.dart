@@ -1,73 +1,19 @@
-// Copyright (c) MineEjo.
-//
-// This source code is licensed under the MIT license found in the
-// LICENSE file in the root directory of this source tree.
-
 import 'dart:html';
 import 'dart:math';
 
-import '../expand/expand_list.dart';
-import '../widget/html/html.dart';
-import 'virtual_node_attr.dart';
+import '../../expand/expand_list.dart';
+import '../../widget/html/html.dart';
+import '../node/virtual_node.dart';
+import '../virtual_attr.dart';
 
-// Ready-made code that can help at any time.
-// const String reioWidget = 'reio-widget';
-
-int _totalGenerated = 0;
-
-int _genWidgetNumber() => ++_totalGenerated;
-
-abstract class ReioNode {
-  String tag;
-  String value;
-  List<ReioNodeAttr>? attrs;
-  List<ReioNode>? children;
-
-  // Used as an identifier for a widget.
-  String number = _genWidgetNumber().toString();
-
-  // Contains the initial value and the actual value.
-  List<String> values = [];
-
-  bool isNewValue(String value) => (values.length > 1 && values[0] != value);
-
-  bool isOldValue(String value) => (values.length == 1 && values[0] == value);
-
-  // Stores the element from the DOM,
-  // to change the HTML, because Reio uses virtual.
-  Element? element;
-
-  /// The virtual virtual_dom used in the virtual DOM
-  /// tries to be similar to the HTML.
-  ReioNode({required this.tag, required this.value, this.attrs, this.children});
-
-  void destroy();
-
-  void init([Node? htmlNode]);
-
-  void updateTo(ReioNode newNode);
-
-  void saveValue(dynamic value) {
-    // Saves the original values, if there are more than 1,
-    // for checking them in the future.
-    // For example, to see if the new value was the original value.
-    if (!values.contains(value)) {
-      values.add(value);
-      // if there are more than 1, it reverses the list and
-      // trims the rest, leaving the initial and actual value.
-      if (values.length > 1) values = values.reversed.toList().sublist(0, 2);
-    }
-  }
-}
-
-/// Initializes or overwrites a [ReioNode].
-class ReioNodeController {
-  final ReioNode node;
-  ReioNode? minorNode;
+/// Initializes or overwrites a [VirtualNode].
+class VirtualController {
+  final VirtualNode node;
+  VirtualNode? minorNode;
 
   bool isUpdate = false;
 
-  ReioNodeController(this.node, [this.minorNode]) {
+  VirtualController(this.node, [this.minorNode]) {
     // The new virtual_dom, must update the old one,
     // so the update is true.
     if (minorNode != null) isUpdate = true;
@@ -76,7 +22,7 @@ class ReioNodeController {
   // Ready-made code that can help at any time.
   // void initData([Element? element]) {
   //   if (element == null) return;
-  //   element.setAttribute(reioWidget, node.number);
+  //   element.setAttribute('reio-widget', node.number);
   // }
 
   void initValue([Element? element]) {
@@ -92,7 +38,7 @@ class ReioNodeController {
     }
 
     if (isUpdate) {
-      ReioNode newNode = minorNode as ReioNode;
+      VirtualNode newNode = minorNode as VirtualNode;
 
       // No element = no value in the element.
       if (newNode.element == null ||
@@ -123,16 +69,16 @@ class ReioNodeController {
 
   void initAttrs([Element? element]) {
     // Ready-made code that can help at any time.
-    // final List<String> ignore = [reioWidget];
+    // final List<String> ignore = ['reio-widget'];
 
     if (isUpdate) {
       // No element = no attributes in the element.
       if (minorNode?.element == null || minorNode?.attrs == null) return;
-      ReioNode newNode = minorNode as ReioNode;
+      VirtualNode newNode = minorNode as VirtualNode;
       Element newElement = minorNode!.element as Element;
 
       if (compareMapOfList(node.attrs, newNode.attrs, (m) {
-        m as ReioNodeAttr;
+        m as VirtualAttr;
         return m.name + m.value;
       })) {
         return;
@@ -149,16 +95,16 @@ class ReioNodeController {
       }
 
       // Inserts new attributes.
-      List<ReioNodeAttr> attrs = newNode.attrs as List<ReioNodeAttr>;
-      for (ReioNodeAttr attr in attrs) {
+      List<VirtualAttr> attrs = newNode.attrs as List<VirtualAttr>;
+      for (VirtualAttr attr in attrs) {
         newElement.setAttribute(attr.name, attr.value);
       }
     } else {
       // No element = no attributes in the element.
       if (element == null || node.attrs == null) return;
-      List<ReioNodeAttr> attrs = node.attrs as List<ReioNodeAttr>;
+      List<VirtualAttr> attrs = node.attrs as List<VirtualAttr>;
 
-      for (ReioNodeAttr attr in attrs) {
+      for (VirtualAttr attr in attrs) {
         element.setAttribute(attr.name, attr.value);
       }
     }
@@ -167,10 +113,10 @@ class ReioNodeController {
   void initChildren([Element? element]) {
     if (isUpdate) {
       if (minorNode?.element == null || minorNode?.children == null) return;
-      List<ReioNode> newChildren = minorNode!.children as List<ReioNode>;
+      List<VirtualNode> newChildren = minorNode!.children as List<VirtualNode>;
 
       if (node.children != null) {
-        List<ReioNode> children = node.children as List<ReioNode>;
+        List<VirtualNode> children = node.children as List<VirtualNode>;
 
         // A loop that compares the children of
         // the current virtual_dom with the children of the new virtual_dom.

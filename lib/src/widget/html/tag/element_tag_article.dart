@@ -11,9 +11,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<article>` tag.
-class Article extends ReioElementVisible {
+class Article extends WidgetElementVisible {
   /// The `<article>` HTML element represents
   /// a self-contained composition in a document,
   /// page, application, or site, which is intended

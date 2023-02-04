@@ -5,7 +5,7 @@
 
 import 'dart:html';
 
-import '../../../virtual_dom/virtual_node_attr.dart';
+import '../../../virtual_dom/virtual_attr.dart';
 import '../html_element.dart';
 import '../html_element_visible.dart';
 
@@ -14,9 +14,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<object>` tag.
-class Object extends ReioElementVisible {
+class Object extends WidgetElementVisible {
   /// The `<object>` HTML element represents
   /// an external resource, which can be treated as an image,
   /// a nested browsing context, or a resource
@@ -67,7 +67,7 @@ class Object extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object#attr-data)
   Object data(String url, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('data', url);
+      VirtualAttr attr = VirtualAttr('data', url);
       node.attrs!.add(attr);
     }
     return this;
@@ -78,7 +78,7 @@ class Object extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object#attr-form)
   Object form(String id, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('form', id);
+      VirtualAttr attr = VirtualAttr('form', id);
       node.attrs!.add(attr);
     }
     return this;
@@ -88,7 +88,7 @@ class Object extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object#attr-height)
   Object height(int pixels, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('height', pixels.toString());
+      VirtualAttr attr = VirtualAttr('height', pixels.toString());
       node.attrs!.add(attr);
     }
     return this;
@@ -98,7 +98,7 @@ class Object extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object#attr-name)
   Object name(String name, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('name', name);
+      VirtualAttr attr = VirtualAttr('name', name);
       node.attrs!.add(attr);
     }
     return this;
@@ -108,7 +108,7 @@ class Object extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object#attr-type)
   Object type(String mediaType, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('type', mediaType);
+      VirtualAttr attr = VirtualAttr('type', mediaType);
       node.attrs!.add(attr);
     }
     return this;
@@ -120,7 +120,7 @@ class Object extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object#attr-usemap)
   Object useMap(String id, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('usemap', id);
+      VirtualAttr attr = VirtualAttr('usemap', id);
       node.attrs!.add(attr);
     }
     return this;
@@ -130,7 +130,7 @@ class Object extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object#attr-width)
   Object width(int pixels, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('width', pixels.toString());
+      VirtualAttr attr = VirtualAttr('width', pixels.toString());
       node.attrs!.add(attr);
     }
     return this;

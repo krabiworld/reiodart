@@ -5,7 +5,7 @@
 
 import 'dart:html';
 
-import '../../../virtual_dom/virtual_node_attr.dart';
+import '../../../virtual_dom/virtual_attr.dart';
 import '../html.dart';
 import '../html_element.dart';
 import '../html_element_visible.dart';
@@ -15,11 +15,11 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-ReioHtml _html = ReioHtml();
+WidgetHtml _html = WidgetHtml();
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<img>` tag.
-class Img extends ReioElementVisible {
+class Img extends WidgetElementVisible {
   /// The `<img>` HTML element embeds
   /// an image into the document.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img)
@@ -60,7 +60,7 @@ class Img extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-alt)
   Img alt(String text, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('alt', text);
+      VirtualAttr attr = VirtualAttr('alt', text);
       node.attrs!.add(attr);
     }
     return this;
@@ -71,7 +71,7 @@ class Img extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-crossorigin)
   Img crossOrigin(String mode, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('crossorigin', mode);
+      VirtualAttr attr = VirtualAttr('crossorigin', mode);
       node.attrs!.add(attr);
     }
     return this;
@@ -81,7 +81,7 @@ class Img extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-decoding)
   Img decoding(String value, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('decoding', value);
+      VirtualAttr attr = VirtualAttr('decoding', value);
       node.attrs!.add(attr);
     }
     return this;
@@ -92,7 +92,7 @@ class Img extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-elementtiming)
   Img elementTiming(String marker, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('elementtiming', marker);
+      VirtualAttr attr = VirtualAttr('elementtiming', marker);
       node.attrs!.add(attr);
     }
     return this;
@@ -102,7 +102,7 @@ class Img extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-height)
   Img height(int pixels, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('height', pixels.toString());
+      VirtualAttr attr = VirtualAttr('height', pixels.toString());
       node.attrs!.add(attr);
     }
     return this;
@@ -113,7 +113,7 @@ class Img extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-ismap)
   Img isMap(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('ismap', '');
+      VirtualAttr attr = VirtualAttr('ismap', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -123,7 +123,7 @@ class Img extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-loading)
   Img loading(String value, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('loading', value);
+      VirtualAttr attr = VirtualAttr('loading', value);
       node.attrs!.add(attr);
     }
     return this;
@@ -133,7 +133,7 @@ class Img extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-referrerpolicy)
   Img referrerPolicy(String referrer, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('referrerpolicy', referrer);
+      VirtualAttr attr = VirtualAttr('referrerpolicy', referrer);
       node.attrs!.add(attr);
     }
     return this;
@@ -143,7 +143,7 @@ class Img extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes)
   Img sizes(List<String> sizesList, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('sizes', _html.listToCommas(sizesList));
+      VirtualAttr attr = VirtualAttr('sizes', _html.listToCommas(sizesList));
       node.attrs!.add(attr);
     }
     return this;
@@ -153,7 +153,7 @@ class Img extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-src)
   Img src(String url, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('src', url);
+      VirtualAttr attr = VirtualAttr('src', url);
       node.attrs!.add(attr);
     }
     return this;
@@ -164,7 +164,7 @@ class Img extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-srcset)
   Img srcSet(List<String> srcList, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('srcset', _html.listToCommas(srcList));
+      VirtualAttr attr = VirtualAttr('srcset', _html.listToCommas(srcList));
       node.attrs!.add(attr);
     }
     return this;
@@ -174,7 +174,7 @@ class Img extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-width)
   Img width(int pixels, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('width', pixels.toString());
+      VirtualAttr attr = VirtualAttr('width', pixels.toString());
       node.attrs!.add(attr);
     }
     return this;
@@ -185,7 +185,7 @@ class Img extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-usemap)
   Img useMap(String id, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('usemap', id);
+      VirtualAttr attr = VirtualAttr('usemap', id);
       node.attrs!.add(attr);
     }
     return this;

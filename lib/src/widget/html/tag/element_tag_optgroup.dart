@@ -3,7 +3,7 @@
 // This source code is licensed under the MIT license found in the
 // LICENSE file in the root directory of this source tree.
 
-import '../../../virtual_dom/virtual_node_attr.dart';
+import '../../../virtual_dom/virtual_attr.dart';
 import '../html_element.dart';
 import '../html_element_visible.dart';
 
@@ -12,9 +12,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<optgroup>` tag.
-class OptGroup extends ReioElementVisible {
+class OptGroup extends WidgetElementVisible {
   /// The `<optgroup>` HTML element creates a grouping
   /// of options within a `<select>` element.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup)
@@ -27,7 +27,7 @@ class OptGroup extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup#attr-disabled)
   OptGroup disabled(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('disabled', '');
+      VirtualAttr attr = VirtualAttr('disabled', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -39,7 +39,7 @@ class OptGroup extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup#attr-label)
   OptGroup label(String text, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('label', text);
+      VirtualAttr attr = VirtualAttr('label', text);
       node.attrs!.add(attr);
     }
     return this;

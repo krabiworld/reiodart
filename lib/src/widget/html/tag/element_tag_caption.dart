@@ -13,9 +13,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<caption>` tag.
-class Caption extends ReioElementVisible {
+class Caption extends WidgetElementVisible {
   /// The `<caption>` HTML element specifies
   /// the caption (or title) of a table.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/caption)

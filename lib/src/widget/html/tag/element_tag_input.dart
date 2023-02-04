@@ -5,7 +5,7 @@
 
 import 'dart:html';
 
-import '../../../virtual_dom/virtual_node_attr.dart';
+import '../../../virtual_dom/virtual_attr.dart';
 import '../html_element.dart';
 import '../html_element_visible.dart';
 
@@ -14,9 +14,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<input>` tag.
-class Input extends ReioElementVisible {
+class Input extends WidgetElementVisible {
   /// The `<input>` HTML element is used
   /// to create interactive controls for web-based
   /// forms in order to accept data from the user.
@@ -26,7 +26,7 @@ class Input extends ReioElementVisible {
 
     /// The initial value of the control.
     /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#value)
-    ReioNodeAttr attr = ReioNodeAttr('value', value.toString());
+    VirtualAttr attr = VirtualAttr('value', value.toString());
     node.attrs!.add(attr);
   }
 
@@ -80,7 +80,7 @@ class Input extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#accept)
   Input accept(String type, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('accept', type);
+      VirtualAttr attr = VirtualAttr('accept', type);
       node.attrs!.add(attr);
     }
     return this;
@@ -90,7 +90,7 @@ class Input extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#alt)
   Input alt(String text, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('alt', text);
+      VirtualAttr attr = VirtualAttr('alt', text);
       node.attrs!.add(attr);
     }
     return this;
@@ -100,7 +100,7 @@ class Input extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#autocomplete)
   Input autoComplete(String value, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('autocomplete', value);
+      VirtualAttr attr = VirtualAttr('autocomplete', value);
       node.attrs!.add(attr);
     }
     return this;
@@ -110,7 +110,7 @@ class Input extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#capture)
   Input capture(String media, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('capture', media);
+      VirtualAttr attr = VirtualAttr('capture', media);
       node.attrs!.add(attr);
     }
     return this;
@@ -120,7 +120,7 @@ class Input extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#checked)
   Input checked(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('checked', '');
+      VirtualAttr attr = VirtualAttr('checked', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -131,7 +131,7 @@ class Input extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#dirname)
   Input dirName(String name, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('dirname', name);
+      VirtualAttr attr = VirtualAttr('dirname', name);
       node.attrs!.add(attr);
     }
     return this;
@@ -141,7 +141,7 @@ class Input extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#disabled)
   Input disabled(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('disabled', '');
+      VirtualAttr attr = VirtualAttr('disabled', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -151,7 +151,7 @@ class Input extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#form)
   Input form(String id, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('form', id);
+      VirtualAttr attr = VirtualAttr('form', id);
       node.attrs!.add(attr);
     }
     return this;
@@ -161,7 +161,7 @@ class Input extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#formaction)
   Input formAction(String url, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('formaction', url);
+      VirtualAttr attr = VirtualAttr('formaction', url);
       node.attrs!.add(attr);
     }
     return this;
@@ -172,7 +172,7 @@ class Input extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#formenctype)
   Input formEncType(String value, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('formenctype', value);
+      VirtualAttr attr = VirtualAttr('formenctype', value);
       node.attrs!.add(attr);
     }
     return this;
@@ -182,7 +182,7 @@ class Input extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#formmethod)
   Input formMethod(String method, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('formmethod', method);
+      VirtualAttr attr = VirtualAttr('formmethod', method);
       node.attrs!.add(attr);
     }
     return this;
@@ -192,7 +192,7 @@ class Input extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#formnovalidate)
   Input formNoValidate(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('formnovalidate', '');
+      VirtualAttr attr = VirtualAttr('formnovalidate', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -202,7 +202,7 @@ class Input extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#formtarget)
   Input formTarget(String context, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('formtarget', context);
+      VirtualAttr attr = VirtualAttr('formtarget', context);
       node.attrs!.add(attr);
     }
     return this;
@@ -212,7 +212,7 @@ class Input extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#height)
   Input height(int pixels, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('height', pixels.toString());
+      VirtualAttr attr = VirtualAttr('height', pixels.toString());
       node.attrs!.add(attr);
     }
     return this;
@@ -223,7 +223,7 @@ class Input extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#list)
   Input list(String id, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('list', id);
+      VirtualAttr attr = VirtualAttr('list', id);
       node.attrs!.add(attr);
     }
     return this;
@@ -233,7 +233,7 @@ class Input extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#max)
   Input max(dynamic value, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('max', value.toString());
+      VirtualAttr attr = VirtualAttr('max', value.toString());
       node.attrs!.add(attr);
     }
     return this;
@@ -243,7 +243,7 @@ class Input extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#maxlength)
   Input maxLength(num number, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('maxlength', number.toString());
+      VirtualAttr attr = VirtualAttr('maxlength', number.toString());
       node.attrs!.add(attr);
     }
     return this;
@@ -253,7 +253,7 @@ class Input extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#min)
   Input min(dynamic value, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('min', value.toString());
+      VirtualAttr attr = VirtualAttr('min', value.toString());
       node.attrs!.add(attr);
     }
     return this;
@@ -263,7 +263,7 @@ class Input extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#minlength)
   Input minLength(num number, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('minlength', number.toString());
+      VirtualAttr attr = VirtualAttr('minlength', number.toString());
       node.attrs!.add(attr);
     }
     return this;
@@ -273,7 +273,7 @@ class Input extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#multiple)
   Input multiple(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('multiple', '');
+      VirtualAttr attr = VirtualAttr('multiple', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -283,7 +283,7 @@ class Input extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#name)
   Input name(String name, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('name', name);
+      VirtualAttr attr = VirtualAttr('name', name);
       node.attrs!.add(attr);
     }
     return this;
@@ -293,7 +293,7 @@ class Input extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#pattern)
   Input pattern(RegExp exp, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('pattern', exp.pattern);
+      VirtualAttr attr = VirtualAttr('pattern', exp.pattern);
       node.attrs!.add(attr);
     }
     return this;
@@ -304,7 +304,7 @@ class Input extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#placeholder)
   Input placeholder(String text, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('placeholder', text);
+      VirtualAttr attr = VirtualAttr('placeholder', text);
       node.attrs!.add(attr);
     }
     return this;
@@ -314,7 +314,7 @@ class Input extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#readonly)
   Input readOnly(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('readonly', '');
+      VirtualAttr attr = VirtualAttr('readonly', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -325,7 +325,7 @@ class Input extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#required)
   Input required(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('required', '');
+      VirtualAttr attr = VirtualAttr('required', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -335,7 +335,7 @@ class Input extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#size)
   Input size(int number, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('size', number.toString());
+      VirtualAttr attr = VirtualAttr('size', number.toString());
       node.attrs!.add(attr);
     }
     return this;
@@ -345,7 +345,7 @@ class Input extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#src)
   Input src(String url, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('src', url);
+      VirtualAttr attr = VirtualAttr('src', url);
       node.attrs!.add(attr);
     }
     return this;
@@ -355,7 +355,7 @@ class Input extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#step)
   Input step(int number, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('step', number.toString());
+      VirtualAttr attr = VirtualAttr('step', number.toString());
       node.attrs!.add(attr);
     }
     return this;
@@ -365,7 +365,7 @@ class Input extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#type)
   Input type(String inputTypes, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('type', inputTypes);
+      VirtualAttr attr = VirtualAttr('type', inputTypes);
       node.attrs!.add(attr);
     }
     return this;
@@ -375,7 +375,7 @@ class Input extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#width)
   Input width(int pixels, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('width', pixels.toString());
+      VirtualAttr attr = VirtualAttr('width', pixels.toString());
       node.attrs!.add(attr);
     }
     return this;

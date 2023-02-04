@@ -5,7 +5,7 @@
 
 import 'dart:html';
 
-import '../../../virtual_dom/virtual_node_attr.dart';
+import '../../../virtual_dom/virtual_attr.dart';
 import '../html_element.dart';
 import '../html_element_visible.dart';
 
@@ -14,9 +14,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<select>` tag.
-class Select extends ReioElementVisible {
+class Select extends WidgetElementVisible {
   /// The `<select>` HTML element represents
   /// a control that provides a menu of options.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select)
@@ -46,7 +46,7 @@ class Select extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select#attr-autocomplete)
   Select autoComplete(String value, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('autocomplete', value);
+      VirtualAttr attr = VirtualAttr('autocomplete', value);
       node.attrs!.add(attr);
     }
     return this;
@@ -57,7 +57,7 @@ class Select extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select#attr-disabled)
   Select disabled(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('disabled', '');
+      VirtualAttr attr = VirtualAttr('disabled', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -68,7 +68,7 @@ class Select extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select#attr-form)
   Select form(String id, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('form', id);
+      VirtualAttr attr = VirtualAttr('form', id);
       node.attrs!.add(attr);
     }
     return this;
@@ -79,7 +79,7 @@ class Select extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select#attr-multiple)
   Select multiple(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('multiple', '');
+      VirtualAttr attr = VirtualAttr('multiple', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -90,7 +90,7 @@ class Select extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select#attr-name)
   Select name(String name, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('name', name);
+      VirtualAttr attr = VirtualAttr('name', name);
       node.attrs!.add(attr);
     }
     return this;
@@ -101,7 +101,7 @@ class Select extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select#attr-required)
   Select required(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('required', '');
+      VirtualAttr attr = VirtualAttr('required', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -116,7 +116,7 @@ class Select extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select#attr-size)
   Select size(int number, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('size', number.toString());
+      VirtualAttr attr = VirtualAttr('size', number.toString());
       node.attrs!.add(attr);
     }
     return this;

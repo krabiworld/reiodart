@@ -11,9 +11,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<abbr>` tag.
-class Abbr extends ReioElementVisible {
+class Abbr extends WidgetElementVisible {
   /// The `<abbr>` HTML element represents
   /// an abbreviation or acronym.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr)

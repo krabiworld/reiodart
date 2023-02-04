@@ -3,7 +3,7 @@
 // This source code is licensed under the MIT license found in the
 // LICENSE file in the root directory of this source tree.
 
-import '../../../virtual_dom/virtual_node_attr.dart';
+import '../../../virtual_dom/virtual_attr.dart';
 import '../html.dart';
 import '../html_element.dart';
 import '../html_element_visible.dart';
@@ -13,11 +13,11 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-ReioHtml _html = ReioHtml();
+WidgetHtml _html = WidgetHtml();
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<a>` tag.
-class A extends ReioElementVisible {
+class A extends WidgetElementVisible {
   /// The `<a>` HTML element (or anchor element),
   /// with its href attribute, creates a hyperlink
   /// to web pages, files, email addresses, locations
@@ -32,7 +32,7 @@ class A extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-download)
   A download(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('download', '');
+      VirtualAttr attr = VirtualAttr('download', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -42,7 +42,7 @@ class A extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-href)
   A href(String url, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('href', url);
+      VirtualAttr attr = VirtualAttr('href', url);
       node.attrs!.add(attr);
     }
     return this;
@@ -52,7 +52,7 @@ class A extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-hreflang)
   A hrefLang(String langCode, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('hreflang', langCode);
+      VirtualAttr attr = VirtualAttr('hreflang', langCode);
       node.attrs!.add(attr);
     }
     return this;
@@ -62,7 +62,7 @@ class A extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-ping)
   A ping(List<String> urlList, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('ping', _html.listToSpaces(urlList));
+      VirtualAttr attr = VirtualAttr('ping', _html.listToSpaces(urlList));
       node.attrs!.add(attr);
     }
     return this;
@@ -72,7 +72,7 @@ class A extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-referrerpolicy)
   A referrerPolicy(String referrer, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('referrerpolicy', referrer);
+      VirtualAttr attr = VirtualAttr('referrerpolicy', referrer);
       node.attrs!.add(attr);
     }
     return this;
@@ -82,7 +82,7 @@ class A extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-rel)
   A rel(List<String> typeList, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('rel', _html.listToSpaces(typeList));
+      VirtualAttr attr = VirtualAttr('rel', _html.listToSpaces(typeList));
       node.attrs!.add(attr);
     }
     return this;
@@ -93,7 +93,7 @@ class A extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-target)
   A target(String context, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('target', context);
+      VirtualAttr attr = VirtualAttr('target', context);
       node.attrs!.add(attr);
     }
     return this;
@@ -103,7 +103,7 @@ class A extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-type)
   A type(String mediaType, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('type', mediaType);
+      VirtualAttr attr = VirtualAttr('type', mediaType);
       node.attrs!.add(attr);
     }
     return this;

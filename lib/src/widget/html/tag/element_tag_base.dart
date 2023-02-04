@@ -3,7 +3,7 @@
 // This source code is licensed under the MIT license found in the
 // LICENSE file in the root directory of this source tree.
 
-import '../../../virtual_dom/virtual_node_attr.dart';
+import '../../../virtual_dom/virtual_attr.dart';
 import '../html_element.dart';
 
 // Experimental, not standard or obsolete tags and attributes
@@ -11,9 +11,9 @@ import '../html_element.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<base>` tag.
-class Base extends ReioElement {
+class Base extends WidgetElement {
   /// The `<base>` HTML element specifies
   /// the base URL to use for all relative
   /// URLs in a document.
@@ -27,7 +27,7 @@ class Base extends ReioElement {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base#attr-href)
   Base href(String url, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('href', url);
+      VirtualAttr attr = VirtualAttr('href', url);
       node.attrs!.add(attr);
     }
     return this;
@@ -40,7 +40,7 @@ class Base extends ReioElement {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base#attr-target)
   Base target(String context, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('target', context);
+      VirtualAttr attr = VirtualAttr('target', context);
       node.attrs!.add(attr);
     }
     return this;

@@ -5,7 +5,7 @@
 
 import 'dart:html';
 
-import '../../../virtual_dom/virtual_node_attr.dart';
+import '../../../virtual_dom/virtual_attr.dart';
 import '../html.dart';
 import '../html_element.dart';
 import '../html_element_visible.dart';
@@ -15,11 +15,11 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-ReioHtml _html = ReioHtml();
+WidgetHtml _html = WidgetHtml();
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<form>` tag.
-class Form extends ReioElementVisible {
+class Form extends WidgetElementVisible {
   /// The `<form>` HTML element represents
   /// a document section containing interactive controls
   /// for submitting information.
@@ -54,8 +54,8 @@ class Form extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attr-accept-charset)
   Form acceptCharset(List<String> encList, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr =
-          ReioNodeAttr('accept-charset', _html.listToSpaces(encList));
+      VirtualAttr attr =
+          VirtualAttr('accept-charset', _html.listToSpaces(encList));
       node.attrs!.add(attr);
     }
     return this;
@@ -67,7 +67,7 @@ class Form extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attr-autocomplete)
   Form autoComplete(String value, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('autocomplete', value);
+      VirtualAttr attr = VirtualAttr('autocomplete', value);
       node.attrs!.add(attr);
     }
     return this;
@@ -77,7 +77,7 @@ class Form extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attr-name)
   Form name(String name, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('name', name);
+      VirtualAttr attr = VirtualAttr('name', name);
       node.attrs!.add(attr);
     }
     return this;
@@ -88,7 +88,7 @@ class Form extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attr-rel)
   Form rel(List<String> typeList, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('rel', _html.listToSpaces(typeList));
+      VirtualAttr attr = VirtualAttr('rel', _html.listToSpaces(typeList));
       node.attrs!.add(attr);
     }
     return this;

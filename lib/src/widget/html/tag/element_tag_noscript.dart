@@ -11,9 +11,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<noscript>` tag.
-class NoScript extends ReioElementVisible {
+class NoScript extends WidgetElementVisible {
   /// The `<noscript>` HTML element defines a section
   /// of HTML to be inserted if a script type on the page
   /// is unsupported or if scripting is currently turned

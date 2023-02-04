@@ -11,9 +11,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<section>` tag.
-class Section extends ReioElementVisible {
+class Section extends WidgetElementVisible {
   /// The `<section>` HTML element represents
   /// a generic standalone section of a document,
   /// which doesn't have a more specific semantic

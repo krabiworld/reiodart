@@ -5,7 +5,7 @@
 
 import 'dart:html';
 
-import '../../../virtual_dom/virtual_node_attr.dart';
+import '../../../virtual_dom/virtual_attr.dart';
 import '../html_element.dart';
 import '../html_element_visible.dart';
 
@@ -14,9 +14,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<audio>` tag.
-class Audio extends ReioElementVisible {
+class Audio extends WidgetElementVisible {
   /// The `<audio>` HTML element is used
   /// to embed sound content in documents.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio)
@@ -229,7 +229,7 @@ class Audio extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio#attr-autoplay)
   Audio autoPlay(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('autoplay', '');
+      VirtualAttr attr = VirtualAttr('autoplay', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -241,7 +241,7 @@ class Audio extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio#attr-controls)
   Audio controls(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('controls', '');
+      VirtualAttr attr = VirtualAttr('controls', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -252,7 +252,7 @@ class Audio extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio#attr-crossorigin)
   Audio crossOrigin(String mode, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('crossorigin', mode);
+      VirtualAttr attr = VirtualAttr('crossorigin', mode);
       node.attrs!.add(attr);
     }
     return this;
@@ -264,7 +264,7 @@ class Audio extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio#attr-loop)
   Audio loop(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('loop', '');
+      VirtualAttr attr = VirtualAttr('loop', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -275,7 +275,7 @@ class Audio extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio#attr-muted)
   Audio muted(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('muted', '');
+      VirtualAttr attr = VirtualAttr('muted', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -287,7 +287,7 @@ class Audio extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio#attr-preload)
   Audio preload(String value, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('preload', value);
+      VirtualAttr attr = VirtualAttr('preload', value);
       node.attrs!.add(attr);
     }
     return this;
@@ -297,7 +297,7 @@ class Audio extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio#attr-src)
   Audio src(String url, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('src', url);
+      VirtualAttr attr = VirtualAttr('src', url);
       node.attrs!.add(attr);
     }
     return this;

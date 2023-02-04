@@ -11,9 +11,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<aside>` tag.
-class Aside extends ReioElementVisible {
+class Aside extends WidgetElementVisible {
   /// The `<aside>` HTML element represents
   /// a portion of a document whose content is only
   /// indirectly related to the document's main content.

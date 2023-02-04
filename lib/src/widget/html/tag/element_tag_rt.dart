@@ -11,9 +11,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<rt>` tag.
-class Rt extends ReioElementVisible {
+class Rt extends WidgetElementVisible {
   /// The `<rt>` HTML element specifies
   /// the ruby text widget of a ruby annotation,
   /// which is used to provide pronunciation, translation,

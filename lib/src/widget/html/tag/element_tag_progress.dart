@@ -3,7 +3,7 @@
 // This source code is licensed under the MIT license found in the
 // LICENSE file in the root directory of this source tree.
 
-import '../../../virtual_dom/virtual_node_attr.dart';
+import '../../../virtual_dom/virtual_attr.dart';
 import '../html_element.dart';
 import '../html_element_visible.dart';
 
@@ -12,9 +12,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<progress>` tag.
-class Progress extends ReioElementVisible {
+class Progress extends WidgetElementVisible {
   /// The `<progress>` HTML element displays an indicator
   /// showing the completion progress of a task,
   /// typically displayed as a progress bar.
@@ -28,7 +28,7 @@ class Progress extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress#attr-max)
   Progress max(num number, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('max', number.toString());
+      VirtualAttr attr = VirtualAttr('max', number.toString());
       node.attrs!.add(attr);
     }
     return this;
@@ -39,7 +39,7 @@ class Progress extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress#attr-value)
   Progress value(num number, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('value', number.toString());
+      VirtualAttr attr = VirtualAttr('value', number.toString());
       node.attrs!.add(attr);
     }
     return this;

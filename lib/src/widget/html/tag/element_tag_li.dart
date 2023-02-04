@@ -5,7 +5,7 @@
 
 import 'dart:html';
 
-import '../../../virtual_dom/virtual_node_attr.dart';
+import '../../../virtual_dom/virtual_attr.dart';
 import '../html_element.dart';
 import '../html_element_visible.dart';
 
@@ -14,9 +14,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<li>` tag.
-class Li extends ReioElementVisible {
+class Li extends WidgetElementVisible {
   /// The `<li>` HTML element is used
   /// to represent an item in a list.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li)
@@ -30,7 +30,7 @@ class Li extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li#attr-value)
   Li value(int number, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('value', number.toString());
+      VirtualAttr attr = VirtualAttr('value', number.toString());
       node.attrs!.add(attr);
     }
     return this;

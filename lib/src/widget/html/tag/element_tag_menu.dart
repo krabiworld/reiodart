@@ -13,9 +13,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<menu>` tag.
-class Menu extends ReioElementVisible {
+class Menu extends WidgetElementVisible {
   /// The `<menu>` HTML element is described
   /// in the HTML specification as a semantic
   /// alternative to `<ul>`, but treated by browsers

@@ -11,9 +11,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<u>` tag.
-class U extends ReioElementVisible {
+class U extends WidgetElementVisible {
   /// The `<u>` HTML element represents a span of inline text
   /// which should be rendered in a way that indicates
   /// that it has a non-textual annotation.

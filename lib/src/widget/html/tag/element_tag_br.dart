@@ -10,9 +10,9 @@ import '../html_element.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<br>` tag.
-class Br extends ReioElement {
+class Br extends WidgetElement {
   /// The `<br>` HTML element produces a line break
   /// in text (carriage-return).
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br)

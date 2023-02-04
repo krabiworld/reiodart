@@ -11,9 +11,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<i>` tag.
-class I extends ReioElementVisible {
+class I extends WidgetElementVisible {
   /// The `<i>` HTML element represents a range
   /// of text that is set off from the normal text
   /// for some reason, such as idiomatic text,

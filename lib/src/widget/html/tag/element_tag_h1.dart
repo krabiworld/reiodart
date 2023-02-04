@@ -13,9 +13,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a
+/// Contains [WidgetElement] that contains a
 /// virtual_dom with the `<h1>` tag.
-class H1 extends ReioElementVisible {
+class H1 extends WidgetElementVisible {
   /// The `<h1>` to `<h6>` HTML element represents
   /// a document section containing interactive controls
   /// for submitting information.

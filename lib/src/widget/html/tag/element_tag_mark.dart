@@ -11,9 +11,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<mark>` tag.
-class Mark extends ReioElementVisible {
+class Mark extends WidgetElementVisible {
   /// The `<mark>` HTML element represents text
   /// which is marked or highlighted for reference
   /// or notation purposes due to the marked passage's

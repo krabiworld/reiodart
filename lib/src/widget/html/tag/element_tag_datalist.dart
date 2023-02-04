@@ -11,9 +11,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<datalist>` tag.
-class DataList extends ReioElementVisible {
+class DataList extends WidgetElementVisible {
   /// The `<datalist>` HTML element contains
   /// a set of `<option>` elements that represent
   /// the permissible or recommended options available

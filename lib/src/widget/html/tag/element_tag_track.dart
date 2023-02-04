@@ -5,7 +5,7 @@
 
 import 'dart:html';
 
-import '../../../virtual_dom/virtual_node_attr.dart';
+import '../../../virtual_dom/virtual_attr.dart';
 import '../html_element.dart';
 import '../html_element_visible.dart';
 
@@ -14,9 +14,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<track>` tag.
-class Track extends ReioElementVisible {
+class Track extends WidgetElementVisible {
   /// The `<track>` HTML element is used
   /// as a child of the media elements, `<audio>` and `<video>`.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track)
@@ -38,7 +38,7 @@ class Track extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track#attr-default)
   Track thisDefault(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('default', '');
+      VirtualAttr attr = VirtualAttr('default', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -48,7 +48,7 @@ class Track extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track#attr-kind)
   Track kind(String keyword, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('kind', keyword);
+      VirtualAttr attr = VirtualAttr('kind', keyword);
       node.attrs!.add(attr);
     }
     return this;
@@ -60,7 +60,7 @@ class Track extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track#attr-label)
   Track label(String text, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('label', text);
+      VirtualAttr attr = VirtualAttr('label', text);
       node.attrs!.add(attr);
     }
     return this;
@@ -70,7 +70,7 @@ class Track extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track#attr-src)
   Track src(String url, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('src', url);
+      VirtualAttr attr = VirtualAttr('src', url);
       node.attrs!.add(attr);
     }
     return this;
@@ -80,7 +80,7 @@ class Track extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track#attr-srclang)
   Track srcLang(String langCode, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('srclang', langCode);
+      VirtualAttr attr = VirtualAttr('srclang', langCode);
       node.attrs!.add(attr);
     }
     return this;

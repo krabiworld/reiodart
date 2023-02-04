@@ -11,9 +11,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<main>` tag.
-class Main extends ReioElementVisible {
+class Main extends WidgetElementVisible {
   /// The `<main>` HTML element represents
   /// the dominant content of the `<body>` of a document.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main)

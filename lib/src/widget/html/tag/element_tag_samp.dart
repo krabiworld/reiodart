@@ -11,9 +11,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<samp>` tag.
-class Samp extends ReioElementVisible {
+class Samp extends WidgetElementVisible {
   /// The `<samp>` HTML element is used
   /// to enclose inline text which represents sample
   /// (or quoted) output from a computer program.

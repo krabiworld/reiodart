@@ -5,9 +5,9 @@
 
 import 'dart:html';
 
-import '../../virtual_dom/virtual_node_attr.dart';
-import '../../virtual_dom/virtual_node_slot.dart';
-import '../../virtual_dom/virtual_node_widget.dart';
+import '../../virtual_dom/virtual_attr.dart';
+import '../../virtual_dom/node/virtual_node_slot.dart';
+import '../../virtual_dom/node/virtual_node_widget.dart';
 import '../widget.dart';
 import 'html.dart';
 import 'tag/element_tag_div.dart';
@@ -17,93 +17,93 @@ import 'tag/element_tag_div.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-ReioHtml _html = ReioHtml();
+WidgetHtml _html = WidgetHtml();
 
-/// Contains [ReioElement] created on [ReioWidget].
+/// Contains [WidgetElement] created on [Widget].
 /// Optimizes HTML DOM and Reio Virtual DOM.
-abstract class ReioElement {
-  final ReioNodeWidget _node =
-      ReioNodeWidget(tag: '', value: '', attrs: [], children: []);
+abstract class WidgetElement {
+  final VirtualNodeWidget _node =
+      VirtualNodeWidget(tag: '', value: '', attrs: [], children: []);
 
-  /// Returns [ReioElement] created on [ReioWidget].
+  /// Returns [WidgetElement] created on [Widget].
   /// Optimizes HTML DOM and Reio Virtual DOM.
   /// For example, convert HTML `<div>`
   /// to Reio [Div] preserving basic functions.<br><br>
   /// Uses a [value] similar to innerValue in HTML.
-  ReioElement([String? value]) {
+  WidgetElement([String? value]) {
     _node.value = value ?? '';
   }
 
-  /// Sets the [ReioElement] HTML tag.
+  /// Sets the [WidgetElement] HTML tag.
   set tag(String tag) => _node.tag = tag;
 
-  /// Removes [ReioElement] from the HTML DOM.
-  ReioElement remove(ReioWidget widget) {
+  /// Removes [WidgetElement] from the HTML DOM.
+  WidgetElement remove(Widget widget) {
     widget.remNodes.add(_node);
     return this;
   }
 
-  /// Removes [ReioElement] from the HTML DOM
+  /// Removes [WidgetElement] from the HTML DOM
   /// if the condition is true.
-  ReioElement removeIf(ReioWidget widget, bool Function()? condition) {
+  WidgetElement removeIf(Widget widget, bool Function()? condition) {
     widget.remOnceNodes.add([_node, condition]);
     return this;
   }
 
-  /// Removes [ReioElement] from the HTML DOM
+  /// Removes [WidgetElement] from the HTML DOM
   /// if the condition is true and adds it using
   /// [$] method if it is false.
-  ReioElement removeIfTrue(
-      ReioWidget widget, int slot, bool Function()? condition) {
+  WidgetElement removeIfTrue(
+      Widget widget, int slot, bool Function()? condition) {
     widget.remOnNodes[slot] = [_node, condition];
     return this;
   }
 
-  /// Adds the specified [ReioElement] to [ReioElement]
+  /// Adds the specified [WidgetElement] to [WidgetElement]
   /// from which the method was called.
   /// Think of it as an add, insert, etc. method.
-  ReioElement $(ReioElement element) {
+  WidgetElement $(WidgetElement element) {
     _node.children?.add(element.node);
     return this;
   }
 
-  /// Creates a slot for inserting a side [ReioWidget].
-  ReioElement $slot(String id) {
-    _node.children?.add(ReioNodeSlot(value: id));
+  /// Creates a slot for inserting a side [Widget].
+  WidgetElement $slot(String id) {
+    _node.children?.add(VirtualNodeSlot(value: id));
     return this;
   }
 
-  /// The event is activated when [ReioWidget]
+  /// The event is activated when [Widget]
   /// is mounted in the Reio Virtual DOM.
-  ReioElement onMount(Function(Element)? fun) {
+  WidgetElement onMount(Function(Element)? fun) {
     _node.onMount = fun;
     return this;
   }
 
-  /// The event is activated when [ReioWidget]
+  /// The event is activated when [Widget]
   /// is removed from the Reio Virtual DOM.
-  ReioElement onDestroy(Function()? fun) {
+  WidgetElement onDestroy(Function()? fun) {
     _node.onDestroy = fun;
     return this;
   }
 
-  /// The event is activated when an [ReioElement]
+  /// The event is activated when an [WidgetElement]
   /// is added to the HTML DOM.
-  ReioElement onAdd(Function(Element)? fun) {
+  WidgetElement onAdd(Function(Element)? fun) {
     _node.onAdd = fun;
     return this;
   }
 
-  /// The event is activated when an [ReioElement]
+  /// The event is activated when an [WidgetElement]
   /// is removed from the HTML DOM.
-  ReioElement onRemove(Function()? fun) {
+  WidgetElement onRemove(Function()? fun) {
     _node.onRemove = fun;
     return this;
   }
 
   /// Allows to create a custom HTML event,
   /// for example, if you can't find the desired one.
-  ReioElement on(String eventName, Function(Element, Event) fun) {
+  WidgetElement on(String eventName, Function(Element, Event) fun) {
     // The element event can only be activated
     // after the element has been embedded.
     onMount((Element element) => element.on[eventName].listen((Event event) {
@@ -118,9 +118,9 @@ abstract class ReioElement {
   /// should be translated when the page is localized,
   /// or whether to leave them unchanged.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/translate)
-  ReioElement translate(String value, [bool? removeIf]) {
+  WidgetElement translate(String value, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('translate', value);
+      VirtualAttr attr = VirtualAttr('translate', value);
       node.attrs!.add(attr);
     }
     return this;
@@ -130,9 +130,9 @@ abstract class ReioElement {
   /// representing advisory information related
   /// to the element it belongs to.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/title)
-  ReioElement title(String text, [bool? removeIf]) {
+  WidgetElement title(String text, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('title', text);
+      VirtualAttr attr = VirtualAttr('title', text);
       node.attrs!.add(attr);
     }
     return this;
@@ -144,9 +144,9 @@ abstract class ReioElement {
   /// the Tab key, hence the name) and determine their
   /// relative ordering for sequential focus navigation.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex)
-  ReioElement tabIndex(int number, [bool? removeIf]) {
+  WidgetElement tabIndex(int number, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('tabindex', number.toString());
+      VirtualAttr attr = VirtualAttr('tabindex', number.toString());
       node.attrs!.add(attr);
     }
     return this;
@@ -155,10 +155,10 @@ abstract class ReioElement {
   /// The style global attribute contains CSS
   /// styling declarations to be applied to the element.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/style)
-  ReioElement style(List<String> styleList, [bool? removeIf]) {
+  WidgetElement style(List<String> styleList, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr =
-          ReioNodeAttr('style', _html.listToSemicolons(styleList));
+      VirtualAttr attr =
+          VirtualAttr('style', _html.listToSemicolons(styleList));
       node.attrs!.add(attr);
     }
     return this;
@@ -167,9 +167,9 @@ abstract class ReioElement {
   /// The spellcheck global attribute that defines
   /// whether the element may be checked for spelling errors.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/spellcheck)
-  ReioElement spellCheck(bool boolean, [bool? removeIf]) {
+  WidgetElement spellCheck(bool boolean, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('spellcheck', boolean.toString());
+      VirtualAttr attr = VirtualAttr('spellcheck', boolean.toString());
       node.attrs!.add(attr);
     }
     return this;
@@ -181,9 +181,9 @@ abstract class ReioElement {
   /// to determine whether or not a given fetch will
   /// be allowed to proceed for a given element.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/nonce)
-  ReioElement nonce(String crypto, [bool? removeIf]) {
+  WidgetElement nonce(String crypto, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('nonce', crypto);
+      VirtualAttr attr = VirtualAttr('nonce', crypto);
       node.attrs!.add(attr);
     }
     return this;
@@ -195,9 +195,9 @@ abstract class ReioElement {
   /// or the language that the editable elements
   /// should be written in by the user.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang)
-  ReioElement lang(String langCode, [bool? removeIf]) {
+  WidgetElement lang(String langCode, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('lang', langCode);
+      VirtualAttr attr = VirtualAttr('lang', langCode);
       node.attrs!.add(attr);
     }
     return this;
@@ -207,9 +207,9 @@ abstract class ReioElement {
   /// of the vocabulary that will be used to define
   /// itemprop's (item properties) in the data structure.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemtype)
-  ReioElement itemType(String url, [bool? removeIf]) {
+  WidgetElement itemType(String url, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('itemtype', url);
+      VirtualAttr attr = VirtualAttr('itemtype', url);
       node.attrs!.add(attr);
     }
     return this;
@@ -218,9 +218,9 @@ abstract class ReioElement {
   /// itemscope is a global attribute that
   /// defines the scope of associated metadata.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemscope)
-  ReioElement itemScope(bool boolean) {
+  WidgetElement itemScope(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('itemscope', '');
+      VirtualAttr attr = VirtualAttr('itemscope', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -230,9 +230,9 @@ abstract class ReioElement {
   /// (not itemids) elsewhere in the document,
   /// with additional properties
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemref)
-  ReioElement itemRef(String value, [bool? removeIf]) {
+  WidgetElement itemRef(String value, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('itemref', value);
+      VirtualAttr attr = VirtualAttr('itemref', value);
       node.attrs!.add(attr);
     }
     return this;
@@ -241,9 +241,9 @@ abstract class ReioElement {
   /// The itemprop global attribute
   /// is used to add properties to an item.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemprop)
-  ReioElement itemProp(String name, [bool? removeIf]) {
+  WidgetElement itemProp(String name, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('itemprop', name);
+      VirtualAttr attr = VirtualAttr('itemprop', name);
       node.attrs!.add(attr);
     }
     return this;
@@ -253,9 +253,9 @@ abstract class ReioElement {
   /// microdata in the form of a unique,
   /// global identifier of an item.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemid)
-  ReioElement itemId(String value, [bool? removeIf]) {
+  WidgetElement itemId(String value, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('itemid', value);
+      VirtualAttr attr = VirtualAttr('itemid', value);
       node.attrs!.add(attr);
     }
     return this;
@@ -266,9 +266,9 @@ abstract class ReioElement {
   /// like a defined custom built-in element
   /// (see Using custom elements for more details).
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/is)
-  ReioElement thisIs(String elementName, [bool? removeIf]) {
+  WidgetElement thisIs(String elementName, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('is', elementName);
+      VirtualAttr attr = VirtualAttr('is', elementName);
       node.attrs!.add(attr);
     }
     return this;
@@ -279,9 +279,9 @@ abstract class ReioElement {
   /// by the user while editing the element
   /// or its contents.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inputmode)
-  ReioElement inputMode(String mode, [bool? removeIf]) {
+  WidgetElement inputMode(String mode, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('inputmode', mode);
+      VirtualAttr attr = VirtualAttr('inputmode', mode);
       node.attrs!.add(attr);
     }
     return this;
@@ -290,9 +290,9 @@ abstract class ReioElement {
   /// The id global attribute defines an identifier
   /// (ID) which must be unique in the whole document.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id)
-  ReioElement id(String id, [bool? removeIf]) {
+  WidgetElement id(String id, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('id', id);
+      VirtualAttr attr = VirtualAttr('id', id);
       node.attrs!.add(attr);
     }
     return this;
@@ -302,9 +302,9 @@ abstract class ReioElement {
   /// the browser should not render the contents
   /// of the element.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden)
-  ReioElement hidden(bool boolean) {
+  WidgetElement hidden(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('hidden', '');
+      VirtualAttr attr = VirtualAttr('hidden', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -314,9 +314,9 @@ abstract class ReioElement {
   /// what action label (or icon) to present
   /// for the enter key on virtual keyboards.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/enterkeyhint)
-  ReioElement enterKeyHint(String key, [bool? removeIf]) {
+  WidgetElement enterKeyHint(String key, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('enterkeyhint', key);
+      VirtualAttr attr = VirtualAttr('enterkeyhint', key);
       node.attrs!.add(attr);
     }
     return this;
@@ -327,9 +327,9 @@ abstract class ReioElement {
   /// either with native browser behavior
   /// or the HTML Drag and Drop API.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/draggable)
-  ReioElement draggable(bool boolean, [bool? removeIf]) {
+  WidgetElement draggable(bool boolean, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('draggable', boolean.toString());
+      VirtualAttr attr = VirtualAttr('draggable', boolean.toString());
       node.attrs!.add(attr);
     }
     return this;
@@ -338,9 +338,9 @@ abstract class ReioElement {
   /// The dir global attribute that indicates
   /// the directionality of the element's text.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/dir)
-  ReioElement dir(String dir, [bool? removeIf]) {
+  WidgetElement dir(String dir, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('dir', dir);
+      VirtualAttr attr = VirtualAttr('dir', dir);
       node.attrs!.add(attr);
     }
     return this;
@@ -349,9 +349,9 @@ abstract class ReioElement {
   /// The contenteditable global attribute
   /// indicating if the element should be editable by the user.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/contenteditable)
-  ReioElement contentEditable(bool boolean, [bool? removeIf]) {
+  WidgetElement contentEditable(bool boolean, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('contenteditable', boolean.toString());
+      VirtualAttr attr = VirtualAttr('contenteditable', boolean.toString());
       node.attrs!.add(attr);
     }
     return this;
@@ -360,9 +360,9 @@ abstract class ReioElement {
   /// The class global attribute is a list
   /// of the case-sensitive classes of the element.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class)
-  ReioElement thisClass(List<String> nameList, [bool? removeIf]) {
+  WidgetElement thisClass(List<String> nameList, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('class', _html.listToSpaces(nameList));
+      VirtualAttr attr = VirtualAttr('class', _html.listToSpaces(nameList));
       node.attrs!.add(attr);
     }
     return this;
@@ -372,9 +372,9 @@ abstract class ReioElement {
   /// that an element should be focused on page load,
   /// or when the `<dialog>` that it is part of is displayed.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/autofocus)
-  ReioElement autoFocus(bool boolean) {
+  WidgetElement autoFocus(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('autofocus', '');
+      VirtualAttr attr = VirtualAttr('autofocus', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -384,9 +384,9 @@ abstract class ReioElement {
   /// whether and how text input is automatically
   /// capitalized as it is entered/edited by the user.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/autocapitalize)
-  ReioElement autoCapitalize(String value, [bool? removeIf]) {
+  WidgetElement autoCapitalize(String value, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('autocapitalize', value);
+      VirtualAttr attr = VirtualAttr('autocapitalize', value);
       node.attrs!.add(attr);
     }
     return this;
@@ -396,9 +396,9 @@ abstract class ReioElement {
   /// a hint for generating a keyboard shortcut
   /// for the current element.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/accesskey)
-  ReioElement accessKey(String key, [bool? removeIf]) {
+  WidgetElement accessKey(String key, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('accesskey', key);
+      VirtualAttr attr = VirtualAttr('accesskey', key);
       node.attrs!.add(attr);
     }
     return this;
@@ -406,13 +406,13 @@ abstract class ReioElement {
 
   /// Allows to create a custom HTML attribute,
   /// for example, if you can't find the desired one.
-  ReioElement a(String name, dynamic value, [bool? removeIf]) {
+  WidgetElement a(String name, dynamic value, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr(name, value.toString());
+      VirtualAttr attr = VirtualAttr(name, value.toString());
       node.attrs!.add(attr);
     }
     return this;
   }
 
-  ReioNodeWidget get node => _node;
+  VirtualNodeWidget get node => _node;
 }

@@ -7,16 +7,16 @@ import '../widget.dart';
 import 'store.dart';
 
 /// Reactive store available for writing and reading.
-class ReioWritableStore {
-  final Map<String, ReioProxy> _store = {};
+class WritableStore {
+  final Map<String, ProxyStore> _store = {};
 
   /// Creates a store of writable proxies created on [Map].
-  ReioWritableStore(Map<String, dynamic> fields) {
-    fields.forEach((key, value) => _store[key] = ReioProxy(value));
+  WritableStore(Map<String, dynamic> fields) {
+    fields.forEach((key, value) => _store[key] = ProxyStore(value));
   }
 
-  /// Takes [ReioWidget] second argument as a store subscription.
-  dynamic get(String key, ReioWidget widget) {
+  /// Takes [Widget] second argument as a store subscription.
+  dynamic get(String key, Widget widget) {
     return _store[key]?.get(widget.node);
   }
 
@@ -24,9 +24,9 @@ class ReioWritableStore {
     _store[key]?.set(value);
   }
 
-  /// Takes [ReioWidget] second argument as a store subscription.
+  /// Takes [Widget] second argument as a store subscription.
   void update(
-      String key, ReioWidget widget, dynamic Function(dynamic value) fun) {
+      String key, Widget widget, dynamic Function(dynamic value) fun) {
     dynamic value = _store[key]?.get(widget.node);
     if (value == null) return;
 

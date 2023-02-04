@@ -11,10 +11,10 @@ const String slotHtmlTag = 'slot';
 const String slotPrefix = 'reio-slot-';
 const String slotQuery = '$slotHtmlTag.$slotPrefix';
 
-class ReioNodeSlot extends ReioNode {
-  /// [ReioNodeSlot] creates an element in place of which
+class VirtualNodeSlot extends VirtualNode {
+  /// [VirtualNodeSlot] creates an element in place of which
   /// the widget is inserted.
-  ReioNodeSlot({super.tag = slotHtmlTag, required super.value});
+  VirtualNodeSlot({super.tag = slotHtmlTag, required super.value});
 
   @override
   void destroy() {
@@ -34,8 +34,8 @@ class ReioNodeSlot extends ReioNode {
   }
 
   @override
-  void updateTo(ReioNode newNode) {
-    // ReioNodeSlot creates an element in place of which
+  void updateTo(VirtualNode newNode) {
+    // Slot creates an element in place of which
     // the widget is inserted, so it cannot update itself.
   }
 }

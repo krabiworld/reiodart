@@ -5,7 +5,7 @@
 
 import 'dart:html';
 
-import '../../../virtual_dom/virtual_node_attr.dart';
+import '../../../virtual_dom/virtual_attr.dart';
 import '../html_element.dart';
 import '../html_element_visible.dart';
 
@@ -14,9 +14,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<blockquote>` tag.
-class BlockQuote extends ReioElementVisible {
+class BlockQuote extends WidgetElementVisible {
   /// The `<blockquote>` HTML element indicates
   /// that the enclosed text is an extended quotation.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote)
@@ -37,7 +37,7 @@ class BlockQuote extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote#attr-cite)
   BlockQuote cite(String url, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('cite', url);
+      VirtualAttr attr = VirtualAttr('cite', url);
       node.attrs!.add(attr);
     }
     return this;

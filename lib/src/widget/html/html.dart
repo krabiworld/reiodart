@@ -11,7 +11,7 @@ final br = '<${Br().node.tag}>';
 final wbr = '<${Wbr().node.tag}>';
 
 /// Contains useful methods to make working with HTML easier.
-class ReioHtml {
+class WidgetHtml {
   static const String semicolonSep = '; ';
   static const String commaSep = ', ';
   static const String spaceSep = ' ';

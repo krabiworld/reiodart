@@ -5,9 +5,10 @@
 
 import 'dart:html';
 
+import '../controller/virtual_controller_widget.dart';
 import 'virtual_node.dart';
 
-class ReioNodeWidget extends ReioNode {
+class VirtualNodeWidget extends VirtualNode {
   // Events that will be triggered after
   // the corresponding name has been activated.
   Function(Element)? onMount;
@@ -25,7 +26,7 @@ class ReioNodeWidget extends ReioNode {
 
   /// Creates a node for the widget
   /// with its main functionality.
-  ReioNodeWidget(
+  VirtualNodeWidget(
       {required super.tag,
       required super.value,
       super.attrs,
@@ -87,7 +88,7 @@ class ReioNodeWidget extends ReioNode {
     isDestroy = true;
   }
 
-  /// Initializes a [ReioNodeWidget] in the HTML DOM.
+  /// Initializes a [VirtualNodeWidget] in the HTML DOM.
   /// Takes an [htmlNode] to insert into an element
   /// and [replace] to denote insertion
   /// in place of that element.
@@ -97,9 +98,7 @@ class ReioNodeWidget extends ReioNode {
     saveValue(value);
 
     final Element newElement = document.createElement(tag);
-    ReioNodeWidgetController(this)
-      // Ready-made code that can help at any time.
-      // ..initData(newElement)
+    VirtualControllerWidget(this)
       ..initValue(newElement)
       ..initAttrs(newElement)
       ..initStyles(newElement)
@@ -122,77 +121,33 @@ class ReioNodeWidget extends ReioNode {
     isDestroy = false;
   }
 
-  /// Replaces the values of the old [ReioNodeWidget]
-  /// with those of the new [ReioNodeWidget].
+  /// Replaces the values of the old [VirtualNodeWidget]
+  /// with those of the new [VirtualNodeWidget].
   @override
-  void updateTo(ReioNode newNode) {
-    newNode as ReioNodeWidget;
+  void updateTo(VirtualNode newNode) {
+    newNode as VirtualNodeWidget;
 
     // With different tags, recreates
-    // a ReioNodeWidget in the same parent.
+    // a widget in the same parent.
     if (tag != newNode.tag) {
       newNode.init(element?.parentNode);
-      // This ReioNodeWidget is destroyed because
-      // a new ReioNodeWidget has been created.
+      // This widget is destroyed because
+      // a new widget has been created.
       destroy();
     } else {
       saveValue(newNode.value);
 
-      // ReioNodeWidget does not have its own
+      // The widget does not have its own
       // element in the DOM at this stage,
       // but it must keep the data of the previous one.
       newNode.element = element;
       newNode.number = number;
 
-      ReioNodeWidgetController(this, newNode)
+      VirtualControllerWidget(this, newNode)
         ..initValue()
         ..initAttrs()
         ..initStyles()
         ..initChildren();
-    }
-  }
-}
-
-const String styleHtmlTag = 'style';
-const String stylePrefix = 'reio-style-';
-const String styleQuery = '$styleHtmlTag.$stylePrefix';
-
-/// Initializes or overwrites a [ReioNodeWidget].
-class ReioNodeWidgetController extends ReioNodeController {
-  ReioNodeWidgetController(super.node, [super.newNode]);
-
-  void initStyles([Element? element]) {
-    ReioNodeWidget curNode = node as ReioNodeWidget;
-
-    if (curNode.styles == null) return;
-
-    // Clears the line with
-    // the style from the `<style>` tag.
-    String? clearStyle(String? style) {
-      return style
-          ?.replaceFirst('<$styleHtmlTag>', '')
-          .replaceFirst('</$styleHtmlTag>', '')
-          .trim();
-    }
-
-    if (isUpdate) {
-      // The style is updated only when there
-      // is reactivity in it, that is, all the work
-      // is on the watcher, and no additional
-      // checks are required.
-
-      Element? style =
-          curNode.element?.querySelector(styleQuery + curNode.number);
-
-      style?.text = clearStyle(curNode.styles);
-    } else {
-      if (element == null) return;
-
-      Element style = StyleElement();
-      style.className = stylePrefix + curNode.number;
-      style.text = clearStyle(curNode.styles!);
-
-      element.append(style);
     }
   }
 }

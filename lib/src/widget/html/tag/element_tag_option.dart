@@ -3,7 +3,7 @@
 // This source code is licensed under the MIT license found in the
 // LICENSE file in the root directory of this source tree.
 
-import '../../../virtual_dom/virtual_node_attr.dart';
+import '../../../virtual_dom/virtual_attr.dart';
 import '../html_element.dart';
 import '../html_element_visible.dart';
 
@@ -12,9 +12,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<option>` tag.
-class Option extends ReioElementVisible {
+class Option extends WidgetElementVisible {
   /// The `<option>` HTML element is used
   /// to define an item contained in a `<select>`, an `<optgroup>`,
   /// or a `<datalist>` element.
@@ -28,7 +28,7 @@ class Option extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option#attr-disabled)
   Option disabled(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('disabled', '');
+      VirtualAttr attr = VirtualAttr('disabled', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -39,7 +39,7 @@ class Option extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option#attr-label)
   Option label(String text, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('label', text);
+      VirtualAttr attr = VirtualAttr('label', text);
       node.attrs!.add(attr);
     }
     return this;
@@ -50,7 +50,7 @@ class Option extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option#attr-selected)
   Option selected(bool boolean) {
     if (boolean && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('selected', '');
+      VirtualAttr attr = VirtualAttr('selected', '');
       node.attrs!.add(attr);
     }
     return this;
@@ -62,7 +62,7 @@ class Option extends ReioElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option#attr-value)
   Option value(dynamic value, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('value', value.toString());
+      VirtualAttr attr = VirtualAttr('value', value.toString());
       node.attrs!.add(attr);
     }
     return this;

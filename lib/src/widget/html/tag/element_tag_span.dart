@@ -11,9 +11,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<span>` tag.
-class Span extends ReioElementVisible {
+class Span extends WidgetElementVisible {
   /// The `<span>` HTML element
   /// is a generic inline container for phrasing content,
   /// which does not inherently represent anything.

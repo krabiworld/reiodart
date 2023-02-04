@@ -3,7 +3,7 @@
 // This source code is licensed under the MIT license found in the
 // LICENSE file in the root directory of this source tree.
 
-import '../../../virtual_dom/virtual_node_attr.dart';
+import '../../../virtual_dom/virtual_attr.dart';
 import '../html_element.dart';
 
 // Experimental, not standard or obsolete tags and attributes
@@ -11,9 +11,9 @@ import '../html_element.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<meta>` tag.
-class Meta extends ReioElement {
+class Meta extends WidgetElement {
   /// The `<meta>` HTML element represents
   /// metadata that cannot be represented by other
   /// HTML meta-related elements, like `<base>`, `<link>`,
@@ -28,7 +28,7 @@ class Meta extends ReioElement {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-charset)
   Meta charSet(String charSet, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('charset', charSet);
+      VirtualAttr attr = VirtualAttr('charset', charSet);
       node.attrs!.add(attr);
     }
     return this;
@@ -40,7 +40,7 @@ class Meta extends ReioElement {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-content)
   Meta content(String text, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('content', text);
+      VirtualAttr attr = VirtualAttr('content', text);
       node.attrs!.add(attr);
     }
     return this;
@@ -50,7 +50,7 @@ class Meta extends ReioElement {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-http-equiv)
   Meta httpEquiv(String value, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('http-equiv', value);
+      VirtualAttr attr = VirtualAttr('http-equiv', value);
       node.attrs!.add(attr);
     }
     return this;
@@ -64,7 +64,7 @@ class Meta extends ReioElement {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-name)
   Meta name(String name, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('name', name);
+      VirtualAttr attr = VirtualAttr('name', name);
       node.attrs!.add(attr);
     }
     return this;

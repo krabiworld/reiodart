@@ -5,7 +5,7 @@
 
 import 'dart:html';
 
-import '../../../virtual_dom/virtual_node_attr.dart';
+import '../../../virtual_dom/virtual_attr.dart';
 import '../html.dart';
 import '../html_element.dart';
 
@@ -14,11 +14,11 @@ import '../html_element.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-ReioHtml _html = ReioHtml();
+WidgetHtml _html = WidgetHtml();
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<iframe>` tag.
-class IFrame extends ReioElement {
+class IFrame extends WidgetElement {
   /// The `<iframe>` HTML element represents
   /// a nested browsing context, embedding another
   /// HTML page into the current one.
@@ -41,8 +41,8 @@ class IFrame extends ReioElement {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-allow)
   IFrame allow(List<String> permissionList, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr =
-          ReioNodeAttr('allow', _html.listToSemicolons(permissionList));
+      VirtualAttr attr =
+          VirtualAttr('allow', _html.listToSemicolons(permissionList));
       node.attrs!.add(attr);
     }
     return this;
@@ -52,7 +52,7 @@ class IFrame extends ReioElement {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-height)
   IFrame height(int pixels, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('height', pixels.toString());
+      VirtualAttr attr = VirtualAttr('height', pixels.toString());
       node.attrs!.add(attr);
     }
     return this;
@@ -63,7 +63,7 @@ class IFrame extends ReioElement {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-name)
   IFrame name(String name, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('name', name);
+      VirtualAttr attr = VirtualAttr('name', name);
       node.attrs!.add(attr);
     }
     return this;
@@ -73,7 +73,7 @@ class IFrame extends ReioElement {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-referrerpolicy)
   IFrame referrerPolicy(String referrer, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('referrerpolicy', referrer);
+      VirtualAttr attr = VirtualAttr('referrerpolicy', referrer);
       node.attrs!.add(attr);
     }
     return this;
@@ -84,8 +84,8 @@ class IFrame extends ReioElement {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-sandbox)
   IFrame sandbox(List<String> accessList, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr =
-          ReioNodeAttr('sandbox', _html.listToSpaces(accessList));
+      VirtualAttr attr =
+          VirtualAttr('sandbox', _html.listToSpaces(accessList));
       node.attrs!.add(attr);
     }
     return this;
@@ -95,7 +95,7 @@ class IFrame extends ReioElement {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-src)
   IFrame src(String url, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('src', url);
+      VirtualAttr attr = VirtualAttr('src', url);
       node.attrs!.add(attr);
     }
     return this;
@@ -105,7 +105,7 @@ class IFrame extends ReioElement {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-srcdoc)
   IFrame srcDoc(String doc, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('srcdoc', doc);
+      VirtualAttr attr = VirtualAttr('srcdoc', doc);
       node.attrs!.add(attr);
     }
     return this;
@@ -115,7 +115,7 @@ class IFrame extends ReioElement {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-width)
   IFrame width(int pixels, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      ReioNodeAttr attr = ReioNodeAttr('width', pixels.toString());
+      VirtualAttr attr = VirtualAttr('width', pixels.toString());
       node.attrs!.add(attr);
     }
     return this;

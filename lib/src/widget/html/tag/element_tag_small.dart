@@ -11,9 +11,9 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [ReioElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual_dom
 /// with the `<small>` tag.
-class Small extends ReioElementVisible {
+class Small extends WidgetElementVisible {
   /// The `<small>` HTML element represents side-comments
   /// and small print, like copyright and legal text,
   /// independent of its styled presentation.
