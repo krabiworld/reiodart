@@ -7,9 +7,8 @@ import 'dart:html';
 
 import '../virtual_attr.dart';
 
-int _totalGenerated = 0;
-
-int _genWidgetNumber() => ++_totalGenerated;
+int _totalNodes = 0;
+int _nodeNumber() => ++_totalNodes;
 
 abstract class VirtualNode {
   String tag;
@@ -18,7 +17,7 @@ abstract class VirtualNode {
   List<VirtualNode>? children;
 
   // Used as an identifier for a widget.
-  String number = _genWidgetNumber().toString();
+  String number = _nodeNumber().toString();
 
   // Contains the initial value and the actual value.
   List<String> values = [];
@@ -33,7 +32,8 @@ abstract class VirtualNode {
 
   /// The virtual virtual_dom used in the virtual DOM
   /// tries to be similar to the HTML.
-  VirtualNode({required this.tag, required this.value, this.attrs, this.children});
+  VirtualNode(
+      {required this.tag, required this.value, this.attrs, this.children});
 
   void destroy();
 
