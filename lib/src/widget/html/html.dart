@@ -3,10 +3,8 @@
 // This source code is licensed under the MIT license found in the
 // LICENSE file in the root directory of this source tree.
 
-// Prepared for use in the element value.
-import 'package:reio/src/widget/html/html_element.dart';
-import 'package:reio/src/widget/html/tag/element_tag_br.dart';
-import 'package:reio/src/widget/html/tag/element_tag_wbr.dart';
+import 'element/tag/element_tag_br.dart';
+import 'element/tag/element_tag_wbr.dart';
 
 /// Contains a `<br>` HTML tag, used to embed the [WidgetElement] value.
 /// <br><br>

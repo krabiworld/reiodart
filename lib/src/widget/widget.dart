@@ -7,7 +7,7 @@ import 'dart:html';
 
 import '../virtual_dom/node/virtual_node_slot.dart';
 import '../virtual_dom/node/virtual_node_widget.dart';
-import 'html/html_element.dart';
+import 'html/element/html_element.dart';
 import 'widget_watcher.dart';
 
 int _totalSlots = 0;
