@@ -10,6 +10,12 @@ import '../virtual_dom/node/virtual_node_widget.dart';
 import 'html/html_element.dart';
 import 'widget_watcher.dart';
 
+int _totalSlots = 0;
+
+/// Returns a unique number,
+/// used to identify the slot.
+int slotNumber() => ++_totalSlots;
+
 /// The parent of all widgets.
 /// You must extend it if you want to create a widget.
 abstract class Widget {
@@ -54,8 +60,8 @@ abstract class Widget {
   }
 
   /// Mounts the widget in the specified slot.
-  void toSlot(String id) {
-    Element? element = document.querySelector(slotQuery + id);
+  void toSlot(int id) {
+    Element? element = document.querySelector(slotQuery + id.toString());
     if (element == null) return;
 
     _initialize(element, true);
