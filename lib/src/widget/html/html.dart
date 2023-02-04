@@ -4,10 +4,24 @@
 // LICENSE file in the root directory of this source tree.
 
 // Prepared for use in the element value.
+import 'package:reio/src/widget/html/html_element.dart';
 import 'package:reio/src/widget/html/tag/element_tag_br.dart';
 import 'package:reio/src/widget/html/tag/element_tag_wbr.dart';
 
+/// Contains a `<br>` HTML tag, used to embed the [WidgetElement] value.
+/// <br><br>
+/// The `<br>` HTML element produces a line break
+/// in text (carriage-return).
+/// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br)
 final br = '<${Br().node.tag}>';
+
+/// Contains a `<wbr>` HTML tag, used to embed the [WidgetElement] value.
+/// <br><br>
+/// The `<wbr>` HTML  element represents a word break
+/// opportunity—a position within text where the browser
+/// may optionally break a line, though its line-breaking
+/// rules would not otherwise create a break at that location.
+/// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr)
 final wbr = '<${Wbr().node.tag}>';
 
 /// Contains useful methods to make working with HTML easier.
