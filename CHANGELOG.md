@@ -1,6 +1,7 @@
 ## 0.2.0
 
-* Added support for <br> and <wbr> tags in the element value.
+* Changed style system, removed modifiers.
+* Added support for `<br>` and `<wbr>` tags in the element value.
 * Added a system of slots, for widget mounting.
 * Added automatic refresh for development.
 * The finished project template has been updated.
