@@ -32,7 +32,7 @@ abstract class VirtualNode {
   // to change the HTML, because Reio uses virtual.
   Element? element;
 
-  /// The virtual virtual_dom used in the virtual DOM
+  /// The virtual virtual node used in the virtual DOM
   /// tries to be similar to the HTML.
   VirtualNode(
       {required this.tag, required this.value, this.attrs, this.children});

@@ -14,7 +14,7 @@ import '../html_element_visible.dart';
 // Adapted for HTML version 5.
 
 /// Contains [WidgetElement] that contains a
-/// virtual_dom with the `<h1>` tag.
+/// virtual node with the `<h1>` tag.
 class H1 extends WidgetElementVisible {
   /// The `<h1>` to `<h6>` HTML element represents
   /// a document section containing interactive controls

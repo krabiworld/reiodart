@@ -14,7 +14,7 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [WidgetElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual node
 /// with the `<video>` tag.
 class Video extends WidgetElementVisible {
   /// The `<video>` HTML element embeds a media player

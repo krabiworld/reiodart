@@ -15,7 +15,7 @@ import '../html_element_visible.dart';
 
 WidgetHtml _html = WidgetHtml();
 
-/// Contains [WidgetElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual node
 /// with the `<td>` tag.
 class Td extends WidgetElementVisible {
   /// The `<td>` HTML element defines a cell

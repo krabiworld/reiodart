@@ -16,7 +16,7 @@ import '../html_element.dart';
 
 WidgetHtml _html = WidgetHtml();
 
-/// Contains [WidgetElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual node
 /// with the `<script>` tag.
 class Script extends WidgetElement {
   /// The `<script>` HTML element is used

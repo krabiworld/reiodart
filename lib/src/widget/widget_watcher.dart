@@ -33,7 +33,7 @@ class Subscriber {
 class Dependency {
   final List<Subscriber> subscribers = [];
 
-  // Subscribes the activity to a virtual_dom.
+  // Subscribes the activity to a node.
   void depend(VirtualNodeWidget node) {
     if (activity != null && !subscribers.contains(activity)) {
       subscribers.add(Subscriber(activity, node));
@@ -46,7 +46,7 @@ class Dependency {
     List<Function> toExecute = [];
 
     for (var subscriber in subscribers) {
-      // Send a subscriber to be removed if the virtual_dom does not exist.
+      // Send a subscriber to be removed if the node does not exist.
       if (subscriber.node.isMount == false) {
         toRemove.add(subscriber);
         continue;

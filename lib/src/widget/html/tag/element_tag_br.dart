@@ -10,7 +10,7 @@ import '../html_element.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [WidgetElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual node
 /// with the `<br>` tag.
 class Br extends WidgetElement {
   /// The `<br>` HTML element produces a line break

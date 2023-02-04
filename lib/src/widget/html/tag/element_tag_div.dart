@@ -13,7 +13,7 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [WidgetElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual node
 /// with the `<div>` tag.
 class Div extends WidgetElementVisible {
   /// The `<div>` HTML element is the generic

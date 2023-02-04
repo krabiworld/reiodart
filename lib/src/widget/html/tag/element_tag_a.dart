@@ -15,7 +15,7 @@ import '../html_element_visible.dart';
 
 WidgetHtml _html = WidgetHtml();
 
-/// Contains [WidgetElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual node
 /// with the `<a>` tag.
 class A extends WidgetElementVisible {
   /// The `<a>` HTML element (or anchor element),

@@ -19,7 +19,7 @@ class VirtualController {
   bool isUpdate = false;
 
   VirtualController(this.node, [this.minorNode]) {
-    // The new virtual_dom, must update the old one,
+    // The new virtual node, must update the old one,
     // so the update is true.
     if (minorNode != null) isUpdate = true;
   }
@@ -124,12 +124,12 @@ class VirtualController {
         List<VirtualNode> children = node.children as List<VirtualNode>;
 
         // A loop that compares the children of
-        // the current virtual_dom with the children of the new virtual_dom.
+        // the current virtual node with the children of the new virtual node.
         for (int i = 0; i < min(children.length, newChildren.length); i++) {
           children[i].updateTo(newChildren[i]);
         }
 
-        // If the new virtual_dom has fewer children than
+        // If the new virtual node has fewer children than
         // the current one, the excess children are removed.
         if (children.length > newChildren.length) {
           children.sublist(newChildren.length).forEach((child) {
@@ -138,7 +138,7 @@ class VirtualController {
         }
       }
 
-      // If the new virtual_dom has more children than
+      // If the new virtual node has more children than
       // the current one, the children are added.
       int length = (node.children?.length != null) ? node.children!.length : 0;
       if (newChildren.length > length) {

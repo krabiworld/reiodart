@@ -15,7 +15,7 @@ import '../html_element_visible.dart';
 
 WidgetHtml _html = WidgetHtml();
 
-/// Contains [WidgetElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual node
 /// with the `<source>` tag.
 class Source extends WidgetElementVisible {
   /// The `<source>` HTML element specifies

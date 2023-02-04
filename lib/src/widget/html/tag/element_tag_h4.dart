@@ -13,7 +13,7 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [WidgetElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual node
 /// with the `<h4>` tag.
 class H4 extends WidgetElementVisible {
   /// The `<h1>` to `<h6>` HTML element represents

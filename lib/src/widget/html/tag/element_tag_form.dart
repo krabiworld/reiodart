@@ -17,7 +17,7 @@ import '../html_element_visible.dart';
 
 WidgetHtml _html = WidgetHtml();
 
-/// Contains [WidgetElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual node
 /// with the `<form>` tag.
 class Form extends WidgetElementVisible {
   /// The `<form>` HTML element represents

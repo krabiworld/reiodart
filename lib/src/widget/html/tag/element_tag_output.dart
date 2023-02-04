@@ -15,7 +15,7 @@ import '../html_element_visible.dart';
 
 WidgetHtml _html = WidgetHtml();
 
-/// Contains [WidgetElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual node
 /// with the `<output>` tag.
 class Output extends WidgetElementVisible {
   /// The `<output>` HTML element is a container

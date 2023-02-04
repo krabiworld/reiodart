@@ -15,7 +15,7 @@ import '../html_element_visible.dart';
 
 WidgetHtml _html = WidgetHtml();
 
-/// Contains [WidgetElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual node
 /// with the `<area>` tag.
 class Area extends WidgetElementVisible {
   /// The `<area>` HTML element defines an area inside

@@ -16,7 +16,7 @@ import '../html_element.dart';
 
 WidgetHtml _html = WidgetHtml();
 
-/// Contains [WidgetElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual node
 /// with the `<iframe>` tag.
 class IFrame extends WidgetElement {
   /// The `<iframe>` HTML element represents

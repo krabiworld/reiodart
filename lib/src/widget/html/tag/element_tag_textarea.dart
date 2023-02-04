@@ -14,7 +14,7 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [WidgetElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual node
 /// with the `<textarea>` tag.
 class TextArea extends WidgetElementVisible {
   /// The `<textarea>` HTML element represents a multi-line

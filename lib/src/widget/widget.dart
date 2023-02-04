@@ -33,11 +33,11 @@ abstract class Widget {
   /// Slots of removed nodes, to check their state.
   final Set<int> _remSlots = {};
 
-  /// Saved virtual_dom parent, which will be removed in the future
+  /// Saved virtual node parent, which will be removed in the future
   /// and then added back into it.
   final Map<int, Element?> _remParents = {};
 
-  /// Saved virtual_dom position, which will be removed in the future,
+  /// Saved virtual node position, which will be removed in the future,
   /// and afterwards also added on the same position.
   final Map<int, int?> _remPositions = {};
 

@@ -17,7 +17,7 @@ import '../html_element_visible.dart';
 
 WidgetHtml _html = WidgetHtml();
 
-/// Contains [WidgetElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual node
 /// with the `<img>` tag.
 class Img extends WidgetElementVisible {
   /// The `<img>` HTML element embeds

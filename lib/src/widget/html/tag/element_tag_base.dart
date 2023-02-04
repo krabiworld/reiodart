@@ -11,7 +11,7 @@ import '../html_element.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-/// Contains [WidgetElement] that contains a virtual_dom
+/// Contains [WidgetElement] that contains a virtual node
 /// with the `<base>` tag.
 class Base extends WidgetElement {
   /// The `<base>` HTML element specifies
