@@ -19,7 +19,7 @@ import 'tag/element_tag_div.dart';
 
 WidgetHtml _html = WidgetHtml();
 
-/// Contains [WidgetElement] created on [Widget].
+/// Contains [WidgetElement] created on [VirtualNodeWidget].
 /// Optimizes HTML DOM and Reio Virtual DOM.
 abstract class WidgetElement {
   final VirtualNodeWidget _node =
