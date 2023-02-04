@@ -13,7 +13,12 @@ export 'src/widget/store/store_readable.dart';
 // widget/html
 export 'src/widget/html/html.dart';
 
-// widget/html/tag
+// widget/html/alias
+export 'src/widget/html/alias/html_alias_body.dart';
+export 'src/widget/html/alias/html_alias_head.dart';
+export 'src/widget/html/alias/html_alias_title.dart';
+
+// widget/html/element/tag
 export 'src/widget/html/element/tag/element_tag_a.dart';
 export 'src/widget/html/element/tag/element_tag_abbr.dart';
 export 'src/widget/html/element/tag/element_tag_address.dart';
