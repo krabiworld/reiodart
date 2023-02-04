@@ -5,9 +5,9 @@
 
 import 'dart:html';
 
-import '../../virtual_dom/virtual_attr.dart';
 import '../../virtual_dom/node/virtual_node_slot.dart';
 import '../../virtual_dom/node/virtual_node_widget.dart';
+import '../../virtual_dom/virtual_attr.dart';
 import '../widget.dart';
 import 'html.dart';
 import 'tag/element_tag_div.dart';

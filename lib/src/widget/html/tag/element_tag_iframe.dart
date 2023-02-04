@@ -84,8 +84,7 @@ class IFrame extends WidgetElement {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-sandbox)
   IFrame sandbox(List<String> accessList, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      VirtualAttr attr =
-          VirtualAttr('sandbox', _html.listToSpaces(accessList));
+      VirtualAttr attr = VirtualAttr('sandbox', _html.listToSpaces(accessList));
       node.attrs!.add(attr);
     }
     return this;

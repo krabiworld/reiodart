@@ -32,7 +32,7 @@ class VirtualControllerWidget extends VirtualController {
       // checks are required.
 
       Element? style =
-      curNode.element?.querySelector(styleQuery + curNode.number);
+          curNode.element?.querySelector(styleQuery + curNode.number);
 
       style?.text = clearStyle(curNode.styles);
     } else {

@@ -5,7 +5,6 @@
 
 import 'dart:html';
 
-
 import '../../../virtual_dom/virtual_attr.dart';
 import '../html.dart';
 import '../html_element.dart';

@@ -25,8 +25,7 @@ class WritableStore {
   }
 
   /// Takes [Widget] second argument as a store subscription.
-  void update(
-      String key, Widget widget, dynamic Function(dynamic value) fun) {
+  void update(String key, Widget widget, dynamic Function(dynamic value) fun) {
     dynamic value = _store[key]?.get(widget.node);
     if (value == null) return;
 

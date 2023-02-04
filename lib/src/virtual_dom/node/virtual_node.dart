@@ -8,6 +8,7 @@ import 'dart:html';
 import '../virtual_attr.dart';
 
 int _totalNodes = 0;
+
 int _nodeNumber() => ++_totalNodes;
 
 abstract class VirtualNode {

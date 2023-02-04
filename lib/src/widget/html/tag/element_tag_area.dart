@@ -44,8 +44,7 @@ class Area extends WidgetElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area#attr-coords)
   Area coords(List<num> coordsList, [bool? removeIf]) {
     if (removeIf != true && node.attrs != null) {
-      VirtualAttr attr =
-          VirtualAttr('coords', _html.listToCommas(coordsList));
+      VirtualAttr attr = VirtualAttr('coords', _html.listToCommas(coordsList));
       node.attrs!.add(attr);
     }
     return this;
