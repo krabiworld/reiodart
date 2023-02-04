@@ -68,8 +68,8 @@ abstract class WidgetElement {
   }
 
   /// Creates a slot for inserting a side [Widget].
-  WidgetElement $slot(String id) {
-    _node.children?.add(VirtualNodeSlot(value: id));
+  WidgetElement $slot(int id) {
+    _node.children?.add(VirtualNodeSlot(value: id.toString()));
     return this;
   }
 
