@@ -82,6 +82,7 @@ abstract class ReioWidget {
   /// Updates the old [ReioNodeWidget] with a new one.
   void _update() {
     if (_isUpdate) {
+      _watcher.node.styles = _styles?.call();
       _watcher.node.updateTo(_html.call(this).node);
       _isUpdate = false;
     }
