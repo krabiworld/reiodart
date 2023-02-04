@@ -105,7 +105,7 @@ abstract class WidgetElement {
   /// for example, if you can't find the desired one.
   WidgetElement on(String eventName, Function(Element, Event) fun) {
     // The element event can only be activated
-    // after the element has been embedded.
+    // after the element has been inserted.
     onMount((Element element) => element.on[eventName].listen((Event event) {
           fun.call(element, event);
         }));
