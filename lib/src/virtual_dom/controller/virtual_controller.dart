@@ -82,8 +82,7 @@ class VirtualController {
       VirtualNode newNode = minorNode as VirtualNode;
       Element newElement = minorNode!.element as Element;
 
-      if (compareMapOfList(node.attrs, newNode.attrs, (m) {
-        m as VirtualAttr;
+      if (compareClassOfList<VirtualAttr>(node.attrs, newNode.attrs, (m) {
         return m.name + m.value;
       })) {
         return;
