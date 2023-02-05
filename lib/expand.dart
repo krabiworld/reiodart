@@ -5,3 +5,4 @@
 
 // expand
 export 'src/expand/expand_list.dart';
+export 'src/expand/expand_simple_list.dart';
