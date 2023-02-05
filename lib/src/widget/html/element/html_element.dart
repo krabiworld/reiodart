@@ -445,18 +445,26 @@ abstract class WidgetElement {
 
       WidgetElement element = map[keys[i]]!;
 
-      if (key == keysPosition.last) {
-        add(element);
-        add(Span(value.substring(key + keyLength, value.length)));
-        continue;
+      int nextKey = 0;
+      if ((keysPosition.length - 1) != i) {
+        nextKey = keysPosition[i + 1];
+      } else {
+        // If it is the last position in the array,
+        // there will be no next key,
+        // but the value must be saved.
+        nextKey = value.length;
       }
-
-      int nextKey = keysPosition[i + 1];
 
       if (key == keysPosition.first) {
         add(Span(value.substring(0, key)));
         add(element);
         add(Span(value.substring(key + keyLength, nextKey)));
+        continue;
+      }
+
+      if (key == keysPosition.last) {
+        add(element);
+        add(Span(value.substring(key + keyLength, value.length)));
         continue;
       }
 
