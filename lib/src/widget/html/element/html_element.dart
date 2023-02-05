@@ -11,6 +11,7 @@ import '../../../virtual_dom/virtual_attr.dart';
 import '../../widget.dart';
 import '../html.dart';
 import 'tag/element_tag_div.dart';
+import 'tag/element_tag_span.dart';
 
 // Experimental, not standard or obsolete tags and attributes
 // are not and will not be implemented. If you notice this,
@@ -411,6 +412,59 @@ abstract class WidgetElement {
       VirtualAttr attr = VirtualAttr(name, value.toString());
       node.attrs!.add(attr);
     }
+    return this;
+  }
+
+  /// Splits the value into the specified elements.
+  /// Accepts a [map] with the widget key,
+  /// works together with the [go] function - go(key).
+  WidgetElement to(Map<int, WidgetElement> map) {
+    if (_node.value.isEmpty) return this;
+
+    String value = _node.value;
+
+    List<int> keys = map.keys.toList()..sort();
+    List<int> keysPosition = [];
+    List<int> keysLength = [];
+
+    for (int key in keys) {
+      // The go function is used so as not
+      // to duplicate it, since its name
+      // is incorrect in this context.
+      keysPosition.add(value.indexOf(go(key)));
+      keysLength.add(go(key).length);
+    }
+
+    void add(WidgetElement element) {
+      _node.children?.add(element.node);
+    }
+
+    for (int i = 0; i < keysPosition.length; i++) {
+      int key = keysPosition[i];
+      int keyLength = keysLength[i];
+
+      WidgetElement element = map[keys[i]]!;
+
+      if (key == keysPosition.last) {
+        add(element);
+        add(Span(value.substring(key + keyLength, value.length)));
+        continue;
+      }
+
+      int nextKey = keysPosition[i + 1];
+
+      if (key == keysPosition.first) {
+        add(Span(value.substring(0, key)));
+        add(element);
+        add(Span(value.substring(key + keyLength, nextKey)));
+        continue;
+      }
+
+      add(element);
+      add(Span(value.substring(key + keyLength, nextKey)));
+    }
+
+    _node.value = '';
     return this;
   }
 

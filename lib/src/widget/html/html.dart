@@ -7,14 +7,18 @@ import 'element/html_element.dart';
 import 'element/tag/element_tag_br.dart';
 import 'element/tag/element_tag_wbr.dart';
 
-/// Contains a `<br>` HTML tag, used to embed the [WidgetElement] value.
+/// Returns the ready key transition to inserted
+/// in this place element using the to method of [WidgetElement].
+String go(int key) => '[to:$key]';
+
+/// Contains a `<br>` HTML tag, used to embed [WidgetElement] value.
 /// <br><br>
 /// The `<br>` HTML element produces a line break
 /// in text (carriage-return).
 /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br)
 final br = '<${Br().node.tag}>';
 
-/// Contains a `<wbr>` HTML tag, used to embed the [WidgetElement] value.
+/// Contains a `<wbr>` HTML tag, used to embed [WidgetElement] value.
 /// <br><br>
 /// The `<wbr>` HTML  element represents a word break
 /// opportunity—a position within text where the browser
