@@ -49,7 +49,7 @@ abstract class Widget {
 
   /// Mounts the widget in the parent, and starts the activity.
   void mount(Widget parent) {
-    _initialize(parent.node.element, true);
+    _initialize(parent.node.element!, true);
   }
 
   /// Mounts the widget directly to the HTML element ([htmlElement]),
@@ -68,7 +68,7 @@ abstract class Widget {
   }
 
   /// Starts the activity and watcher [Widget].
-  void _initialize(dynamic element, bool replace) {
+  void _initialize(Element element, bool replace) {
     _watcher.initActivity(() {
       _watcher.node = _html.call(this).node;
       _watcher.node.styles = _styles?.call();
