@@ -54,7 +54,7 @@ class VirtualController {
       if (childValue == null) return;
 
       if (isWithHtml(newNode.value)) {
-        spanValue.innerHtml = newNode.value;
+        spanValue.setInnerHtml(newNode.value);
         childValue.replaceWith(spanValue);
       } else {
         childValue.text = newNode.value;
@@ -64,7 +64,7 @@ class VirtualController {
       if (element == null || node.value.isEmpty) return;
 
       if (isWithHtml(node.value)) {
-        spanValue.innerHtml = node.value;
+        spanValue.setInnerHtml(node.value);
         element.append(spanValue);
       } else {
         element.appendText(node.value);
