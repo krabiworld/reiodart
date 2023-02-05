@@ -124,3 +124,6 @@ export 'src/widget/html/element/tag/element_tag_ul.dart';
 export 'src/widget/html/element/tag/element_tag_var.dart';
 export 'src/widget/html/element/tag/element_tag_video.dart';
 export 'src/widget/html/element/tag/element_tag_wbr.dart';
+
+// widget/html/shortcut
+export 'src/widget/html/shortcut/html_shortcut_icon.dart';
