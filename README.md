@@ -25,6 +25,10 @@ tackle complexity in large Single-Page Applications.
 To check out [live examples](https://reiodart.vercel.app/), [docs](https://mineejo.github.io/reiodart/)
 and [demo](https://github.com/MineEjo/reiodart-demo).
 
+## Questions
+
+For questions and support please use [discussions](https://github.com/MineEjo/reiodart/discussions).
+
 ## Changelog
 
 Detailed changes for each release are documented in
