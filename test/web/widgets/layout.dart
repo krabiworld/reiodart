@@ -16,7 +16,7 @@ Widget layout = Layout(
         .$(Div()
             .id('introduction')
             .$(H1(go(1)).to({
-              1: A('Reio Dart Framework')
+              1: A('Reio Dart Framework 0.2.0')
                   .href('https://github.com/MineEjo/reiodart')
             }))
             .$(Span('A progressive ${go(1)} framework for creating UI '
@@ -35,20 +35,20 @@ Widget layout = Layout(
         .$slot(Layout.observerSlot)
         .$(Div()
             .id('footer')
-            .$(Ul('GitHub')
-                .$(Li(go(1)).to({
+            .$(Div('GitHub').thisClass(['footer-title'])
+                .$(Span(go(1)).to({
                   1: A('Repository')
                       .href('https://github.com/MineEjo/reiodart'),
                 }))
-                .$(Li(go(1)).to({
+                .$(Span(go(1)).to({
                   1: A('Documentation')
                       .href('https://github.com/MineEjo/reiodart/wiki'),
                 })))
-            .$(Ul('Pub.dev')
-                .$(Li(go(1)).to({
+            .$(Div('Pub.dev').thisClass(['footer-title'])
+                .$(Span(go(1)).to({
                   1: A('Package').href('https://pub.dev/packages/reio'),
                 }))
-                .$(Li(go(1)).to({
+                .$(Span(go(1)).to({
                   1: A('API reference')
                       .href('https://pub.dev/documentation/reio/latest/'),
                 }))))
@@ -100,12 +100,14 @@ Widget layout = Layout(
       }
     }
 
-    #footer ul {
+    .footer-title {
       font-weight: bold;
       list-style: none;
+      display: block;
     }
     
-    #footer ul li {
+    .footer-title span {
+      display: block;
       font-weight: normal;
     }
     </style>''');
