@@ -90,7 +90,8 @@ Widget layout = Layout(
     
     #footer-copy {
       background-color: var(--color-background);
-      margin-top: 0;
+      margin-top: var(--margin-top-2);
+      opacity: 0.5;
       justify-content: center;
     }
 
@@ -101,6 +102,7 @@ Widget layout = Layout(
     }
 
     .footer-title {
+      padding: var(--padding-3);
       font-weight: bold;
       list-style: none;
       display: block;
