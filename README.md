@@ -1,85 +1,33 @@
-## About
+<p align="center">
+  <a href="https://reiodart.vercel.app/" target="_blank" rel="noopener noreferrer">
+    <img width="200" src="https://github.com/MineEjo/reiodart/blob/master/assets/reio_icon.png" alt="Reio logo">
+  </a>
+</p>
 
-Reio.dart is a progressive Dart library for creating UI on the web. Create your UI in minutes!
+<h1 align="center">Reio Dart Framework</h1>
 
-* Zero-dependency*;
-* Flexible components;
-* Virtual DOM;
-* Reactivity;
+<span>
+  A progressive <a href="https://dart.dev/" target="_blank" rel="noopener noreferrer">Dart</a> framework for creating UI on the web. <br>
+  Uses HTML, CSS and <a href="https://dart.dev/" target="_blank" rel="noopener noreferrer">Dart</a>, which is compiled into efficient JavaScript code.
+  <br><br>
+  By default, Reio template uses <a href="https://web.dev/" target="_blank" rel="noopener noreferrer">Webdeb</a>
+</span>
 
-## Quick links
+## Introduction
 
-**Github**
+Reio is a **progressive framework** for building user interfaces. It is designed from the ground up to be incrementally adoptable, and can easily scale between a library and a framework depending on different use cases. It consists of an approachable core library that focuses on the view layer only, and an ecosystem of supporting libraries that helps you tackle complexity in large Single-Page Applications.
 
-* [Getting started](https://github.com/MineEjo/reiodart/wiki)
-* [Repository](https://github.com/MineEjo/reiodart)
+## Documentation
 
-**Pub**
+To check out [live examples](https://reiodart.vercel.app/), [docs](https://mineejo.github.io/reiodart/) and [demo](https://github.com/MineEjo/reiodart-demo).
 
-* [Package](https://pub.dev/packages/reio)
-* [API reference](https://pub.dev/documentation/reio/latest/)
 
-## Example
+## Changelog
 
-```dart
-import 'components/app.dart';
+Detailed changes for each release are documented in the [changelog](https://github.com/MineEjo/reiodart/blob/master/CHANGELOG.md).
 
-void main() {
-  $App();
-}
-```
+## License
 
-## Reactive stores
+[MIT](https://opensource.org/licenses/MIT)
 
-Stores are used to interact and store information. They are responsible for reactivity in components.
-
-```dart
-
-Watcher watcher = Watcher();
-
-watcher.watch(() {
-  print('Congratulations, you have ${store['clicks']?.get()} clicks!');
-});
-```
-
-## HTML
-
-```dart
-div('value', [
-        'id cool-element',
-        'class first second etc'
-      ], [
-        div(),
-        span(),
-        $Component({})
-      ], {
-        'onMount': () => print('Yep!'),
-        'onDestroy': () => print('Nope!')
-      })
-```
-
-## Styles
-
-The syntax is almost the same as standard CSS, but has the ability to use access modifiers.
-
-* `public` - It makes element styles global, which is an alternative to `global.css`. Use the public modifier if this is
-  the only way and if the element styles refer to a component, otherwise use `global.css`.
-* `private` - Restricts access to element styles to everyone except the component `itself`. Does not require an element
-  to be specified after the modifier.
-* `protected` access to element styles other than the component `itself` and `its children`.
-
-**Example:**
-
-```css
-{public}: body {
-  color: black;
-}
-
-{private}: {
-  color: white;
-}
-
-{protected}: div {
-  color: blue;
-}
-```
+Copyright (c) 2022-present, MineEjo
