@@ -2,7 +2,7 @@
 #  publish: dart pub publish --dry-run
 
 name: reio
-description: Reio.dart is a progressive Dart framework for creating UI on the web. Uses HTML, CSS and Dart, which is compiled into efficient JavaScript code.
+description: Reio is a progressive Dart framework for creating UI on the web. Uses HTML, CSS and Dart, which is compiled into efficient JavaScript code.
 version: 0.2.0
 homepage: https://github.com/MineEjo/reiodart
 repository: https://github.com/MineEjo/reiodart
