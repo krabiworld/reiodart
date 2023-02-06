@@ -42,7 +42,7 @@ Widget layout = Layout(
                 }))
                 .$(Span(go(1)).to({
                   1: A('Documentation')
-                      .href('https://github.com/MineEjo/reiodart/wiki'),
+                      .href('https://mineejo.github.io/reiodart/'),
                 })))
             .$(Div('Pub.dev').thisClass(['footer-title'])
                 .$(Span(go(1)).to({
@@ -89,9 +89,7 @@ Widget layout = Layout(
     }
     
     #footer-copy {
-      background-color: var(--color-background);
-      margin-top: var(--margin-top-2);
-      opacity: 0.5;
+      margin-top: 0;
       justify-content: center;
     }
 
@@ -109,6 +107,7 @@ Widget layout = Layout(
     }
     
     .footer-title span {
+      padding-top: var(--padding-4);
       display: block;
       font-weight: normal;
     }

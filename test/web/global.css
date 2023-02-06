@@ -48,6 +48,8 @@
 
     --padding-3: 5px;
     --box-shadow-3: 0 3px 0 0 var(--color-accent);
+
+    --padding-4: 2px;
 }
 
 html, body {
