@@ -35,7 +35,8 @@ Widget layout = Layout(
         .$slot(Layout.observerSlot)
         .$(Div()
             .id('footer')
-            .$(Div('GitHub').thisClass(['footer-title'])
+            .$(Div('GitHub')
+                .thisClass(['footer-title'])
                 .$(Span(go(1)).to({
                   1: A('Repository')
                       .href('https://github.com/MineEjo/reiodart'),
@@ -44,7 +45,8 @@ Widget layout = Layout(
                   1: A('Documentation')
                       .href('https://mineejo.github.io/reiodart/'),
                 })))
-            .$(Div('Pub.dev').thisClass(['footer-title'])
+            .$(Div('Pub.dev')
+                .thisClass(['footer-title'])
                 .$(Span(go(1)).to({
                   1: A('Package').href('https://pub.dev/packages/reio'),
                 }))
