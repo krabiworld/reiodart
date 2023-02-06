@@ -66,7 +66,7 @@ The syntax is almost the same as standard CSS, but has the ability to use access
   the only way and if the element styles refer to a component, otherwise use `global.css`.
 * `private` - Restricts access to element styles to everyone except the component `itself`. Does not require an element
   to be specified after the modifier.
-* `Restricts` access to element styles other than the component `itself` and `its children`.
+* `protected` access to element styles other than the component `itself` and `its children`.
 
 **Example:**
 
