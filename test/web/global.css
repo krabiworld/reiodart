@@ -23,15 +23,15 @@
     var(--color-accent-background) 50%,
     var(--color-accent-text) 50%);
 
-    --color-text: rgba(191,189,193,1);
-    --color-accent-text: rgba(238,203,98,1);
-    --color-accent-optional: rgba(238,203,98,0.5);
-    --color-accent: rgba(255,207,62,1);
-    --color-accent-background: rgba(109,106,117,1);
-    --color-background: rgba(55,50,62,1);
-    --color-shadow: rgba(49,45,56,1);
+    --color-text: rgba(191, 189, 193, 1);
+    --color-accent-text: rgba(238, 203, 98, 1);
+    --color-accent-optional: rgba(238, 203, 98, 0.5);
+    --color-accent: rgba(255, 207, 62, 1);
+    --color-accent-background: rgba(109, 106, 117, 1);
+    --color-background: rgba(55, 50, 62, 1);
+    --color-shadow: rgba(49, 45, 56, 1);
 
-    --box-shadow-1: var(--padding-1) var(--padding-1) 0 0 var(--color-shadow);;
+    --box-shadow-1: var(--padding-1) var(--padding-1) 0 0 var(--color-shadow);
     --margin-1: 10px 20px 0 20px;
     --margin-top-1: 50px;
     --padding-1: 10px;
