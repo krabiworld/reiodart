@@ -1,3 +1,8 @@
+## 0.2.1
+
+* Documentation has begun.
+* Added an example for pub.dev.
+
 ## 0.2.0
 
 * Changed style system, removed modifiers.
