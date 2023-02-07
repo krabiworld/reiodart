@@ -1,1 +1,3 @@
 Beginning of the documentation...
+
+<div class="simple">Test</div>
