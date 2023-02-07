@@ -3952,7 +3952,7 @@ j.I(p)
 i.a="h1"
 i=t.S
 l=t.gw
-j=n.n(j.T(A.ay([1,A.aq("Reio Dart Framework 0.2.1").K(0,r)],i,l)))
+j=n.n(j.T(A.ay([1,A.aq("Reio Dart Framework 0.2.2").K(0,r)],i,l)))
 n=$.cZ()
 n=o.n(j.n(A.E("A progressive [to:1] framework for creating UI on the web. "+n+" Uses HTML, CSS and [to:2], which is compiled into efficient JavaScript code. "+n+" "+n+"By default, Reio template uses [to:3]").T(A.ay([1,A.aq("Dart").K(0,q),2,A.aq("Dart").K(0,q),3,A.aq("Webdev").K(0,"https://web.dev/")],i,l))))
 m=A.d([],m)
