@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://reiodart.vercel.app/">
-    <img width="200" src="https://github.com/MineEjo/reiodart/blob/master/assets/reio_icon.png" alt="Reio logo">
+    <img width="200" src="https://raw.githubusercontent.com/MineEjo/reiodart/master/assets/reio_icon.png" alt="Reio logo">
   </a>
 </p>
 
