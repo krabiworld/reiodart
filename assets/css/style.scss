@@ -1,4 +1,8 @@
 ---
 ---
 
-@import "docs/theme.css";
+@import "{{ site.theme }}";
+
+.simple {
+  background: red;
+}
