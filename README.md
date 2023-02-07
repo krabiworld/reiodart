@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://reiodart.vercel.app/" target="_blank" rel="noopener noreferrer">
+  <a href="https://reiodart.vercel.app/">
     <img width="200" src="https://github.com/MineEjo/reiodart/blob/master/assets/reio_icon.png" alt="Reio logo">
   </a>
 </p>
@@ -7,10 +7,10 @@
 <h1 align="center">Reio Dart Framework</h1>
 
 <span>
-  A progressive <a href="https://dart.dev/" target="_blank" rel="noopener noreferrer">Dart</a> framework for creating UI on the web. <br>
-  Uses HTML, CSS and <a href="https://dart.dev/" target="_blank" rel="noopener noreferrer">Dart</a>, which is compiled into efficient JavaScript code.
+  A progressive <a href="https://dart.dev/">Dart</a> framework for creating UI on the web. <br>
+  Uses HTML, CSS and <a href="https://dart.dev/">Dart</a>, which is compiled into efficient JavaScript code.
   <br><br>
-  By default, Reio template uses <a href="https://web.dev/" target="_blank" rel="noopener noreferrer">Webdev</a>
+  By default, Reio template uses <a href="https://web.dev/">Webdev</a>
 </span>
 
 ## Documentation
