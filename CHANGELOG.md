@@ -1,3 +1,7 @@
+## 0.2.2
+
+* Fixed the link to the icon.
+
 ## 0.2.1
 
 * Documentation has begun.
