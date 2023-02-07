@@ -1,1 +1,3 @@
 Beginning of the documentation...
+
+<div style="background: red">Test</div>
