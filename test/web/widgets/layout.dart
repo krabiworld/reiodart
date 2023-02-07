@@ -16,7 +16,7 @@ Widget layout = Layout(
         .$(Div()
             .id('introduction')
             .$(H1(go(1)).to({
-              1: A('Reio Dart Framework 0.2.0')
+              1: A('Reio Dart Framework 0.2.1')
                   .href('https://github.com/MineEjo/reiodart')
             }))
             .$(Span('A progressive ${go(1)} framework for creating UI '
