@@ -10,50 +10,70 @@ class Layout extends Widget {
 Widget layout = Layout(
     (w) => Div()
         .id('example')
+        .$(Nav().id('docs-nav').$(Div('Getting Started')
+                .thisClass(['docs-title']).$(Span(go(1)).to({
+              1: A('Quick Start').href('quick-start.html'),
+            }))))
         .$(Div()
-            .id('introduction')
-            .$(H1(go(1)).to({
-              1: A('Reio Dart Framework 0.2.2')
-                  .href('https://github.com/MineEjo/reiodart')
-            }))
-            .$(Span('A progressive ${go(1)} framework for creating UI '
-                    'on the web. $br Uses HTML, CSS and ${go(2)}, which '
-                    'is compiled into efficient JavaScript code. '
-                    '$br $br'
-                    'By default, Reio template uses ${go(3)}')
-                .to({
-              1: A('Dart').href('https://dart.dev/'),
-              2: A('Dart').href('https://dart.dev/'),
-              3: A('Webdev').href('https://web.dev/')
-            })))
-        .$(Div()
-            .id('footer')
-            .$(Div('GitHub')
-                .thisClass(['footer-title'])
-                .$(Span(go(1)).to({
-                  1: A('Repository')
-                      .href('https://github.com/MineEjo/reiodart'),
+            .$(Div()
+                .id('introduction')
+                .$(H1(go(1)).to({
+                  1: A('Reio Dart Framework 0.2.2')
+                      .href('https://github.com/MineEjo/reiodart')
                 }))
-                .$(Span(go(1)).to({
-                  1: A('Documentation')
-                      .href('https://mineejo.github.io/reiodart/'),
+                .$(Span('A progressive ${go(1)} framework for creating UI '
+                        'on the web. $br Uses HTML, CSS and ${go(2)}, which '
+                        'is compiled into efficient JavaScript code. '
+                        '$br $br'
+                        'By default, Reio template uses ${go(3)}')
+                    .to({
+                  1: A('Dart').href('https://dart.dev/'),
+                  2: A('Dart').href('https://dart.dev/'),
+                  3: A('Webdev').href('https://web.dev/')
                 })))
-            .$(Div('Pub.dev')
-                .thisClass(['footer-title'])
-                .$(Span(go(1)).to({
-                  1: A('Package').href('https://pub.dev/packages/reio'),
-                }))
-                .$(Span(go(1)).to({
-                  1: A('API reference')
-                      .href('https://pub.dev/documentation/reio/latest/'),
-                }))))
-        .$(Span('© 2023 MineEjo').id('footer-copy')),
+            .$(Div()
+                .id('footer')
+                .$(Div('GitHub')
+                    .thisClass(['footer-title'])
+                    .$(Span(go(1)).to({
+                      1: A('Repository')
+                          .href('https://github.com/MineEjo/reiodart'),
+                    }))
+                    .$(Span(go(1)).to({
+                      1: A('Documentation')
+                          .href('https://mineejo.github.io/reiodart/'),
+                    })))
+                .$(Div('Pub.dev')
+                    .thisClass(['footer-title'])
+                    .$(Span(go(1)).to({
+                      1: A('Package').href('https://pub.dev/packages/reio'),
+                    }))
+                    .$(Span(go(1)).to({
+                      1: A('API reference')
+                          .href('https://pub.dev/documentation/reio/latest/'),
+                    }))))
+            .$(Span('© 2023 MineEjo').id('footer-copy'))),
     () => '''<style>
     #example {
       display: grid;
       margin: var(--margin-1);
       justify-content: center;
-      grid-template-columns: var(--grid-width-1);
+      grid-column-gap: 1%;
+      grid-template-columns: 20% 79%;
+    }
+    
+    // #docs-nav {
+    //   background: red;
+    // }
+    
+    .docs-title {
+      font-weight: bold;
+      display: block;
+    }
+    
+    .docs-title span {
+      font-weight: normal;
+      display: block;
     }
 
     h1 a {
