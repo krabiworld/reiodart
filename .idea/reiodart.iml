@@ -4,6 +4,9 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/docs/docs" />
       <excludeFolder url="file://$MODULE_DIR$/test/web_output" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/build" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/.pub" />
       <excludePattern pattern="temp" />
       <excludePattern pattern=".tmp" />
       <excludePattern pattern="tmp" />
