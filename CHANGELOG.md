@@ -1,3 +1,9 @@
+## 0.2.3
+
+* A new isJump function has been added and the jump design has been put separately.
+* Renamed the "to" method and the "go" function to "jump".
+* Fixed unnecessary duplication of tags when jumping.
+
 ## 0.2.2
 
 * Fixed the link to the icon.
