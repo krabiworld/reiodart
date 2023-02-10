@@ -62,10 +62,6 @@ Widget layout = Layout(
       grid-template-columns: 20% 79%;
     }
     
-    // #docs-nav {
-    //   background: red;
-    // }
-    
     .docs-title {
       font-weight: bold;
       display: block;
