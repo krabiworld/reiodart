@@ -35,20 +35,20 @@ Widget layout = Layout(
                 .id('footer')
                 .$(Div('GitHub')
                     .thisClass(['footer-title'])
-                    .$(Span(go(1)).to({
+                    .$(Span(getJump(1)).setJump({
                       1: A('Repository')
                           .href('https://github.com/MineEjo/reiodart'),
                     }))
-                    .$(Span(go(1)).to({
+                    .$(Span(getJump(1)).setJump({
                       1: A('Documentation')
                           .href('https://mineejo.github.io/reiodart/'),
                     })))
                 .$(Div('Pub.dev')
                     .thisClass(['footer-title'])
-                    .$(Span(go(1)).to({
+                    .$(Span(getJump(1)).setJump({
                       1: A('Package').href('https://pub.dev/packages/reio'),
                     }))
-                    .$(Span(go(1)).to({
+                    .$(Span(getJump(1)).setJump({
                       1: A('API reference')
                           .href('https://pub.dev/documentation/reio/latest/'),
                     }))))
