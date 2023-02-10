@@ -417,8 +417,8 @@ abstract class WidgetElement {
 
   /// Splits the value into the specified elements.
   /// Accepts a [map] with the widget key,
-  /// works together with the [go] function - go(key).
-  WidgetElement to(Map<int, WidgetElement> map) {
+  /// works together with the [getJump] function.
+  WidgetElement setJump(Map<int, WidgetElement> map) {
     if (_node.value.isEmpty) return this;
 
     String value = _node.value;
@@ -428,11 +428,11 @@ abstract class WidgetElement {
     List<int> keysLength = [];
 
     for (int key in keys) {
-      // The go function is used so as not
+      // The jump function is used so as not
       // to duplicate it, since its name
       // is incorrect in this context.
-      keysPosition.add(value.indexOf(go(key)));
-      keysLength.add(go(key).length);
+      keysPosition.add(value.indexOf(getJump(key)));
+      keysLength.add(getJump(key).length);
     }
 
     void add(WidgetElement element) {
