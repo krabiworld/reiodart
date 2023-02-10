@@ -423,6 +423,11 @@ abstract class WidgetElement {
 
     String value = _node.value;
 
+    /// Allows you to see if there is anything other than
+    /// a tag in the value. Sometimes instead of a value,
+    /// only a jump is used.
+    bool onlyJump = isJump(value);
+
     List<int> keys = map.keys.toList()..sort();
     List<int> keysPosition = [];
     List<int> keysLength = [];
@@ -456,9 +461,9 @@ abstract class WidgetElement {
       }
 
       if (key == keysPosition.first) {
-        add(Span(value.substring(0, key)));
+        if (!onlyJump) add(Span(value.substring(0, key)));
         add(element);
-        add(Span(value.substring(key + keyLength, nextKey)));
+        if (!onlyJump) add(Span(value.substring(key + keyLength, nextKey)));
         continue;
       }
 
