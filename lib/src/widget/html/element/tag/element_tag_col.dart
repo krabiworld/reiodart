@@ -28,7 +28,7 @@ class Col extends WidgetElementVisible {
   /// indicating the number of consecutive columns
   /// the `<col>` element spans.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col#attr-span)
-  Col span(int number, [bool? removeIf]) {
+  Col span(int number, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('span', number.toString());
       node.attrs!.add(attr);

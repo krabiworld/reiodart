@@ -26,7 +26,7 @@ class Meta extends WidgetElement {
   /// This attribute declares the
   /// document's character encoding.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-charset)
-  Meta charSet(String charSet, [bool? removeIf]) {
+  Meta charSet(String charSet, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('charset', charSet);
       node.attrs!.add(attr);
@@ -38,7 +38,7 @@ class Meta extends WidgetElement {
   /// for the http-equiv or name attribute,
   /// depending on which is used.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-content)
-  Meta content(String text, [bool? removeIf]) {
+  Meta content(String text, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('content', text);
       node.attrs!.add(attr);
@@ -48,7 +48,7 @@ class Meta extends WidgetElement {
 
   /// Defines a pragma directive.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-http-equiv)
-  Meta httpEquiv(String value, [bool? removeIf]) {
+  Meta httpEquiv(String value, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('http-equiv', value);
       node.attrs!.add(attr);
@@ -62,7 +62,7 @@ class Meta extends WidgetElement {
   /// attribute giving the metadata name, and the content
   /// attribute giving the value.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-name)
-  Meta name(String name, [bool? removeIf]) {
+  Meta name(String name, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('name', name);
       node.attrs!.add(attr);

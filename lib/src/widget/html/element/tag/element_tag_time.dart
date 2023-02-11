@@ -26,7 +26,7 @@ class Time extends WidgetElementVisible {
   /// date of the element and must be in one
   /// of the formats described below.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time#attr-datetime)
-  Time dateTime(String time, [bool? removeIf]) {
+  Time dateTime(String time, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('datetime', time);
       node.attrs!.add(attr);

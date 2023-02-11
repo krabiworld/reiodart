@@ -28,7 +28,7 @@ class Th extends WidgetElementVisible {
   /// This attribute contains a short abbreviated
   /// description of the cell's content.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th#attr-abbr)
-  Th abbr(String text, [bool? removeIf]) {
+  Th abbr(String text, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('abbr', text);
       node.attrs!.add(attr);
@@ -40,7 +40,7 @@ class Th extends WidgetElementVisible {
   /// integer value that indicates
   /// for how many columns the cell extends.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th#attr-colspan)
-  Th colSpan(int number, [bool? removeIf]) {
+  Th colSpan(int number, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('colspan', number.toString());
       node.attrs!.add(attr);
@@ -52,7 +52,7 @@ class Th extends WidgetElementVisible {
   /// to the id attribute of the `<th>` elements
   /// that apply to this element.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th#attr-headers)
-  Th headers(List<String> idList, [bool? removeIf]) {
+  Th headers(List<String> idList, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('headers', _html.listToSpaces(idList));
       node.attrs!.add(attr);
@@ -64,7 +64,7 @@ class Th extends WidgetElementVisible {
   /// integer value that indicates
   /// for how many rows the cell extends.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th#attr-rowspan)
-  Th rowSpan(int number, [bool? removeIf]) {
+  Th rowSpan(int number, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('rowspan', number.toString());
       node.attrs!.add(attr);
@@ -76,7 +76,7 @@ class Th extends WidgetElementVisible {
   /// that the header (defined in the `<th>`)
   /// element relates to.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th#attr-scope)
-  Th scope(String value, [bool? removeIf]) {
+  Th scope(String value, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('scope', value);
       node.attrs!.add(attr);

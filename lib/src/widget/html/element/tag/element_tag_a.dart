@@ -41,7 +41,7 @@ class A extends WidgetElementVisible {
 
   /// The URL that the hyperlink points to.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-href)
-  A href(String url, [bool? removeIf]) {
+  A href(String url, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('href', url);
       node.attrs!.add(attr);
@@ -70,7 +70,7 @@ class A extends WidgetElementVisible {
 
   /// Hints at the human language of the linked URL.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-hreflang)
-  A hrefLang(String langCode, [bool? removeIf]) {
+  A hrefLang(String langCode, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('hreflang', langCode);
       node.attrs!.add(attr);
@@ -80,7 +80,7 @@ class A extends WidgetElementVisible {
 
   /// A list of URLs.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-ping)
-  A ping(List<String> urlList, [bool? removeIf]) {
+  A ping(List<String> urlList, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('ping', _html.listToSpaces(urlList));
       node.attrs!.add(attr);
@@ -90,7 +90,7 @@ class A extends WidgetElementVisible {
 
   /// How much of the referrer to send when following the link.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-referrerpolicy)
-  A referrerPolicy(String referrer, [bool? removeIf]) {
+  A referrerPolicy(String referrer, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('referrerpolicy', referrer);
       node.attrs!.add(attr);
@@ -100,7 +100,7 @@ class A extends WidgetElementVisible {
 
   /// The relationship of the linked URL as link types.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-rel)
-  A rel(List<String> typeList, [bool? removeIf]) {
+  A rel(List<String> typeList, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('rel', _html.listToSpaces(typeList));
       node.attrs!.add(attr);
@@ -111,7 +111,7 @@ class A extends WidgetElementVisible {
   /// Where to display the linked URL, as the name
   /// for a browsing context (a tab, window, or `<iframe>`).
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-target)
-  A target(String context, [bool? removeIf]) {
+  A target(String context, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('target', context);
       node.attrs!.add(attr);
@@ -121,7 +121,7 @@ class A extends WidgetElementVisible {
 
   /// Hints at the linked URL's format with a MIME type.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-type)
-  A type(String mediaType, [bool? removeIf]) {
+  A type(String mediaType, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('type', mediaType);
       node.attrs!.add(attr);

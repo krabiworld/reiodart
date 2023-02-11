@@ -64,7 +64,7 @@ class Script extends WidgetElement {
   /// for sites which use a separate domain
   /// for static media, use this attribute.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-crossorigin)
-  Script crossOrigin(String mode, [bool? removeIf]) {
+  Script crossOrigin(String mode, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('crossorigin', mode);
       node.attrs!.add(attr);
@@ -90,7 +90,7 @@ class Script extends WidgetElement {
   /// that a fetched resource has been delivered
   /// free of unexpected manipulation.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-integrity)
-  Script integrity(String metaData, [bool? removeIf]) {
+  Script integrity(String metaData, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('integrity', metaData);
       node.attrs!.add(attr);
@@ -117,7 +117,7 @@ class Script extends WidgetElement {
   /// to send when fetching the script,
   /// or resources fetched by the script.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-referrerpolicy)
-  Script referrerPolicy(String referrer, [bool? removeIf]) {
+  Script referrerPolicy(String referrer, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('referrerpolicy', referrer);
       node.attrs!.add(attr);
@@ -129,7 +129,7 @@ class Script extends WidgetElement {
   /// this can be used as an alternative
   /// to embedding a script directly within a document.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-src)
-  Script src(String url, [bool? removeIf]) {
+  Script src(String url, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('src', url);
       node.attrs!.add(attr);
@@ -139,7 +139,7 @@ class Script extends WidgetElement {
 
   /// This attribute indicates the type of script represented.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script/type)
-  Script type(String scriptType, [bool? removeIf]) {
+  Script type(String scriptType, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('type', scriptType);
       node.attrs!.add(attr);
@@ -151,7 +151,7 @@ class Script extends WidgetElement {
   /// that certain operations should be blocked
   /// on the fetching of the script.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-blocking)
-  Script blocking(List<String> operationList, [bool? removeIf]) {
+  Script blocking(List<String> operationList, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr =
           VirtualAttr('blocking', _html.listToCommas(operationList));

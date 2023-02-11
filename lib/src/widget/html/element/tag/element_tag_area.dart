@@ -30,7 +30,7 @@ class Area extends WidgetElementVisible {
   /// A text alternative to display
   /// on browsers that do not display images.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area#attr-alt)
-  Area alt(String text, [bool? removeIf]) {
+  Area alt(String text, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('alt', text);
       node.attrs!.add(attr);
@@ -42,7 +42,7 @@ class Area extends WidgetElementVisible {
   /// of the shape attribute in size, shape,
   /// and placement of an `<area>`.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area#attr-coords)
-  Area coords(List<num> coordsList, [bool? removeIf]) {
+  Area coords(List<num> coordsList, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('coords', _html.listToCommas(coordsList));
       node.attrs!.add(attr);
@@ -63,7 +63,7 @@ class Area extends WidgetElementVisible {
 
   /// The hyperlink target for the area.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area#attr-href)
-  Area href(String url, [bool? removeIf]) {
+  Area href(String url, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('href', url);
       node.attrs!.add(attr);
@@ -75,7 +75,7 @@ class Area extends WidgetElementVisible {
   /// when the hyperlink is followed, POST requests with
   /// the body PING will be sent by the browser (in the background).
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area#attr-ping)
-  Area ping(List<String> urlList, [bool? removeIf]) {
+  Area ping(List<String> urlList, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('ping', _html.listToSpaces(urlList));
       node.attrs!.add(attr);
@@ -86,7 +86,7 @@ class Area extends WidgetElementVisible {
   /// A string indicating which referrer to
   /// use when fetching the resource.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area#attr-referrerpolicy)
-  Area referrerPolicy(String referrer, [bool? removeIf]) {
+  Area referrerPolicy(String referrer, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('referrerpolicy', referrer);
       node.attrs!.add(attr);
@@ -98,7 +98,7 @@ class Area extends WidgetElementVisible {
   /// this attribute specifies the relationship
   /// of the target object to the link object.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area#attr-rel)
-  Area rel(List<String> typeList, [bool? removeIf]) {
+  Area rel(List<String> typeList, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('rel', _html.listToSpaces(typeList));
       node.attrs!.add(attr);
@@ -108,7 +108,7 @@ class Area extends WidgetElementVisible {
 
   /// The shape of the associated hot spot.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area#attr-shape)
-  Area shape(String shape, [bool? removeIf]) {
+  Area shape(String shape, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('shape', shape);
       node.attrs!.add(attr);
@@ -119,7 +119,7 @@ class Area extends WidgetElementVisible {
   /// A keyword or author-defined name
   /// of the browsing context to display the linked resource.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area#attr-target)
-  Area target(String context, [bool? removeIf]) {
+  Area target(String context, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('target', context);
       node.attrs!.add(attr);

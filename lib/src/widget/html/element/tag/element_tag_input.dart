@@ -78,7 +78,7 @@ class Input extends WidgetElementVisible {
   /// Hint for expected file type
   /// in file upload controls.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#accept)
-  Input accept(String type, [bool? removeIf]) {
+  Input accept(String type, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('accept', type);
       node.attrs!.add(attr);
@@ -88,7 +88,7 @@ class Input extends WidgetElementVisible {
 
   /// Alt attribute for the image type.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#alt)
-  Input alt(String text, [bool? removeIf]) {
+  Input alt(String text, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('alt', text);
       node.attrs!.add(attr);
@@ -98,7 +98,7 @@ class Input extends WidgetElementVisible {
 
   /// Hint for form autofill feature.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#autocomplete)
-  Input autoComplete(String value, [bool? removeIf]) {
+  Input autoComplete(String value, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('autocomplete', value);
       node.attrs!.add(attr);
@@ -108,7 +108,7 @@ class Input extends WidgetElementVisible {
 
   /// Media capture input method in file upload controls.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#capture)
-  Input capture(String media, [bool? removeIf]) {
+  Input capture(String media, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('capture', media);
       node.attrs!.add(attr);
@@ -129,7 +129,7 @@ class Input extends WidgetElementVisible {
   /// Name of form field to use for sending
   /// the element's directionality in form submission.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#dirname)
-  Input dirName(String name, [bool? removeIf]) {
+  Input dirName(String name, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('dirname', name);
       node.attrs!.add(attr);
@@ -149,7 +149,7 @@ class Input extends WidgetElementVisible {
 
   /// Associates the control with a form element.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#form)
-  Input form(String id, [bool? removeIf]) {
+  Input form(String id, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('form', id);
       node.attrs!.add(attr);
@@ -159,7 +159,7 @@ class Input extends WidgetElementVisible {
 
   /// URL to use for form submission.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#formaction)
-  Input formAction(String url, [bool? removeIf]) {
+  Input formAction(String url, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('formaction', url);
       node.attrs!.add(attr);
@@ -170,7 +170,7 @@ class Input extends WidgetElementVisible {
   /// Form data set encoding type to use
   /// for form submission.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#formenctype)
-  Input formEncType(String value, [bool? removeIf]) {
+  Input formEncType(String value, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('formenctype', value);
       node.attrs!.add(attr);
@@ -180,7 +180,7 @@ class Input extends WidgetElementVisible {
 
   /// HTTP method to use for form submission.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#formmethod)
-  Input formMethod(String method, [bool? removeIf]) {
+  Input formMethod(String method, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('formmethod', method);
       node.attrs!.add(attr);
@@ -200,7 +200,7 @@ class Input extends WidgetElementVisible {
 
   /// Browsing context for form submission.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#formtarget)
-  Input formTarget(String context, [bool? removeIf]) {
+  Input formTarget(String context, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('formtarget', context);
       node.attrs!.add(attr);
@@ -210,7 +210,7 @@ class Input extends WidgetElementVisible {
 
   /// Same as height attribute for `<img>`.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#height)
-  Input height(int pixels, [bool? removeIf]) {
+  Input height(int pixels, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('height', pixels.toString());
       node.attrs!.add(attr);
@@ -221,7 +221,7 @@ class Input extends WidgetElementVisible {
   /// Value of the id attribute of the
   /// `<datalist>` of autocomplete options.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#list)
-  Input list(String id, [bool? removeIf]) {
+  Input list(String id, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('list', id);
       node.attrs!.add(attr);
@@ -231,7 +231,7 @@ class Input extends WidgetElementVisible {
 
   /// Maximum value.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#max)
-  Input max(dynamic value, [bool? removeIf]) {
+  Input max(dynamic value, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('max', value.toString());
       node.attrs!.add(attr);
@@ -241,7 +241,7 @@ class Input extends WidgetElementVisible {
 
   /// Maximum length (number of characters) of value.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#maxlength)
-  Input maxLength(num number, [bool? removeIf]) {
+  Input maxLength(num number, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('maxlength', number.toString());
       node.attrs!.add(attr);
@@ -251,7 +251,7 @@ class Input extends WidgetElementVisible {
 
   /// Minimum value.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#min)
-  Input min(dynamic value, [bool? removeIf]) {
+  Input min(dynamic value, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('min', value.toString());
       node.attrs!.add(attr);
@@ -261,7 +261,7 @@ class Input extends WidgetElementVisible {
 
   /// Minimum length (number of characters) of value.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#minlength)
-  Input minLength(num number, [bool? removeIf]) {
+  Input minLength(num number, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('minlength', number.toString());
       node.attrs!.add(attr);
@@ -281,7 +281,7 @@ class Input extends WidgetElementVisible {
 
   /// Name of the form control.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#name)
-  Input name(String name, [bool? removeIf]) {
+  Input name(String name, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('name', name);
       node.attrs!.add(attr);
@@ -291,7 +291,7 @@ class Input extends WidgetElementVisible {
 
   /// Pattern the value must match to be valid.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#pattern)
-  Input pattern(RegExp exp, [bool? removeIf]) {
+  Input pattern(RegExp exp, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('pattern', exp.pattern);
       node.attrs!.add(attr);
@@ -302,7 +302,7 @@ class Input extends WidgetElementVisible {
   /// Text that appears in the form control
   /// when it has no value set.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#placeholder)
-  Input placeholder(String text, [bool? removeIf]) {
+  Input placeholder(String text, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('placeholder', text);
       node.attrs!.add(attr);
@@ -333,7 +333,7 @@ class Input extends WidgetElementVisible {
 
   /// Size of the control.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#size)
-  Input size(int number, [bool? removeIf]) {
+  Input size(int number, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('size', number.toString());
       node.attrs!.add(attr);
@@ -343,7 +343,7 @@ class Input extends WidgetElementVisible {
 
   /// Same as src attribute for `<img>`.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#src)
-  Input src(String url, [bool? removeIf]) {
+  Input src(String url, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('src', url);
       node.attrs!.add(attr);
@@ -353,7 +353,7 @@ class Input extends WidgetElementVisible {
 
   /// Incremental values that are valid.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#step)
-  Input step(int number, [bool? removeIf]) {
+  Input step(int number, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('step', number.toString());
       node.attrs!.add(attr);
@@ -363,7 +363,7 @@ class Input extends WidgetElementVisible {
 
   /// Type of form control.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#type)
-  Input type(String inputTypes, [bool? removeIf]) {
+  Input type(String inputTypes, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('type', inputTypes);
       node.attrs!.add(attr);
@@ -373,7 +373,7 @@ class Input extends WidgetElementVisible {
 
   /// Same as width attribute for `<img>`.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#width)
-  Input width(int pixels, [bool? removeIf]) {
+  Input width(int pixels, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('width', pixels.toString());
       node.attrs!.add(attr);

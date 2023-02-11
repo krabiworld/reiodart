@@ -46,7 +46,7 @@ class FieldSet extends WidgetElementVisible {
   /// of a `<form>` element you want the `<fieldset>` to be part
   /// of, even if it is not inside the form.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset#attr-form)
-  FieldSet form(String id, [bool? removeIf]) {
+  FieldSet form(String id, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('form', id);
       node.attrs!.add(attr);
@@ -56,7 +56,7 @@ class FieldSet extends WidgetElementVisible {
 
   /// The name associated with the group.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset#attr-name)
-  FieldSet name(String name, [bool? removeIf]) {
+  FieldSet name(String name, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('name', name);
       node.attrs!.add(attr);

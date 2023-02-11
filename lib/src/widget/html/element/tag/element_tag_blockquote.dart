@@ -35,7 +35,7 @@ class BlockQuote extends WidgetElementVisible {
   /// A URL that designates a source document
   /// or message for the information quoted.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote#attr-cite)
-  BlockQuote cite(String url, [bool? removeIf]) {
+  BlockQuote cite(String url, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('cite', url);
       node.attrs!.add(attr);

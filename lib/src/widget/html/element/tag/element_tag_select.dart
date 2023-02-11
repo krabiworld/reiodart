@@ -44,7 +44,7 @@ class Select extends WidgetElementVisible {
   /// A string providing a hint
   /// for a user agent's autocomplete feature.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select#attr-autocomplete)
-  Select autoComplete(String value, [bool? removeIf]) {
+  Select autoComplete(String value, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('autocomplete', value);
       node.attrs!.add(attr);
@@ -66,7 +66,7 @@ class Select extends WidgetElementVisible {
   /// The `<form>` element to associate
   /// the `<select>` with (its form owner).
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select#attr-form)
-  Select form(String id, [bool? removeIf]) {
+  Select form(String id, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('form', id);
       node.attrs!.add(attr);
@@ -88,7 +88,7 @@ class Select extends WidgetElementVisible {
   /// This attribute is used to specify
   /// the name of the control.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select#attr-name)
-  Select name(String name, [bool? removeIf]) {
+  Select name(String name, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('name', name);
       node.attrs!.add(attr);
@@ -114,7 +114,7 @@ class Select extends WidgetElementVisible {
   /// Browsers are not required to present
   /// a select element as a scrolled list box.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select#attr-size)
-  Select size(int number, [bool? removeIf]) {
+  Select size(int number, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('size', number.toString());
       node.attrs!.add(attr);

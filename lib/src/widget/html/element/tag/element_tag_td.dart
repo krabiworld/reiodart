@@ -29,7 +29,7 @@ class Td extends WidgetElementVisible {
   /// integer value that indicates
   /// for how many columns the cell extends.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td#attr-colspan)
-  Td colSpan(int number, [bool? removeIf]) {
+  Td colSpan(int number, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('colspan', number.toString());
       node.attrs!.add(attr);
@@ -41,7 +41,7 @@ class Td extends WidgetElementVisible {
   /// to the id attribute of the `<th>` elements
   /// that apply to this element.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td#attr-headers)
-  Td headers(List<String> idList, [bool? removeIf]) {
+  Td headers(List<String> idList, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('headers', _html.listToSpaces(idList));
       node.attrs!.add(attr);
@@ -53,7 +53,7 @@ class Td extends WidgetElementVisible {
   /// integer value that indicates
   /// for how many rows the cell extends.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td#attr-rowspan)
-  Td rowSpan(int number, [bool? removeIf]) {
+  Td rowSpan(int number, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('rowspan', number.toString());
       node.attrs!.add(attr);

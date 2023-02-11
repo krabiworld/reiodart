@@ -38,7 +38,7 @@ class Button extends WidgetElementVisible {
   /// The `<form>` element to associate
   /// the button with (its form owner).
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attr-form)
-  Button form(String id, [bool? removeIf]) {
+  Button form(String id, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('form', id);
       node.attrs!.add(attr);
@@ -49,7 +49,7 @@ class Button extends WidgetElementVisible {
   /// The URL that processes the information
   /// submitted by the button.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attr-formaction)
-  Button formAction(String url, [bool? removeIf]) {
+  Button formAction(String url, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('formaction', url);
       node.attrs!.add(attr);
@@ -60,7 +60,7 @@ class Button extends WidgetElementVisible {
   /// Specifies how to encode the form data
   /// that is submitted.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attr-formenctype)
-  Button formEncType(String value, [bool? removeIf]) {
+  Button formEncType(String value, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('formenctype', value);
       node.attrs!.add(attr);
@@ -71,7 +71,7 @@ class Button extends WidgetElementVisible {
   /// This attribute specifies the HTTP method
   /// used to submit the form.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attr-formmethod)
-  Button formMethod(String method, [bool? removeIf]) {
+  Button formMethod(String method, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('formmethod', method);
       node.attrs!.add(attr);
@@ -96,7 +96,7 @@ class Button extends WidgetElementVisible {
   /// indicating where to display the response
   /// from submitting the form.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attr-formtarget)
-  Button formTarget(String context, [bool? removeIf]) {
+  Button formTarget(String context, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('formtarget', context);
       node.attrs!.add(attr);
@@ -108,7 +108,7 @@ class Button extends WidgetElementVisible {
   /// with the button's value as part of the form data,
   /// when that button is used to submit the form.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attr-name)
-  Button name(String name, [bool? removeIf]) {
+  Button name(String name, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('name', name);
       node.attrs!.add(attr);
@@ -118,7 +118,7 @@ class Button extends WidgetElementVisible {
 
   /// The default behavior of the button.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attr-type)
-  Button type(String mediaType, [bool? removeIf]) {
+  Button type(String mediaType, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('type', mediaType);
       node.attrs!.add(attr);
@@ -129,7 +129,7 @@ class Button extends WidgetElementVisible {
   /// Defines the value associated with the button's
   /// name when it's submitted with the form data.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attr-value)
-  Button value(dynamic value, [bool? removeIf]) {
+  Button value(dynamic value, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('value', value.toString());
       node.attrs!.add(attr);

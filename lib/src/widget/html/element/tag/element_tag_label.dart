@@ -26,7 +26,7 @@ class Label extends WidgetElementVisible {
   /// for a labelable form-related element in the same
   /// document as the `<label>` element.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label#attr-for)
-  Label thisFor(String id, [bool? removeIf]) {
+  Label thisFor(String id, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('for', id);
       node.attrs!.add(attr);

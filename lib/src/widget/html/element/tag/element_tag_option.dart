@@ -37,7 +37,7 @@ class Option extends WidgetElementVisible {
   /// This attribute is text for the label
   /// indicating the meaning of the option.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option#attr-label)
-  Option label(String text, [bool? removeIf]) {
+  Option label(String text, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('label', text);
       node.attrs!.add(attr);
@@ -60,7 +60,7 @@ class Option extends WidgetElementVisible {
   /// the value to be submitted with the form,
   /// should this option be selected.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option#attr-value)
-  Option value(dynamic value, [bool? removeIf]) {
+  Option value(dynamic value, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('value', value.toString());
       node.attrs!.add(attr);

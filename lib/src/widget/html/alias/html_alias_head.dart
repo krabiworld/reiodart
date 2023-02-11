@@ -18,7 +18,7 @@ class DocumentHead {
 
   /// Allows to create a custom HTML attribute,
   /// for example, if you can't find the desired one.
-  DocumentHead a(String name, dynamic value, [bool? removeIf]) {
+  DocumentHead a(String name, dynamic value, {bool? removeIf}) {
     if (removeIf == true) {
       head.removeAttribute(name);
     } else {

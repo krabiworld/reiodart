@@ -58,7 +58,7 @@ class Img extends WidgetElementVisible {
   /// Defines an alternative text description
   /// of the image.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-alt)
-  Img alt(String text, [bool? removeIf]) {
+  Img alt(String text, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('alt', text);
       node.attrs!.add(attr);
@@ -69,7 +69,7 @@ class Img extends WidgetElementVisible {
   /// Indicates if the fetching of the image
   /// must be done using a CORS request.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-crossorigin)
-  Img crossOrigin(String mode, [bool? removeIf]) {
+  Img crossOrigin(String mode, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('crossorigin', mode);
       node.attrs!.add(attr);
@@ -79,7 +79,7 @@ class Img extends WidgetElementVisible {
 
   /// Provides an image decoding hint to the browser.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-decoding)
-  Img decoding(String value, [bool? removeIf]) {
+  Img decoding(String value, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('decoding', value);
       node.attrs!.add(attr);
@@ -90,7 +90,7 @@ class Img extends WidgetElementVisible {
   /// Marks the image for observation
   /// by the PerformanceElementTiming API.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-elementtiming)
-  Img elementTiming(String marker, [bool? removeIf]) {
+  Img elementTiming(String marker, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('elementtiming', marker);
       node.attrs!.add(attr);
@@ -100,7 +100,7 @@ class Img extends WidgetElementVisible {
 
   /// The intrinsic height of the image, in pixels.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-height)
-  Img height(int pixels, [bool? removeIf]) {
+  Img height(int pixels, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('height', pixels.toString());
       node.attrs!.add(attr);
@@ -121,7 +121,7 @@ class Img extends WidgetElementVisible {
 
   /// Indicates how the browser should load the image.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-loading)
-  Img loading(String value, [bool? removeIf]) {
+  Img loading(String value, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('loading', value);
       node.attrs!.add(attr);
@@ -131,7 +131,7 @@ class Img extends WidgetElementVisible {
 
   /// Indicating which referrer to use when fetching the resource.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-referrerpolicy)
-  Img referrerPolicy(String referrer, [bool? removeIf]) {
+  Img referrerPolicy(String referrer, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('referrerpolicy', referrer);
       node.attrs!.add(attr);
@@ -141,7 +141,7 @@ class Img extends WidgetElementVisible {
 
   /// Indicating a set of source sizes.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes)
-  Img sizes(List<String> sizesList, [bool? removeIf]) {
+  Img sizes(List<String> sizesList, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('sizes', _html.listToCommas(sizesList));
       node.attrs!.add(attr);
@@ -151,7 +151,7 @@ class Img extends WidgetElementVisible {
 
   /// The image URL.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-src)
-  Img src(String url, [bool? removeIf]) {
+  Img src(String url, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('src', url);
       node.attrs!.add(attr);
@@ -162,7 +162,7 @@ class Img extends WidgetElementVisible {
   /// Indicating possible image sources
   /// for the user agent to use.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-srcset)
-  Img srcSet(List<String> srcList, [bool? removeIf]) {
+  Img srcSet(List<String> srcList, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('srcset', _html.listToCommas(srcList));
       node.attrs!.add(attr);
@@ -172,7 +172,7 @@ class Img extends WidgetElementVisible {
 
   /// The intrinsic width of the image in pixels.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-width)
-  Img width(int pixels, [bool? removeIf]) {
+  Img width(int pixels, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('width', pixels.toString());
       node.attrs!.add(attr);
@@ -183,7 +183,7 @@ class Img extends WidgetElementVisible {
   /// The partial URL (starting with #) of
   /// an image map associated with the element.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-usemap)
-  Img useMap(String id, [bool? removeIf]) {
+  Img useMap(String id, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('usemap', id);
       node.attrs!.add(attr);

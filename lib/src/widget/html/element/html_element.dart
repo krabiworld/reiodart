@@ -129,7 +129,7 @@ abstract class WidgetElement {
   /// should be translated when the page is localized,
   /// or whether to leave them unchanged.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/translate)
-  WidgetElement translate(String value, [bool? removeIf]) {
+  WidgetElement translate(String value, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('translate', value);
       node.attrs!.add(attr);
@@ -141,7 +141,7 @@ abstract class WidgetElement {
   /// representing advisory information related
   /// to the element it belongs to.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/title)
-  WidgetElement title(String text, [bool? removeIf]) {
+  WidgetElement title(String text, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('title', text);
       node.attrs!.add(attr);
@@ -155,7 +155,7 @@ abstract class WidgetElement {
   /// the Tab key, hence the name) and determine their
   /// relative ordering for sequential focus navigation.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex)
-  WidgetElement tabIndex(int number, [bool? removeIf]) {
+  WidgetElement tabIndex(int number, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('tabindex', number.toString());
       node.attrs!.add(attr);
@@ -166,7 +166,7 @@ abstract class WidgetElement {
   /// The style global attribute contains CSS
   /// styling declarations to be applied to the element.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/style)
-  WidgetElement style(List<String> styleList, [bool? removeIf]) {
+  WidgetElement style(List<String> styleList, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr =
           VirtualAttr('style', _html.listToSemicolons(styleList));
@@ -178,7 +178,7 @@ abstract class WidgetElement {
   /// The spellcheck global attribute that defines
   /// whether the element may be checked for spelling errors.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/spellcheck)
-  WidgetElement spellCheck(bool boolean, [bool? removeIf]) {
+  WidgetElement spellCheck(bool boolean, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('spellcheck', boolean.toString());
       node.attrs!.add(attr);
@@ -192,7 +192,7 @@ abstract class WidgetElement {
   /// to determine whether or not a given fetch will
   /// be allowed to proceed for a given element.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/nonce)
-  WidgetElement nonce(String crypto, [bool? removeIf]) {
+  WidgetElement nonce(String crypto, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('nonce', crypto);
       node.attrs!.add(attr);
@@ -206,7 +206,7 @@ abstract class WidgetElement {
   /// or the language that the editable elements
   /// should be written in by the user.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang)
-  WidgetElement lang(String langCode, [bool? removeIf]) {
+  WidgetElement lang(String langCode, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('lang', langCode);
       node.attrs!.add(attr);
@@ -218,7 +218,7 @@ abstract class WidgetElement {
   /// of the vocabulary that will be used to define
   /// itemprop's (item properties) in the data structure.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemtype)
-  WidgetElement itemType(String url, [bool? removeIf]) {
+  WidgetElement itemType(String url, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('itemtype', url);
       node.attrs!.add(attr);
@@ -241,7 +241,7 @@ abstract class WidgetElement {
   /// (not itemids) elsewhere in the document,
   /// with additional properties
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemref)
-  WidgetElement itemRef(String value, [bool? removeIf]) {
+  WidgetElement itemRef(String value, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('itemref', value);
       node.attrs!.add(attr);
@@ -252,7 +252,7 @@ abstract class WidgetElement {
   /// The itemprop global attribute
   /// is used to add properties to an item.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemprop)
-  WidgetElement itemProp(String name, [bool? removeIf]) {
+  WidgetElement itemProp(String name, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('itemprop', name);
       node.attrs!.add(attr);
@@ -264,7 +264,7 @@ abstract class WidgetElement {
   /// microdata in the form of a unique,
   /// global identifier of an item.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemid)
-  WidgetElement itemId(String value, [bool? removeIf]) {
+  WidgetElement itemId(String value, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('itemid', value);
       node.attrs!.add(attr);
@@ -277,7 +277,7 @@ abstract class WidgetElement {
   /// like a defined custom built-in element
   /// (see Using custom elements for more details).
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/is)
-  WidgetElement thisIs(String elementName, [bool? removeIf]) {
+  WidgetElement thisIs(String elementName, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('is', elementName);
       node.attrs!.add(attr);
@@ -290,7 +290,7 @@ abstract class WidgetElement {
   /// by the user while editing the element
   /// or its contents.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inputmode)
-  WidgetElement inputMode(String mode, [bool? removeIf]) {
+  WidgetElement inputMode(String mode, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('inputmode', mode);
       node.attrs!.add(attr);
@@ -301,7 +301,7 @@ abstract class WidgetElement {
   /// The id global attribute defines an identifier
   /// (ID) which must be unique in the whole document.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id)
-  WidgetElement id(String id, [bool? removeIf]) {
+  WidgetElement id(String id, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('id', id);
       node.attrs!.add(attr);
@@ -325,7 +325,7 @@ abstract class WidgetElement {
   /// what action label (or icon) to present
   /// for the enter key on virtual keyboards.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/enterkeyhint)
-  WidgetElement enterKeyHint(String key, [bool? removeIf]) {
+  WidgetElement enterKeyHint(String key, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('enterkeyhint', key);
       node.attrs!.add(attr);
@@ -338,7 +338,7 @@ abstract class WidgetElement {
   /// either with native browser behavior
   /// or the HTML Drag and Drop API.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/draggable)
-  WidgetElement draggable(bool boolean, [bool? removeIf]) {
+  WidgetElement draggable(bool boolean, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('draggable', boolean.toString());
       node.attrs!.add(attr);
@@ -349,7 +349,7 @@ abstract class WidgetElement {
   /// The dir global attribute that indicates
   /// the directionality of the element's text.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/dir)
-  WidgetElement dir(String dir, [bool? removeIf]) {
+  WidgetElement dir(String dir, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('dir', dir);
       node.attrs!.add(attr);
@@ -360,7 +360,7 @@ abstract class WidgetElement {
   /// The contenteditable global attribute
   /// indicating if the element should be editable by the user.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/contenteditable)
-  WidgetElement contentEditable(bool boolean, [bool? removeIf]) {
+  WidgetElement contentEditable(bool boolean, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('contenteditable', boolean.toString());
       node.attrs!.add(attr);
@@ -371,7 +371,7 @@ abstract class WidgetElement {
   /// The class global attribute is a list
   /// of the case-sensitive classes of the element.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class)
-  WidgetElement thisClass(List<String> nameList, [bool? removeIf]) {
+  WidgetElement thisClass(List<String> nameList, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('class', _html.listToSpaces(nameList));
       node.attrs!.add(attr);
@@ -395,7 +395,7 @@ abstract class WidgetElement {
   /// whether and how text input is automatically
   /// capitalized as it is entered/edited by the user.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/autocapitalize)
-  WidgetElement autoCapitalize(String value, [bool? removeIf]) {
+  WidgetElement autoCapitalize(String value, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('autocapitalize', value);
       node.attrs!.add(attr);
@@ -407,7 +407,7 @@ abstract class WidgetElement {
   /// a hint for generating a keyboard shortcut
   /// for the current element.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/accesskey)
-  WidgetElement accessKey(String key, [bool? removeIf]) {
+  WidgetElement accessKey(String key, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('accesskey', key);
       node.attrs!.add(attr);
@@ -417,7 +417,7 @@ abstract class WidgetElement {
 
   /// Allows to create a custom HTML attribute,
   /// for example, if you can't find the desired one.
-  WidgetElement a(String name, dynamic value, [bool? removeIf]) {
+  WidgetElement a(String name, dynamic value, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr(name, value.toString());
       node.attrs!.add(attr);

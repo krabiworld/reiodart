@@ -25,7 +25,7 @@ class Map extends WidgetElementVisible {
   /// The name attribute gives the map
   /// a name so that it can be referenced.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map#attr-name)
-  Map name(String name, [bool? removeIf]) {
+  Map name(String name, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('name', name);
       node.attrs!.add(attr);

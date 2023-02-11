@@ -65,7 +65,7 @@ class Object extends WidgetElementVisible {
 
   /// The address of the resource as a valid URL.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object#attr-data)
-  Object data(String url, [bool? removeIf]) {
+  Object data(String url, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('data', url);
       node.attrs!.add(attr);
@@ -76,7 +76,7 @@ class Object extends WidgetElementVisible {
   /// The form element, if any, that the object element
   /// is associated with (its form owner).
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object#attr-form)
-  Object form(String id, [bool? removeIf]) {
+  Object form(String id, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('form', id);
       node.attrs!.add(attr);
@@ -86,7 +86,7 @@ class Object extends WidgetElementVisible {
 
   /// The height of the displayed resource, in CSS pixels.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object#attr-height)
-  Object height(int pixels, [bool? removeIf]) {
+  Object height(int pixels, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('height', pixels.toString());
       node.attrs!.add(attr);
@@ -96,7 +96,7 @@ class Object extends WidgetElementVisible {
 
   /// The name of valid browsing context (HTML5).
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object#attr-name)
-  Object name(String name, [bool? removeIf]) {
+  Object name(String name, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('name', name);
       node.attrs!.add(attr);
@@ -106,7 +106,7 @@ class Object extends WidgetElementVisible {
 
   /// The content type of the resource specified by data.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object#attr-type)
-  Object type(String mediaType, [bool? removeIf]) {
+  Object type(String mediaType, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('type', mediaType);
       node.attrs!.add(attr);
@@ -118,7 +118,7 @@ class Object extends WidgetElementVisible {
   /// that is a '#' followed by the value
   /// of a name of a map element.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object#attr-usemap)
-  Object useMap(String id, [bool? removeIf]) {
+  Object useMap(String id, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('usemap', id);
       node.attrs!.add(attr);
@@ -128,7 +128,7 @@ class Object extends WidgetElementVisible {
 
   /// The width of the display resource, in CSS pixels.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object#attr-width)
-  Object width(int pixels, [bool? removeIf]) {
+  Object width(int pixels, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('width', pixels.toString());
       node.attrs!.add(attr);

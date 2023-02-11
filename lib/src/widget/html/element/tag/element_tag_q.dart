@@ -27,7 +27,7 @@ class Q extends WidgetElementVisible {
   /// that designates a source document
   /// or message for the information quoted.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q#attr-cite)
-  WidgetElement cite(String url, [bool? removeIf]) {
+  WidgetElement cite(String url, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('cite', url);
       node.attrs!.add(attr);

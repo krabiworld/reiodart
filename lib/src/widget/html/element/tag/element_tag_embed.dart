@@ -55,7 +55,7 @@ class Embed extends WidgetElementVisible {
 
   /// The displayed height of the resource, in CSS pixels.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed#attr-height)
-  Embed height(int pixels, [bool? removeIf]) {
+  Embed height(int pixels, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('height', pixels.toString());
       node.attrs!.add(attr);
@@ -65,7 +65,7 @@ class Embed extends WidgetElementVisible {
 
   /// The URL of the resource being embedded.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed#attr-src)
-  Embed src(String url, [bool? removeIf]) {
+  Embed src(String url, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('src', url);
       node.attrs!.add(attr);
@@ -76,7 +76,7 @@ class Embed extends WidgetElementVisible {
   /// The MIME type to use to select the plug-in
   /// to instantiate.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed#attr-type)
-  Embed type(String mediaType, [bool? removeIf]) {
+  Embed type(String mediaType, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('type', mediaType);
       node.attrs!.add(attr);
@@ -86,7 +86,7 @@ class Embed extends WidgetElementVisible {
 
   /// The displayed width of the resource, in CSS pixels.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed#attr-width)
-  Embed width(int pixels, [bool? removeIf]) {
+  Embed width(int pixels, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('width', pixels.toString());
       node.attrs!.add(attr);

@@ -31,7 +31,7 @@ class Output extends WidgetElementVisible {
   /// indicating that those elements contributed input
   /// values to (or otherwise affected) the calculation.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output#attr-for)
-  Output thisFor(List<String> idList, [bool? removeIf]) {
+  Output thisFor(List<String> idList, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('for', _html.listToSpaces(idList));
       node.attrs!.add(attr);
@@ -42,7 +42,7 @@ class Output extends WidgetElementVisible {
   /// The `<form>` element to associate
   /// the output with (its form owner).
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output#attr-form)
-  Output form(String id, [bool? removeIf]) {
+  Output form(String id, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('form', id);
       node.attrs!.add(attr);
@@ -52,7 +52,7 @@ class Output extends WidgetElementVisible {
 
   /// The element's name.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output#attr-name)
-  Output name(String name, [bool? removeIf]) {
+  Output name(String name, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('name', name);
       node.attrs!.add(attr);

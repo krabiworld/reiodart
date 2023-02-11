@@ -25,7 +25,7 @@ class Base extends WidgetElement {
   /// The base URL to be used throughout
   /// the document for relative URLs.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base#attr-href)
-  Base href(String url, [bool? removeIf]) {
+  Base href(String url, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('href', url);
       node.attrs!.add(attr);
@@ -38,7 +38,7 @@ class Base extends WidgetElement {
   /// from `<a>`, `<area>`, or `<form>` elements
   /// without explicit target attributes.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base#attr-target)
-  Base target(String context, [bool? removeIf]) {
+  Base target(String context, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('target', context);
       node.attrs!.add(attr);

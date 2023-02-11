@@ -64,7 +64,7 @@ class TextArea extends WidgetElementVisible {
   /// of the control can be automatically completed
   /// by the browser.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attr-autocomplete)
-  TextArea autoComplete(String value, [bool? removeIf]) {
+  TextArea autoComplete(String value, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('autocomplete', value);
       node.attrs!.add(attr);
@@ -75,7 +75,7 @@ class TextArea extends WidgetElementVisible {
   /// The visible width of the text control,
   /// in average character widths.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attr-cols)
-  TextArea cols(int number, [bool? removeIf]) {
+  TextArea cols(int number, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('cols', number.toString());
       node.attrs!.add(attr);
@@ -97,7 +97,7 @@ class TextArea extends WidgetElementVisible {
   /// The form element that the `<textarea>` element
   /// is associated with (its "form owner").
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attr-form)
-  TextArea form(String id, [bool? removeIf]) {
+  TextArea form(String id, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('form', id);
       node.attrs!.add(attr);
@@ -108,7 +108,7 @@ class TextArea extends WidgetElementVisible {
   /// The maximum number of characters
   /// (UTF-16 code units) that the user can enter.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attr-maxlength)
-  TextArea maxLength(num number, [bool? removeIf]) {
+  TextArea maxLength(num number, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('maxlength', number.toString());
       node.attrs!.add(attr);
@@ -120,7 +120,7 @@ class TextArea extends WidgetElementVisible {
   /// (UTF-16 code units) required
   /// that the user should enter.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attr-minlength)
-  TextArea minLength(num number, [bool? removeIf]) {
+  TextArea minLength(num number, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('minlength', number.toString());
       node.attrs!.add(attr);
@@ -130,7 +130,7 @@ class TextArea extends WidgetElementVisible {
 
   /// The name of the control.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attr-name)
-  TextArea name(String name, [bool? removeIf]) {
+  TextArea name(String name, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('name', name);
       node.attrs!.add(attr);
@@ -141,7 +141,7 @@ class TextArea extends WidgetElementVisible {
   /// A hint to the user of what can
   /// be entered in the control.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attr-placeholder)
-  TextArea placeholder(String text, [bool? removeIf]) {
+  TextArea placeholder(String text, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('placeholder', text);
       node.attrs!.add(attr);
@@ -175,7 +175,7 @@ class TextArea extends WidgetElementVisible {
 
   /// The number of visible text lines for the control.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attr-rows)
-  TextArea rows(int number, [bool? removeIf]) {
+  TextArea rows(int number, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('rows', number.toString());
       node.attrs!.add(attr);
@@ -186,7 +186,7 @@ class TextArea extends WidgetElementVisible {
   /// Indicates how the control should wrap
   /// the value for form submission.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attr-wrap)
-  TextArea wrap(String value, [bool? removeIf]) {
+  TextArea wrap(String value, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('wrap', value);
       node.attrs!.add(attr);

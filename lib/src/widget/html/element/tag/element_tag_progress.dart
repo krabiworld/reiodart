@@ -26,7 +26,7 @@ class Progress extends WidgetElementVisible {
   /// This attribute describes how much work
   /// the task indicated by the progress element requires.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress#attr-max)
-  Progress max(num number, [bool? removeIf]) {
+  Progress max(num number, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('max', number.toString());
       node.attrs!.add(attr);
@@ -37,7 +37,7 @@ class Progress extends WidgetElementVisible {
   /// This attribute specifies how much
   /// of the task that has been completed.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress#attr-value)
-  Progress value(num number, [bool? removeIf]) {
+  Progress value(num number, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('value', number.toString());
       node.attrs!.add(attr);

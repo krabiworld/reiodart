@@ -52,7 +52,7 @@ class Form extends WidgetElementVisible {
 
   /// Character encodings the server accepts.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attr-accept-charset)
-  Form acceptCharset(List<String> encList, [bool? removeIf]) {
+  Form acceptCharset(List<String> encList, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr =
           VirtualAttr('accept-charset', _html.listToSpaces(encList));
@@ -65,7 +65,7 @@ class Form extends WidgetElementVisible {
   /// have their values automatically
   /// completed by the browser.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attr-autocomplete)
-  Form autoComplete(String value, [bool? removeIf]) {
+  Form autoComplete(String value, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('autocomplete', value);
       node.attrs!.add(attr);
@@ -75,7 +75,7 @@ class Form extends WidgetElementVisible {
 
   /// The name of the form.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attr-name)
-  Form name(String name, [bool? removeIf]) {
+  Form name(String name, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('name', name);
       node.attrs!.add(attr);
@@ -86,7 +86,7 @@ class Form extends WidgetElementVisible {
   /// Controls the annotations and
   /// what kinds of links the form creates.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attr-rel)
-  Form rel(List<String> typeList, [bool? removeIf]) {
+  Form rel(List<String> typeList, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('rel', _html.listToSpaces(typeList));
       node.attrs!.add(attr);

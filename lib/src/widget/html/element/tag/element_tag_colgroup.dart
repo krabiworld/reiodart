@@ -26,7 +26,7 @@ class ColGroup extends WidgetElementVisible {
   /// indicating the number of consecutive columns
   /// the `<colgroup>` element spans.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/colgroup#attr-span)
-  ColGroup span(int number, [bool? removeIf]) {
+  ColGroup span(int number, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('span', number.toString());
       node.attrs!.add(attr);

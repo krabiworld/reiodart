@@ -45,7 +45,7 @@ class Ol extends WidgetElementVisible {
 
   /// Start counting from for the list items.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol#attr-start)
-  Ol start(int number, [bool? removeIf]) {
+  Ol start(int number, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('start', number.toString());
       node.attrs!.add(attr);
@@ -55,7 +55,7 @@ class Ol extends WidgetElementVisible {
 
   /// Sets the numbering type.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol#attr-type)
-  Ol type(String numberingType, [bool? removeIf]) {
+  Ol type(String numberingType, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('type', numberingType);
       node.attrs!.add(attr);

@@ -28,7 +28,7 @@ class Li extends WidgetElementVisible {
   /// ordinal value of the list item
   /// as defined by the `<ol>` element.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li#attr-value)
-  Li value(int number, [bool? removeIf]) {
+  Li value(int number, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('value', number.toString());
       node.attrs!.add(attr);

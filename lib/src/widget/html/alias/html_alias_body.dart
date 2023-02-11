@@ -34,7 +34,7 @@ class DocumentBody {
   /// The style global attribute contains CSS
   /// styling declarations to be applied to the element.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/style)
-  DocumentBody style(List<String> styleList, [bool? removeIf]) {
+  DocumentBody style(List<String> styleList, {bool? removeIf}) {
     if (removeIf == true) {
       body.removeAttribute('style');
     } else {
@@ -45,7 +45,7 @@ class DocumentBody {
 
   /// Allows to create a custom HTML attribute,
   /// for example, if you can't find the desired one.
-  DocumentBody a(String name, dynamic value, [bool? removeIf]) {
+  DocumentBody a(String name, dynamic value, {bool? removeIf}) {
     if (removeIf == true) {
       body.removeAttribute(name);
     } else {

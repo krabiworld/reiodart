@@ -37,7 +37,7 @@ class OptGroup extends WidgetElementVisible {
   /// which the browser can use when labeling
   /// the options in the user interface.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup#attr-label)
-  OptGroup label(String text, [bool? removeIf]) {
+  OptGroup label(String text, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('label', text);
       node.attrs!.add(attr);

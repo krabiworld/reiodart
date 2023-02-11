@@ -250,7 +250,7 @@ class Video extends WidgetElementVisible {
   /// This attribute indicates whether
   /// to use CORS to fetch the related video.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-crossorigin)
-  Video crossOrigin(String mode, [bool? removeIf]) {
+  Video crossOrigin(String mode, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('crossorigin', mode);
       node.attrs!.add(attr);
@@ -260,7 +260,7 @@ class Video extends WidgetElementVisible {
 
   /// The height of the video's display area, in CSS pixels.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-height)
-  Video height(int pixels, [bool? removeIf]) {
+  Video height(int pixels, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('height', pixels.toString());
       node.attrs!.add(attr);
@@ -305,7 +305,7 @@ class Video extends WidgetElementVisible {
   /// A URL for an image to be shown
   /// while the video is downloading.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-poster)
-  Video poster(String url, [bool? removeIf]) {
+  Video poster(String url, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('poster', url);
       node.attrs!.add(attr);
@@ -318,7 +318,7 @@ class Video extends WidgetElementVisible {
   /// thinks will lead to the best user experience
   /// regarding what content is loaded before the video is played
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-preload)
-  Video preload(String value, [bool? removeIf]) {
+  Video preload(String value, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('preload', value);
       node.attrs!.add(attr);
@@ -328,7 +328,7 @@ class Video extends WidgetElementVisible {
 
   /// The URL of the video to embed.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-src)
-  Video src(String url, [bool? removeIf]) {
+  Video src(String url, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('src', url);
       node.attrs!.add(attr);
@@ -338,7 +338,7 @@ class Video extends WidgetElementVisible {
 
   /// The width of the video's display area, in CSS pixels.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-width)
-  Video width(int pixels, [bool? removeIf]) {
+  Video width(int pixels, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('width', pixels.toString());
       node.attrs!.add(attr);

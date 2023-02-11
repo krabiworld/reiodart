@@ -250,7 +250,7 @@ class Audio extends WidgetElementVisible {
   /// This attribute indicates whether
   /// to use CORS to fetch the related audio file.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio#attr-crossorigin)
-  Audio crossOrigin(String mode, [bool? removeIf]) {
+  Audio crossOrigin(String mode, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('crossorigin', mode);
       node.attrs!.add(attr);
@@ -285,7 +285,7 @@ class Audio extends WidgetElementVisible {
   /// a hint to the browser about what the author
   /// thinks will lead to the best user experience.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio#attr-preload)
-  Audio preload(String value, [bool? removeIf]) {
+  Audio preload(String value, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('preload', value);
       node.attrs!.add(attr);
@@ -295,7 +295,7 @@ class Audio extends WidgetElementVisible {
 
   /// The URL of the audio to embed.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio#attr-src)
-  Audio src(String url, [bool? removeIf]) {
+  Audio src(String url, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('src', url);
       node.attrs!.add(attr);

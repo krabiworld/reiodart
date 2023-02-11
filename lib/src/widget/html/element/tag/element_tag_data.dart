@@ -25,7 +25,7 @@ class Data extends WidgetElementVisible {
   /// This attribute specifies the machine-readable
   /// translation of the content of the element.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/data#attr-value)
-  Data value(dynamic value, [bool? removeIf]) {
+  Data value(dynamic value, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('value', value.toString());
       node.attrs!.add(attr);

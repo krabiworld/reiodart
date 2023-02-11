@@ -26,7 +26,7 @@ class Del extends WidgetElementVisible {
   /// A URL for a resource that explains the change
   /// (for example, meeting minutes).
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del#attr-cite)
-  Del cite(String url, [bool? removeIf]) {
+  Del cite(String url, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('cite', url);
       node.attrs!.add(attr);
@@ -38,7 +38,7 @@ class Del extends WidgetElementVisible {
   /// the change and must be a valid date string
   /// with an optional time.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del#attr-datetime)
-  Del dateTime(String time, [bool? removeIf]) {
+  Del dateTime(String time, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('datetime', time);
       node.attrs!.add(attr);

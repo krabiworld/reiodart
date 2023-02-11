@@ -25,7 +25,7 @@ class Canvas extends WidgetElementVisible {
 
   /// The height of the coordinate space in CSS pixels.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas#attr-height)
-  Canvas height(int pixels, [bool? removeIf]) {
+  Canvas height(int pixels, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('height', pixels.toString());
       node.attrs!.add(attr);
@@ -35,7 +35,7 @@ class Canvas extends WidgetElementVisible {
 
   /// The width of the coordinate space in CSS pixels.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas#attr-width)
-  Canvas width(int pixels, [bool? removeIf]) {
+  Canvas width(int pixels, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('width', pixels.toString());
       node.attrs!.add(attr);

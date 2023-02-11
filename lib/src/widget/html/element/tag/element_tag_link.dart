@@ -43,7 +43,7 @@ class Link extends WidgetElementVisible {
   /// application of correct content security policy,
   /// and setting of correct Accept request header.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-as)
-  Link as(String type, [bool? removeIf]) {
+  Link as(String type, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('as', type);
       node.attrs!.add(attr);
@@ -54,7 +54,7 @@ class Link extends WidgetElementVisible {
   /// This attribute indicates whether CORS
   /// must be used when fetching the resource.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-crossorigin)
-  Link crossOrigin(String mode, [bool? removeIf]) {
+  Link crossOrigin(String mode, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('crossorigin', mode);
       node.attrs!.add(attr);
@@ -65,7 +65,7 @@ class Link extends WidgetElementVisible {
   /// This attribute specifies the URL
   /// of the linked resource.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-href)
-  Link href(String url, [bool? removeIf]) {
+  Link href(String url, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('href', url);
       node.attrs!.add(attr);
@@ -76,7 +76,7 @@ class Link extends WidgetElementVisible {
   /// This attribute indicates the language
   /// of the linked resource.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-hreflang)
-  Link hrefLang(String langCode, [bool? removeIf]) {
+  Link hrefLang(String langCode, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('hreflang', langCode);
       node.attrs!.add(attr);
@@ -88,7 +88,7 @@ class Link extends WidgetElementVisible {
   /// that indicates to preload the appropriate
   /// resource used by an img element.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-imagesizes)
-  Link imageSizes(List<String> sizesList, [bool? removeIf]) {
+  Link imageSizes(List<String> sizesList, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr =
           VirtualAttr('imagesizes', _html.listToCommas(sizesList));
@@ -101,7 +101,7 @@ class Link extends WidgetElementVisible {
   /// that indicates to preload the appropriate
   /// resource used by an img element.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-imagesrcset)
-  Link imageSrcSet(List<String> srcList, [bool? removeIf]) {
+  Link imageSrcSet(List<String> srcList, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr =
           VirtualAttr('imagesrcset', _html.listToCommas(srcList));
@@ -114,7 +114,7 @@ class Link extends WidgetElementVisible {
   /// cryptographic hash of the resource (file)
   /// you're telling the browser to fetch.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-integrity)
-  Link integrity(String metaData, [bool? removeIf]) {
+  Link integrity(String metaData, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('integrity', metaData);
       node.attrs!.add(attr);
@@ -125,7 +125,7 @@ class Link extends WidgetElementVisible {
   /// This attribute specifies the media
   /// that the linked resource applies to.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-media)
-  Link media(String value, [bool? removeIf]) {
+  Link media(String value, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('media', value);
       node.attrs!.add(attr);
@@ -136,7 +136,7 @@ class Link extends WidgetElementVisible {
   /// A string indicating which referrer
   /// to use when fetching the resource.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-referrerpolicy)
-  Link referrerPolicy(String referrer, [bool? removeIf]) {
+  Link referrerPolicy(String referrer, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('referrerpolicy', referrer);
       node.attrs!.add(attr);
@@ -147,7 +147,7 @@ class Link extends WidgetElementVisible {
   /// This attribute names a relationship
   /// of the linked document to the current document.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-rel)
-  Link rel(List<String> typeList, [bool? removeIf]) {
+  Link rel(List<String> typeList, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('rel', _html.listToSpaces(typeList));
       node.attrs!.add(attr);
@@ -158,7 +158,7 @@ class Link extends WidgetElementVisible {
   /// This attribute is used to define
   /// the type of the content linked to.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-type)
-  Link type(String mediaType, [bool? removeIf]) {
+  Link type(String mediaType, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr = VirtualAttr('type', mediaType);
       node.attrs!.add(attr);
@@ -170,7 +170,7 @@ class Link extends WidgetElementVisible {
   /// operations should be blocked on the fetching
   /// of an external resource.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-blocking)
-  Link blocking(List<String> operationList, [bool? removeIf]) {
+  Link blocking(List<String> operationList, {bool? removeIf}) {
     if (removeIf != true && node.attrs != null) {
       VirtualAttr attr =
           VirtualAttr('blocking', _html.listToCommas(operationList));
