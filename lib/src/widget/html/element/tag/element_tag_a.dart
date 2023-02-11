@@ -52,12 +52,12 @@ class A extends WidgetElementVisible {
   // Updates the page URL to the specified one,
   // updating the history and widgets,
   // but not the page itself.
-  A link(String url, {bool? history}) {
+  A link(String href, {bool? history}) {
     on.call('click', (Element element, Event event) {
       if (history == false) {
-        window.history.replaceState({}, url, window.location.origin + url);
+        window.history.replaceState({}, href, window.location.origin + href);
       } else {
-        window.history.pushState({}, url, window.location.origin + url);
+        window.history.pushState({}, href, window.location.origin + href);
       }
       window.dispatchEvent(Event(urlChangeEvent));
     });
