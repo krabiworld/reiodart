@@ -43,8 +43,12 @@ Widget counter = Counter(
                     .thisClass(['condition'])))
             .$(Div()
                 .onRemove(() => window.alert('Content is removed!'))
-                .thisClass(['content']).removeIfTrue(w, 456789,
-                    () => Counter.clicks > Counter.maxVisibleClicks)))
+                .thisClass(['content']).removeIfTrue(
+                    widget: w,
+                    slot: 1,
+                    condition: () {
+                      return Counter.clicks > Counter.maxVisibleClicks;
+                    })))
         .$(Div()
             .thisClass(['sidebar'])
             .$(Button('+').onClick(Counter.plus))

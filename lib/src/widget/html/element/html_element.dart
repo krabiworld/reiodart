@@ -39,14 +39,15 @@ abstract class WidgetElement {
   set tag(String tag) => _node.tag = tag;
 
   /// Removes [WidgetElement] from the HTML DOM.
-  WidgetElement remove(Widget widget) {
+  WidgetElement remove({required Widget widget}) {
     widget.remNodes.add(_node);
     return this;
   }
 
   /// Removes [WidgetElement] from the HTML DOM
   /// if the condition is true.
-  WidgetElement removeIf(Widget widget, bool Function()? condition) {
+  WidgetElement removeIf(
+      {required Widget widget, required bool Function()? condition}) {
     widget.remOnceNodes.add([_node, condition]);
     return this;
   }
@@ -55,7 +56,9 @@ abstract class WidgetElement {
   /// if the condition is true and adds it using
   /// [$] method if it is false.
   WidgetElement removeIfTrue(
-      Widget widget, int slot, bool Function()? condition) {
+      {required Widget widget,
+      required int slot,
+      required bool Function()? condition}) {
     widget.remOnNodes[slot] = [_node, condition];
     return this;
   }
