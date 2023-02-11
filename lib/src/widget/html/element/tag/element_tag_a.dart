@@ -52,9 +52,13 @@ class A extends WidgetElementVisible {
   // Updates the page URL to the specified one,
   // updating the history and widgets,
   // but not the page itself.
-  A staticRouter(String url, [bool? removeIf]) {
+  A staticRouter(String url, {bool? history}) {
     on.call('click', (Element element, Event event) {
-      window.history.pushState({}, url, window.location.origin + url);
+      if (history == false) {
+        window.history.replaceState({}, url, window.location.origin + url);
+      } else {
+        window.history.pushState({}, url, window.location.origin + url);
+      }
       window.dispatchEvent(Event(urlChangeEvent));
     });
 
