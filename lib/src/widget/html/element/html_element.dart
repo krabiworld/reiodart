@@ -68,6 +68,16 @@ abstract class WidgetElement {
     return this;
   }
 
+  /// Adds the specified list with [WidgetElement] to the [WidgetElement]
+  /// from which the method was called.
+  /// Think of it as an add, insert, etc. method.
+  WidgetElement $list(List<WidgetElement> elements) {
+    for (WidgetElement element in elements) {
+      _node.children?.add(element.node);
+    }
+    return this;
+  }
+
   /// Creates a slot for inserting a side [Widget].
   WidgetElement $slot(int id) {
     _node.children?.add(VirtualNodeSlot(value: id.toString()));
