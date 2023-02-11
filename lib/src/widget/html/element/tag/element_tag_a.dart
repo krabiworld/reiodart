@@ -54,11 +54,14 @@ class A extends WidgetElementVisible {
   // but not the page itself.
   A link(String href, {bool? history}) {
     on.call('click', (Element element, Event event) {
+      if (window.location.href == window.location.origin + href) return this;
+
       if (history == false) {
         window.history.replaceState({}, href, window.location.origin + href);
       } else {
         window.history.pushState({}, href, window.location.origin + href);
       }
+
       window.dispatchEvent(Event(routerEvent));
     });
 
