@@ -7,15 +7,15 @@ import 'element/html_element.dart';
 import 'element/tag/element_tag_br.dart';
 import 'element/tag/element_tag_wbr.dart';
 
-const String startJumpConstruction = '[jump:';
-const String endJumpConstruction = ']';
+const String _startJumpConstruction = '[jump:';
+const String _endJumpConstruction = ']';
 
 /// Returns the ready key transition to inserted
 /// in this place element using the to method of [WidgetElement].
-String getJump(int key) => startJumpConstruction + key.toString() + endJumpConstruction;
+String getJump(int key) => _startJumpConstruction + key.toString() + _endJumpConstruction;
 
 /// Returns true if the string or value is a jump.
-bool isJump(String value) => value.startsWith(startJumpConstruction) && value.endsWith(endJumpConstruction);
+bool isJump(String value) => value.startsWith(_startJumpConstruction) && value.endsWith(_endJumpConstruction);
 
 /// Contains a `<br>` HTML tag, used to embed [WidgetElement] value.
 /// <br><br>
