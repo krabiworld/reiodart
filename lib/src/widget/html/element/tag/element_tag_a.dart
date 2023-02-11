@@ -59,7 +59,7 @@ class A extends WidgetElementVisible {
       } else {
         window.history.pushState({}, href, window.location.origin + href);
       }
-      window.dispatchEvent(Event(urlChangeEvent));
+      window.dispatchEvent(Event(routerEvent));
     });
 
     VirtualAttr attr = VirtualAttr('onclick', 'return false');

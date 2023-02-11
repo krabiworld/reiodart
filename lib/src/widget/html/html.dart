@@ -10,7 +10,7 @@ import 'element/tag/element_tag_wbr.dart';
 /// Contains the name of the custom event
 /// that is triggered if the URL
 /// of the page was changed using the router.
-final String urlChangeEvent = 'reio-url-change-event';
+final String routerEvent = 'reio-router-event';
 
 const String _startJumpConstruction = '[jump:';
 const String _endJumpConstruction = ']';
