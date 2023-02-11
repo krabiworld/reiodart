@@ -3,6 +3,8 @@
 // This source code is licensed under the MIT license found in the
 // LICENSE file in the root directory of this source tree.
 
+import 'dart:html';
+
 import '../../../../virtual_dom/virtual_attr.dart';
 import '../../html.dart';
 import '../html_element_visible.dart';
@@ -44,6 +46,21 @@ class A extends WidgetElementVisible {
       VirtualAttr attr = VirtualAttr('href', url);
       node.attrs!.add(attr);
     }
+    return this;
+  }
+
+  // Updates the page URL to the specified one,
+  // updating the history and widgets,
+  // but not the page itself.
+  A staticRouter(String url, [bool? removeIf]) {
+    on.call('click', (Element element, Event event) {
+      window.history.pushState({}, url, window.location.origin + url);
+      window.dispatchEvent(Event(urlChangeEvent));
+    });
+
+    VirtualAttr attr = VirtualAttr('onclick', 'return false');
+    node.attrs!.add(attr);
+
     return this;
   }
 

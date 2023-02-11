@@ -8,6 +8,7 @@ import 'dart:html';
 import '../virtual_dom/node/virtual_node_slot.dart';
 import '../virtual_dom/node/virtual_node_widget.dart';
 import 'html/element/html_element.dart';
+import 'html/html.dart';
 import 'widget_watcher.dart';
 
 int _totalSlots = 0;
@@ -19,6 +20,9 @@ int slotNumber() => ++_totalSlots;
 /// The parent of all widgets.
 /// You must extend it if you want to create a widget.
 abstract class Widget {
+  /// Contains the path for the router.
+  String _path = '';
+
   bool _isUpdate = false;
 
   /// Contains nodes that will be removed. Not recommended for use.
@@ -59,12 +63,39 @@ abstract class Widget {
     _initialize(htmlElement, true);
   }
 
+  Element? slotParent;
+  int? slotPosition;
+  Element? slotBackup;
+
   /// Mounts the widget in the specified slot.
   void toSlot(int id) {
-    Element? element = document.querySelector(slotQuery + id.toString());
-    if (element == null) return;
+    Element? slot = document.querySelector(slotQuery + id.toString());
+    if (slot == null) return;
 
-    _initialize(element, true);
+    slotParent = slot.parent;
+    slotPosition = slotParent?.children.indexOf(slot);
+    slotBackup = slot;
+
+    window.addEventListener(urlChangeEvent, (event) {
+      if (window.location.href.endsWith(_path)) {
+        if (slotParent?.children.contains(slot) == true) {
+          _initialize(slot, true);
+        }
+      } else if (slotBackup != null) {
+        Element currentElement = slotParent!.children[slotPosition!];
+
+        if (currentElement != slotBackup) {
+          currentElement.replaceWith(slotBackup!);
+          destroy();
+        }
+      }
+    });
+
+    if (_path.isEmpty) {
+      _initialize(slot, true);
+    } else if (window.location.href.endsWith(_path)) {
+      _initialize(slot, true);
+    }
   }
 
   /// Starts the activity and watcher [Widget].
@@ -174,6 +205,10 @@ abstract class Widget {
 
     toRemove.clear();
     toAdd.clear();
+  }
+
+  void path(String path) {
+    _path = path;
   }
 
   void destroy() => _watcher.node.destroy();
