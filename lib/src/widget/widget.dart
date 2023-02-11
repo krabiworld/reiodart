@@ -71,43 +71,59 @@ abstract class Widget {
     Element? slot = document.querySelector(slotQuery + id.toString());
     if (slot == null) return;
 
-    if (staticPath != null || dynamicPath != null) {
-      slotParent = slot.parent;
-      slotPosition = slotParent?.children.indexOf(slot);
-      slotBackup = slot;
+    if (staticPath == null && dynamicPath == null) {
+      return _initialize(slot, true);
+    }
 
+    slotParent = slot.parent;
+    slotPosition = slotParent?.children.indexOf(slot);
+    slotBackup = slot;
+
+    void initializeWidget() {
+      if (slotParent?.children.contains(slot) == true) {
+        _initialize(slot, true);
+      }
+    }
+
+    void destroyWidget() {
+      if (slotBackup == null) return;
+
+      Element currentElement = slotParent!.children[slotPosition!];
+
+      if (currentElement != slotBackup) {
+        currentElement.replaceWith(slotBackup!);
+        destroy();
+      }
+    }
+
+    if (staticPath != null) {
       window.addEventListener(urlChangeEvent, (event) {
-        if (staticPath != null && window.location.href.endsWith(staticPath)) {
-          if (slotParent?.children.contains(slot) == true) {
-            _initialize(slot, true);
-          }
-        } else if (dynamicPath != null) {
-          RegExp path = RegExp(dynamicPath);
-          if (path.hasMatch(window.location.href) && slotParent?.children.contains(slot) == true) {
-            _initialize(slot, true);
-          }
-        } else if (slotBackup != null) {
-          Element currentElement = slotParent!.children[slotPosition!];
-
-          if (currentElement != slotBackup) {
-            currentElement.replaceWith(slotBackup!);
-            destroy();
-          }
+        if (window.location.href.endsWith(staticPath)) {
+          initializeWidget();
+        } else {
+          destroyWidget();
         }
       });
 
-      if (staticPath != null && staticPath.isEmpty) {
+      if (window.location.href.endsWith(staticPath)) {
         _initialize(slot, true);
-      } else if (staticPath != null && window.location.href.endsWith(staticPath)) {
-        _initialize(slot, true);
-      } else if (dynamicPath != null) {
+      }
+    }
+
+    if (dynamicPath != null) {
+      window.addEventListener(urlChangeEvent, (event) {
         RegExp path = RegExp(dynamicPath);
         if (path.hasMatch(window.location.href)) {
-          _initialize(slot, true);
+          initializeWidget();
+        } else {
+          destroyWidget();
         }
+      });
+
+      RegExp path = RegExp(dynamicPath);
+      if (path.hasMatch(window.location.href)) {
+        _initialize(slot, true);
       }
-    } else {
-      _initialize(slot, true);
     }
   }
 
