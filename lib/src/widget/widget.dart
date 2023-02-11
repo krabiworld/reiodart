@@ -97,7 +97,7 @@ abstract class Widget {
     }
 
     if (staticPath != null) {
-      window.addEventListener(urlChangeEvent, (event) {
+      onRoute(() {
         if (window.location.href.endsWith(staticPath)) {
           initializeWidget();
         } else {
@@ -111,7 +111,7 @@ abstract class Widget {
     }
 
     if (dynamicPath != null) {
-      window.addEventListener(urlChangeEvent, (event) {
+      onRoute(() {
         RegExp path = RegExp(dynamicPath);
         if (path.hasMatch(window.location.href)) {
           initializeWidget();
