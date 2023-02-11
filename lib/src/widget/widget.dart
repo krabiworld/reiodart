@@ -65,6 +65,8 @@ abstract class Widget {
   Element? slotBackup;
 
   /// Mounts the widget in the specified slot.
+  /// [staticPath] - A strictly specified path to anything.
+  /// [dynamicPath] - A regular expression that allows you to set your targets.
   void toSlot(int id, {String? staticPath, String? dynamicPath}) {
     Element? slot = document.querySelector(slotQuery + id.toString());
     if (slot == null) return;
