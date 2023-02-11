@@ -207,6 +207,7 @@ abstract class Widget {
     toAdd.clear();
   }
 
+  /// Specifies the widget path for the router.
   void path(String path) {
     _path = path;
   }
