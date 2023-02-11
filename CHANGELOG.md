@@ -1,5 +1,6 @@
 ## 0.2.3
 
+* Added method of embedding the list of widget elements.
 * Implemented a system of page routing without reloading.
 * A new isJump function has been added and the jump design has been put separately.
 * Renamed the "to" method and the "go" function to "jump".
