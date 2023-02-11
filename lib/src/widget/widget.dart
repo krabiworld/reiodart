@@ -65,18 +65,23 @@ abstract class Widget {
   Element? slotBackup;
 
   /// Mounts the widget in the specified slot.
-  void toSlot(int id, [String? routerPath]) {
+  void toSlot(int id, {String? staticPath, String? dynamicPath}) {
     Element? slot = document.querySelector(slotQuery + id.toString());
     if (slot == null) return;
 
-    if (routerPath != null) {
+    if (staticPath != null || dynamicPath != null) {
       slotParent = slot.parent;
       slotPosition = slotParent?.children.indexOf(slot);
       slotBackup = slot;
 
       window.addEventListener(urlChangeEvent, (event) {
-        if (window.location.href.endsWith(routerPath)) {
+        if (staticPath != null && window.location.href.endsWith(staticPath)) {
           if (slotParent?.children.contains(slot) == true) {
+            _initialize(slot, true);
+          }
+        } else if (dynamicPath != null) {
+          RegExp path = RegExp(dynamicPath);
+          if (path.hasMatch(window.location.href) && slotParent?.children.contains(slot) == true) {
             _initialize(slot, true);
           }
         } else if (slotBackup != null) {
@@ -89,10 +94,15 @@ abstract class Widget {
         }
       });
 
-      if (routerPath.isEmpty) {
+      if (staticPath != null && staticPath.isEmpty) {
         _initialize(slot, true);
-      } else if (window.location.href.endsWith(routerPath)) {
+      } else if (staticPath != null && window.location.href.endsWith(staticPath)) {
         _initialize(slot, true);
+      } else if (dynamicPath != null) {
+        RegExp path = RegExp(dynamicPath);
+        if (path.hasMatch(window.location.href)) {
+          _initialize(slot, true);
+        }
       }
     } else {
       _initialize(slot, true);
