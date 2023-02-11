@@ -20,9 +20,6 @@ int slotNumber() => ++_totalSlots;
 /// The parent of all widgets.
 /// You must extend it if you want to create a widget.
 abstract class Widget {
-  /// Contains the path for the router.
-  String _path = '';
-
   bool _isUpdate = false;
 
   /// Contains nodes that will be removed. Not recommended for use.
@@ -68,32 +65,36 @@ abstract class Widget {
   Element? slotBackup;
 
   /// Mounts the widget in the specified slot.
-  void toSlot(int id) {
+  void toSlot(int id, [String? routerPath]) {
     Element? slot = document.querySelector(slotQuery + id.toString());
     if (slot == null) return;
 
-    slotParent = slot.parent;
-    slotPosition = slotParent?.children.indexOf(slot);
-    slotBackup = slot;
+    if (routerPath != null) {
+      slotParent = slot.parent;
+      slotPosition = slotParent?.children.indexOf(slot);
+      slotBackup = slot;
 
-    window.addEventListener(urlChangeEvent, (event) {
-      if (window.location.href.endsWith(_path)) {
-        if (slotParent?.children.contains(slot) == true) {
-          _initialize(slot, true);
-        }
-      } else if (slotBackup != null) {
-        Element currentElement = slotParent!.children[slotPosition!];
+      window.addEventListener(urlChangeEvent, (event) {
+        if (window.location.href.endsWith(routerPath)) {
+          if (slotParent?.children.contains(slot) == true) {
+            _initialize(slot, true);
+          }
+        } else if (slotBackup != null) {
+          Element currentElement = slotParent!.children[slotPosition!];
 
-        if (currentElement != slotBackup) {
-          currentElement.replaceWith(slotBackup!);
-          destroy();
+          if (currentElement != slotBackup) {
+            currentElement.replaceWith(slotBackup!);
+            destroy();
+          }
         }
+      });
+
+      if (routerPath.isEmpty) {
+        _initialize(slot, true);
+      } else if (window.location.href.endsWith(routerPath)) {
+        _initialize(slot, true);
       }
-    });
-
-    if (_path.isEmpty) {
-      _initialize(slot, true);
-    } else if (window.location.href.endsWith(_path)) {
+    } else {
       _initialize(slot, true);
     }
   }
@@ -205,11 +206,6 @@ abstract class Widget {
 
     toRemove.clear();
     toAdd.clear();
-  }
-
-  /// Specifies the widget path for the router.
-  void path(String path) {
-    _path = path;
   }
 
   void destroy() => _watcher.node.destroy();
