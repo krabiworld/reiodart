@@ -1,3 +1,4 @@
+import '../../../pubspec.dart';
 import 'package:reio/widget.dart';
 
 class Layout extends Widget {
@@ -16,7 +17,7 @@ Widget layout = Layout(
         .$(Div()
             .id('introduction')
             .$(H1(getJump(1)).setJump({
-              1: A('Reio Dart Framework 0.2.2')
+              1: A('Reio Dart Framework $version')
                   .href('https://github.com/MineEjo/reiodart')
             }))
             .$(Span('A progressive ${getJump(1)} framework for creating UI '
