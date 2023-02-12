@@ -133,6 +133,7 @@ abstract class Widget {
       _watcher.node = _html.call(this).node;
       _watcher.node.styles = _styles?.call();
       _watcher.node.init(element, replace);
+      onMount();
     });
 
     _watcher.watchActivity(() {
@@ -144,6 +145,16 @@ abstract class Widget {
 
   /// Implementation of widget functionality.
   void activity() {}
+
+  /// Implementation of widget functionality.
+  /// It differs from the [activity] in that it starts
+  /// only when the widget is mounted.
+  void onMount() {}
+
+  /// The implementation of the widget functionality.
+  /// It differs from [activity] in that it is run
+  /// only when the widget is destroyed.
+  void onDestroy() {}
 
   /// Updates the old [VirtualNodeWidget] with a new one.
   void _update() {
@@ -236,7 +247,10 @@ abstract class Widget {
     toAdd.clear();
   }
 
-  void destroy() => _watcher.node.destroy();
+  void destroy() {
+    _watcher.node.destroy();
+    onDestroy();
+  }
 
   VirtualNodeWidget get node => _watcher.node;
 }
