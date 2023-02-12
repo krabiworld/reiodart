@@ -1,6 +1,8 @@
 import 'dart:html';
 
 import 'package:reio/widget.dart';
+import 'package:reio/widget_html.dart';
+import 'package:reio/widget_stores.dart';
 
 class Counter extends Widget {
   static int clicks = 1;

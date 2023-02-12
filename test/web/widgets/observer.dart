@@ -1,5 +1,6 @@
 import 'dart:html';
 
+import 'package:reio/widget_html.dart';
 import 'package:reio/widget.dart';
 
 import 'counter.dart';
