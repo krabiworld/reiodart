@@ -9,8 +9,6 @@ Here are the rules to make your life easier.
 
 ## Rules for updating
 
-### [Core](https://github.com/MineEjo/reiodart/tree/master/core)
-
 When updating data in [`./core/pubspec.yaml`](https://github.com/MineEjo/reiodart/blob/master/core/pubspec.yaml), update
 the data in [`./core/lib/reio.dart`](https://github.com/MineEjo/reiodart/blob/master/core/lib/reio.dart).
 
@@ -18,28 +16,20 @@ the data in [`./core/lib/reio.dart`](https://github.com/MineEjo/reiodart/blob/ma
 
 ## Rules for creating
 
-### [Core](https://github.com/MineEjo/reiodart/tree/master/core)
-
-`README.md`, which are identical to the [`README.md`](https://github.com/MineEjo/reiodart/blob/master/README.md) one:
+`README.md`, which are **identical** to the [`README.md`](https://github.com/MineEjo/reiodart/blob/master/README.md) one:
 
 > - [`./core/README.md`](https://github.com/MineEjo/reiodart/blob/master/core/README.md)
 
 
-`LICENSE`, which are identical to the [`LICENSE`](https://github.com/MineEjo/reiodart/blob/master/LICENSE) one:
+`LICENSE`, which are **identical** to the [`LICENSE`](https://github.com/MineEjo/reiodart/blob/master/LICENSE) one:
 
 > - [`./core/LICENSE.md`](https://github.com/MineEjo/reiodart/blob/master/core/LICENSE)
+> - [`./packages/router/LICENSE`](https://github.com/MineEjo/reiodart/blob/master/packages/router/LICENSE)
 
-
-### Packages
-
-`LICENSE`, which must be as in the `./core`.
-
-```text
-./packages/router/LICENSE
-```
+### [Packages](https://github.com/MineEjo/reiodart/tree/master/packages)
 
 `example/README.md`, which must be as in the `./core`.
-Ч
+
 ```text
 ./packages/router/example/README.md
 ```
