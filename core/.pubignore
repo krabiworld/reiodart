@@ -2,6 +2,7 @@
 test/
 docs/
 assets/
+website/
 
 # Git.
 .gitignore
