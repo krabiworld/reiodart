@@ -1,31 +1,20 @@
-import 'dart:html';
-
-import 'package:reio/widget.dart';
 import 'package:reio/widget_html.dart';
+import 'package:reio_router/widget.dart';
 
-class QuickStart extends Widget {
+class QuickStart extends WidgetRouter {
   QuickStart(super.construct, super.styles);
 
-  @override
-  void activity() {
-    print('Крутое значение: ${window.location.search}');
-  }
+  // @override
+  // void onMount() {}
 
-  @override
-  void onMount() {
-    print('Виджет создан!');
-  }
-
-  @override
-  void onDestroy() {
-    print('Виджет уничтожен!');
-  }
+  // @override
+  // void onDestroy() {}
 }
 
-Widget quickStart = QuickStart(
+WidgetRouter quickStart = QuickStart(
     (w) => Div()
         .id('introduction')
         .$(H1(getJump(1)).setJump(
             {1: A('Quick Start').href('https://github.com/MineEjo/reiodart')}))
-        .$(Span('Loooool')),
+        .$(Span('Dev...')),
     () => null);

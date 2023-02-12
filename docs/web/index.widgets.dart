@@ -10,6 +10,8 @@ void widgetConstruction() {
   about.toRoute(Layout.aboutSlot, staticPath: '/');
   about.toRoute(Layout.aboutSlot, staticPath: '/index.html');
 
-  quickStart.toRoute(Layout.quickStartSlot,
-      dynamicPath: r'\?.[a-zA-Z]*=[a-zA-Z]');
+  quickStart.toRoute(Layout.quickStartSlot, staticPath: '/quick-start.html');
+
+  // quickStart.toRoute(Layout.quickStartSlot,
+  //     dynamicPath: r'\?.[a-zA-Z]*=[a-zA-Z]');
 }

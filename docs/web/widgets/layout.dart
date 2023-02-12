@@ -1,29 +1,28 @@
-import 'dart:html';
-
-import 'package:reio/widget.dart';
 import 'package:reio/widget_html.dart';
+import 'package:reio_router/widget.dart';
+import 'package:reio_router/widget_html.dart';
 
-class Layout extends Widget {
+class Layout extends WidgetRouter {
   static int aboutSlot = slotNumber();
   static int quickStartSlot = slotNumber();
 
   Layout(super.construct, super.styles);
 }
 
-Widget layout = Layout(
+WidgetRouter layout = Layout(
     (w) => Div()
         .id('example')
         .$(Nav()
             .id('docs-nav')
             .$(Div('Getting Started')
                 .thisClass(['docs-title']).$(Span(getJump(1)).setJump({
-              1: A('About').link('/index.html'),
+              1: Route('About').href('/index.html'),
             })))
             .$(Span(getJump(1)).setJump({
-              1: A('Quick Start').link('/quick-start.html?query=value'),
+              1: Route('Quick Start').href('/quick-start.html'),
             })))
         .$(Div()
-            .$list([Span('a'), Span('b'), Span('c')])
+            // .$list([Span('a'), Span('b'), Span('c')])
             .$slot(Layout.aboutSlot)
             .$slot(Layout.quickStartSlot)
             .$(Div()

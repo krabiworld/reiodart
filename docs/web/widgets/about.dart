@@ -1,14 +1,12 @@
-import 'dart:html';
-
 import 'package:reio/reio.dart';
-import 'package:reio/widget.dart';
 import 'package:reio/widget_html.dart';
+import 'package:reio_router/widget.dart';
 
-class About extends Widget {
+class About extends WidgetRouter {
   About(super.construct, super.styles);
 }
 
-Widget about = About(
+WidgetRouter about = About(
     (w) => Div()
         .id('introduction')
         .$(H1(getJump(1)).setJump({
