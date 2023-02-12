@@ -18,6 +18,7 @@ the data in [`./core/lib/reio.dart`](https://github.com/MineEjo/reiodart/blob/ma
 
 ## Rules for creating
 
+### [Core](https://github.com/MineEjo/reiodart/tree/master/core)
 
 `README.md`, which are identical to the [`README.md`](https://github.com/MineEjo/reiodart/blob/master/README.md) one:
 
