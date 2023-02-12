@@ -2,14 +2,21 @@
 
 Here are the rules to make your life easier.
 
+> 1. [Rules for updating](https://github.com/MineEjo/reiodart/blob/master/.reio/ecosystem.md#rules-for-updating)
+> 2. [Rules for creating](https://github.com/MineEjo/reiodart/blob/master/.reio/ecosystem.md#rules-for-creating)
+
+<br>
+
 ## Rules for updating
 
-### Core
+### [Core](https://github.com/MineEjo/reiodart/tree/master/core)
 
 When updating data in [`./core/pubspec.yaml`](https://github.com/MineEjo/reiodart/blob/master/core/pubspec.yaml), update
 the data in [`./core/lib/reio.dart`](https://github.com/MineEjo/reiodart/blob/master/core/lib/reio.dart).
 
-## Rules of creation
+<br>
+
+## Rules for creating
 
 ### Core
 
@@ -19,8 +26,6 @@ the data in [`./core/lib/reio.dart`](https://github.com/MineEjo/reiodart/blob/ma
 ./README.md
 ./core/README.md
 ```
-
-<br>
 
 `LICENSE`, which must be `identical`.
 
@@ -38,7 +43,7 @@ the data in [`./core/lib/reio.dart`](https://github.com/MineEjo/reiodart/blob/ma
 ```
 
 `example/README.md`, which must be as in the `./core`.
-
+Ч
 ```text
 ./packages/router/example/README.md
 ```
