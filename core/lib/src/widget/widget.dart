@@ -59,10 +59,6 @@ abstract class Widget {
     initialize(htmlElement, true);
   }
 
-  Element? slotParent;
-  int? slotPosition;
-  Element? slotBackup;
-
   /// Mounts the widget in the specified slot.
   void toSlot(int id) {
     Element? element = document.querySelector(slotQuery + id.toString());
