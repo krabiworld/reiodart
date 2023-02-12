@@ -1,5 +1,6 @@
 ## 0.2.3
 
+* Separated file exports.
 * Added "onMount" and "onDestroy" implementation for the widget.
 * The implementation of the widget activity has become optional.
 * Added method of inserting a list of elements of the widget.
