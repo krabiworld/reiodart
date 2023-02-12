@@ -16,23 +16,22 @@ the data in [`./core/lib/reio.dart`](https://github.com/MineEjo/reiodart/blob/ma
 
 ## Rules for creating
 
-`README.md`, which are **identical** to the [`README.md`](https://github.com/MineEjo/reiodart/blob/master/README.md) one:
+`README.md`, which are **identical** to the [`README.md`](https://github.com/MineEjo/reiodart/blob/master/README.md):
 
 > - [`./core/README.md`](https://github.com/MineEjo/reiodart/blob/master/core/README.md)
 
 
-`LICENSE`, which are **identical** to the [`LICENSE`](https://github.com/MineEjo/reiodart/blob/master/LICENSE) one:
+`LICENSE`, which are **identical** to the [`LICENSE`](https://github.com/MineEjo/reiodart/blob/master/LICENSE):
 
 > - [`./core/LICENSE.md`](https://github.com/MineEjo/reiodart/blob/master/core/LICENSE)
 > - [`./packages/router/LICENSE`](https://github.com/MineEjo/reiodart/blob/master/packages/router/LICENSE)
 
+`example/README.md`, which are **identical** to
+the [`example/README.md`](https://github.com/MineEjo/reiodart/blob/master/core/example/README.md):
+
+> - [`./packages/router/example/README.md`](https://github.com/MineEjo/reiodart/blob/master/packages/router/example/README.md)
+
 ### [Packages](https://github.com/MineEjo/reiodart/tree/master/packages)
-
-`example/README.md`, which must be as in the `./core`.
-
-```text
-./packages/router/example/README.md
-```
 
 `.gitignore`, which must be as in the `./core`.
 
