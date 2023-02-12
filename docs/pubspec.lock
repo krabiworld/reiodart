@@ -354,10 +354,10 @@ packages:
   reio:
     dependency: "direct dev"
     description:
-      path: ".."
+      path: "../core"
       relative: true
     source: path
-    version: "0.2.2"
+    version: "0.2.3"
   scratch_space:
     dependency: transitive
     description:

@@ -1,36 +1,31 @@
+import 'dart:html';
+
 import 'package:reio/widget.dart';
+import 'package:reio/widget_html.dart';
 
 class Layout extends Widget {
-  Layout(super.construct, super.styles);
+  static int aboutSlot = slotNumber();
+  static int quickStartSlot = slotNumber();
 
-  @override
-  void activity() {}
+  Layout(super.construct, super.styles);
 }
 
 Widget layout = Layout(
     (w) => Div()
         .id('example')
-        .$(Nav().id('docs-nav').$(Div('Getting Started')
+        .$(Nav()
+            .id('docs-nav')
+            .$(Div('Getting Started')
                 .thisClass(['docs-title']).$(Span(getJump(1)).setJump({
-              1: A('Quick Start').href('quick-start.html'),
-            }))))
+              1: A('About').link('/index.html'),
+            })))
+            .$(Span(getJump(1)).setJump({
+              1: A('Quick Start').link('/quick-start.html?query=value'),
+            })))
         .$(Div()
-            .$(Div()
-                .id('introduction')
-                .$(H1(getJump(1)).setJump({
-                  1: A('Reio Dart Framework 0.2.2')
-                      .href('https://github.com/MineEjo/reiodart')
-                }))
-                .$(Span('A progressive ${getJump(1)} framework for creating UI '
-                        'on the web. $br Uses HTML, CSS and ${getJump(2)}, which '
-                        'is compiled into efficient JavaScript code. '
-                        '$br $br'
-                        'By default, Reio template uses ${getJump(3)}')
-                    .setJump({
-                  1: A('Dart').href('https://dart.dev/'),
-                  2: A('Dart').href('https://dart.dev/'),
-                  3: A('Webdev').href('https://web.dev/')
-                })))
+            .$list([Span('a'), Span('b'), Span('c')])
+            .$slot(Layout.aboutSlot)
+            .$slot(Layout.quickStartSlot)
             .$(Div()
                 .id('footer')
                 .$(Div('GitHub')
