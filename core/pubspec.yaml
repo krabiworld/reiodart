@@ -1,6 +1,6 @@
 name: reio
 description: Reio is a progressive Dart framework for creating UI on the web. Uses HTML, CSS and Dart, which is compiled into efficient JavaScript code.
-version: 0.2.4
+version: 0.2.5
 homepage: https://reiodart.vercel.app
 repository: https://github.com/MineEjo/reiodart
 issue_tracker: https://github.com/MineEjo/reiodart/issues

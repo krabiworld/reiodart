@@ -1,3 +1,7 @@
+## 0.2.5
+
+* Removed the remnants of routing from the core.
+
 ## 0.2.4
 
 * Removed the remnants of routing from the core.
