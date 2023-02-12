@@ -1,0 +1,19 @@
+name: website
+
+# scripts:
+#   format: dart format .
+#   dev: webdev serve --auto=refresh
+#   test: dart run build_runner website -- -p firefox
+
+environment:
+  sdk: '>=2.17.6 <3.0.0'
+
+dev_dependencies:
+  test: ^1.23.0
+  build_runner: ^2.3.3
+  build_test: ^2.1.6
+  build_web_compilers: ^3.2.7
+  lints: ^2.0.1
+  reio: ^0.2.4
+  reio_router:
+    path: ../
