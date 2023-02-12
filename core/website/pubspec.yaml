@@ -13,7 +13,7 @@ executables:
   test: dart run build_runner test -- -p firefox
   dev: webdev serve --auto=refresh
   serve: webdev serve --release
-  build: webdev build --release --output ./web_output
+  build: webdev build --release --output ./website
 
 environment:
   sdk: '>=2.17.6 <3.0.0'
