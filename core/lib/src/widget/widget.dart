@@ -8,7 +8,6 @@ import 'dart:html';
 import '../virtual_dom/node/virtual_node_slot.dart';
 import '../virtual_dom/node/virtual_node_widget.dart';
 import 'html/element/html_element.dart';
-import 'html/html.dart';
 import 'widget_watcher.dart';
 
 int _totalSlots = 0;
@@ -50,14 +49,14 @@ abstract class Widget {
 
   /// Mounts the widget in the parent, and starts the activity.
   void mount(Widget parent) {
-    _initialize(parent.node.element!, true);
+    initialize(parent.node.element!, true);
   }
 
   /// Mounts the widget directly to the HTML element ([htmlElement]),
   /// used to insert in HTML element if Reio was not previously inserted in it.
   void inject(Element? htmlElement) {
     if (htmlElement == null) return;
-    _initialize(htmlElement, true);
+    initialize(htmlElement, true);
   }
 
   Element? slotParent;
@@ -65,70 +64,14 @@ abstract class Widget {
   Element? slotBackup;
 
   /// Mounts the widget in the specified slot.
-  /// [staticPath] - A strictly specified path to anything.
-  /// [dynamicPath] - A regular expression that allows you to set your targets.
-  void toSlot(int id, {String? staticPath, String? dynamicPath}) {
-    Element? slot = document.querySelector(slotQuery + id.toString());
-    if (slot == null) return;
-
-    if (staticPath == null && dynamicPath == null) {
-      return _initialize(slot, true);
-    }
-
-    slotParent = slot.parent;
-    slotPosition = slotParent?.children.indexOf(slot);
-    slotBackup = slot;
-
-    void initializeWidget() {
-      if (slotParent?.children.contains(slot) == true) {
-        _initialize(slot, true);
-      }
-    }
-
-    void destroyWidget() {
-      if (slotBackup == null) return;
-
-      Element currentElement = slotParent!.children[slotPosition!];
-
-      if (currentElement != slotBackup) {
-        currentElement.replaceWith(slotBackup!);
-        destroy();
-      }
-    }
-
-    if (staticPath != null) {
-      onRoute(() {
-        if (window.location.href.endsWith(staticPath)) {
-          initializeWidget();
-        } else {
-          destroyWidget();
-        }
-      });
-
-      if (window.location.href.endsWith(staticPath)) {
-        _initialize(slot, true);
-      }
-    }
-
-    if (dynamicPath != null) {
-      onRoute(() {
-        RegExp path = RegExp(dynamicPath);
-        if (path.hasMatch(window.location.href)) {
-          initializeWidget();
-        } else {
-          destroyWidget();
-        }
-      });
-
-      RegExp path = RegExp(dynamicPath);
-      if (path.hasMatch(window.location.href)) {
-        _initialize(slot, true);
-      }
-    }
+  void toSlot(int id) {
+    Element? element = document.querySelector(slotQuery + id.toString());
+    if (element == null) return;
+    initialize(element, true);
   }
 
   /// Starts the activity and watcher [Widget].
-  void _initialize(Element element, bool replace) {
+  void initialize(Element element, bool replace) {
     _watcher.initActivity(() {
       _watcher.node = _html.call(this).node;
       _watcher.node.styles = _styles?.call();
