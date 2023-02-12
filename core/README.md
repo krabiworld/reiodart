@@ -13,6 +13,14 @@
   By default, Reio template uses <a href="https://web.dev/">Webdev</a>
 </p>
 
+## Ecosystem
+
+| Project       | Description                     |
+|---------------|---------------------------------|
+| [reio_router] | Single-page application routing |
+
+[reio_router]: https://github.com/MineEjo/reiodart/tree/master/packages/router
+
 ## Documentation
 
 To check out [live examples](https://reiodart.vercel.app/), [docs](https://mineejo.github.io/reiodart/)
