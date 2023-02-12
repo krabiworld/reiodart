@@ -7,9 +7,9 @@ import 'widgets/quick_start.dart';
 void widgetConstruction() {
   layout.inject(document.getElementById('app'));
 
-  about.toSlot(Layout.aboutSlot, staticPath: '/');
-  about.toSlot(Layout.aboutSlot, staticPath: '/index.html');
+  about.toRoute(Layout.aboutSlot, staticPath: '/');
+  about.toRoute(Layout.aboutSlot, staticPath: '/index.html');
 
-  quickStart.toSlot(Layout.quickStartSlot,
+  quickStart.toRoute(Layout.quickStartSlot,
       dynamicPath: r'\?.[a-zA-Z]*=[a-zA-Z]');
 }
