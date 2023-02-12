@@ -18,21 +18,16 @@ the data in [`./core/lib/reio.dart`](https://github.com/MineEjo/reiodart/blob/ma
 
 ## Rules for creating
 
-### Core
 
-`README.md`, which must be `identical`:
+`README.md`, which are identical to the [`README.md`](https://github.com/MineEjo/reiodart/blob/master/README.md) one:
 
-```text
-./README.md
-./core/README.md
-```
+> - [`./core/README.md`](https://github.com/MineEjo/reiodart/blob/master/core/README.md)
 
-`LICENSE`, which must be `identical`.
 
-```text
-./LICENSE
-./core/LICENSE
-```
+`LICENSE`, which are identical to the [`LICENSE`](https://github.com/MineEjo/reiodart/blob/master/LICENSE) one:
+
+> - [`./core/LICENSE.md`](https://github.com/MineEjo/reiodart/blob/master/core/LICENSE)
+
 
 ### Packages
 
