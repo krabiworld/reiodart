@@ -50,6 +50,18 @@ Here are the rules to make your life easier.
 ./packages/router/analysis_options.yaml
 ```
 
+`pubspec.yaml`, must be `similar` to `core`.
+
+```text
+./packages/router/pubspec.yaml
+```
+
+`README.md`, must be `similar` to `core`.
+
+```text
+./packages/router/README.md
+```
+
 `CHANGELOG.md`, which must be `identical`.
 
 ```text
