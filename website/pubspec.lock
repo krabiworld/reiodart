@@ -354,7 +354,7 @@ packages:
   reio:
     dependency: "direct dev"
     description:
-      path: ".."
+      path: "../core"
       relative: true
     source: path
     version: "0.2.3"

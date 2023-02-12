@@ -1,6 +1,6 @@
 name: website
 
-# Don't forget to enter the folder, e.g. with `cd core/website`.
+# Don't forget to enter the folder, e.g. with `cd website`.
 executables:
   # The tests are done with firefox because chrome is
   # often added as a stable prefix in third-party linux
@@ -25,4 +25,4 @@ dev_dependencies:
   build_web_compilers: ^3.2.7
   lints: ^2.0.1
   reio:
-    path: ../
+    path: ../core
