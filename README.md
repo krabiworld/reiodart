@@ -15,10 +15,10 @@
 
 ## [Ecosystem](https://github.com/MineEjo/reiodart/blob/master/.reio/ecosystem.md)
 
-| Project       | Package                                         | Description                      |
-|---------------|-------------------------------------------------|----------------------------------|
-| [reio]        | [pub.dev](https://pub.dev/packages/reio)        |                                  |
-| [reio_router] | [pub.dev](https://pub.dev/packages/reio_router) | Single-page application routing. |
+| Project       | Package                                                                                                             | Description                      |
+|---------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------|
+| [reio]        | [pub.dev](https://pub.dev/packages/reio), [API reference](https://pub.dev/documentation/reio/latest/)               |                                  |
+| [reio_router] | [pub.dev](https://pub.dev/packages/reio_router), [API reference](https://pub.dev/documentation/reio_router/latest/) | Single-page application routing. |
 
 [reio]: https://github.com/MineEjo/reiodart/tree/master/core
 [reio_router]: https://github.com/MineEjo/reiodart/tree/master/packages/router
