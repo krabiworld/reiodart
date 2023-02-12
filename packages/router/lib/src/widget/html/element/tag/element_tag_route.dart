@@ -8,6 +8,8 @@ import 'dart:html';
 import 'package:reio/dev.dart';
 import 'package:reio/widget_html.dart';
 
+import '../../html.dart';
+
 // Experimental, not standard or obsolete tags and attributes
 // are not and will not be implemented. If you notice this,
 // send it as a issue to https://github.com/MineEjo/reiodart/issues

@@ -7,7 +7,8 @@ import 'dart:html';
 
 import 'package:reio/dev.dart';
 import 'package:reio/widget.dart';
-import 'package:reio/widget_html.dart';
+
+import 'html/html.dart';
 
 export 'package:reio/widget.dart';
 
@@ -49,13 +50,16 @@ class WidgetRouter extends Widget {
     }
 
     if (staticPath != null) {
-      onRoute(() {
+      void function() {
         if (window.location.href.endsWith(staticPath)) {
           initializeWidget();
         } else {
           destroyWidget();
         }
-      });
+      }
+
+      onRoute(function);
+      onPopState(function);
 
       if (window.location.href.endsWith(staticPath)) {
         initialize(slot, true);
@@ -63,14 +67,17 @@ class WidgetRouter extends Widget {
     }
 
     if (dynamicPath != null) {
-      onRoute(() {
+      void function() {
         RegExp path = RegExp(dynamicPath);
         if (path.hasMatch(window.location.href)) {
           initializeWidget();
         } else {
           destroyWidget();
         }
-      });
+      }
+
+      onRoute(function);
+      onPopState(function);
 
       RegExp path = RegExp(dynamicPath);
       if (path.hasMatch(window.location.href)) {
