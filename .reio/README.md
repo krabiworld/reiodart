@@ -1,5 +1,7 @@
 ## Ecosystem
 
+Here are the rules to make your life easier.
+
 ### Base
 
 `README.md`, which must be `identical`:
