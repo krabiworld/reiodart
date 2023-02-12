@@ -20,7 +20,7 @@ class WidgetRouter extends Widget {
   /// Mounts the widget in the specified slot.
   /// [staticPath] - A strictly specified path to anything.
   /// [dynamicPath] - A regular expression that allows you to set your targets.
-  void toRoute(int slotId, {String? staticPath, String? dynamicPath}) {
+  void toRoute(int slotId, {List<String>? staticPath, List<String>? dynamicPath}) {
     Element? slot = document.querySelector(slotQuery + slotId.toString());
     if (slot == null) return;
 
@@ -50,38 +50,46 @@ class WidgetRouter extends Widget {
     }
 
     if (staticPath != null) {
-      void function() {
-        if (window.location.href.endsWith(staticPath)) {
-          initializeWidget();
-        } else {
-          destroyWidget();
+      for (String path in staticPath) {
+        void function() {
+          if (window.location.href.endsWith(path)) {
+            initializeWidget();
+          } else {
+            destroyWidget();
+          }
         }
-      }
 
-      onRoute(function);
-      onPopState(function);
+        onRoute(function);
+        onPopState(function);
 
-      if (window.location.href.endsWith(staticPath)) {
-        initialize(slot, true);
+        if (window.location.href.endsWith(path)) {
+          initialize(slot, true);
+        }
+
+        break;
       }
     }
 
     if (dynamicPath != null) {
-      void function() {
-        RegExp path = RegExp(dynamicPath);
-        if (path.hasMatch(window.location.href)) {
-          initializeWidget();
-        } else {
-          destroyWidget();
+      for (String path in dynamicPath) {
+        void function() {
+          RegExp regularPath = RegExp(path);
+          if (regularPath.hasMatch(window.location.href)) {
+            initializeWidget();
+          } else {
+            destroyWidget();
+          }
         }
-      }
 
-      onRoute(function);
-      onPopState(function);
+        onRoute(function);
+        onPopState(function);
 
-      RegExp path = RegExp(dynamicPath);
-      if (path.hasMatch(window.location.href)) {
-        initialize(slot, true);
+        RegExp regularPath = RegExp(path);
+        if (regularPath.hasMatch(window.location.href)) {
+          initialize(slot, true);
+        }
+
+        break;
       }
     }
   }
