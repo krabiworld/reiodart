@@ -1,5 +1,7 @@
 ## 0.2.3
 
+* Added "onMount" and "onDestroy" implementation for the widget.
+* The implementation of the widget activity has become optional.
 * Added method of inserting a list of elements of the widget.
 * Implemented a system of page routing without reloading.
 * A new isJump function has been added and the jump design has been put separately.
