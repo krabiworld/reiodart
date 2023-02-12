@@ -6,9 +6,6 @@ class Layout extends Widget {
   static int observerSlot = slotNumber();
 
   Layout(super.construct, super.styles);
-
-  @override
-  void activity() {}
 }
 
 Widget layout = Layout(

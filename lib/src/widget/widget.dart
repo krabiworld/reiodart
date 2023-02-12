@@ -143,7 +143,7 @@ abstract class Widget {
   }
 
   /// Implementation of widget functionality.
-  void activity();
+  void activity() {}
 
   /// Updates the old [VirtualNodeWidget] with a new one.
   void _update() {
