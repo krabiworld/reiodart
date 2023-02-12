@@ -7,7 +7,8 @@
 <h1 align="center">Reio Router</h1>
 
 <p align="center">
-  The official router for  <a href="https://github.com/MineEjo/reiodart">Reio.dart</a>
+  The official router for  <a href="https://github.com/MineEjo/reiodart">Reio.dart</a>.
+  Single-page application routing.
 </p>
 
 ## Documentation

@@ -2,7 +2,7 @@
 #  publish: dart pub publish --dry-run
 
 name: reio_router
-description: The official router for Reio.dart.
+description: The official router for Reio.dart. Single-page application routing.
 version: 0.2.3
 homepage: https://github.com/MineEjo/reiodart
 repository: https://github.com/MineEjo/reiodart
