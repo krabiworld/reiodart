@@ -30,8 +30,6 @@ packages/test/src/runner/wasm/static/default.html.tpl
 packages/test/src/runner/wasm/static/run_wasm_chrome.js
 pubspec.lock
 pubspec.yaml
-test/expand_list_test.dart.browser_test.dart.js
-test/expand_list_test.debug.html
 test/index.html
 web/assets/reio_icon.png
 web/global.css
