@@ -9,6 +9,9 @@ repository: https://github.com/MineEjo/reiodart
 issue_tracker: https://github.com/MineEjo/reiodart/issues
 documentation: https://mineejo.github.io/reiodart/
 
+executables:
+  test: dart test
+
 platforms:
   web:
 
@@ -16,4 +19,5 @@ environment:
   sdk: '>=2.17.6 <3.0.0'
 
 dev_dependencies:
+  test: ^1.23.0
   lints: ^2.0.1

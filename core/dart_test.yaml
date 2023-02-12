@@ -1,0 +1,12 @@
+# This package's tests are very slow. Double the default timeout.
+timeout: 2x
+
+# The tests are done with firefox because chrome is
+# often added as a stable prefix in third-party linux
+# distributions and firefox is almost always in the default distribution repositories.
+#
+# Build_runner calls google-chrome, but with the prefix.
+# it turns out google-chrome-stable, which makes build_runner unable to run the tests.
+#
+# The best solution at the moment, is to change the platform from chrome to firefox.
+platforms: [firefox]
