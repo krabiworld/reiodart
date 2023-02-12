@@ -13,7 +13,7 @@
   By default, Reio template uses <a href="https://web.dev/">Webdev</a>
 </p>
 
-## Ecosystem
+## [Ecosystem](https://github.com/MineEjo/reiodart/blob/master/.reio/ecosystem.md)
 
 | Project       | Description                     |
 |---------------|---------------------------------|
