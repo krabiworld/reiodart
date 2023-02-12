@@ -1,6 +1,6 @@
 name: website
 
-# Don't forget to enter the folder, e.g. with `cd website`.
+# Don't forget to enter the folder, e.g. with `cd core/website`.
 executables:
   # The tests are done with firefox because chrome is
   # often added as a stable prefix in third-party linux
