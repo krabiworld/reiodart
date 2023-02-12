@@ -3,7 +3,7 @@
 
 name: reio_router
 description: The official router for Reio.dart. Single-page application routing.
-version: 0.2.3
+version: 0.2.3+1.0.0
 homepage: https://github.com/MineEjo/reiodart
 repository: https://github.com/MineEjo/reiodart
 issue_tracker: https://github.com/MineEjo/reiodart/issues
