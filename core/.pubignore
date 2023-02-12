@@ -6,6 +6,3 @@ website/
 
 # Git.
 .gitignore
-
-# Files and directories created by pub.
-.packages
