@@ -4,6 +4,7 @@ Here are the rules to make your life easier.
 
 > 1. [Rules for updating](https://github.com/MineEjo/reiodart/blob/master/.reio/ecosystem.md#rules-for-updating)
 > 2. [Rules for creating](https://github.com/MineEjo/reiodart/blob/master/.reio/ecosystem.md#rules-for-creating)
+> 3. [Rules for packages](https://github.com/MineEjo/reiodart/blob/master/.reio/ecosystem.md#rules-for-packages)
 
 <br>
 
@@ -31,40 +32,42 @@ the [`example/README.md`](https://github.com/MineEjo/reiodart/blob/master/core/e
 
 > - [`./packages/router/example/README.md`](https://github.com/MineEjo/reiodart/blob/master/packages/router/example/README.md)
 
-### [Packages](https://github.com/MineEjo/reiodart/tree/master/packages)
+`.gitignore`, which are **identical** to
+the [`.gitignore`](https://github.com/MineEjo/reiodart/blob/master/core/.gitignore):
 
-`.gitignore`, which must be as in the `./core`.
+> - [`./packages/router/.gitignore`](https://github.com/MineEjo/reiodart/blob/master/packages/router/.gitignore)
 
-```text
-./packages/router/.gitignore
+`.pubignore`, which are **identical** to
+the [`.pubignore`](https://github.com/MineEjo/reiodart/blob/master/core/.pubignore):
+
+> - [`./packages/router/.pubignore`](https://github.com/MineEjo/reiodart/blob/master/packages/router/.pubignore)
+
+`analysis_options.yaml`, which are **identical** to
+the [`analysis_options.yaml`](https://github.com/MineEjo/reiodart/blob/master/core/analysis_options.yaml):
+
+> - [`./packages/router/analysis_options.yaml`](https://github.com/MineEjo/reiodart/blob/master/packages/router/analysis_options.yaml)
+
+<br>
+
+## [Rules for packages](https://github.com/MineEjo/reiodart/tree/master/packages)
+
+### Readme
+
+In the `README.md` of the official package, only the name, description and lack of ecosystem changes.
+
+### Changelog
+
+The list of changes in the official packages is always identical:
+
+```
+## <reio-version>+<package-version>
+
+* Follow the versions on the [main changelog](https://pub.dev/packages/reio/changelog).
 ```
 
-`.pubignore`, which must be as in the `./core`.
+### Pubspec
 
-```text
-./packages/router/.pubignore
-```
+Partial changes (compare regular and from some package), there are no special rules, except the version.
 
-`analysis_options.yaml`, which must be as in the `./core`.
-
-```text
-./packages/router/analysis_options.yaml
-```
-
-`pubspec.yaml`, must be `similar` to `./core`.
-
-```text
-./packages/router/pubspec.yaml
-```
-
-`README.md`, must be `similar` to `./core`.
-
-```text
-./packages/router/README.md
-```
-
-`CHANGELOG.md`, which must be `identical`.
-
-```text
-./packages/router/CHANGELOG.md
-```
+`Version style: <reio-version>+<package-version>`
+`Example: 1.0.0+1.2.3`
