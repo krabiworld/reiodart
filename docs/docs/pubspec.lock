@@ -354,10 +354,17 @@ packages:
   reio:
     dependency: "direct dev"
     description:
-      path: ".."
-      relative: true
-    source: path
-    version: "0.2.2"
+      name: reio
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.3"
+  reio_router:
+    dependency: "direct dev"
+    description:
+      name: reio_router
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.3+1.0.0"
   scratch_space:
     dependency: transitive
     description:
