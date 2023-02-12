@@ -32,11 +32,6 @@ the [`example/README.md`](https://github.com/MineEjo/reiodart/blob/master/core/e
 
 > - [`./packages/router/example/README.md`](https://github.com/MineEjo/reiodart/blob/master/packages/router/example/README.md)
 
-`.gitignore`, which are **identical** to
-the [`.gitignore`](https://github.com/MineEjo/reiodart/blob/master/core/.gitignore):
-
-> - [`./packages/router/.gitignore`](https://github.com/MineEjo/reiodart/blob/master/packages/router/.gitignore)
-
 `.pubignore`, which are **identical** to
 the [`.pubignore`](https://github.com/MineEjo/reiodart/blob/master/core/.pubignore):
 
