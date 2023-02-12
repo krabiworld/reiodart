@@ -2,6 +2,8 @@ import 'package:reio/widget_html.dart';
 import 'package:reio_router/widget.dart';
 import 'package:reio_router/widget_html.dart';
 
+import '../index.widgets.dart';
+
 class Layout extends WidgetRouter {
   static int aboutSlot = slotNumber();
   static int quickStartSlot = slotNumber();
@@ -16,10 +18,10 @@ WidgetRouter layout = Layout(
             .id('docs-nav')
             .$(Div('Getting Started')
                 .thisClass(['docs-title']).$(Span(getJump(1)).setJump({
-              1: Route('About').href('/index.html'),
+              1: Route('About').href(pathIndex),
             })))
             .$(Span(getJump(1)).setJump({
-              1: Route('Quick Start').href('/quick-start.html'),
+              1: Route('Quick Start').href(pathQuickStart),
             })))
         .$(Div()
             // .$list([Span('a'), Span('b'), Span('c')])
