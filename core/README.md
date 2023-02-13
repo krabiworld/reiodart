@@ -35,7 +35,7 @@ For questions and support please use [discussions](https://github.com/MineEjo/re
 ## Changelog
 
 Detailed changes for each release are documented in
-the [changelog](https://github.com/MineEjo/reiodart/blob/master/CHANGELOG.md).
+the [changelog](https://pub.dev/packages/reio/changelog).
 
 ## License
 
