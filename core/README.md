@@ -1,16 +1,14 @@
 <p align="center">
-  <a href="https://reiodart.vercel.app/">
     <img width="200" src="https://raw.githubusercontent.com/MineEjo/reiodart/master/assets/reio_icon.png" alt="Reio logo">
-  </a>
 </p>
 
 <h1 align="center">Reio Dart Framework</h1>
 
 <p align="center">
-  A progressive <a href="https://dart.dev/">Dart</a> framework for creating UI on the web. <br>
-  Uses HTML, CSS and <a href="https://dart.dev/">Dart</a>, which is compiled into efficient JavaScript code.
-  <br><br>
-  By default, Reio template uses <a href="https://web.dev/">Webdev</a>
+    A progressive <a href="https://dart.dev/">Dart</a> framework for creating UI on the web. <br>
+    Uses HTML, CSS and <a href="https://dart.dev/">Dart</a>, which is compiled into efficient JavaScript code.
+    <br><br>
+    By default, Reio template uses <a href="https://web.dev/">Webdev</a>
 </p>
 
 ## [Ecosystem](https://github.com/MineEjo/reiodart/blob/master/.reio/ecosystem.md)
