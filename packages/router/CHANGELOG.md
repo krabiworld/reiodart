@@ -1,3 +1,4 @@
-## 0.2.4+1.0.3
+## 0.2.5+1.0.4
 
-* Follow the versions on the [main changelog](https://pub.dev/packages/reio/changelog).
+* Fixed route binding in toRoute method.
+* Added a router event and tabbed moves.

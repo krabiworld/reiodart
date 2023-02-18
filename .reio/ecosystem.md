@@ -50,16 +50,6 @@ the [`analysis_options.yaml`](https://github.com/MineEjo/reiodart/blob/master/co
 
 In the `README.md` of the official package, only the name, description and lack of ecosystem changes.
 
-### Changelog
-
-The list of changes in the official packages is always identical:
-
-```
-## <reio-version>+<package-version>
-
-* Follow the versions on the [main changelog](https://pub.dev/packages/reio/changelog).
-```
-
 ### Pubspec
 
 Partial changes (compare regular and from some package), there are no special rules, except the version.
