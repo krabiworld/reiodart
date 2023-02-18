@@ -48,7 +48,12 @@ the [`analysis_options.yaml`](https://github.com/MineEjo/reiodart/blob/master/co
 
 ### Readme
 
-In the `README.md` of the official package, only the name, description and lack of ecosystem changes.
+```text
+## Introduction
+Package description.
+
+## License
+```
 
 ### Pubspec
 
