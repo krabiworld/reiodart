@@ -4,3 +4,4 @@
 # Don't commit optional pubspec files.
 docs/pubspec.lock
 website/pubspec.lock
+packages/*/test/pubspec.lock
