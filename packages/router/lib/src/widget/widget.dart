@@ -33,8 +33,7 @@ class WidgetRouter extends Widget {
     if (hrefContainsRoute()) {
       if (lazy == true) {
         initializeLazyLoading(slot);
-      }
-      else {
+      } else {
         initialize(slot, true);
       }
     }
@@ -46,8 +45,7 @@ class WidgetRouter extends Widget {
           // its own slot to initialize the widget.
           if (lazy == true) {
             initializeLazyLoading(slot);
-          }
-          else {
+          } else {
             initialize(slot, true);
           }
         }
