@@ -1,0 +1,8 @@
+# This file configures the static analysis results for your project (errors,
+# warnings, and lints).
+
+include: package:lints/recommended.yaml
+
+analyzer:
+  language:
+    strict-raw-types: true # Reio uses this, do not remove it if you use Reio.
