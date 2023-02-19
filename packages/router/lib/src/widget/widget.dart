@@ -18,76 +18,37 @@ class WidgetRouter extends Widget {
   WidgetRouter(super.html, super.styles);
 
   /// Mounts the widget in the specified slot.
-  /// [staticPath] - A strictly specified path to anything.
-  /// [dynamicPath] - A regular expression that allows you to set your targets.
-  void toRoute(int slotId,
-      {List<String>? staticPath, List<String>? dynamicPath}) {
+  void toRoute(int slotId, RegExp routeExp) {
+    bool hrefContainsRoute() => routeExp.hasMatch(window.location.href);
+
     Element? slot = document.querySelector(slotQuery + slotId.toString());
     if (slot == null) return;
 
-    if (staticPath == null && dynamicPath == null) {
-      return initialize(slot, true);
-    }
+    Element? slotParent = slot.parent;
+    int? slotPosition = slotParent?.children.indexOf(slot);
 
-    slotParent = slot.parent;
-    slotPosition = slotParent?.children.indexOf(slot);
-    slotBackup = slot;
+    if (hrefContainsRoute()) initialize(slot, true);
 
-    void initializeWidget() {
-      if (slotParent?.children.contains(slot) == true) {
-        initialize(slot, true);
-      }
-    }
-
-    void destroyWidget() {
-      if (slotBackup == null) return;
-
-      Element currentElement = slotParent!.children[slotPosition!];
-
-      if (currentElement != slotBackup) {
-        currentElement.replaceWith(slotBackup!);
-        destroy();
-      }
-    }
-
-    if (staticPath != null) {
-      for (String path in staticPath) {
-        void function() {
-          if (window.location.href.endsWith(path)) {
-            initializeWidget();
-          } else {
-            destroyWidget();
-          }
-        }
-
-        if (window.location.href.endsWith(path)) {
+    void controlState() {
+      if (hrefContainsRoute()) {
+        if (slotParent?.children.contains(slot) == true) {
+          // By default, each widget should have
+          // its own slot to initialize the widget.
           initialize(slot, true);
-        } else {
-          onRoute(function);
-          onPopState(function);
+        }
+      } else {
+        Element currentElement = slotParent!.children[slotPosition!];
+
+        if (currentElement != slot) {
+          // If the current element is not a slot.
+          // You need a widget for destroying it, not a slot.
+          currentElement.replaceWith(slot);
+          destroy();
         }
       }
     }
 
-    if (dynamicPath != null) {
-      for (String path in dynamicPath) {
-        void function() {
-          RegExp regularPath = RegExp(path);
-          if (regularPath.hasMatch(window.location.href)) {
-            initializeWidget();
-          } else {
-            destroyWidget();
-          }
-        }
-
-        RegExp regularPath = RegExp(path);
-        if (regularPath.hasMatch(window.location.href)) {
-          initialize(slot, true);
-        } else {
-          onRoute(function);
-          onPopState(function);
-        }
-      }
-    }
+    onRoute(controlState);
+    onPopState(controlState);
   }
 }
