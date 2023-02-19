@@ -15,5 +15,5 @@ dev_dependencies:
   build_web_compilers: ^3.2.7
   lints: ^2.0.1
   reio: ^0.2.6
-  reio_reinterface:
+  reio_css:
     path: ../
