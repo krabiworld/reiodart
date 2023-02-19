@@ -14,6 +14,6 @@ RegExp routeOfdex = RegExp(r'/ofdex.html$');
 void widgetConstruction() {
   layout.inject(document.getElementById('app'));
 
-  index.toRoute(Layout.indexSlot, routeIndex);
-  ofdex.toRoute(Layout.ofdexSlot, routeOfdex);
+  index.toRoute(Layout.indexSlot, routeIndex, lazy: true);
+  ofdex.toRoute(Layout.ofdexSlot, routeOfdex, lazy: true);
 }
