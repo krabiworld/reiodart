@@ -405,17 +405,17 @@ packages:
     dependency: "direct dev"
     description:
       name: reio
-      sha256: b2d813a34923c03d279601273cb503f8ad0ca5683c00f1aa5fe6cd50c3ec916d
+      sha256: "1df7dbb46ccde04818902e3543ac30feacfdd989ffe770ba3c3fa1077a125171"
       url: "https://pub.dev"
     source: hosted
-    version: "0.2.4"
+    version: "0.2.5"
   reio_router:
     dependency: "direct dev"
     description:
       path: ".."
       relative: true
     source: path
-    version: "0.2.4+1.0.3"
+    version: "0.2.5+1.0.4"
   scratch_space:
     dependency: transitive
     description:

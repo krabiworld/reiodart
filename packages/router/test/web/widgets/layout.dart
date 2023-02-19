@@ -17,7 +17,7 @@ WidgetRouter layout = Layout(
           1: Route('Index').href(pathIndex),
         }))
         .$(Span(getJump(1)).setJump({
-          1: Route('Ofdex').href(pathQuickStart),
+          1: Route('Ofdex').href(pathOfdex),
         }))
         .$slot(Layout.indexSlot)
         .$slot(Layout.ofdexSlot),
