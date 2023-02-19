@@ -18,7 +18,7 @@ class WidgetRouter extends Widget {
   WidgetRouter(super.html, super.styles);
 
   /// Mounts the widget in the specified slot.
-  void toRoute(int slotId, RegExp routeExp) {
+  void toRoute(int slotId, RegExp routeExp, {bool? lazy}) {
     bool hrefContainsRoute() => routeExp.hasMatch(window.location.href);
 
     Element? slot = document.querySelector(slotQuery + slotId.toString());
@@ -30,14 +30,26 @@ class WidgetRouter extends Widget {
     int slotPosition = slotParent.children.indexOf(slot);
     if (slotPosition < 0) return;
 
-    if (hrefContainsRoute()) initialize(slot, true);
+    if (hrefContainsRoute()) {
+      if (lazy == true) {
+        initializeLazyLoading(slot);
+      }
+      else {
+        initialize(slot, true);
+      }
+    }
 
     void controlState() {
       if (hrefContainsRoute()) {
         if (slotParent.children.contains(slot) == true) {
           // By default, each widget should have
           // its own slot to initialize the widget.
-          initialize(slot, true);
+          if (lazy == true) {
+            initializeLazyLoading(slot);
+          }
+          else {
+            initialize(slot, true);
+          }
         }
       } else {
         if (slotPosition >= slotParent.children.length) {
