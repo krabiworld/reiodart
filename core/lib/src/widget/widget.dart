@@ -59,11 +59,46 @@ abstract class Widget {
     initialize(htmlElement, true);
   }
 
+  /// Enables lazy loading for the [slot] to be initialized
+  /// on the page when it is queued.
+  void initializeLazyLoading(Element slot) {
+    Element? slotParent = slot.parent;
+    if (slotParent == null) return;
+
+    int slotPosition = slotParent.children.indexOf(slot);
+    if (slotPosition < 0) return;
+
+    Element trigger = slotParent;
+    if (slotPosition != 0) {
+      // If the parent has children other than a slot,
+      // a child must be taken before the slot. Usually the parent is used,
+      // because of the lack of difference in the absence of children.
+      trigger = slotParent.children[slotPosition - 1];
+    }
+
+    IntersectionObserver observer = IntersectionObserver((entries, observer) {
+      for (var entry in entries) {
+        if (!entry.isIntersecting) return;
+
+        initialize(slot, true);
+
+        observer.unobserve(trigger);
+      }
+    });
+
+    observer.observe(trigger);
+  }
+
   /// Mounts the widget in the specified slot.
-  void toSlot(int id) {
-    Element? element = document.querySelector(slotQuery + id.toString());
-    if (element == null) return;
-    initialize(element, true);
+  void toSlot(int id, {bool? lazy}) {
+    Element? slot = document.querySelector(slotQuery + id.toString());
+    if (slot == null) return;
+
+    if (lazy == true) {
+      initializeLazyLoading(slot);
+    } else {
+      initialize(slot, true);
+    }
   }
 
   /// Starts the activity and watcher [Widget].
