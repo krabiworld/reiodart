@@ -17,7 +17,5 @@ void onRoute(Function() function) {
 
 /// Binds the [function] to a router event.
 void onPopState(Function() function) {
-  window.onPopState.listen((event) {
-    function.call();
-  });
+  window.onPopState.listen((event) => function.call());
 }
