@@ -25,19 +25,30 @@ class WidgetRouter extends Widget {
     if (slot == null) return;
 
     Element? slotParent = slot.parent;
-    int? slotPosition = slotParent?.children.indexOf(slot);
+    if (slotParent == null) return;
+
+    int slotPosition = slotParent.children.indexOf(slot);
+    if (slotPosition < 0) return;
 
     if (hrefContainsRoute()) initialize(slot, true);
 
     void controlState() {
       if (hrefContainsRoute()) {
-        if (slotParent?.children.contains(slot) == true) {
+        if (slotParent.children.contains(slot) == true) {
           // By default, each widget should have
           // its own slot to initialize the widget.
           initialize(slot, true);
         }
       } else {
-        Element currentElement = slotParent!.children[slotPosition!];
+        if (slotPosition >= slotParent.children.length) {
+          // The slot position cannot be equal to or greater than
+          // the number of children. If this has happened it is
+          // likely that a slot has been removed
+          // or an external critical situation has been created.
+          return;
+        }
+
+        Element currentElement = slotParent.children[slotPosition];
 
         if (currentElement != slot) {
           // If the current element is not a slot.
