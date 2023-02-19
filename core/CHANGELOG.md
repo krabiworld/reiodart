@@ -1,3 +1,7 @@
+## 0.2.6
+
+* Implemented lazy loading of widgets.
+
 ## 0.2.5
 
 * Removed the remnants of routing from the core.
