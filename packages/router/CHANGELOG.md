@@ -1,3 +1,7 @@
+## 0.2.6+1.0.5
+
+* Implemented lazy loading of widgets.
+
 ## 0.2.5+1.0.5
 
 * Added error checks for frequent occurrences.

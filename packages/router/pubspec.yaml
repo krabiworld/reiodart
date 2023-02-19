@@ -1,6 +1,6 @@
 name: reio_router
 description: The official router for Reio.dart. Single-page application routing.
-version: 0.2.5+1.0.5
+version: 0.2.6+1.0.5
 homepage: https://reiodart.vercel.app
 repository: https://github.com/MineEjo/reiodart/tree/master/packages/router
 issue_tracker: https://github.com/MineEjo/reiodart/issues
@@ -17,7 +17,7 @@ environment:
   sdk: '>=2.17.6 <3.0.0'
 
 dependencies:
-  reio: ^0.2.5
+  reio: ^0.2.6
 
 dev_dependencies:
   lints: ^2.0.1

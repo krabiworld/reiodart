@@ -13,9 +13,9 @@ packages:
     dependency: "direct main"
     description:
       name: reio
-      sha256: "1df7dbb46ccde04818902e3543ac30feacfdd989ffe770ba3c3fa1077a125171"
+      sha256: "7e81983bc76afa2a820b0ddb23e468e0eccfc745156beed7685bb3652ad05647"
       url: "https://pub.dev"
     source: hosted
-    version: "0.2.5"
+    version: "0.2.6"
 sdks:
   dart: ">=2.17.6 <3.0.0"
