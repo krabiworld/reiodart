@@ -18,10 +18,10 @@ WidgetRouter layout = Layout(
             .id('docs-nav')
             .$(Div('Getting Started')
                 .thisClass(['docs-title']).$(Span(getJump(1)).setJump({
-              1: Route('About').href(pathIndex),
+              1: Route('About').href(pathIndex as String),
             })))
             .$(Span(getJump(1)).setJump({
-              1: Route('Quick Start').href(pathQuickStart),
+              1: Route('Quick Start').href(pathQuickStart as String),
             })))
         .$(Div()
             // .$list([Span('a'), Span('b'), Span('c')])
