@@ -14,7 +14,7 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
-const String _dialogData = 'data-reio-dialog-';
+const String _dialogData = 'data-reio-dialog';
 
 /// Contains [WidgetElement] that contains a virtual node
 /// with the `<dialog>` tag.
@@ -25,7 +25,7 @@ class Dialog extends WidgetElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
   Dialog([super.value]) {
     tag = 'dialog';
-    node.attrs!.add(VirtualAttr('$_dialogData${node.number}', ''));
+    node.attrs!.add(VirtualAttr(_dialogData, node.number));
   }
 
   /// Indicates that the dialog is active
@@ -47,7 +47,7 @@ class Dialog extends WidgetElementVisible {
       Function(DialogElement)? onModal,
       Function(DialogElement)? onClose}) {
     DialogElement? element = document
-        .querySelector('dialog[$_dialogData${node.number}]') as DialogElement?;
+        .querySelector('[$_dialogData="${node.number}"]') as DialogElement?;
     if (element == null) return this;
 
     if (returnValue != null) element.returnValue = returnValue;
