@@ -43,20 +43,25 @@ class Dialog extends WidgetElementVisible {
       String? closeValue,
       Function(DialogElement)? onModal,
       Function(DialogElement)? onClose}) {
+    DialogElement? element;
 
-    if (node.isMount) {
-      DialogElement element = node.element as DialogElement;
+    void controlModal() {
+      if (element == null) return;
+      DialogElement el = element as DialogElement;
 
-      if (returnValue != null) element.returnValue = returnValue;
+      if (returnValue != null) element?.returnValue = returnValue;
 
       if (boolean) {
-        element.showModal();
-        onModal?.call(element);
-      } else if (element.open == true) {
-        element.close(closeValue);
-        onClose?.call(element);
+        el.showModal();
+        onModal?.call(el);
+      } else if (el.open == true) {
+        el.close(closeValue);
+        onClose?.call(el);
       }
     }
+
+    onMount((Element el) => element = el as DialogElement);
+    controlModal();
 
     return this;
   }
