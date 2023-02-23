@@ -36,6 +36,8 @@ class Dialog extends WidgetElementVisible {
     return this;
   }
 
+  DialogElement? element;
+
   /// Shows or closes the modal dialog window.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/showModal)
   Dialog modal(bool boolean,
@@ -43,8 +45,6 @@ class Dialog extends WidgetElementVisible {
       String? closeValue,
       Function(DialogElement)? onModal,
       Function(DialogElement)? onClose}) {
-    DialogElement? element;
-
     void controlModal() {
       if (element == null) return;
       DialogElement el = element as DialogElement;
