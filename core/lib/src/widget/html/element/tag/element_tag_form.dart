@@ -93,4 +93,58 @@ class Form extends WidgetElementVisible {
     }
     return this;
   }
+
+  /// The URL that processes the form submission.
+  /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attr-action)
+  Form action(String url, {bool? removeIf}) {
+    if (removeIf != true && node.attrs != null) {
+      VirtualAttr attr = VirtualAttr('action', url);
+      node.attrs!.add(attr);
+    }
+    return this;
+  }
+
+  /// If the value of the method attribute is post,
+  /// enctype is the MIME type of the form submission.
+  /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attr-enctype)
+  Form encType(String value, {bool? removeIf}) {
+    if (removeIf != true && node.attrs != null) {
+      VirtualAttr attr = VirtualAttr('enctype', value);
+      node.attrs!.add(attr);
+    }
+    return this;
+  }
+
+  /// The HTTP method to submit the form with.
+  /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attr-method)
+  Form method(String method, {bool? removeIf}) {
+    if (removeIf != true && node.attrs != null) {
+      VirtualAttr attr = VirtualAttr('method', method);
+      node.attrs!.add(attr);
+    }
+    return this;
+  }
+
+  /// This attribute specifies
+  /// that the form is not to be validated
+  /// when it is submitted.
+  /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attr-novalidate)
+  Form noValidate(bool boolean) {
+    if (boolean && node.attrs != null) {
+      VirtualAttr attr = VirtualAttr('novalidate', '');
+      node.attrs!.add(attr);
+    }
+    return this;
+  }
+
+  /// Indicates where to display
+  /// the response after submitting the form.
+  /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attr-target)
+  Form target(String context, {bool? removeIf}) {
+    if (removeIf != true && node.attrs != null) {
+      VirtualAttr attr = VirtualAttr('target', context);
+      node.attrs!.add(attr);
+    }
+    return this;
+  }
 }
