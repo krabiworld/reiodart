@@ -1,3 +1,7 @@
+## 0.2.8
+
+* Fixed bug in Dialog.
+
 ## 0.2.7
 
 * HTML `<dialog>` added non-HTML attribute modal.
