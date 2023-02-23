@@ -7,10 +7,8 @@ import 'dart:html';
 
 import '../virtual_attr.dart';
 
-int _totalNodes = 0;
-
 // Used as an identifier for a node.
-int _nodeNumber() => ++_totalNodes;
+int totalNodes = 0;
 
 abstract class VirtualNode {
   String tag;
@@ -19,7 +17,7 @@ abstract class VirtualNode {
   List<VirtualNode>? children;
 
   // Used as an identifier for a node.
-  String number = _nodeNumber().toString();
+  String number = totalNodes.toString();
 
   // Contains the initial value and the actual value.
   List<String> values = [];

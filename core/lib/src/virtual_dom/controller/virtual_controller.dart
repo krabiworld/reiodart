@@ -24,11 +24,10 @@ class VirtualController {
     if (minorNode != null) isUpdate = true;
   }
 
-  // Ready-made code that can help at any time.
-  // void initData([Element? element]) {
-  //   if (element == null) return;
-  //   element.setAttribute('reio-widget', node.number);
-  // }
+  void initData([Element? element]) {
+    if (element == null) return;
+    ++totalNodes;
+  }
 
   void initValue([Element? element]) {
     // Tags that are allowed in the element value.

@@ -99,6 +99,7 @@ class VirtualNodeWidget extends VirtualNode {
 
     final Element newElement = document.createElement(tag);
     VirtualControllerWidget(this)
+      ..initData(newElement)
       ..initValue(newElement)
       ..initAttrs(newElement)
       ..initStyles(newElement)
