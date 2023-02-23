@@ -3,6 +3,8 @@
 // This source code is licensed under the MIT license found in the
 // LICENSE file in the root directory of this source tree.
 
+import 'dart:html';
+
 import '../../../../virtual_dom/virtual_attr.dart';
 import '../html_element.dart';
 import '../html_element_visible.dart';
@@ -31,6 +33,29 @@ class Dialog extends WidgetElementVisible {
       VirtualAttr attr = VirtualAttr('open', '');
       node.attrs!.add(attr);
     }
+    return this;
+  }
+
+  /// Shows or closes the modal dialog window.
+  /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/showModal)
+  Dialog modal(bool boolean,
+      {String? returnValue,
+      String? closeValue,
+      Function(DialogElement)? onModal,
+      Function(DialogElement)? onClose}) {
+    onMount((element) {
+      element as DialogElement;
+
+      if (returnValue != null) element.returnValue = returnValue;
+
+      if (boolean) {
+        element.showModal();
+        onModal?.call(element);
+      } else if (element.open == true) {
+        element.close(closeValue);
+        onClose?.call(element);
+      }
+    });
     return this;
   }
 }
