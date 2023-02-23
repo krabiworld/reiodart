@@ -1,7 +1,5 @@
 # Don’t commit the following directories created by pub.
 .dart_tool/
 
-# Don't commit optional pubspec files.
-docs/pubspec.lock
-website/pubspec.lock
-packages/*/test/pubspec.lock
+# Don't commit pubspec file.
+pubspec.lock

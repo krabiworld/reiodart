@@ -1,8 +1,6 @@
 # Not needed in the package.
 test/
-docs/
-assets/
-website/
+pubspec.lock
 
 # Git.
 .gitignore
