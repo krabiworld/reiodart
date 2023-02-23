@@ -14,6 +14,8 @@ import '../html_element_visible.dart';
 // send it as a issue to https://github.com/MineEjo/reiodart/issues
 // Adapted for HTML version 5.
 
+const String _dialogData = 'data-reio-dialog-';
+
 /// Contains [WidgetElement] that contains a virtual node
 /// with the `<dialog>` tag.
 class Dialog extends WidgetElementVisible {
@@ -23,6 +25,7 @@ class Dialog extends WidgetElementVisible {
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
   Dialog([super.value]) {
     tag = 'dialog';
+    node.attrs!.add(VirtualAttr('$_dialogData${node.number}', ''));
   }
 
   /// Indicates that the dialog is active
@@ -36,8 +39,6 @@ class Dialog extends WidgetElementVisible {
     return this;
   }
 
-  DialogElement? element;
-
   /// Shows or closes the modal dialog window.
   /// [Read more...](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/showModal)
   Dialog modal(bool boolean,
@@ -45,23 +46,19 @@ class Dialog extends WidgetElementVisible {
       String? closeValue,
       Function(DialogElement)? onModal,
       Function(DialogElement)? onClose}) {
-    void controlModal() {
-      if (element == null) return;
-      DialogElement el = element as DialogElement;
+    DialogElement? element = document
+        .querySelector('dialog[$_dialogData${node.number}]') as DialogElement?;
+    if (element == null) return this;
 
-      if (returnValue != null) element?.returnValue = returnValue;
+    if (returnValue != null) element.returnValue = returnValue;
 
-      if (boolean) {
-        el.showModal();
-        onModal?.call(el);
-      } else if (el.open == true) {
-        el.close(closeValue);
-        onClose?.call(el);
-      }
+    if (boolean) {
+      element.showModal();
+      onModal?.call(element);
+    } else if (element.open == true) {
+      element.close(closeValue);
+      onClose?.call(element);
     }
-
-    onMount((Element el) => element = el as DialogElement);
-    controlModal();
 
     return this;
   }
