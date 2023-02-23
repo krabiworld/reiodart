@@ -43,8 +43,9 @@ class Dialog extends WidgetElementVisible {
       String? closeValue,
       Function(DialogElement)? onModal,
       Function(DialogElement)? onClose}) {
-    onMount((element) {
-      element as DialogElement;
+
+    if (node.isMount) {
+      DialogElement element = node.element as DialogElement;
 
       if (returnValue != null) element.returnValue = returnValue;
 
@@ -55,7 +56,8 @@ class Dialog extends WidgetElementVisible {
         element.close(closeValue);
         onClose?.call(element);
       }
-    });
+    }
+
     return this;
   }
 }
