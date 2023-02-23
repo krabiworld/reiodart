@@ -7,6 +7,28 @@
       <sourceFolder url="file://$MODULE_DIR$/packages/css/test" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/docs/docs" />
       <excludeFolder url="file://$MODULE_DIR$/website/website" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/css/test/build" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/css/test/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/css/test/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/css/build" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/css/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/css/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/website/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/website/build" />
+      <excludeFolder url="file://$MODULE_DIR$/website/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/core/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/core/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/core/build" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/router/test/build" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/router/test/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/router/test/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/router/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/router/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/router/build" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/build" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/css" />
       <excludePattern pattern=".dart_tool" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
