@@ -1,3 +1,7 @@
+## 0.2.13
+
+* Corrected incorrect node counter.
+
 ## 0.2.12
 
 * Fixed bug in Dialog.
