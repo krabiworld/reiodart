@@ -1,3 +1,7 @@
+## 0.2.11
+
+* Fixed bug in Dialog.
+
 ## 0.2.10
 
 * Fixed bug in Dialog.
