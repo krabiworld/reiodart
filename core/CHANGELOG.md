@@ -1,3 +1,8 @@
+## 0.2.7
+
+* HTML `<dialog>` added non-HTML attribute modal.
+* HTML `<form>` attributes have been added for submission.
+
 ## 0.2.6
 
 * Implemented lazy loading of widgets.
