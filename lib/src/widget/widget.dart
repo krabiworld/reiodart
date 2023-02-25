@@ -224,8 +224,8 @@ abstract class Widget {
       remOnceNodes.clear();
     }
 
-    final List toRemove = [];
-    final List toAdd = [];
+    final List<dynamic> toRemove = [];
+    final List<dynamic> toAdd = [];
 
     remOnNodes.forEach((int k, List<dynamic> v) {
       bool Function() condition = v[1];
