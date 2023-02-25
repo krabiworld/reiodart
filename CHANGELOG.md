@@ -1,6 +1,6 @@
 ## 0.3.0
 
-* Automation.
+* Automation, tests.
 
 ## 0.2.14
 
