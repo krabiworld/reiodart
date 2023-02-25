@@ -16,6 +16,6 @@ jobs:
       - name: Install dependencies
         run: dart pub get
       # Here you can insert custom steps you need
-      - run: ${{ github.workspace }}/.github/scripts/gen_pubspec_dart.sh ../../pubspec.yaml ../../lib/pubspec.dart
+      - run: /bin/bash ${{ github.workspace }}/.github/scripts/gen_pubspec_dart.sh ../../pubspec.yaml ../../lib/pubspec.dart
       - name: Publish
         run: dart pub publish --force
