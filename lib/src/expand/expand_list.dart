@@ -10,7 +10,8 @@
 ///   return c.peel + c.pulp;
 /// })
 /// ```
-bool compareClassOfList<T>(List<dynamic>? l1, List<dynamic>? l2, dynamic Function(T) getValue) {
+bool compareClassOfList<T>(
+    List<dynamic>? l1, List<dynamic>? l2, dynamic Function(T) getValue) {
   List<dynamic> firstValues = [];
   l1?.toSet().forEach((c) => firstValues.add(getValue.call(c)));
 
