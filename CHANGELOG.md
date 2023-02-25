@@ -1,3 +1,7 @@
+## 0.3.1
+
+* Automation, tests.
+
 ## 0.3.0
 
 * Automation, tests.
