@@ -1,6 +1,0 @@
-# Not needed in the package.
-test/
-pubspec.lock
-
-# Git.
-.gitignore

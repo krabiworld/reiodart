@@ -1,7 +1,0 @@
-# Not needed in the package.
-test/
-docs/
-assets/
-
-# Git.
-.gitignore

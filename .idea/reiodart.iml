@@ -2,9 +2,9 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/core/test" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/router/test" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/css/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/docs/docs" />
       <excludeFolder url="file://$MODULE_DIR$/website/website" />
       <excludeFolder url="file://$MODULE_DIR$/packages/css/test/build" />
@@ -16,7 +16,6 @@
       <excludeFolder url="file://$MODULE_DIR$/website/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/website/build" />
       <excludeFolder url="file://$MODULE_DIR$/website/.dart_tool" />
-      <excludeFolder url="file://$MODULE_DIR$/core/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/core/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/core/build" />
       <excludeFolder url="file://$MODULE_DIR$/packages/router/test/build" />
@@ -28,7 +27,12 @@
       <excludeFolder url="file://$MODULE_DIR$/docs/build" />
       <excludeFolder url="file://$MODULE_DIR$/docs/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/docs/.pub" />
-      <excludeFolder url="file://$MODULE_DIR$/packages/css" />
+      <excludeFolder url="file://$MODULE_DIR$/test/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/test/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/test/build" />
+      <excludeFolder url="file://$MODULE_DIR$/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/build" />
       <excludePattern pattern=".dart_tool" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
