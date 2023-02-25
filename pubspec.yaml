@@ -1,3 +1,6 @@
+# dart pub global activate webdev
+# dart pub global activate rps
+
 name: reio
 description: Reio is a progressive Dart framework for creating UI on the web. Uses HTML, CSS and Dart, which is compiled into efficient JavaScript code.
 version: 0.3.3
@@ -6,11 +9,12 @@ repository: https://github.com/MineEjo/reiodart
 issue_tracker: https://github.com/MineEjo/reiodart/issues
 documentation: https://mineejo.github.io/reiodart
 
-# scripts:
-#   format: dart format .
-#   publish: dart pub publish --dry-run
-#   unit_test: dart test
-#   web: webdev serve web --auto=refresh
+scripts: # rps name
+  format: dart format .
+  publish: dart pub publish --dry-run
+  analyze: dart analyze
+  test: dart test
+  web: webdev serve web --auto=refresh
 
 platforms:
   web:
