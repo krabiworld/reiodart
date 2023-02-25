@@ -2,7 +2,3 @@
 # warnings, and lints).
 
 include: package:lints/recommended.yaml
-
-analyzer:
-  language:
-    strict-raw-types: true # Reio uses this, do not remove it if you use Reio.
