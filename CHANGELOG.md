@@ -1,3 +1,7 @@
+## 0.3.4
+
+* Added dart2js compiler.
+
 ## 0.3.3
 
 * Automation, tests.
