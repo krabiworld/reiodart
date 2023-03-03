@@ -1,8 +1,10 @@
 name: Formatting dart code
+
 on:
   push:
     paths:
       - '**.dart'
+
 jobs:
   format:
     runs-on: ubuntu-latest
