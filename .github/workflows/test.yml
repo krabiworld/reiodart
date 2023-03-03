@@ -1,4 +1,4 @@
-name: Running unit tests
+name: Testing dart code
 
 on:
   pull_request:
@@ -19,5 +19,5 @@ jobs:
         run: dart pub get
       - name: Install Google Chrome
         run: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-      - name: Run tests
+      - name: Run unit tests
         run: dart test -r github -p chrome
