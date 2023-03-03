@@ -12,12 +12,12 @@ jobs:
       - run: firefox --version
 
       - name: Install desktop
-        run: sudo apt-get install openbox
+        run: sudo apt-get install xorg openbox
 
       - name: Install dependencies
         run: dart pub get
 
       - name: Run tests
         run: |
-          export $DISPLAY
+          startx
           dart test -r github
