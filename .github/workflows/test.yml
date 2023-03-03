@@ -11,8 +11,8 @@ jobs:
 
       - run: firefox --version
 
-      - name: Install xorg
-        run: sudo apt install xorg
+      - name: Install desktop
+        run: sudo apt install ubuntu-desktop
 
       - name: Install dependencies
         run: dart pub get
