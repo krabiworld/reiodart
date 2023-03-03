@@ -19,5 +19,6 @@ jobs:
 
       - name: Run tests
         run: |
+          sudo apt install xauth
           export DISPLAY=localhost:0.0
           dart test -r github
