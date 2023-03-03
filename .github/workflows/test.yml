@@ -13,8 +13,6 @@ jobs:
         run: dart pub get
 
       - name: Run tests
-        uses: ./
-        timeout-minutes: 3
         with:
           run: dart test -r github
           browser: firefox
