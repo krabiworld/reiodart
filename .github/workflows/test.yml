@@ -12,3 +12,5 @@ jobs:
         run: dart pub get
       - name: Run tests
         run: dart test -r github
+        with:
+          browser: firefox
