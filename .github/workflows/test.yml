@@ -8,7 +8,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: dart-lang/setup-dart@v1.4
+
       - run: firefox --version
+
+      - name: install x
+        run: apt-get install x-window-system
 
       - name: Install dependencies
         run: dart pub get
