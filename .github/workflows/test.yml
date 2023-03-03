@@ -11,8 +11,8 @@ jobs:
 
       - run: firefox --version
 
-      - name: install x
-        run: sudo apt-get install x-window-system
+      - name: Install xorg
+        run: sudo apt install xorg
 
       - name: Install dependencies
         run: dart pub get
