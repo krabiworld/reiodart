@@ -1,9 +1,13 @@
 name: Formatting dart code
 
 on:
+  pull_request:
+    paths:
+      - '**.dart'
   push:
     paths:
       - '**.dart'
+  workflow_dispatch:
 
 jobs:
   format:
