@@ -9,18 +9,13 @@ jobs:
       - uses: actions/checkout@v3
       - uses: dart-lang/setup-dart@v1.4
 
-      - run: firefox --version
-
       - name: Install desktop
-        run: sudo apt-get install xorg openbox
+        run: sudo apt-get install openbox
 
       - name: Install dependencies
         run: dart pub get
 
       - name: Run tests
         run: |
-          touch ~/.Xauthority
-          xauth generate :0 . trusted 
-          xauth add ${HOST}:0 . $(xxd -l 16 -p /dev/urandom)
-          startx
-          dart test -r github
+          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          dart test -r github -p chrome
