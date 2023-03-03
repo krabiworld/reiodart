@@ -1,4 +1,1 @@
-class Test {
-  var test = "test";
-  Test();
-}
+class Test { var test = "test"; Test(); }
