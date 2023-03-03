@@ -19,5 +19,5 @@ jobs:
 
       - name: Run tests
         run: |
-          export DISPLAY="127.0.0.1:10.0"
+          export $DISPLAY
           dart test -r github
