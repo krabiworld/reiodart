@@ -8,11 +8,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: dart-lang/setup-dart@v1.4
+      - uses: browser-actions/setup-firefox@v1
 
       - name: Install dependencies
         run: dart pub get
 
       - name: Run tests
-        with:
-          run: dart test -r github
-          browser: firefox
+        run: dart test -r github
