@@ -8,7 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: dart-lang/setup-dart@v1.4
-      - uses: browser-actions/setup-firefox@v1
       - run: firefox --version
 
       - name: Install dependencies
