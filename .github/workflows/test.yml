@@ -12,7 +12,9 @@ jobs:
       - run: firefox --version
 
       - name: Install desktop
-        run: sudo apt-get install openbox
+        run: |
+          export DISPLAY=0:0
+          sudo apt-get install openbox
 
       - name: Install dependencies
         run: dart pub get
