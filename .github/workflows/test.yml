@@ -1,6 +1,13 @@
 name: Running unit tests
 
-on: [ push, pull_request, workflow_dispatch ]
+on:
+  pull_request:
+    paths:
+      - '**.dart'
+  push:
+    paths:
+      - '**.dart'
+  workflow_dispatch:
 
 jobs:
   test:
