@@ -1,4 +1,4 @@
 class Test {
-  var test = "test1";
+  var test = "test2";
   Test();
 }
