@@ -14,7 +14,7 @@ jobs:
       - run: dart format .
       - name: Check for modified files
         id: git-check
-        run: echo "$(if git diff-index --quiet HEAD --; then echo "false"; else echo "true"; fi)" >> $GITHUB_OUTPUT
+        run: echo "modified=$(if git diff-index --quiet HEAD --; then echo "false"; else echo "true"; fi)" >> $GITHUB_OUTPUT
       - name: Push changes
         if: steps.git-check.outputs.modified == 'true'
         run: |
