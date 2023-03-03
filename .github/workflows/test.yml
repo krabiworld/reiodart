@@ -8,9 +8,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: dart-lang/setup-dart@v1.4
+
       - name: Install dependencies
         run: dart pub get
+
       - name: Run tests
-        run: dart test -r github
+        uses: ./
+        timeout-minutes: 3
         with:
+          run: dart test -r github
           browser: firefox
